@@ -1,2 +1,8 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Sendeplan</h1>
+
+<% @episodes.each do |episode| %>
+	<h2><%= episode['artist_name'] %></h2>
+	<p><%= episode['track_title'] %></p>
+	<p><%= episode['starts'] %></p>
+	<p><%= episode['ends'] %></p>
+<% end %>
