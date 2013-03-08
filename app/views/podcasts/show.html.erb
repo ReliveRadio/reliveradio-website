@@ -42,6 +42,11 @@
   <%= @podcast.artistname %>
 </p>
 
+<p>
+  <b>Beschreibung:</b>
+  <%= @podcast.description %>
+</p>
+
 
 <%= link_to 'Edit', edit_podcast_path(@podcast) %> |
 <%= link_to 'Back', podcasts_path %>
