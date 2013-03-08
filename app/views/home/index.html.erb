@@ -1,7 +1,12 @@
 <h1>Sendeplan</h1>
 
 <% @episodes.each do |episode| %>
+<% podcast = Podcast.where(["artistname = ?", episode['artist_name']]).first %>
+
 	<h2><%= episode['artist_name'] %></h2>
+	<% if !podcast.nil? %>
+		<img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg">
+    <% end %>
 	<p><%= episode['track_title'] %></p>
 	<p><%= episode['starts'] %></p>
 	<p><%= episode['ends'] %></p>
