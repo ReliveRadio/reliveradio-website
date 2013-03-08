@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @podcast.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @podcast.url %>
+</p>
+
+<p>
+  <b>Slugintern:</b>
+  <%= @podcast.slugintern %>
+</p>
+
+<p>
+  <b>Flattrhandle:</b>
+  <%= @podcast.flattrhandle %>
+</p>
+
+<p>
+  <b>Twitterhandle:</b>
+  <%= @podcast.twitterhandle %>
+</p>
+
+<p>
+  <b>Hoersuppeslug:</b>
+  <%= @podcast.hoersuppeslug %>
+</p>
+
+<p>
+  <b>Feedurl:</b>
+  <%= @podcast.feedurl %>
+</p>
+
+<p>
+  <b>Artistname:</b>
+  <%= @podcast.artistname %>
+</p>
+
+
+<%= link_to 'Edit', edit_podcast_path(@podcast) %> |
+<%= link_to 'Back', podcasts_path %>

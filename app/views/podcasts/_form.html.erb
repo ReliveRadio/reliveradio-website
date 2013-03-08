@@ -1,0 +1,49 @@
+<%= form_for(@podcast) do |f| %>
+  <% if @podcast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@podcast.errors.count, "error") %> prohibited this podcast from being saved:</h2>
+
+      <ul>
+      <% @podcast.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :slugintern %><br />
+    <%= f.text_field :slugintern %>
+  </div>
+  <div class="field">
+    <%= f.label :flattrhandle %><br />
+    <%= f.text_field :flattrhandle %>
+  </div>
+  <div class="field">
+    <%= f.label :twitterhandle %><br />
+    <%= f.text_field :twitterhandle %>
+  </div>
+  <div class="field">
+    <%= f.label :hoersuppeslug %><br />
+    <%= f.text_field :hoersuppeslug %>
+  </div>
+  <div class="field">
+    <%= f.label :feedurl %><br />
+    <%= f.text_field :feedurl %>
+  </div>
+  <div class="field">
+    <%= f.label :artistname %><br />
+    <%= f.text_field :artistname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

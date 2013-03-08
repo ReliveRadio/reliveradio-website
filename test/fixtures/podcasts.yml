@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  url: MyString
+  slugintern: MyString
+  flattrhandle: MyString
+  twitterhandle: MyString
+  hoersuppeslug: MyString
+  feedurl: MyString
+  artistname: MyString
+
+two:
+  name: MyString
+  url: MyString
+  slugintern: MyString
+  flattrhandle: MyString
+  twitterhandle: MyString
+  hoersuppeslug: MyString
+  feedurl: MyString
+  artistname: MyString
