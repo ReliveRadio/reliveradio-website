@@ -1,4 +1,7 @@
 class PodcastsController < ApplicationController
+
+  http_basic_authenticate_with :name => "test", :password => "test"
+
   # GET /podcasts
   # GET /podcasts.json
   def index
