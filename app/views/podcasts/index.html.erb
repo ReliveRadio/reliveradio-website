@@ -3,13 +3,12 @@
 
         <h1>Alle Podcasts in der Datenbank</h1>
 
-        <%= link_to 'New Podcast', new_podcast_path %> | 
-        <%= link_to "Download as CSV", podcasts_path(format: "csv") %>
+        <%= link_to 'Neuer Podcast', new_podcast_path, :class => "button secondary" %>
+        <%= link_to "CSV herunterladen", podcasts_path(format: "csv"), :class => "button secondary" %>
 
-        <h2>Import Podcasts</h2>
         <%= form_tag import_podcasts_path, multipart: true do %>
           <%= file_field_tag :file %>
-          <%= submit_tag "Import" %>
+          <%= submit_tag "Importieren"%>
         <% end %>
 
     </div>
