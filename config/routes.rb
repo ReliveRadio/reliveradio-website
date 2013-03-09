@@ -1,5 +1,7 @@
 Reliveradio::Application.routes.draw do
-  resources :podcasts
+  resources :podcasts do
+    collection {post :import}
+  end
 
 
   get "home/index"

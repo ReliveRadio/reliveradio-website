@@ -3,6 +3,12 @@
 <%= link_to 'New Podcast', new_podcast_path %> | 
 <%= link_to "Download as CSV", podcasts_path(format: "csv") %>
 
+<h2>Import Podcasts</h2>
+<%= form_tag import_podcasts_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
 <table>
   <tr>
     <th>Name</th>

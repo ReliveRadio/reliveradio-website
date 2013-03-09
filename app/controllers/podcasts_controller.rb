@@ -2,6 +2,11 @@ class PodcastsController < ApplicationController
 
   http_basic_authenticate_with :name => "test", :password => "test"
 
+  def import
+    Podcast.import(params[:file])
+    redirect_to podcasts_path, notice: "Podcasts imported."
+  end
+
   # GET /podcasts
   # GET /podcasts.json
   def index

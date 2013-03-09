@@ -12,4 +12,12 @@ class Podcast < ActiveRecord::Base
         end
 	end
 
+	def self.import(file)
+	  CSV.foreach(file.path, headers: true) do |row|
+	    podcast = find_by_id(row["id"]) || new
+	    podcast.attributes = row.to_hash.slice(*accessible_attributes)
+	    podcast.save!
+	  end
+	end
+
 end
