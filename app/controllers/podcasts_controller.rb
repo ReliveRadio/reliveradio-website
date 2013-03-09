@@ -10,6 +10,7 @@ class PodcastsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @podcasts }
+      format.csv { send_data Podcast.to_csv }
     end
   end
 
