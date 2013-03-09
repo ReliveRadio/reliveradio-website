@@ -1,47 +1,51 @@
-<h1>Listing podcasts</h1>
+<div class="row">
+    <div class="twelve columns">
 
-<%= link_to 'New Podcast', new_podcast_path %> | 
-<%= link_to "Download as CSV", podcasts_path(format: "csv") %>
+        <h1>Listing podcasts</h1>
 
-<h2>Import Podcasts</h2>
-<%= form_tag import_podcasts_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
+        <%= link_to 'New Podcast', new_podcast_path %> | 
+        <%= link_to "Download as CSV", podcasts_path(format: "csv") %>
 
-<table class="responsive">
-  <tr>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Slugintern</th>
-    <th>Flattrhandle</th>
-    <th>Twitterhandle</th>
-    <th>Hoersuppeslug</th>
-    <th>Feedurl</th>
-    <th>Artistname</th>
-    <th>Beschreibung</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <h2>Import Podcasts</h2>
+        <%= form_tag import_podcasts_path, multipart: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag "Import" %>
+        <% end %>
 
+    </div>
+</div>
+
+<% toggle = 0 %>
 <% @podcasts.each do |podcast| %>
-  <tr>
-    <td><%= podcast.name %></td>
-    <td><%= podcast.url %></td>
-    <td><%= podcast.slugintern %></td>
-    <td><%= podcast.flattrhandle %></td>
-    <td><%= podcast.twitterhandle %></td>
-    <td><%= podcast.hoersuppeslug %></td>
-    <td><%= podcast.feedurl %></td>
-    <td><%= podcast.artistname %></td>
-    <td><%= podcast.description %></td>
-    <td><%= link_to 'Show', podcast %></td>
-    <td><%= link_to 'Edit', edit_podcast_path(podcast) %></td>
-    <td><%= link_to 'Destroy', podcast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <% if toggle%3 == 0 %>
+        <div class="row">
+    <% end %>
 
-<br />
+      <div class="large-4 columns">
+
+        <img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg">
+        <h2 class="subheader"><%= podcast.name %></h2>
+        <div><strong>url: </strong><%= podcast.url %></div>
+        <div><strong>slugintern: </strong><%= podcast.slugintern %></div>
+        <div><strong>flattrhandle: </strong><%= podcast.flattrhandle %></div>
+        <div><strong>twitterhandle: </strong><%= podcast.twitterhandle %></div>
+        <div><strong>hoersuppeslug: </strong><%= podcast.hoersuppeslug %></div>
+        <div><strong>feedurl: </strong><%= podcast.feedurl %></div>
+        <div><strong>artistname: </strong><%= podcast.artistname %></div>
+        <div><strong>description: </strong><%= podcast.description %></div>
+        
+        <ul class="button-group">
+
+        <li><%= link_to 'Show', podcast, :class => "button secondary" %></li>
+        <li><%= link_to 'Edit', edit_podcast_path(podcast), :class => "button secondary" %></li>
+        <li><%= link_to 'Destroy', podcast, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button alert" %></li>
+        </ul>
+      
+      </div>
+    <% if toggle%3 == 2 %>
+        </div>
+    <% end %>
+    <% toggle = toggle + 1 %>
+<% end %>
+
 
