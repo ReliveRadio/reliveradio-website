@@ -1,18 +1,23 @@
 <div class="row">
     <div class="large-12 columns">
-
         <h1>Alle Podcasts in der Datenbank</h1>
-
-        <%= link_to 'Neuer Podcast', new_podcast_path, :class => "button secondary" %>
-        <%= link_to "CSV herunterladen", podcasts_path(format: "csv"), :class => "button secondary" %>
-
-        <%= form_tag import_podcasts_path, multipart: true do %>
-          <%= file_field_tag :file %>
-          <%= submit_tag "Importieren", :class => "button secondary" %>
-        <% end %>
-
     </div>
 </div>
+
+<div class="row">
+  <div class="large-6 columns">    
+      <%= link_to 'Neuen Podcast anlegen', new_podcast_path, :class => "button secondary" %>
+      <%= link_to "CSV herunterladen", podcasts_path(format: "csv"), :class => "button secondary" %>
+  </div>
+  <div class="large-6 columns">
+      <%= form_tag import_podcasts_path, multipart: true do %>
+        <%= file_field_tag :file %>
+        <%= submit_tag "CSV importieren", :class => "button secondary" %>
+      <% end %>
+  </div>
+</div>
+
+<hr />
 
 <% @podcasts.each do |podcast| %>
     <div class="row podcast">
