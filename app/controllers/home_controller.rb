@@ -13,25 +13,23 @@ class HomeController < ApplicationController
 
 	# check if HTTP request worked
 	if response.code == "200"
-      # parse JSON
-	  result = JSON.parse(response.body)
-	  # save received episodes into episodes object
-	  @episodes = result
-	  @episodes.reverse.each do |episode|
-	  	# check if track is upcoming
-	  	now_time = Time.now
-	  	start_time = Time.parse(episode["starts"])
-	  	end_time = Time.parse(episode["ends"])
-	  	if end_time < now_time
-	  		# track already played: do not show it in view and therefore remove it from array
-	  		@episodes.delete(episode)
-	  	else
-	  		# add database information to this object to easily access that in view
-		  	episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first  		
-	  	end
+		# parse JSON
+		result = JSON.parse(response.body)
+		# save received episodes into episodes object
+		@episodes = result
+
+		now_time = Time.now
+		@episodes.delete_if { |episode| Time.parse(episode["ends"])+1.hour < now_time }
+
+		@episodes.each do |episode|
+			# adjust time
+			episode["starts"] = Time.parse(episode["starts"]) + 1.hour
+			episode["ends"] = Time.parse(episode["ends"]) + 1.hour
+			# add database information to this object to easily access that in view
+			episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first
 	  end
 	else
-	  puts "ERROR: Could not read todays episode list from server."
+		puts "ERROR: Could not read todays episode list from server."
 	end
   end
 end

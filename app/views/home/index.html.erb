@@ -3,14 +3,12 @@
 <% @episodes.each do |episode| %>
 	
 	<!-- find corresponding podcast in database -->
-	<% podcast = Podcast.where(["artistname = ?", episode['artist_name']]).first %>
+	<% podcast = episode["db"] %>
 
 	<h2><%= episode['artist_name'] %></h2>
-	<% if !podcast.nil? %>
-		<img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg">
-    <% end %>
+	<img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg">
 	<p><%= episode['track_title'] %></p>
-	<p><%= episode['db'].description %></p>
+	<p><%= podcast.description %></p>
 	<p><%= episode['starts'] %></p>
 	<p><%= episode['ends'] %></p>
 <% end %>
