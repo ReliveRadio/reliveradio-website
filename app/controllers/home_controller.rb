@@ -16,8 +16,20 @@ class HomeController < ApplicationController
       # parse JSON
 	  result = JSON.parse(response.body)
 	  # save received episodes into episodes object
-	  # the AT means, that we can use this variable also in the corresponding view
 	  @episodes = result
+	  @episodes.reverse.each do |episode|
+	  	# check if track is upcoming
+	  	now_time = Time.now
+	  	start_time = Time.parse(episode["starts"])
+	  	end_time = Time.parse(episode["ends"])
+	  	if end_time < now_time
+	  		# track already played: do not show it in view and therefore remove it from array
+	  		@episodes.delete(episode)
+	  	else
+	  		# add database information to this object to easily access that in view
+		  	episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first  		
+	  	end
+	  end
 	else
 	  puts "ERROR: Could not read todays episode list from server."
 	end
