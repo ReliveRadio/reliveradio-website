@@ -1,4 +1,6 @@
 Reliveradio::Application.routes.draw do
+
+  # enable podcasts csv import
   resources :podcasts do
     collection {post :import}
   end
