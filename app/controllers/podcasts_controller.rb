@@ -1,6 +1,15 @@
 class PodcastsController < ApplicationController
 
-  http_basic_authenticate_with :name => "test", :password => "test", :except => "info"
+  http_basic_authenticate_with :name => "test", :password => "test", :except => ["info", "overview"]
+
+  def overview
+    @podcasts = Podcast.all
+
+    respond_to do |format|
+      format.html # overview.html.erb
+      format.json { render json: @podcasts }
+    end
+  end
 
   def info
     @podcast = Podcast.where(["slugintern = ?", params[:slugintern]]).first
