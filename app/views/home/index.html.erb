@@ -1,17 +1,19 @@
-<h1>Sendeplan</h1>
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Sendeplan</h1>
 
-<% @episodes.each do |episode| %>
-	
-	<!-- find corresponding podcast in database -->
-	<% podcast = episode["db"] %>
+		<% @episodes.each do |episode| %>
+			<!-- find corresponding podcast in database -->
+			<% podcast = episode["db"] %>				
+				<h2><%= episode['artist_name'] %></h2>
+				<% if episode["isLive"] %>
+					<span class="success label">Jetzt Live!</span>
+				<% end %>
+				<h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2>
+				<p><%= episode['track_title'] %></p>
+				<p><%= podcast.description %></p>
+				<div><%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></div>
+		<% end %>	
+	</div>
+</div>
 
-	<h2><%= episode['artist_name'] %></h2>
-	<% if episode["isLive"] %>
-		<span class="success label">Jetzt Live!</span>
-	<% end %>
-	<img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg">
-	<p><%= episode['track_title'] %></p>
-	<p><%= podcast.description %></p>
-	<p><%= episode['starts'] %></p>
-	<p><%= episode['ends'] %></p>
-<% end %>
