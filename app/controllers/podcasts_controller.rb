@@ -4,7 +4,7 @@ class PodcastsController < ApplicationController
 
   def import
     Podcast.import(params[:file])
-    redirect_to podcasts_path, notice: "Podcasts imported."
+    redirect_to podcasts_path, notice: "Daten erfolgreich importiert."
   end
 
   # GET /podcasts
@@ -53,7 +53,7 @@ class PodcastsController < ApplicationController
 
     respond_to do |format|
       if @podcast.save
-        format.html { redirect_to @podcast, notice: 'Podcast was successfully created.' }
+        format.html { redirect_to @podcast, notice: 'Neuer Podcast wurde angelegt.' }
         format.json { render json: @podcast, status: :created, location: @podcast }
       else
         format.html { render action: "new" }
@@ -69,7 +69,7 @@ class PodcastsController < ApplicationController
 
     respond_to do |format|
       if @podcast.update_attributes(params[:podcast])
-        format.html { redirect_to @podcast, notice: 'Podcast was successfully updated.' }
+        format.html { redirect_to @podcast, notice: 'Podcast erfolgreich gespeichert' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
