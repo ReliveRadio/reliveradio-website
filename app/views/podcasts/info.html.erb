@@ -17,8 +17,9 @@
     <div class="breaklines datafield"><strong>feedurl: </strong><%= @podcast.feedurl %></div>
     <div class="breaklines datafield"><strong>artistname: </strong><%= @podcast.artistname %></div>
     <div class="breaklines datafield"><strong>description: </strong><%= @podcast.description %></div>
-    <div class="editbuttons">
-        <%= link_to 'Zurück zum Sendeplan', root_path, :class => "small secondary button" %>
+    <div class="buttonbar">
+        <%= link_to 'Zum Sendeplan', root_path, :class => "small secondary button" %>
+        <%= link_to 'Zur Podcastübersicht', overview_url, :class => "small secondary button" %>
     </div>
   </div>
 </div>
