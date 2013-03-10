@@ -29,10 +29,10 @@
         <div class="breaklines"><strong>feedurl: </strong><%= podcast.feedurl %></div>
         <div class="breaklines"><strong>artistname: </strong><%= podcast.artistname %></div>
         <div class="breaklines"><strong>description: </strong><%= podcast.description %></div>
-        <ul class="button-group">
-            <li><%= link_to 'Bearbeiten', edit_podcast_path(podcast), :class => "button secondary" %></li>
-            <li><%= link_to 'Löschen', podcast, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button alert" %></li>
-        </ul>
+        <div class="editbuttons">
+            <%= link_to 'Bearbeiten', edit_podcast_path(podcast), :class => "small secondary button" %>
+            <%= link_to 'Löschen', podcast, method: :delete, data: { confirm: 'Are you sure?' }, :class => "small alert button" %>
+        </div>
       </div>
     </div>
 <% end %>
