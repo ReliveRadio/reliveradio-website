@@ -3,7 +3,6 @@
 		<h1>Sendeplan</h1>
 
 		<% @episodes.each do |episode| %>
-			<!-- find corresponding podcast in database -->
 			<% podcast = episode["db"] %>				
 				<h2><%= episode['artist_name'] %></h2>
 				<% if episode["isLive"] %>
@@ -12,7 +11,8 @@
 				<h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2>
 				<p><%= episode['track_title'] %></p>
 				<p><%= podcast.description %></p>
-				<div><%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></div>
+				<p><%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
+				<p><%= link_to "Mehr Infos", podcast %></p>
 		<% end %>	
 	</div>
 </div>
