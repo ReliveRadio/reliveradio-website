@@ -6,6 +6,9 @@
 	<% podcast = episode["db"] %>
 
 	<h2><%= episode['artist_name'] %></h2>
+	<% if episode["isLive"] %>
+		<span class="success label">Jetzt Live!</span>
+	<% end %>
 	<img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg">
 	<p><%= episode['track_title'] %></p>
 	<p><%= podcast.description %></p>

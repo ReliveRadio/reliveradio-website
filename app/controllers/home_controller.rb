@@ -18,16 +18,26 @@ class HomeController < ApplicationController
 		# save received episodes into episodes object
 		@episodes = result
 
+		# remove all passed podcasts from the episodes array
 		now_time = Time.now
 		@episodes.delete_if { |episode| Time.parse(episode["ends"])+1.hour < now_time }
 
+		# add some more metadata to episodes array
 		@episodes.each do |episode|
+			# set all to not being live (first one will be set to live after this iterator)
+			episode["isLive"] = false;
+
 			# adjust time
 			episode["starts"] = Time.parse(episode["starts"]) + 1.hour
 			episode["ends"] = Time.parse(episode["ends"]) + 1.hour
+			
 			# add database information to this object to easily access that in view
 			episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first
-	  end
+		end
+
+		# first episode in array is live!
+		@episodes.first["isLive"] = true;
+
 	else
 		puts "ERROR: Could not read todays episode list from server."
 	end
