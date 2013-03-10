@@ -12,7 +12,7 @@
 				<p><%= episode['track_title'] %></p>
 				<p><%= podcast.description %></p>
 				<p><%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
-				<p><%= link_to "Mehr Infos", podcast %></p>
+				<p><%= link_to "Mehr Infos", info_url(:slugintern => podcast.slugintern) %></p>
 		<% end %>	
 	</div>
 </div>

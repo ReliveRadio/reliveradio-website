@@ -4,7 +4,9 @@ Reliveradio::Application.routes.draw do
   resources :podcasts do
     collection {post :import}
   end
-
+  
+  # This route can be invoked with info_url(:id => podcast.id)
+  match 'podcast_info/:slugintern' => 'podcasts#info', :as => :info
 
   get "home/index"
 

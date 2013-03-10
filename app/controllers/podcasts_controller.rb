@@ -1,6 +1,15 @@
 class PodcastsController < ApplicationController
 
-  http_basic_authenticate_with :name => "test", :password => "test"
+  http_basic_authenticate_with :name => "test", :password => "test", :except => "info"
+
+  def info
+    @podcast = Podcast.where(["slugintern = ?", params[:slugintern]]).first
+
+    respond_to do |format|
+      format.html # info.html.erb
+      format.json { render json: @podcast }
+    end   
+  end
 
   def import
     Podcast.import(params[:file])
