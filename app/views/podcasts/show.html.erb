@@ -8,7 +8,9 @@
     <h2><img src="http://reliveradio.de/podcasts/logos/<%= @podcast.slugintern %>.jpg"></h2>
   </div>
   <div class="large-9 columns">
-    <span class="success label"><%= notice %></span>
+    <% if !notice.nil? %>
+      <span class="success label"><%= notice %></span>
+    <% end %>
     <h2 class="subheader breaklines"><%= @podcast.name %></h2>
     <div class="breaklines datafield"><strong>url: </strong><%= link_to @podcast.url, @podcast.url %></div>
     <div class="breaklines datafield"><strong>slugintern: </strong><%= @podcast.slugintern %></div>
