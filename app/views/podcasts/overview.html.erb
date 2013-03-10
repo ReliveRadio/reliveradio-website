@@ -4,23 +4,23 @@
     </div>
 </div>
 
+<% toggle = 0 %>
 <% @podcasts.each do |podcast| %>
-    <div class="row podcast">
-      <div class="large-3 columns">
-        <h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2>
+    <% if toggle%3 == 0 %>
+        <div class="row podcast">
+    <% end %>
+
+      <div class="large-4 columns">
+
+        <img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg">
+        <h2 class="subheader breaklines"><%= link_to podcast.name, podcast.url %></h2>
+        <p><%= podcast.description %></p>
+      
       </div>
-      <div class="large-9 columns">
-        <h2 class="subheader breaklines"><%= podcast.name %></h2>
-        <div class="breaklines datafield"><strong>url: </strong><%= link_to podcast.url, podcast.url %></div>
-        <div class="breaklines datafield"><strong>slugintern: </strong><%= podcast.slugintern %></div>
-        <div class="breaklines datafield"><strong>flattrhandle: </strong><%= podcast.flattrhandle %></div>
-        <div class="breaklines datafield"><strong>twitterhandle: </strong><%= podcast.twitterhandle %></div>
-        <div class="breaklines datafield"><strong>hoersuppeslug: </strong><%= podcast.hoersuppeslug %></div>
-        <div class="breaklines datafield"><strong>feedurl: </strong><%= podcast.feedurl %></div>
-        <div class="breaklines datafield"><strong>artistname: </strong><%= podcast.artistname %></div>
-        <div class="breaklines datafield"><strong>description: </strong><%= podcast.description %></div>
-      </div>
-    </div>
+    <% if toggle%3 == 2 %>
+        </div>
+    <% end %>
+    <% toggle = toggle + 1 %>
 <% end %>
 
 
