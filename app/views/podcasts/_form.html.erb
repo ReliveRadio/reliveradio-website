@@ -1,53 +1,67 @@
 <%= form_for(@podcast) do |f| %>
-  <% if @podcast.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@podcast.errors.count, "error") %> prohibited this podcast from being saved:</h2>
 
-      <ul>
-      <% @podcast.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+  <div class="row">
+    <div class="large-12 columns">
+      <!-- Error handling -->
+      <% if @podcast.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@podcast.errors.count, "error") %> prohibited this podcast from being saved:</h2>
+
+          <ul>
+          <% @podcast.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+<div class="row">
+  <div class="large-3 columns">
+    <img src="http://reliveradio.de/podcasts/logos/<%= @podcast.slugintern %>.jpg">
   </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+  <div class="large-9 columns">
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label "Webseite" %><br />
+      <%= f.text_field :url %>
+    </div>
+    <div class="field">
+      <%= f.label "SlugIntern" %><br />
+      <%= f.text_field :slugintern %>
+    </div>
+    <div class="field">
+      <%= f.label "FlattrHandle" %><br />
+      <%= f.text_field :flattrhandle %>
+    </div>
+    <div class="field">
+      <%= f.label "Twitter" %><br />
+      <%= f.text_field :twitterhandle %>
+    </div>
+    <div class="field">
+      <%= f.label "HörsuppeSlug" %><br />
+      <%= f.text_field :hoersuppeslug %>
+    </div>
+    <div class="field">
+      <%= f.label "FeedURL" %><br />
+      <%= f.text_field :feedurl %>
+    </div>
+    <div class="field">
+      <%= f.label "ArtistName" %><br />
+      <%= f.text_field :artistname %>
+    </div>
+    <div class="field">
+      <%= f.label "Beschreibung" %><br />
+      <%= f.text_area :description, :placeholder => "small-12.columns" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Speichern", :class => "small button" %>
+      <%= link_to 'Abbrechen', podcasts_path, :class => "small button alert", :confirm => "Vorsicht, alle Änderungen gehen verloren!" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :slugintern %><br />
-    <%= f.text_field :slugintern %>
-  </div>
-  <div class="field">
-    <%= f.label :flattrhandle %><br />
-    <%= f.text_field :flattrhandle %>
-  </div>
-  <div class="field">
-    <%= f.label :twitterhandle %><br />
-    <%= f.text_field :twitterhandle %>
-  </div>
-  <div class="field">
-    <%= f.label :hoersuppeslug %><br />
-    <%= f.text_field :hoersuppeslug %>
-  </div>
-  <div class="field">
-    <%= f.label :feedurl %><br />
-    <%= f.text_field :feedurl %>
-  </div>
-  <div class="field">
-    <%= f.label :artistname %><br />
-    <%= f.text_field :artistname %>
-  </div>
-  <div class="field">
-    <%= f.label "Beschreibung" %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>
