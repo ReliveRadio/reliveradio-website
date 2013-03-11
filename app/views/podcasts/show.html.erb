@@ -21,7 +21,7 @@
     <div class="breaklines datafield"><strong>artistname: </strong><%= @podcast.artistname %></div>
     <div class="breaklines datafield"><strong>description: </strong><%= @podcast.description %></div>
     <div class="buttonbar">
-        <%= link_to 'Zum Podcastverzeichnis', podcasts_path, :class => "small secondary button" %>
+        <%= link_to 'Zum Datenbankverzeichnis', podcasts_path, :class => "small secondary button" %>
         <%= link_to 'Bearbeiten', edit_podcast_path(@podcast), :class => "small secondary button" %>
         <%= link_to 'Löschen', @podcast, method: :delete, data: { confirm: 'Are you sure?' }, :class => "small alert button" %>
     </div>
