@@ -25,7 +25,7 @@
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
 					<h5><%= episode['track_title'] %></h5>
 					<p><% if !podcast.nil? %><%= podcast.description %><% end %></p>
-					<% if !podcast.nil? %><p><i class="icon-arrow-right"></i> <%= link_to "Mehr Informationen", info_url(:slugintern => podcast.slugintern) %></p><% end %>
+					<% if !podcast.nil? %><p><i class="icon-info-sign"></i> <%= link_to "Mehr Informationen", info_url(:slugintern => podcast.slugintern) %></p><% end %>
 				</div>
 			</div>
 			<hr />
