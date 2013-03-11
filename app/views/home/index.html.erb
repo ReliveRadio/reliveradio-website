@@ -9,11 +9,11 @@
 				<% if episode["isLive"] %>
 					<span class="success label">Jetzt Live!</span>
 				<% end %>
-				<h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2>
+				<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
 				<p><%= episode['track_title'] %></p>
-				<p><%= podcast.description %></p>
+				<p><% if !podcast.nil? %><%= podcast.description %><% end %></p>
 				<p><%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
-				<p><%= link_to "Mehr Infos", info_url(:slugintern => podcast.slugintern) %></p>
+				<% if !podcast.nil? %><p><%= link_to "Mehr Infos", info_url(:slugintern => podcast.slugintern) %></p><% end %>
 		<% end %>	
 	</div>
 </div>
