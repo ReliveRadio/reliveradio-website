@@ -9,39 +9,7 @@
 <div class="row">
 	<div class="large-9 columns">
 		<div class="panel">
-			<p><audio id="player" src="http://stream.reliveradio.de:8000/24.mp3"></p>
-			<div id="play" class="button secondary small">Play</div>
-			<script>
-				// using jQuery
-				var player = new MediaElementPlayer('#player',{
-				    startVolume: 0.8,
-				    // useful for <audio> player loops
-				    loop: false,
-				    // enables Flash and Silverlight to resize to content size
-				    enableAutosize: true,
-				    // the order of controls you want on the control bar (and other plugins below)
-				    features: ['playpause','volume'],
-				    audioWidth: 130,
-				    // Hide controls when playing and mouse is not over the video
-				    alwaysShowControls: false,
-				    // force iPad's native controls
-				    iPadUseNativeControls: true,
-				    // force iPhone's native controls
-				    iPhoneUseNativeControls: true, 
-				    // force Android's native controls
-				    AndroidUseNativeControls: true,
-				    enableKeyboard: true,
-				    // when this player starts, it will pause other players
-				    pauseOtherPlayers: true,
-				    // array of keyboard commands
-				    keyActions: []
-				});
-				$("#play").click(function() {
-					// player.pause();
-					// player.setSrc('mynewfile.mp4');
-					player.play();
-				});
-			</script>
+			<div id="play" class="button"><i class="icon-play"></i> Livestream starten</div>
 		</div>
 		<% @episodes.each do |episode| %>
 			<% podcast = episode["db"] %>				
@@ -67,6 +35,7 @@
 	<div class="large-3 columns">
 		<div class="panel">
 			<h4>Livestream</h4>
+			<p><audio id="player" src="http://stream.reliveradio.de:8000/24.mp3"></p>
 			<p>Hier kommen Stream URLs hin</p>
 			<h4>Mehr Infos</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus mollitia ullam exercitationem ipsam sequi tempore vel nesciunt optio asperiores itaque nulla quia laudantium numquam. Ipsa totam facere possimus maiores qui.</p>
@@ -74,4 +43,34 @@
 	</div>
 </div>
 
-
+<script>
+	// using jQuery
+	var player = new MediaElementPlayer('#player',{
+	    startVolume: 0.8,
+	    // useful for <audio> player loops
+	    loop: false,
+	    // enables Flash and Silverlight to resize to content size
+	    enableAutosize: true,
+	    // the order of controls you want on the control bar (and other plugins below)
+	    features: ['playpause','volume'],
+	    audioWidth: 130,
+	    // Hide controls when playing and mouse is not over the video
+	    alwaysShowControls: false,
+	    // force iPad's native controls
+	    iPadUseNativeControls: true,
+	    // force iPhone's native controls
+	    iPhoneUseNativeControls: true, 
+	    // force Android's native controls
+	    AndroidUseNativeControls: true,
+	    enableKeyboard: true,
+	    // when this player starts, it will pause other players
+	    pauseOtherPlayers: true,
+	    // array of keyboard commands
+	    keyActions: []
+	});
+	$("#play").click(function() {
+		// player.pause();
+		// player.setSrc('mynewfile.mp4');
+		player.play();
+	});
+</script>
