@@ -11,16 +11,17 @@
 		<div class="large-3 columns">
 			<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
 			<p><%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
-			
 		</div>
 		<div class="large-9 columns">
-			<h2><%= episode['artist_name'] %></h2>
-			<% if episode["isLive"] %>
-				<p><span class="success label">Jetzt Live!</span></p>
-			<% end %>
-			<p><%= episode['track_title'] %></p>
+			<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
+			<p>
+				<% if episode["isLive"] %>
+					<span class="success label">Jetzt Live!</span>
+				<% end %>
+				<%= episode['track_title'] %>
+			</p>
 			<p><% if !podcast.nil? %><%= podcast.description %><% end %></p>
-			<% if !podcast.nil? %><p><%= link_to "Mehr Infos", info_url(:slugintern => podcast.slugintern) %></p><% end %>
+			<% if !podcast.nil? %><p><%= link_to "Mehr Informationen", info_url(:slugintern => podcast.slugintern) %></p><% end %>
 		</div>
 	</div>
 <% end %>	
