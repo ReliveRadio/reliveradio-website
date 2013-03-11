@@ -85,13 +85,25 @@ class PodcastsController < ApplicationController
   def update
     @podcast = Podcast.find(params[:id])
 
-    respond_to do |format|
-      if @podcast.update_attributes(params[:podcast])
-        format.html { redirect_to @podcast, notice: 'Podcast erfolgreich gespeichert' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @podcast.errors, status: :unprocessable_entity }
+    if params[:import_from_feed]
+      respond_to do |format|
+        if @podcast.update_attributes(params[:podcast])
+          format.html { redirect_to edit_podcast_path(@podcast), notice: 'IMPORT' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @podcast.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        if @podcast.update_attributes(params[:podcast])
+          format.html { redirect_to @podcast, notice: 'Podcast erfolgreich gespeichert' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @podcast.errors, status: :unprocessable_entity }
+        end
       end
     end
   end

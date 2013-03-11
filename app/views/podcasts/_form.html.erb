@@ -57,6 +57,7 @@
     <div class="field">
       <%= f.label "Beschreibung" %><br />
       <%= f.text_area :description, :placeholder => "Kurzbeschreibung des Podcasts." %>
+      <%= f.submit "Beschreibung aus dem Feed importieren", :name => "import_from_feed", :class => "small button" %>
     </div>
     <div class="actions">
       <%= f.submit "Speichern", :class => "small button" %>
