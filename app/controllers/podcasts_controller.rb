@@ -1,3 +1,5 @@
+require 'feedzirra'
+
 class PodcastsController < ApplicationController
 
   http_basic_authenticate_with :name => "test", :password => "test", :except => ["info", "overview"]
@@ -22,7 +24,7 @@ class PodcastsController < ApplicationController
 
   def import
     Podcast.import(params[:file])
-    redirect_to podcasts_path, notice: "Daten erfolgreich importiert."
+    redirect_to podcasts_path, notice: "Daten erfolgreich importiert"
   end
 
   # GET /podcasts
@@ -71,7 +73,7 @@ class PodcastsController < ApplicationController
 
     respond_to do |format|
       if @podcast.save
-        format.html { redirect_to @podcast, notice: 'Neuer Podcast wurde angelegt.' }
+        format.html { redirect_to @podcast, notice: 'Neuer Podcast wurde angelegt' }
         format.json { render json: @podcast, status: :created, location: @podcast }
       else
         format.html { render action: "new" }
@@ -88,7 +90,10 @@ class PodcastsController < ApplicationController
     if params[:import_from_feed]
       respond_to do |format|
         if @podcast.update_attributes(params[:podcast])
-          format.html { redirect_to edit_podcast_path(@podcast), notice: 'IMPORT' }
+          feed = Feedzirra::Feed.fetch_and_parse(@podcast.feedurl)
+          @podcast.description = feed.description
+          @podcast.save
+          format.html { redirect_to edit_podcast_path(@podcast), notice: 'Beschreibung erfolgreich aus dem Feed importiert' }
           format.json { head :no_content }
         else
           format.html { render action: "edit" }
