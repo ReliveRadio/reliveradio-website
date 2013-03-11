@@ -26,6 +26,11 @@ gem 'json'
 gem 'feedzirra'
 gem "font-awesome-rails"
 
+## TESTING
+
+gem 'ruby-prof'
+gem 'test-unit'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
