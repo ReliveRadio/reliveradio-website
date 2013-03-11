@@ -13,7 +13,11 @@
 			<div class="row episode">
 				<div class="large-3 columns">
 					<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
-					<p><i class="icon-bell"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
+					<% if episode["isLive"] %>
+						<p><span class="isLive"><i class="icon-volume-up"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></span></p>
+					<% else %>
+						<p><i class="icon-bell"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
+					<% end %>
 				</div>
 				<div class="large-9 columns">
 					<% if episode["isLive"] %>
