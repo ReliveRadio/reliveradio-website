@@ -22,6 +22,10 @@
     <img src="http://reliveradio.de/podcasts/logos/<%= @podcast.slugintern %>.jpg">
   </div>
   <div class="large-9 columns">
+    <% if !notice.nil? %>
+      <p><span class="success label"><%= notice %></span></p>
+    <% end %>
+
     <div class="field">
       <%= f.label :name %><br />
       <%= f.text_field :name %>

@@ -71,13 +71,28 @@ class PodcastsController < ApplicationController
   def create
     @podcast = Podcast.new(params[:podcast])
 
-    respond_to do |format|
-      if @podcast.save
-        format.html { redirect_to @podcast, notice: 'Neuer Podcast wurde angelegt' }
-        format.json { render json: @podcast, status: :created, location: @podcast }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @podcast.errors, status: :unprocessable_entity }
+    if params[:import_from_feed]
+      respond_to do |format|
+        if @podcast.save
+          feed = Feedzirra::Feed.fetch_and_parse(@podcast.feedurl)
+          @podcast.description = feed.itunes_summary
+          @podcast.save
+          format.html { redirect_to edit_podcast_path(@podcast), notice: 'Neuer Podcast angelegt und Beschreibung erfolgreich aus dem Feed importiert' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @podcast.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        if @podcast.save
+          format.html { redirect_to @podcast, notice: 'Neuer Podcast angelegt' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @podcast.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -91,7 +106,7 @@ class PodcastsController < ApplicationController
       respond_to do |format|
         if @podcast.update_attributes(params[:podcast])
           feed = Feedzirra::Feed.fetch_and_parse(@podcast.feedurl)
-          @podcast.description = feed.description
+          @podcast.description = feed.itunes_summary
           @podcast.save
           format.html { redirect_to edit_podcast_path(@podcast), notice: 'Beschreibung erfolgreich aus dem Feed importiert' }
           format.json { head :no_content }
