@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require mediaelement_rails
 //= require_tree .
 
 $(document).foundation();

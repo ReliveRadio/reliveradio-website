@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'json'
 gem 'feedzirra'
 gem "font-awesome-rails"
+gem "mediaelement_rails"
 
 ## TESTING
 
