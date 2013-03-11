@@ -8,9 +8,6 @@
 
 <div class="row">
 	<div class="large-9 columns">
-		<div class="panel">
-			<div id="play" class="button"><i class="icon-play"></i> Livestream starten</div>
-		</div>
 		<% @episodes.each do |episode| %>
 			<% podcast = episode["db"] %>				
 			<div class="row episode">
@@ -20,7 +17,7 @@
 				</div>
 				<div class="large-9 columns">
 					<% if episode["isLive"] %>
-						<h5><span class="success label"><i class="icon-volume-up"></i> Jetzt Live!</span></h5>
+						<div id="play" class="button success"><i class="icon-play"></i> Jetzt im Livestream hören</div>
 					<% end %>
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
 					<h5><%= episode['track_title'] %></h5>
