@@ -29,6 +29,7 @@
 						<div id="duration"></div>
 						<div id="timeleft"></div>
 						<div id="percentplayed"></div>
+						<div id="percentleft"></div>
 					<% end %>
 					<!-- NAME TRACK DESCRIPTION -->
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
@@ -79,7 +80,8 @@
 	var progressbar = $("#liveprogress");
 	var duration_view = $("#duration");
 	var time_left_view = $("#timeleft");
-	var percent_played = $("#percentplayed");
+	var percent_played_view = $("#percentplayed");
+	var percent_left_view = $("#percentleft");
 
 	function update_progressbar(start_time, end_time) {
 	    // convert dates to milliseconds
@@ -91,15 +93,16 @@
 		var duration = Math.abs(end - start);
 		var played = Math.abs(now - start);
 		// more percent math
-		var percent_left = (played / duration) * 100;
-		var percentplayed = Math.floor(100 - percent_left);
+		var percent_played = (played / duration) * 100;
+		var percent_left = Math.floor(100 - percent_played);
 		var time_left = Math.abs(end - now);
 
 		// update view elements
-		progressbar.width(percent_left + '%');
+		progressbar.width(percent_played + '%');
 		duration_view.text("Insgesamt " + Math.floor(duration / 60 / 1000) + " Minuten");
 		time_left_view.text("Noch " + Math.floor(time_left / 60 / 1000) + " Minuten");
-		percent_played.text(percentplayed + "%");
+		percent_played_view.text(Math.floor(percent_played) + "%");
+		percent_left_view.text(percent_left + "%");
 	}
 	
 	// data is passed in by rails server here
