@@ -16,9 +16,15 @@
 					<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
 					<!-- EPISODE PLAYTIME -->
 					<% if episode["isLive"] %>
-						<p><span class="isLive"><i class="icon-volume-up"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></span></p>
+						<div><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div>
+						<div><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
+						<div><i class="icon-time"></i> <span id="duration"></span> Minuten</div>
+						<div><i class="icon-time"></i> <span id="timeleft"></span> Minuten</div>
+						<div><span id="percentplayed"></span></div>
+						<div><span id="percentleft"></span></div>
 					<% else %>
-						<p><i class="icon-bell"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
+						<div><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div>
+						<div><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
 					<% end %>
 				</div>
 				<div class="small-9 columns">
@@ -26,10 +32,6 @@
 					<% if episode["isLive"] %>
 						<div id="play" class="button success"><i class="icon-play"></i> Jetzt im Livestream hören</div>
 						<div class="progress"><span id="liveprogress" class="meter" style="width: 0%"></span></div>
-						<div id="duration"></div>
-						<div id="timeleft"></div>
-						<div id="percentplayed"></div>
-						<div id="percentleft"></div>
 					<% end %>
 					<!-- NAME TRACK DESCRIPTION -->
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
@@ -99,8 +101,8 @@
 
 		// update view elements
 		progressbar.width(percent_played + '%');
-		duration_view.text("Insgesamt " + Math.floor(duration / 60 / 1000) + " Minuten");
-		time_left_view.text("Noch " + Math.floor(time_left / 60 / 1000) + " Minuten");
+		duration_view.text(Math.floor(duration / 60 / 1000));
+		time_left_view.text(Math.floor(time_left / 60 / 1000));
 		percent_played_view.text(Math.floor(percent_played) + "%");
 		percent_left_view.text(percent_left + "%");
 	}
