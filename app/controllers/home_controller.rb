@@ -29,8 +29,12 @@ class HomeController < ApplicationController
 			episode["isLive"] = false;
 
 			# adjust time
-			episode["starts"] = Time.parse(episode["starts"]) + 1.hour
-			episode["ends"] = Time.parse(episode["ends"]) + 1.hour
+			starts = Time.parse(episode["starts"]) + 1.hour
+			ends = Time.parse(episode["ends"]) + 1.hour
+			episode["starts"] = starts
+			episode["ends"] = ends
+			episode["played_time"] = now_time - starts
+			episode["duration"] = ends - starts
 
 			# add database information to this object to easily access that in view
 			episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first
