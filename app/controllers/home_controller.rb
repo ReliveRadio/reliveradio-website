@@ -33,8 +33,6 @@ class HomeController < ApplicationController
 			ends = Time.parse(episode["ends"]) + 1.hour
 			episode["starts"] = starts
 			episode["ends"] = ends
-			episode["played_time"] = now_time - starts
-			episode["duration"] = ends - starts
 
 			# add database information to this object to easily access that in view
 			episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first

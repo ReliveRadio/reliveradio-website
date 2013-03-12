@@ -25,29 +25,34 @@
 					<!-- START LIVESTREAM PLAYER BUTTON -->
 					<% if episode["isLive"] %>
 						<div id="play" class="button success"><i class="icon-play"></i> Jetzt im Livestream hören</div>
-						<div class="progress"><span id="liveprogress" class="meter"</span></div>
+						<div class="progress"><span id="liveprogress" class="meter" style="width: 0%"></span></div>
+						<div id="duration"></div>
+						<div id="timeleft"></div>
+						<div id="percentplayed"></div>
 					<% end %>
 					<!-- NAME TRACK DESCRIPTION -->
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
 					<h5><%= episode['track_title'] %></h5>
 					<p class="hide-for-small"><% if !podcast.nil? %><%= podcast.description %><% end %></p>
-					<!-- SOCIAL LINKS - MORE METAINFO FOR PODCAST -->
-				    <ul class="inline-list hide-for-small">
-				      <!-- WEBSITE -->
-				      <% if !podcast.url.blank? %><li><a href="<%= podcast.url %>"><i class="icon-globe"></i> Webseite</a></li><% end %>
-				      <!-- FEED -->
-				      <% if !podcast.feedurl.blank? %><li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>"><i class="icon-rss"></i> Abonnieren</a></li><% end %>
-				      <!-- TWITTER -->
-				      <% if !podcast.twitterhandle.blank? %><li><a href="http://www.twitter.com/<%= podcast.twitterhandle %>"><i class="icon-twitter"></i> Twitter</a></li><% end %>
-				      <!-- FLATTR -->
-				      <% if !podcast.flattrhandle.blank? %><li>
-				        <a href="https://flattr.com/submit/auto?user_id=<%= podcast.flattrhandle %>&url=http://reliveradio.de/<%= podcast.slugintern %>&title=<%= podcast.name %> im ReliveRadio&language=de&category=audio"><i class="icon-heart"></i> Flattr</a>
-				      </li><% end %>
-				      <!-- HOERSUPPE -->
-				      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
-				    </ul>
-				    <!-- MORE INFO LINK FOR MOBILE VIEW -->
-					<% if !podcast.nil? %><p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p><% end %>
+					<% if !podcast.nil? %>
+						<!-- SOCIAL LINKS - MORE METAINFO FOR PODCAST -->
+					    <ul class="inline-list hide-for-small">
+					      <!-- WEBSITE -->
+					      <% if !podcast.url.blank? %><li><a href="<%= podcast.url %>"><i class="icon-globe"></i> Webseite</a></li><% end %>
+					      <!-- FEED -->
+					      <% if !podcast.feedurl.blank? %><li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>"><i class="icon-rss"></i> Abonnieren</a></li><% end %>
+					      <!-- TWITTER -->
+					      <% if !podcast.twitterhandle.blank? %><li><a href="http://www.twitter.com/<%= podcast.twitterhandle %>"><i class="icon-twitter"></i> Twitter</a></li><% end %>
+					      <!-- FLATTR -->
+					      <% if !podcast.flattrhandle.blank? %><li>
+					        <a href="https://flattr.com/submit/auto?user_id=<%= podcast.flattrhandle %>&url=http://reliveradio.de/<%= podcast.slugintern %>&title=<%= podcast.name %> im ReliveRadio&language=de&category=audio"><i class="icon-heart"></i> Flattr</a>
+					      </li><% end %>
+					      <!-- HOERSUPPE -->
+					      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
+					    </ul>
+					    <!-- MORE INFO LINK FOR MOBILE VIEW -->
+						<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
+					<% end %>
 				</div>
 			</div>
 			<hr />
@@ -69,29 +74,54 @@
 
 <!-- PROGRESS BAR UPDATER -->
 <script>
+
 	// catch the progressbar from dom
 	var progressbar = $("#liveprogress");
-	// start data is passed in by rails server here
-	var played = <%= @episodes.first['played_time'] %>;
-	var duration = <%= @episodes.first['duration'] %>;
-	//alert(played / 60 + "," + duration / 60);
-	// calc played percent
-	var percent = (played / duration) * 100;
-	// set at startup
-	progressbar.width(percent + '%');
+	var duration_view = $("#duration");
+	var time_left_view = $("#timeleft");
+	var percent_played = $("#percentplayed");
+
+	function update_progressbar(start_time, end_time) {
+	    // convert dates to milliseconds
+	    var start = start_time.getTime()
+	    var end = end_time.getTime()
+		var now = new Date().getTime();
+		
+		// do math
+		var duration = Math.abs(end - start);
+		var played = Math.abs(now - start);
+		// more percent math
+		var percent_left = (played / duration) * 100;
+		var percentplayed = Math.floor(100 - percent_left);
+		var time_left = Math.abs(end - now);
+
+		// update view elements
+		progressbar.width(percent_left + '%');
+		duration_view.text("Insgesamt " + Math.floor(duration / 60 / 1000) + " Minuten");
+		time_left_view.text("Noch " + Math.floor(time_left / 60 / 1000) + " Minuten");
+		percent_played.text(percentplayed + "%");
+	}
+	
+	// data is passed in by rails server here
+	// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+	var starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+	var ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+	starts.setMonth(starts.getMonth() - 1);
+	ends.setMonth(ends.getMonth() - 1);
+
+	update_progressbar(starts, ends);
+
 	// refresh time in milliseconds
 	// this refreshes every 1 minute
 	var intervalTime = 1 * 60 * 1000;
 	// start timer
 	window.setInterval(function(){
-		// recalc played time in percent
-		percent = (played / duration) * 100;
-		// set new progressbar width
-		progressbar.width(percent + '%');
-		// reduce played time by interval time
-		played += intervalTime / 1000;
-		// if podcast ended, no time is played so reload
-		if(played > duration) location.reload();
+		update_progressbar(starts, ends);
+		// check if podcast played completely
+		var now = new Date();
+		if (now > ends) {
+			location.reload();
+		}
 	}, intervalTime);
 </script>
 
