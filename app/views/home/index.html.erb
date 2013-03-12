@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="large-12 columns">
+	<div class="small-12 columns">
 		<h1>ReliveRadio Sendeplan</h1>
 		<h4 class="subheader">Das ReliveRadio sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. Das “Sendebetrieb” begann erst Mitte Oktober 2012, weshalb sich das Projekt noch in einer experimentellen Anfangsphase befindet. Der Radiostream lief seitdem jedoch nahezu unterbrechungsfrei.</h4>		
 		<hr />
@@ -11,7 +11,7 @@
 		<% @episodes.each do |episode| %>
 			<% podcast = episode["db"] %>				
 			<div class="row episode">
-				<div class="large-3 columns">
+				<div class="small-3 columns">
 					<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
 					<% if episode["isLive"] %>
 						<p><span class="isLive"><i class="icon-volume-up"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></span></p>
@@ -19,7 +19,7 @@
 						<p><i class="icon-bell"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></p>
 					<% end %>
 				</div>
-				<div class="large-9 columns">
+				<div class="small-9 columns">
 					<% if episode["isLive"] %>
 						<div id="play" class="button success"><i class="icon-play"></i> Jetzt im Livestream hören</div>
 					<% end %>
