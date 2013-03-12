@@ -9,10 +9,12 @@
 <div class="row">
 	<div class="large-9 columns">
 		<% @episodes.each do |episode| %>
-			<% podcast = episode["db"] %>				
+			<% podcast = episode["db"] %>
 			<div class="row episode">
 				<div class="small-3 columns">
+					<!-- EPISODE PODCAST IMAGE -->
 					<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
+					<!-- EPISODE PLAYTIME -->
 					<% if episode["isLive"] %>
 						<p><span class="isLive"><i class="icon-volume-up"></i> <%= episode['starts'].strftime("%H:%M") %> - <%= episode['ends'].strftime("%H:%M") %></span></p>
 					<% else %>
