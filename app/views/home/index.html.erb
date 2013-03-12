@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="small-12 columns">
 		<h1>ReliveRadio Sendeplan</h1>
-		<h4 class="subheader">Das ReliveRadio sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. Das “Sendebetrieb” begann erst Mitte Oktober 2012, weshalb sich das Projekt noch in einer experimentellen Anfangsphase befindet. Der Radiostream lief seitdem jedoch nahezu unterbrechungsfrei.</h4>		
+		<h4 class="subheader hide-for-small">Das ReliveRadio sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. Das “Sendebetrieb” begann erst Mitte Oktober 2012, weshalb sich das Projekt noch in einer experimentellen Anfangsphase befindet. Der Radiostream lief seitdem jedoch nahezu unterbrechungsfrei.</h4>		
 		<hr />
 	</div>
 </div>
@@ -25,8 +25,17 @@
 					<% end %>
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
 					<h5><%= episode['track_title'] %></h5>
-					<p><% if !podcast.nil? %><%= podcast.description %><% end %></p>
-					<% if !podcast.nil? %><p><i class="icon-info-sign"></i> <%= link_to "Mehr Informationen", info_url(:slugintern => podcast.slugintern) %></p><% end %>
+					<p class="hide-for-small"><% if !podcast.nil? %><%= podcast.description %><% end %></p>
+				    <ul class="inline-list hide-for-small">
+				      <% if !podcast.url.blank? %><li><a href="<%= podcast.url %>"><i class="icon-globe"></i> Webseite</a></li><% end %>
+				      <% if !podcast.feedurl.blank? %><li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>"><i class="icon-rss"></i> Abonnieren</a></li><% end %>
+				      <% if !podcast.twitterhandle.blank? %><li><a href="http://www.twitter.com/<%= podcast.twitterhandle %>"><i class="icon-twitter"></i> Twitter</a></li><% end %>
+				      <% if !podcast.flattrhandle.blank? %><li>
+				        <a href="https://flattr.com/submit/auto?user_id=<%= podcast.flattrhandle %>&url=http://reliveradio.de/<%= podcast.slugintern %>&title=<%= podcast.name %> im ReliveRadio&language=de&category=audio"><i class="icon-heart"></i> Flattr</a>
+				      </li><% end %>
+				      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
+				    </ul>
+					<% if !podcast.nil? %><p class="show-for-small"><i class="icon-info-sign"></i> <%= link_to "Mehr Informationen", info_url(:slugintern => podcast.slugintern) %></p><% end %>
 				</div>
 			</div>
 			<hr />
