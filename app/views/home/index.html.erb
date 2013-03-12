@@ -91,7 +91,7 @@
 		// reduce played time by interval time
 		played += intervalTime / 1000;
 		// if podcast ended, no time is played so reload
-		if(played < 0) location.reload();
+		if(played > duration) location.reload();
 	}, intervalTime);
 </script>
 
