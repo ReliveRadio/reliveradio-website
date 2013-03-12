@@ -35,7 +35,7 @@
 				      </li><% end %>
 				      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
 				    </ul>
-					<% if !podcast.nil? %><p class="show-for-small"><i class="icon-info-sign"></i> <%= link_to "Mehr Informationen", info_url(:slugintern => podcast.slugintern) %></p><% end %>
+					<% if !podcast.nil? %><p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p><% end %>
 				</div>
 			</div>
 			<hr />
