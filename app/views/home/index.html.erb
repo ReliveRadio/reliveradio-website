@@ -19,6 +19,7 @@
 						<div><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div>
 						<div><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
 						<div><i class="icon-time"></i> <span id="duration"></span> Minuten</div>
+						<div class="progress hide-for-small"><span class="meter liveprogress" style="width: 0%"></span></div>							
 						<div><i class="icon-time"></i> <span id="timeleft"></span> Minuten</div>
 						<div><span id="percentplayed"></span></div>
 						<div><span id="percentleft"></span></div>
@@ -28,14 +29,10 @@
 					<% end %>
 				</div>
 				<div class="small-9 columns">
-					<!-- START LIVESTREAM PLAYER BUTTON -->
-					<% if episode["isLive"] %>
-						<div id="play" class="button success"><i class="icon-play"></i> Jetzt im Livestream hören</div>
-						<div class="progress"><span id="liveprogress" class="meter" style="width: 0%"></span></div>
-					<% end %>
 					<!-- NAME TRACK DESCRIPTION -->
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
 					<h5><%= episode['track_title'] %></h5>
+					<% if episode["isLive"] %><div class="progress show-for-small"><span class="meter liveprogress" style="width: 0%"></span></div><% end %>
 					<p class="hide-for-small"><% if !podcast.nil? %><%= podcast.description %><% end %></p>
 					<% if !podcast.nil? %>
 						<!-- SOCIAL LINKS - MORE METAINFO FOR PODCAST -->
@@ -55,6 +52,10 @@
 					    </ul>
 					    <!-- MORE INFO LINK FOR MOBILE VIEW -->
 						<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
+					<% end %>
+					<!-- START LIVESTREAM PLAYER BUTTON -->
+					<% if episode["isLive"] %>
+						<div id="play" class="button success"><i class="icon-play"></i> Jetzt im Livestream hören</div>							
 					<% end %>
 				</div>
 			</div>
@@ -79,7 +80,7 @@
 <script>
 
 	// catch the progressbar from dom
-	var progressbar = $("#liveprogress");
+	var progressbars = $(".liveprogress");
 	var duration_view = $("#duration");
 	var time_left_view = $("#timeleft");
 	var percent_played_view = $("#percentplayed");
@@ -100,7 +101,9 @@
 		var time_left = Math.abs(end - now);
 
 		// update view elements
-		progressbar.width(percent_played + '%');
+		progressbars.each(function() {
+  			$(this).width(percent_played + '%');
+		});
 		duration_view.text(Math.floor(duration / 60 / 1000));
 		time_left_view.text(Math.floor(time_left / 60 / 1000));
 		percent_played_view.text(Math.floor(percent_played) + "%");
