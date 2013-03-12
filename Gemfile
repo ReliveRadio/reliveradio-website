@@ -27,6 +27,8 @@ gem 'feedzirra'
 gem "font-awesome-rails"
 gem "mediaelement_rails"
 
+gem 'thin'
+
 ## TESTING
 
 gem 'ruby-prof'
