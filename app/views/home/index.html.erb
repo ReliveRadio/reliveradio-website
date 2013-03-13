@@ -64,7 +64,7 @@
 					<% end %>
 					<!-- START LIVESTREAM PLAYER BUTTON -->
 					<% if episode["isLive"] %>
-						<div id="livestreambutton" class="button success"></div>
+						<div class="livestreambutton button success"></div>
 					<% end %>
 				</div>
 			</div>
@@ -76,6 +76,7 @@
 		<div class="panel">
 			<h4>Livestream</h4>
 			<p><audio id="player" src="http://stream.reliveradio.de:8000/24.mp3"></p>
+			<div class="livestreambutton button small success"></div>
 			<p>Hier kommen Stream URLs hin</p>
 
 			<h4>Work in Progress</h4>
@@ -180,25 +181,32 @@
 	    keyActions: []
 	});
 
-	var livestreambutton = $("#livestreambutton")
-	livestreambutton.click(startPlayer);
-	livestreambutton.html('<i class="icon-play"></i> Livestream starten.');
+	var livestreambuttons = $(".livestreambutton")
+
+	livestreambuttons.each(function() {
+		$(this).click(startPlayer);
+		$(this).html('<i class="icon-play"></i> Livestream starten');
+	});
 
 	function startPlayer() {
 		// player.setSrc('mynewfile.mp4');
 		player.play();
-		livestreambutton.click(pausePlayer);
-		livestreambutton.html('<i class="icon-pause"></i> Livestream stoppen.');
-		livestreambutton.removeClass('success');
-		livestreambutton.addClass('alert');
+		livestreambuttons.each(function() {
+			$(this).click(pausePlayer);
+			$(this).html('<i class="icon-pause"></i> Livestream stoppen');
+			$(this).removeClass('success');
+			$(this).addClass('alert');
+		});		
 	}
 
 	function pausePlayer() {
 		// player.setSrc('mynewfile.mp4');
 		player.pause();
-		livestreambutton.click(startPlayer);
-		livestreambutton.html('<i class="icon-play"></i> Livestream starten.');
-		livestreambutton.removeClass('alert');
-		livestreambutton.addClass('success');
+		livestreambuttons.each(function() {
+			$(this).click(startPlayer);
+			$(this).html('<i class="icon-play"></i> Livestream starten');
+			$(this).removeClass('alert');
+			$(this).addClass('success');
+		});		
 	}
 </script>
