@@ -64,7 +64,7 @@
 					<% end %>
 					<!-- START LIVESTREAM PLAYER BUTTON -->
 					<% if episode["isLive"] %>
-						<div id="play" class="button success"><i class="icon-play"></i> Jetzt im Livestream hören</div>							
+						<div id="livestreambutton" class="button success"></div>
 					<% end %>
 				</div>
 			</div>
@@ -179,9 +179,26 @@
 	    // array of keyboard commands
 	    keyActions: []
 	});
-	$("#play").click(function() {
-		// player.pause();
+
+	var livestreambutton = $("#livestreambutton")
+	livestreambutton.click(startPlayer);
+	livestreambutton.html('<i class="icon-play"></i> Livestream starten.');
+
+	function startPlayer() {
 		// player.setSrc('mynewfile.mp4');
 		player.play();
-	});
+		livestreambutton.click(pausePlayer);
+		livestreambutton.html('<i class="icon-pause"></i> Livestream stoppen.');
+		livestreambutton.removeClass('success');
+		livestreambutton.addClass('alert');
+	}
+
+	function pausePlayer() {
+		// player.setSrc('mynewfile.mp4');
+		player.pause();
+		livestreambutton.click(startPlayer);
+		livestreambutton.html('<i class="icon-play"></i> Livestream starten.');
+		livestreambutton.removeClass('alert');
+		livestreambutton.addClass('success');
+	}
 </script>
