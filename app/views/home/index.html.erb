@@ -64,7 +64,7 @@
 					<% end %>
 					<!-- START LIVESTREAM PLAYER BUTTON -->
 					<% if episode["isLive"] %>
-						<div class="livestreambutton button success"></div>
+						<div class="livestreambutton button success show-for-small"></div>
 					<% end %>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 	<div class="large-3 columns">
 		<div class="panel">
 			<h4>Livestream</h4>
-			<p><audio id="player" src="http://stream.reliveradio.de:8000/24.mp3"></p>
+			<p style="display: none"><audio id="player" src="http://stream.reliveradio.de:8000/24.mp3"></p>
 			<div class="livestreambutton button small success"></div>
 			<p>Hier kommen Stream URLs hin</p>
 
