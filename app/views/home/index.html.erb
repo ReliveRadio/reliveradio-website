@@ -15,15 +15,27 @@
 					<!-- EPISODE PODCAST IMAGE -->
 					<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
 					<!-- EPISODE PLAYTIME -->
-					<div><strong><i class="icon-play"></i> Beginn:</strong> <%= episode['starts'].strftime("%H:%M") %></div>
-					<div><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends'].strftime("%H:%M") %></div>
-					<div><strong><i class="icon-time"></i> Dauer:</strong> <%= episode['duration'] %> Min.</div>
-					<% if episode["isLive"] %>
-						<div><strong><i class="icon-time"></i> Rest:</strong> <span id="timeleft"></span> Min.</div>
-						<div class="progress hide-for-small"><span class="meter liveprogress" style="width: 0%"></span></div>							
-<!-- 						<div><span id="percentplayed"></span></div>
-						<div><span id="percentleft"></span></div> -->
-					<% end %>
+					<div class="show-for-small playtime-small">
+						<div class="time-info"><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div>
+						<div class="time-info"><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
+						<div class="time-info"><i class="icon-time"></i> <%= episode['duration'] %> Min.</div>
+						<% if episode["isLive"] %>
+							<div class="time-info"><i class="icon-arrow-right"></i> <span class="timeleft"></span> Min.</div>
+							<!-- <div class="time-info"><span class="percentplayed"></span></div>
+							<div class="time-info"><span class="percentleft"></span></div> -->
+						<% end %>
+					</div>
+					<div class="hide-for-small playtime-large">
+						<div class="time-info"><strong><i class="icon-play"></i> Beginn:</strong> <%= episode['starts'].strftime("%H:%M") %></div>
+						<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends'].strftime("%H:%M") %></div>
+						<div class="time-info"><strong><i class="icon-time"></i> Dauer:</strong> <%= episode['duration'] %> Min.</div>
+						<% if episode["isLive"] %>
+							<div class="time-info"><strong><i class="icon-arrow-right"></i> Rest:</strong> <span class="timeleft"></span> Min.</div>
+							<div class="progress time-info"><span class="meter liveprogress" style="width: 0%"></span></div>
+							<!-- <div class="time-info"><span class="percentplayed"></span></div>
+							<div class="time-info"><span class="percentleft"></span></div> -->
+						<% end %>
+					</div>
 				</div>
 				<div class="small-9 columns">
 					<!-- NAME TRACK DESCRIPTION -->
@@ -78,9 +90,9 @@
 
 	// catch the progressbar from dom
 	var progressbars = $(".liveprogress");
-	var time_left_view = $("#timeleft");
-	var percent_played_view = $("#percentplayed");
-	var percent_left_view = $("#percentleft");
+	var time_left_views = $(".timeleft");
+	var percent_played_views = $(".percentplayed");
+	var percent_left_views = $(".percentleft");
 
 	function update_progressbar(start_time, end_time) {
 	    // convert dates to milliseconds
@@ -100,9 +112,15 @@
 		progressbars.each(function() {
   			$(this).width(percent_played + '%');
 		});
-		time_left_view.text(Math.floor(time_left / 60 / 1000));
-		percent_played_view.text(Math.floor(percent_played) + "%");
-		percent_left_view.text(percent_left + "%");
+		time_left_views.each(function() {
+  			$(this).text(Math.floor(time_left / 60 / 1000));
+		});
+		percent_played_views.each(function() {
+  			$(this).text(Math.floor(percent_played) + "%");
+		});
+		percent_played_views.each(function() {
+  			$(this).text(percent_left + "%");
+		});
 	}
 	
 	// data is passed in by rails server here
