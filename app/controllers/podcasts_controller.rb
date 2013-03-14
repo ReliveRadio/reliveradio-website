@@ -2,8 +2,11 @@ require 'feedzirra'
 
 class PodcastsController < ApplicationController
 
+  # authentication for backend
+  # set good password here for production use!
   http_basic_authenticate_with :name => "test", :password => "test", :except => ["info", "overview"]
 
+  # three columns overview over all available podcasts in the DB
   def overview
     @podcasts = Podcast.all
 
@@ -13,6 +16,7 @@ class PodcastsController < ApplicationController
     end
   end
 
+  # detail page for a specific podcast
   def info
     @podcast = Podcast.where(["slugintern = ?", params[:slugintern]]).first
 
@@ -22,13 +26,14 @@ class PodcastsController < ApplicationController
     end   
   end
 
+  # import CSV into DB
+  # see model for implementation
   def import
     Podcast.import(params[:file])
     redirect_to podcasts_path, notice: "Daten erfolgreich importiert"
   end
 
-  # GET /podcasts
-  # GET /podcasts.json
+  # all podcasts in backend view
   def index
     @podcasts = Podcast.all
 
@@ -39,8 +44,7 @@ class PodcastsController < ApplicationController
     end
   end
 
-  # GET /podcasts/1
-  # GET /podcasts/1.json
+  # detail view for a podcast in the backend
   def show
     @podcast = Podcast.find(params[:id])
 
@@ -50,8 +54,7 @@ class PodcastsController < ApplicationController
     end
   end
 
-  # GET /podcasts/new
-  # GET /podcasts/new.json
+  # create a new podcast in the backend to save in DB
   def new
     @podcast = Podcast.new
 
@@ -61,22 +64,27 @@ class PodcastsController < ApplicationController
     end
   end
 
-  # GET /podcasts/1/edit
+  # edit a podcast in the backend
   def edit
     @podcast = Podcast.find(params[:id])
   end
 
-  # POST /podcasts
-  # POST /podcasts.json
+  # post handler after new. creates the new podcast in the DB
   def create
+    # create the new podcast object from form data
     @podcast = Podcast.new(params[:podcast])
 
+    # the import feed button was clicked
     if params[:import_from_feed]
       respond_to do |format|
+        # save the form data first
         if @podcast.save
+          # read the podcast feed
           feed = Feedzirra::Feed.fetch_and_parse(@podcast.feedurl)
+          # fetch the itunes summary and save it as podcast description
           @podcast.description = feed.itunes_summary
           @podcast.save
+          # redirect to the edit page to mal review possible
           format.html { redirect_to edit_podcast_path(@podcast), notice: 'Neuer Podcast angelegt und Beschreibung erfolgreich aus dem Feed importiert' }
           format.json { head :no_content }
         else
@@ -84,6 +92,8 @@ class PodcastsController < ApplicationController
           format.json { render json: @podcast.errors, status: :unprocessable_entity }
         end
       end
+
+    # the default save button was clicked. nothing special about this one
     else
       respond_to do |format|
         if @podcast.save
@@ -97,17 +107,21 @@ class PodcastsController < ApplicationController
     end
   end
 
-  # PUT /podcasts/1
-  # PUT /podcasts/1.json
+  # change the data of an existing podcast in DB
   def update
     @podcast = Podcast.find(params[:id])
 
+    # import feed description button clicked
     if params[:import_from_feed]
       respond_to do |format|
+        # save the form data first
         if @podcast.update_attributes(params[:podcast])
+          # read the podcast feed
           feed = Feedzirra::Feed.fetch_and_parse(@podcast.feedurl)
+          # fetch the itunes summary and save it as podcast description
           @podcast.description = feed.itunes_summary
           @podcast.save
+          # redirect to the edit page to mal review possible
           format.html { redirect_to edit_podcast_path(@podcast), notice: 'Beschreibung erfolgreich aus dem Feed importiert' }
           format.json { head :no_content }
         else
@@ -128,8 +142,7 @@ class PodcastsController < ApplicationController
     end
   end
 
-  # DELETE /podcasts/1
-  # DELETE /podcasts/1.json
+  # delete a podcast
   def destroy
     @podcast = Podcast.find(params[:id])
     @podcast.destroy
