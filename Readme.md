@@ -1,10 +1,10 @@
 #ReliveRadio Sendeplan
 Das hier ist eine Imprementierung für das [ReliveRadio](www.reliveradio.de). Es geht vor allem darum, den Sendeplan des aktuellen Tages mit einigen Metainformationen zu den Podcasts anzuzeigen.
 
-_Achtung:_
+**Achtung:**
 
-	1. Die Datenbank ist _nicht_ hier im Repository enthalten!
-	2. Setze ein ordentliches Passwort in `app/controller/podcasts_controller.rb`
+* Die Datenbank ist **nicht** hier im Repository enthalten!
+* Setze ein ordentliches Passwort in `app/controller/podcasts_controller.rb`
 
 #Todo
 
