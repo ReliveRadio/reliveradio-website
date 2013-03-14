@@ -4,8 +4,6 @@ class HomeController < ApplicationController
 
   def index
 
-  	# TODO: add caching. for more info see this URL http://guides.rubyonrails.org/caching_with_rails.html
-
 	# read the program for today via GET request as JSON from the Airtime radio API
 	uri = URI.parse("http://programm.reliveradio.de/api/today-info")
 	http = Net::HTTP.new(uri.host, uri.port)
