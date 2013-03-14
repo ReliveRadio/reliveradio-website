@@ -1,3 +1,4 @@
+<!-- TOPIC -->
 <div class="row">
 	<div class="small-12 columns">
 		<h1>ReliveRadio Sendeplan</h1>
@@ -8,27 +9,48 @@
 
 <div class="row">
 	<div class="large-9 columns">
+		<!-- SHOW ALL UPCOMING PODCASTS -->
 		<% @episodes.each do |episode| %>
 			<% podcast = episode["db"] %>
 			<div class="row episode">
 				<div class="small-3 columns">
+
 					<!-- EPISODE PODCAST IMAGE -->
 					<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
-					<!-- EPISODE PLAYTIME -->
+
+					<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 					<div class="show-for-small playtime-small">
-						<% if !episode["isLive"] %><div class="time-info"><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div><% end %>
+						<!-- start time -->
+						<% if !episode["isLive"] %>
+							<div class="time-info"><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div>
+						<% end %>
+						<!-- end time -->
 						<div class="time-info"><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
-						<% if !episode["isLive"] %><div class="time-info"><i class="icon-time"></i> <%= episode['duration'] %> Min.</div><% end %>
+						<!-- duration -->
+						<% if !episode["isLive"] %>
+							<div class="time-info"><i class="icon-time"></i> <%= episode['duration'] %> Min.</div>
+						<% end %>
+						<!-- time left -->
 						<% if episode["isLive"] %>
 							<div class="time-info"><i class="icon-arrow-right"></i> <span class="timeleft"></span> Min.</div>
 							<!-- <div class="time-info"><span class="percentplayed"></span></div>
 							<div class="time-info"><span class="percentleft"></span></div> -->
 						<% end %>
 					</div>
+
+					<!-- EPISODE PLAYTIME INFO FOR LARGE DEVICES-->
 					<div class="hide-for-small playtime-large">
-						<% if !episode["isLive"] %><div class="time-info"><strong><i class="icon-play"></i> Beginn:</strong> <%= episode['starts'].strftime("%H:%M") %></div><% end %>
+						<!-- start time -->
+						<% if !episode["isLive"] %>
+							<div class="time-info"><strong><i class="icon-play"></i> Beginn:</strong> <%= episode['starts'].strftime("%H:%M") %></div>
+						<% end %>
+						<!-- end time -->
 						<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends'].strftime("%H:%M") %></div>
-						<% if !episode["isLive"] %><div class="time-info"><strong><i class="icon-time"></i> Dauer:</strong> <%= episode['duration'] %> Min.</div><% end %>
+						<!-- duration -->
+						<% if !episode["isLive"] %>
+							<div class="time-info"><strong><i class="icon-time"></i> Dauer:</strong> <%= episode['duration'] %> Min.</div>
+						<% end %>
+						<!-- left time + progress bar -->
 						<% if episode["isLive"] %>
 							<div class="time-info"><strong><i class="icon-arrow-right"></i> Rest:</strong> <span class="timeleft"></span> Min.</div>
 							<div class="progress time-info"><span class="meter liveprogress" style="width: 0%"></span></div>
@@ -37,13 +59,23 @@
 						<% end %>
 					</div>
 				</div>
+
 				<div class="small-9 columns">
-					<!-- NAME TRACK DESCRIPTION -->
+					<!-- NAME OR TRACK DESCRIPTION -->
 					<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
+
+					<!-- TRACK TITLE -->
 					<h5><%= episode['track_title'] %></h5>
-					<% if episode["isLive"] %><div class="progress show-for-small"><span class="meter liveprogress" style="width: 0%"></span></div><% end %>
-					<p class="hide-for-small"><% if !podcast.nil? %><%= podcast.description %><% end %></p>
+
+					<!-- PROGRESS BAR FOR SMALL DEVICES -->
+					<% if episode["isLive"] %>
+						<div class="progress show-for-small"><span class="meter liveprogress" style="width: 0%"></span></div>
+					<% end %>
+
 					<% if !podcast.nil? %>
+						<!-- PODCAST DESCRIPTION -->
+						<p class="hide-for-small"><%= podcast.description %></p>
+
 						<!-- SOCIAL LINKS - MORE METAINFO FOR PODCAST -->
 					    <ul class="inline-list hide-for-small">
 					      <!-- WEBSITE -->
@@ -62,7 +94,7 @@
 					    <!-- MORE INFO LINK FOR MOBILE VIEW -->
 						<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
 					<% end %>
-					<!-- START LIVESTREAM PLAYER BUTTON -->
+					<!-- START LIVESTREAM PLAYER BUTTON  FOR SMALL DEVICES-->
 					<% if episode["isLive"] %>
 						<div class="livestreambutton button success show-for-small"></div>
 					<% end %>
@@ -93,7 +125,7 @@
 <!-- PROGRESS BAR UPDATER -->
 <script>
 
-	// catch the progressbar from dom
+	// catch all the elements from dom
 	var progressbars = $(".liveprogress");
 	var time_left_views = $(".timeleft");
 	var percent_played_views = $(".percentplayed");
@@ -105,10 +137,9 @@
 	    var end = end_time.getTime();
 		var now = new Date().getTime();
 		
-		// do math
+		// do some nice and fancy math
 		var duration = Math.abs(end - start);
 		var played = Math.abs(now - start);
-		// more percent math
 		var percent_played = (played / duration) * 100;
 		var percent_left = Math.floor(100 - percent_played);
 		var time_left = Math.abs(end - now);
@@ -132,20 +163,23 @@
 	// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
 	var starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
 	var ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+
+	// january is 0 not 1 in JS, so decrease by 1 here.
 	starts.setMonth(starts.getMonth() - 1);
 	ends.setMonth(ends.getMonth() - 1);
 
+	// calc initial state
 	update_progressbar(starts, ends);
 
 	// refresh time in milliseconds
-	// this refreshes every 10 seconds
-	var intervalTime = 10 * 1000;
+	var intervalTime = 10 * 1000; // 10 seconds
 	// start timer
 	window.setInterval(function(){
 		update_progressbar(starts, ends);
-		// check if podcast played completely
+		// check if the episode is finished
 		var now = new Date();
 		if (now > ends) {
+			// if episode is finished, reload the page
 			location.reload();
 		}
 	}, intervalTime);
@@ -185,8 +219,10 @@
 	    keyActions: []
 	});
 
+	// get all the available buttons
 	var livestreambuttons = $(".livestreambutton")
 
+	// initialize the buttons
 	livestreambuttons.each(function() {
 		$(this).click(startPlayer);
 		$(this).html('<i class="icon-play"></i> Livestream starten');
@@ -196,7 +232,8 @@
 		// player.setSrc('mynewfile.mp4');
 		player.play();
 		livestreambuttons.each(function() {
-			$(this).click(pausePlayer);
+			$(this).click(pausePlayer); // set the other function as target for next click
+			// change look and feel of the button
 			$(this).html('<i class="icon-pause"></i> Livestream stoppen');
 			$(this).removeClass('success');
 			$(this).addClass('alert');
@@ -207,7 +244,8 @@
 		// player.setSrc('mynewfile.mp4');
 		player.pause();
 		livestreambuttons.each(function() {
-			$(this).click(startPlayer);
+			$(this).click(startPlayer); // set the other function as target for next click
+			// change look and feel of the button
 			$(this).html('<i class="icon-play"></i> Livestream starten');
 			$(this).removeClass('alert');
 			$(this).addClass('success');
