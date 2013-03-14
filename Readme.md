@@ -11,7 +11,8 @@ Das hier ist eine Imprementierung für das [ReliveRadio](www.reliveradio.de). Es
 * Caching http://guides.rubyonrails.org/caching_with_rails.html
 * Direkt die Bildchen der Podcasts nutzen. Könnte man auch über den Feedimport Button lösen
 * Reliveradio Logo integrieren
-* make Backend also responsive and add font icons to it
+* Backend auch Responsive machen und hübsche Icons hinzufügen
+* Ein Hinweis auf die Hörsuppe now Seite, um wirkliche "Live" Podcasts zu hören
 
 #Komplette Dokumentation
 Befindet sich in `doc/README.rdoc`
