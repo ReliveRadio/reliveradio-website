@@ -20,7 +20,7 @@ end
 
 gem 'jquery-rails'
 gem 'json'
-gem 'feedzirra'
+gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git'
 gem "font-awesome-rails"
 gem "mediaelement_rails"
 
