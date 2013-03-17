@@ -13,6 +13,7 @@ Das hier ist eine Imprementierung für das [ReliveRadio](www.reliveradio.de). Es
 * Reliveradio Logo integrieren
 * Backend auch Responsive machen und hübsche Icons hinzufügen
 * Ein Hinweis auf die Hörsuppe now Seite, um wirkliche "Live" Podcasts zu hören
+* Im Gemfile fixe Versionen eintragen
 
 #Komplette Dokumentation
 Befindet sich in `doc/README.rdoc`
