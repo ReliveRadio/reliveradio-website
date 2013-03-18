@@ -145,21 +145,30 @@ class PodcastsController < ApplicationController
   end
 
   def import_from_feed (podcast)
-    begin
-      # read the podcast feed
-      feed = Feedzirra::Feed.fetch_and_parse(podcast.feedurl)
-      # fetch the itunes summary and save it as podcast description
-      podcast.description = feed.itunes_summary
-    rescue NoMethodError
-      podcast.description = "" # make it blank to raise no description error
-    end
-    if podcast.description.blank?
+    # read the podcast feed
+    feed = Feedzirra::Feed.fetch_and_parse(podcast.feedurl)
+
+    # fetch the itunes summary and save it as podcast description
+    if !feed.nil?
+      if feed.respond_to?('itunes_summary') && !feed.itunes_summary.blank?
+        podcast.description = feed.itunes_summary
+        podcast.save
+        return true
+      else
+        if feed.respond_to?('description') && !feed.description.blank?
+          podcast.description = feed.description
+          podcast.save
+          return true 
+        else
+          podcast.description = "Keine Beschreibung vorhanden."
+          podcast.save
+          return false
+        end
+      end
+    else
       podcast.description = "Keine Beschreibung vorhanden."
       podcast.save
       return false
-    else
-      podcast.save
-      return true
     end
   end
 
