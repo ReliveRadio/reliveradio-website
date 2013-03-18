@@ -85,6 +85,7 @@ class PodcastsController < ApplicationController
           @podcast.description = feed.itunes_summary
           if @podcast.description.blank?
             @podcast.description = "Keine Beschreibung vorhanden."
+          end
           @podcast.save
           # redirect to the edit page to mal review possible
           format.html { redirect_to edit_podcast_path(@podcast), notice: 'Neuer Podcast angelegt und Beschreibung erfolgreich aus dem Feed importiert' }
@@ -124,6 +125,7 @@ class PodcastsController < ApplicationController
           @podcast.description = feed.itunes_summary
           if @podcast.description.blank?
             @podcast.description = "Keine Beschreibung vorhanden."
+          end
           @podcast.save
           # redirect to the edit page to mal review possible
           format.html { redirect_to edit_podcast_path(@podcast), notice: 'Beschreibung erfolgreich aus dem Feed importiert' }
