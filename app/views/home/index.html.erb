@@ -224,31 +224,35 @@
 
 	// initialize the buttons
 	livestreambuttons.each(function() {
-		$(this).click(startPlayer);
+		$(this).click(liveStreamButtonClicked);
 		$(this).html('<i class="icon-play"></i> Livestream starten');
 	});
 
-	function startPlayer() {
-		// player.setSrc('mynewfile.mp4');
-		player.play();
-		livestreambuttons.each(function() {
-			$(this).click(pausePlayer); // set the other function as target for next click
-			// change look and feel of the button
-			$(this).html('<i class="icon-pause"></i> Livestream stoppen');
-			$(this).removeClass('success');
-			$(this).addClass('alert');
-		});		
-	}
+	var isLivestreamPlaying = false;
 
-	function pausePlayer() {
-		// player.setSrc('mynewfile.mp4');
-		player.pause();
-		livestreambuttons.each(function() {
-			$(this).click(startPlayer); // set the other function as target for next click
-			// change look and feel of the button
-			$(this).html('<i class="icon-play"></i> Livestream starten');
-			$(this).removeClass('alert');
-			$(this).addClass('success');
-		});		
+	function liveStreamButtonClicked() {
+		if(isLivestreamPlaying) {
+			// the button was clicked to STOP the livestream
+			player.pause();
+			livestreambuttons.each(function() {
+				// change look and feel of the button
+				$(this).html('<i class="icon-play"></i> Livestream starten');
+				$(this).removeClass('alert');
+				$(this).addClass('success');
+			});		
+			// remember status
+			isLivestreamPlaying = false;
+		} else {
+			// the button was clicked to START the livestream
+			player.play();
+			livestreambuttons.each(function() {
+				// change look and feel of the button
+				$(this).html('<i class="icon-pause"></i> Livestream stoppen');
+				$(this).removeClass('success');
+				$(this).addClass('alert');
+			});		
+			// remember status
+			isLivestreamPlaying = true;
+		}
 	}
 </script>
