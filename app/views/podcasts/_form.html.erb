@@ -22,8 +22,15 @@
     <img src="http://reliveradio.de/podcasts/logos/<%= @podcast.slugintern %>.jpg">
   </div>
   <div class="large-9 columns">
-    <% if !notice.nil? %>
-      <p><span class="success label"><%= notice %></span></p>
+
+    <% if flash[:error] %>
+      <p><span class="alert label"><%= flash[:error] %></span></p>
+    <% end %>
+    <% if flash[:success] %>
+      <p><span class="success label"><%= flash[:success] %></span></p>
+    <% end %>
+    <% if flash[:notice] %>
+      <p><span class="label"><%= flash[:notice] %></span></p>
     <% end %>
 
     <div class="field">

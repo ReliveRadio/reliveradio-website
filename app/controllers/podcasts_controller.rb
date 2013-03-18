@@ -30,7 +30,7 @@ class PodcastsController < ApplicationController
   # see model for implementation
   def import
     Podcast.import(params[:file])
-    redirect_to podcasts_path, notice: "Daten erfolgreich importiert"
+    redirect_to podcasts_path, :flash => { :success => "Daten erfolgreich importiert" }
   end
 
   # all podcasts in backend view
@@ -79,17 +79,15 @@ class PodcastsController < ApplicationController
       respond_to do |format|
         # save the form data first
         if @podcast.save
-          # read the podcast feed
-          feed = Feedzirra::Feed.fetch_and_parse(@podcast.feedurl)
-          # fetch the itunes summary and save it as podcast description
-          @podcast.description = feed.itunes_summary
-          if @podcast.description.blank?
-            @podcast.description = "Keine Beschreibung vorhanden."
-          end
-          @podcast.save
-          # redirect to the edit page to mal review possible
-          format.html { redirect_to edit_podcast_path(@podcast), notice: 'Neuer Podcast angelegt und Beschreibung erfolgreich aus dem Feed importiert' }
-          format.json { head :no_content }
+          if import_from_feed(@podcast)
+            # redirect to the edit page to mal review possible
+            format.html { redirect_to edit_podcast_path(@podcast), :flash => { :success => "Beschreibung erfolgreich aus dem Feed importiert" }}
+            format.json { head :no_content }
+          else
+            # redirect to the edit page to mal review possible
+            format.html { redirect_to edit_podcast_path(@podcast), :flash => { :error => "Es konnte keine Beschreibung importiert werden" } }
+            format.json { head :no_content }
+          end 
         else
           format.html { render action: "new" }
           format.json { render json: @podcast.errors, status: :unprocessable_entity }
@@ -100,7 +98,7 @@ class PodcastsController < ApplicationController
     else
       respond_to do |format|
         if @podcast.save
-          format.html { redirect_to @podcast, notice: 'Neuer Podcast angelegt' }
+          format.html { redirect_to @podcast, :flash => { :success => "Neuer Podcast angelegt" } }
           format.json { head :no_content }
         else
           format.html { render action: "new" }
@@ -119,17 +117,15 @@ class PodcastsController < ApplicationController
       respond_to do |format|
         # save the form data first
         if @podcast.update_attributes(params[:podcast])
-          # read the podcast feed
-          feed = Feedzirra::Feed.fetch_and_parse(@podcast.feedurl)
-          # fetch the itunes summary and save it as podcast description
-          @podcast.description = feed.itunes_summary
-          if @podcast.description.blank?
-            @podcast.description = "Keine Beschreibung vorhanden."
-          end
-          @podcast.save
-          # redirect to the edit page to mal review possible
-          format.html { redirect_to edit_podcast_path(@podcast), notice: 'Beschreibung erfolgreich aus dem Feed importiert' }
-          format.json { head :no_content }
+          if import_from_feed(@podcast)
+            # redirect to the edit page to mal review possible
+            format.html { redirect_to edit_podcast_path(@podcast), :flash => { :success => "Beschreibung erfolgreich aus dem Feed importiert" }}
+            format.json { head :no_content }
+          else
+            # redirect to the edit page to mal review possible
+            format.html { redirect_to edit_podcast_path(@podcast), :flash => { :error => "Es konnte keine Beschreibung importiert werden" } }
+            format.json { head :no_content }
+          end           
         else
           format.html { render action: "edit" }
           format.json { render json: @podcast.errors, status: :unprocessable_entity }
@@ -138,13 +134,32 @@ class PodcastsController < ApplicationController
     else
       respond_to do |format|
         if @podcast.update_attributes(params[:podcast])
-          format.html { redirect_to @podcast, notice: 'Podcast erfolgreich gespeichert' }
+          format.html { redirect_to @podcast, :flash => { :success => "Podcast erfolgreich gespeichert" } }
           format.json { head :no_content }
         else
           format.html { render action: "edit" }
           format.json { render json: @podcast.errors, status: :unprocessable_entity }
         end
       end
+    end
+  end
+
+  def import_from_feed (podcast)
+    begin
+      # read the podcast feed
+      feed = Feedzirra::Feed.fetch_and_parse(podcast.feedurl)
+      # fetch the itunes summary and save it as podcast description
+      podcast.description = feed.itunes_summary
+    rescue NoMethodError
+      podcast.description = "" # make it blank to raise no description error
+    end
+    if podcast.description.blank?
+      podcast.description = "Keine Beschreibung vorhanden."
+      podcast.save
+      return false
+    else
+      podcast.save
+      return true
     end
   end
 
