@@ -6,5 +6,15 @@ Das hier ist eine Imprementierung für das [ReliveRadio](www.reliveradio.de). Es
 * Die Datenbank ist *nicht* hier im Repository enthalten!
 * Setze ein ordentliches Passwort in `app/controller/podcasts_controller.rb`
 
+#Die eigene Rails Installation updaten:
+
+* git pull
+* bundle update
+* rake assets:precompile
+* cp db/production.sqlite2 db/production.bkp.sqlite3
+* rake db:migrate
+* Rails App neu starten
+* DONE :)
+
 #Komplette Dokumentation
 Befindet sich in `doc/README.rdoc`
