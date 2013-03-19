@@ -13,6 +13,7 @@ Das hier ist eine Imprementierung für das [ReliveRadio](www.reliveradio.de). Es
 * rake assets:precompile
 * cp db/production.sqlite2 db/production.bkp.sqlite3
 * rake db:migrate
+* Das Passwort für den internen Bereich setzen in `app/controllers/podcasts_controller.rb`
 * Rails App neu starten
 * DONE :)
 
