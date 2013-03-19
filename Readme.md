@@ -9,7 +9,7 @@ Das hier ist eine Imprementierung für das [ReliveRadio](www.reliveradio.de). Es
 #Die eigene Rails Installation updaten:
 
 * git pull
-* bundle update
+* bundle install
 * rake assets:precompile
 * cp db/production.sqlite2 db/production.bkp.sqlite3
 * rake db:migrate
