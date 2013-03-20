@@ -6,6 +6,8 @@ class PodcastsController < ApplicationController
   # set good password here for production use!
   http_basic_authenticate_with :name => "test", :password => "test", :except => ["info", "overview"]
 
+  caches_page :info, :overview
+
   # three columns overview over all available podcasts in the DB
   def overview
     @podcasts = Podcast.all
