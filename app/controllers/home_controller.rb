@@ -12,14 +12,11 @@ class HomeController < ApplicationController
 
 	# check if HTTP request worked
 	if response.code == "200"
-		# parse JSON
-		result = JSON.parse(response.body)
-		# save received episodes into episodes object
-		@episodes = result
+		# parse JSON and save received episodes into episodes object
+		@episodes = JSON.parse(response.body)
 
 		# remove all passed podcasts from the episodes array
-		now_time = Time.now
-		@episodes.delete_if { |episode| Time.parse(episode["ends"])+1.hour < now_time }
+		@episodes.delete_if { |episode| Time.parse(episode["ends"])+1.hour < Time.now }
 
 		# add some more metadata to episodes array
 		@episodes.each do |episode|
@@ -31,6 +28,7 @@ class HomeController < ApplicationController
 			ends = Time.parse(episode["ends"]) + 1.hour
 			episode["starts"] = starts
 			episode["ends"] = ends
+			# calculate the duration of this episode
 			episode["duration"] = ((ends - starts) / 60).round
 
 			# add database information to this object to easily access that in view
