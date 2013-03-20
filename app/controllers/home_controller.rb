@@ -2,6 +2,8 @@ require "net/http"
 
 class HomeController < ApplicationController
 
+  caches_action :index, :expires_in => 60.seconds, :cache_path => 'index'
+
   def index
 
 	# read the program for today via GET request as JSON from the Airtime radio API
