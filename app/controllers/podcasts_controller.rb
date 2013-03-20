@@ -6,8 +6,13 @@ class PodcastsController < ApplicationController
   # set good password here for production use!
   http_basic_authenticate_with :name => "test", :password => "test", :except => ["info", "overview"]
 
-  caches_page :info, :overview
-
+  # static page cache for all podcasts overview and detailed view for each podcast
+  caches_page :overview, :info
+  # action cache for all podcasts overview in the backend. action cache needed here to have authentication
+  caches_action :index, :cache_path => 'all_podcasts_database_backend'
+  # cache sweeper called after specific methods
+  cache_sweeper :podcast_sweeper, :only => [:create, :update, :destroy, :import]
+  
   # three columns overview over all available podcasts in the DB
   def overview
     @podcasts = Podcast.all
@@ -82,7 +87,7 @@ class PodcastsController < ApplicationController
         # save the form data first
         if @podcast.save
           if import_from_feed(@podcast)
-            # redirect to the edit page to mal review possible
+            # redirect to the edit page to make review possible
             format.html { redirect_to edit_podcast_path(@podcast), :flash => { :success => "Beschreibung erfolgreich aus dem Feed importiert" }}
             format.json { head :no_content }
           else
@@ -120,7 +125,7 @@ class PodcastsController < ApplicationController
         # save the form data first
         if @podcast.update_attributes(params[:podcast])
           if import_from_feed(@podcast)
-            # redirect to the edit page to mal review possible
+            # redirect to the edit page to make review possible
             format.html { redirect_to edit_podcast_path(@podcast), :flash => { :success => "Beschreibung erfolgreich aus dem Feed importiert" }}
             format.json { head :no_content }
           else
