@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 
 	def index
 
+		#Rails.cache.delete("cacheID")
 		@episodes = Rails.cache.fetch("airtime_schedule", :expires_in => 10.minutes) do
 			# read the program for today via GET request as JSON from the Airtime radio API
 			uri = URI.parse("http://programm.reliveradio.de/api/today-info")
