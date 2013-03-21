@@ -6,17 +6,24 @@ class HomeController < ApplicationController
 
 	def index
 
-		# read the program for today via GET request as JSON from the Airtime radio API
-		uri = URI.parse("http://programm.reliveradio.de/api/today-info")
-		http = Net::HTTP.new(uri.host, uri.port)
-		request = Net::HTTP::Get.new(uri.request_uri)
-		response = http.request(request)
+		@episodes = Rails.cache.fetch("airtime_schedule", :expires_in => 10.minutes) do
+			# read the program for today via GET request as JSON from the Airtime radio API
+			uri = URI.parse("http://programm.reliveradio.de/api/today-info")
+			http = Net::HTTP.new(uri.host, uri.port)
+			request = Net::HTTP::Get.new(uri.request_uri)
+			response = http.request(request)
 
-		# check if HTTP request worked
-		if response.code == "200"
-			# parse JSON and save received episodes into episodes object
-			@episodes = JSON.parse(response.body)
+			# check if HTTP request worked
+			if response.code == "200"
+				# parse JSON and save received episodes into episodes object
+				return JSON.parse(response.body)
+			else
+				puts "ERROR: Could not read todays episode list from server."
+				return nil;
+			end
+		end
 
+		if !@episodes.blank?
 			# remove all passed podcasts from the episodes array
 			@episodes.delete_if { |episode| Time.parse(episode["ends"])+1.hour < Time.now }
 
@@ -39,9 +46,7 @@ class HomeController < ApplicationController
 
 			# first episode in array is live!
 			@episodes.first["isLive"] = true;
-
-		else
-			puts "ERROR: Could not read todays episode list from server."
 		end
+
 	end
 end
