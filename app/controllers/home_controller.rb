@@ -12,15 +12,7 @@ class HomeController < ApplicationController
 			http = Net::HTTP.new(uri.host, uri.port)
 			request = Net::HTTP::Get.new(uri.request_uri)
 			response = http.request(request)
-
-			# check if HTTP request worked
-			if response.code == "200"
-				# parse JSON and save received episodes into episodes object
-				return JSON.parse(response.body)
-			else
-				puts "ERROR: Could not read todays episode list from server."
-				return nil;
-			end
+			JSON.parse(response.body)
 		end
 
 		if !@episodes.blank?
