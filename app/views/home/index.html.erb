@@ -118,10 +118,8 @@
 				<li><a href="http://stream.reliveradio.de:8000/24.mp3">mp3-high</a></li>
 				<li><a href="http://stream.reliveradio.de:8000/24mobile.mp3">mp3-low</a></li>
 			</ul>
-
-			<h4>Alles Beta</h4>
-			<p>Der "Sendebetrieb" begann Mitte Oktober 2012, weshalb sich das Projekt noch in einer experimentellen Anfangsphase befindet. Der Radiostream läuft seitdem jedoch nahezu unterbrechungsfrei.</p>
-
+		</div>
+		<div class="panel">
 			<h4>Spenden</h4>
 			<p>Dieses Projekt gefällt dir? Du kannst uns <a href="http://reliveradio.de/blog/mitmachen/">hier unterstützen</a> oder dich durch eine Spende an den Serverkosten beteiligen. Danke <i class="icon-heart"></i></p>
 			<a class="FlattrButton" style="display:none;"
@@ -134,6 +132,21 @@
 			ReliveRadio
 			</a>
 		</div>
+		<!-- HOERSUPPE LIVE PODCASTS -->
+		<% if !@live_podcasts.blank? %>
+			<div class="panel">
+				<h4>Mehr Live:</h4>
+				<p>Diese Podcasts werden gerade live aufgezeichnet und du kannst zuhören:</p>
+				<p>
+				<% @live_podcasts.each do |podcast| %>
+					<div>
+						<a href="<%= podcast['streamurl'] %>"><i class="icon-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
+					</div>
+				<% end %>
+				</p>
+				<p>Das ist ein Service der <%= link_to "Hörsuppe", "http://hoersuppe.de/now/" %>.</p>
+			</div>
+		<% end %>
 	</div>
 </div>
 

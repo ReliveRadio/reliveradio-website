@@ -7,6 +7,33 @@ class HomeController < ApplicationController
 	def index
 
 		#Rails.cache.delete("cacheID")
+		@live_podcasts = Rails.cache.fetch("hoersuppe_live", :expires_in => 1.hour) do
+			# read all podcasts that are really live today from the hoersuppe API
+			# %F => 2007-11-19
+			uri = URI.parse("http://hoersuppe.de/api/?action=getLive&dateEnd="+ Time.now.strftime('%F'))
+			http = Net::HTTP.new(uri.host, uri.port)
+			request = Net::HTTP::Get.new(uri.request_uri)
+			response = http.request(request)
+			JSON.parse(response.body)["data"]
+		end
+
+		if !@live_podcasts.blank?
+			# remove all passed podcasts
+			@live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"])+(podcast["duration"].to_i.minutes) < Time.now }
+			# remove all not started podcasts
+			@live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"]) > Time.now }
+			# this will only keep all podcasts that are LIVE NOW
+			
+			# add some more metadata to podcasts array
+			@live_podcasts.each do |podcast|
+				# add database information to this object to easily access that in view
+				podcast["db"] = Podcast.where(["hoersuppeslug = ?", podcast['podcast']]).first
+			end
+		end
+
+
+
+		#Rails.cache.delete("cacheID")
 		@episodes = Rails.cache.fetch("airtime_schedule", :expires_in => 10.minutes) do
 			# read the program for today via GET request as JSON from the Airtime radio API
 			uri = URI.parse("http://programm.reliveradio.de/api/today-info")
