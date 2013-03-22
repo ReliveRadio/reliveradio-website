@@ -5,13 +5,12 @@ Reliveradio::Application.routes.draw do
     collection {post :import}
   end
   
+  match '/podcasts_overview' => 'podcasts#overview', :as => :overview
+
   # This route can be invoked with info_url(:id => podcast.id)
-  match 'podcast_info/:slugintern' => 'podcasts#info', :as => :info
-  
-  match 'podcasts_overview' => 'podcasts#overview', :as => :overview
+  match '/:slugintern' => 'podcasts#info', :as => :info
 
   get "home/index"
-
   root :to => "home#index"
   
   # The priority is based upon order of creation:
