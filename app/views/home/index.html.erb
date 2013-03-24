@@ -1,153 +1,19 @@
 <% title "Sendeplan" %>
 
 <!-- TOPIC -->
-<div class="row">
-	<div class="small-12 columns">
-		<h1>ReliveRadio Sendeplan</h1>
-		<h4 class="subheader hide-for-small">Das ReliveRadio sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. Ideal zum einfach mal reinhören und neue Podcasts entdecken.</h4>
-		<hr />
-	</div>
-</div>
+<%= render 'topic' %>
 
 <div class="row">
 	<div class="large-9 columns">
 		<% if !@episodes.blank? %>
 			<!-- SHOW ALL UPCOMING PODCASTS -->
 			<% @episodes.each do |episode| %>
-				<% podcast = episode["db"] %>
-				<div class="row episode">
-					<div class="small-3 columns">
-
-						<!-- EPISODE PODCAST IMAGE -->
-						<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
-
-						<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
-						<div class="show-for-small playtime-small">
-							<!-- start time -->
-							<% if !episode["isLive"] %>
-								<div class="time-info"><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div>
-							<% end %>
-							<!-- end time -->
-							<div class="time-info"><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
-							<!-- duration -->
-							<% if !episode["isLive"] %>
-								<div class="time-info"><i class="icon-time"></i> <%= episode['duration'] %> Min.</div>
-							<% end %>
-							<!-- time left -->
-							<% if episode["isLive"] %>
-								<div class="time-info"><i class="icon-arrow-right"></i> <span class="timeleft"></span> Min.</div>
-								<!-- <div class="time-info"><span class="percentplayed"></span></div>
-								<div class="time-info"><span class="percentleft"></span></div> -->
-							<% end %>
-						</div>
-
-						<!-- EPISODE PLAYTIME INFO FOR LARGE DEVICES-->
-						<div class="hide-for-small playtime-large">
-							<!-- start time -->
-							<% if !episode["isLive"] %>
-								<div class="time-info"><strong><i class="icon-play"></i> Beginn:</strong> <%= episode['starts'].strftime("%H:%M") %></div>
-							<% end %>
-							<!-- end time -->
-							<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends'].strftime("%H:%M") %></div>
-							<!-- duration -->
-							<% if !episode["isLive"] %>
-								<div class="time-info"><strong><i class="icon-time"></i> Dauer:</strong> <%= episode['duration'] %> Min.</div>
-							<% end %>
-							<!-- left time + progress bar -->
-							<% if episode["isLive"] %>
-								<div class="time-info"><strong><i class="icon-arrow-right"></i> Rest:</strong> <span class="timeleft"></span> Min.</div>
-								<div class="progress time-info"><span class="meter liveprogress" style="width: 0%"></span></div>
-								<!-- <div class="time-info"><span class="percentplayed"></span></div>
-								<div class="time-info"><span class="percentleft"></span></div> -->
-							<% end %>
-						</div>
-					</div>
-
-					<div class="small-9 columns">
-						<!-- NAME OR TRACK DESCRIPTION -->
-						<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
-
-						<!-- TRACK TITLE -->
-						<h5><%= episode['track_title'] %></h5>
-
-						<!-- PROGRESS BAR FOR SMALL DEVICES -->
-						<% if episode["isLive"] %>
-							<div class="progress show-for-small"><span class="meter liveprogress" style="width: 0%"></span></div>
-						<% end %>
-
-						<% if !podcast.nil? %>
-							<!-- PODCAST DESCRIPTION -->
-							<p class="hide-for-small"><%= podcast.description %></p>
-
-							<!-- SOCIAL LINKS - MORE METAINFO FOR PODCAST -->
-						    <ul class="inline-list hide-for-small">
-						      <!-- WEBSITE -->
-						      <% if !podcast.url.blank? %><li><a href="<%= podcast.url %>"><i class="icon-globe"></i> Webseite</a></li><% end %>
-						      <!-- FEED -->
-						      <% if !podcast.feedurl.blank? %><li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>"><i class="icon-rss"></i> Abonnieren</a></li><% end %>
-						      <!-- TWITTER -->
-						      <% if !podcast.twitterhandle.blank? %><li><a href="http://www.twitter.com/<%= podcast.twitterhandle %>"><i class="icon-twitter"></i> Twitter</a></li><% end %>
-						      <!-- FLATTR -->
-						      <% if !podcast.flattrhandle.blank? %><li>
-						        <a href="https://flattr.com/submit/auto?user_id=<%= podcast.flattrhandle %>&url=http://reliveradio.de/<%= podcast.slugintern %>&title=<%= podcast.name %> im ReliveRadio&language=de&category=audio"><i class="icon-heart"></i> Flattr</a>
-						      </li><% end %>
-						      <!-- HOERSUPPE -->
-						      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
-						    </ul>
-						    <!-- MORE INFO LINK FOR MOBILE VIEW -->
-							<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
-						<% end %>
-						<!-- START LIVESTREAM PLAYER BUTTON  FOR SMALL DEVICES-->
-						<% if episode["isLive"] %>
-							<div class="livestreambutton button success show-for-small"></div>
-						<% end %>
-					</div>
-				</div>
-				<hr />
-			<% end %>	
+				<%= render 'episode', :episode => episode %>
+			<% end %>
 		<% end %>
 	</div>
 	<!-- SIDEBAR -->
-	<div class="large-3 columns">
-		<div class="panel">
-			<h4>Livestream</h4>
-			<audio id="player" preload="none" src="http://stream.reliveradio.de:8000/24.mp3"></audio>
-			<div class="livestreambutton button small success"></div>
-			<p>Falls du den Livestream mit einem externen Programm hören willst, dann benutze folgende Stream URLs:</p>
-			<ul class="inline-list">
-				<li><a href="http://stream.reliveradio.de:8000/24.mp3">mp3-high</a></li>
-				<li><a href="http://stream.reliveradio.de:8000/24mobile.mp3">mp3-low</a></li>
-			</ul>
-		</div>
-		<div class="panel">
-			<h4>Spenden</h4>
-			<p>Dieses Projekt gefällt dir? Du kannst uns <a href="http://blog.reliveradio.de/mitmachen/">hier unterstützen</a> oder dich durch eine Spende an den Serverkosten beteiligen. Danke <i class="icon-heart"></i></p>
-			<a class="FlattrButton" style="display:none;"
-			title="ReliveRadio"
-			data-flattr-uid="germanstudent"
-			data-flattr-tags="text, opensource"
-			data-flattr-category="text"
-			href="http://www.reliveradio.de">
-
-			ReliveRadio
-			</a>
-		</div>
-		<!-- HOERSUPPE LIVE PODCASTS -->
-		<% if !@live_podcasts.blank? %>
-			<div class="panel">
-				<h4>Mehr Live:</h4>
-				<p>Diese Podcasts werden gerade live aufgezeichnet und du kannst zuhören:</p>
-				<p>
-				<% @live_podcasts.each do |podcast| %>
-					<div>
-						<a href="<%= podcast['streamurl'] %>"><i class="icon-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
-					</div>
-				<% end %>
-				</p>
-				<p>Das ist ein Service der <%= link_to "Hörsuppe", "http://hoersuppe.de/now/" %>.</p>
-			</div>
-		<% end %>
-	</div>
+	<%= render 'sidebar', :live_podcasts => @live_podcasts %>
 </div>
 
 
