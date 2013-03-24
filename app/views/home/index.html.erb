@@ -16,140 +16,14 @@
 	<%= render 'sidebar', :live_podcasts => @live_podcasts %>
 </div>
 
-
 <% if !@episodes.blank? %>
-<!-- PROGRESS BAR UPDATER -->
-<script>
-
-	// catch all the elements from dom
-	var progressbars = $(".liveprogress");
-	var time_left_views = $(".timeleft");
-	var percent_played_views = $(".percentplayed");
-	var percent_left_views = $(".percentleft");
-
-	function update_progressbar(start_time, end_time) {
-	    // convert dates to milliseconds
-	    var start = start_time.getTime();
-	    var end = end_time.getTime();
-		var now = new Date().getTime();
-		
-		// do some nice and fancy math
-		var duration = Math.abs(end - start);
-		var played = Math.abs(now - start);
-		var percent_played = (played / duration) * 100;
-		var percent_left = Math.floor(100 - percent_played);
-		var time_left = Math.abs(end - now);
-
-		// update view elements
-		progressbars.each(function() {
-  			$(this).width(percent_played + '%');
-		});
-		time_left_views.each(function() {
-  			$(this).text(Math.floor(time_left / 60 / 1000));
-		});
-		percent_played_views.each(function() {
-  			$(this).text(Math.floor(percent_played) + "%");
-		});
-		percent_played_views.each(function() {
-  			$(this).text(percent_left + "%");
-		});
-	}
-	
-	// data is passed in by rails server here
-	// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
-	var starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
-	var ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
-
-	// january is 0 not 1 in JS, so decrease by 1 here.
-	starts.setMonth(starts.getMonth() - 1);
-	ends.setMonth(ends.getMonth() - 1);
-
-	// calc initial state
-	update_progressbar(starts, ends);
-
-	// refresh time in milliseconds
-	var intervalTime = 10 * 1000; // 10 seconds
-	// start timer
-	window.setInterval(function(){
-		update_progressbar(starts, ends);
-		// check if the episode is finished
-		var now = new Date();
-		if (now > ends) {
-			// if episode is finished, reload the page
-			location.reload();
-		}
-	}, intervalTime);
-</script>
+	<%= javascript_tag do %>
+		// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+		window.starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+		window.ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+	<% end %>
+	<%= javascript_include_tag 'progressbar' %>
 <% end %>
 
-
 <!-- LIVESTREAM MEDIAELEMENT PLAYER -->
-<script>
-	// using jQuery
-	var player = new MediaElementPlayer('#player',{
-	    startVolume: 0.8,
-	    // useful for <audio> player loops
-	    loop: false,
-	    // enables Flash and Silverlight to resize to content size
-	    enableAutosize: true,
-	    // the order of controls you want on the control bar (and other plugins below)
-	    features: ['playpause','volume'],
-	    audioWidth: 130,
-	    // Hide controls when playing and mouse is not over the video
-	    alwaysShowControls: false,
-	    // force iPad's native controls
-	    iPadUseNativeControls: false,
-	    // force iPhone's native controls
-	    iPhoneUseNativeControls: false, 
-	    // force Android's native controls
-	    AndroidUseNativeControls: false,
-		pluginPath: '/assets/mediaelement_rails/',
-		// name of flash file
-		flashName: 'flashmediaelement.swf',
-		// name of silverlight file
-		silverlightName: 'silverlightmediaelement.xap',
-		// default if the <video width> is not specified
-	    enableKeyboard: true,
-	    // when this player starts, it will pause other players
-	    pauseOtherPlayers: true,
-	    // array of keyboard commands
-	    keyActions: []
-	});
-
-	// get all the available buttons
-	var livestreambuttons = $(".livestreambutton")
-
-	// initialize the buttons
-	livestreambuttons.each(function() {
-		$(this).click(liveStreamButtonClicked);
-		$(this).html('<i class="icon-play"></i> Livestream starten');
-	});
-
-	var isLivestreamPlaying = false;
-
-	function liveStreamButtonClicked() {
-		if(isLivestreamPlaying) {
-			// the button was clicked to STOP the livestream
-			player.pause();
-			livestreambuttons.each(function() {
-				// change look and feel of the button
-				$(this).html('<i class="icon-play"></i> Livestream starten');
-				$(this).removeClass('alert');
-				$(this).addClass('success');
-			});		
-			// remember status
-			isLivestreamPlaying = false;
-		} else {
-			// the button was clicked to START the livestream
-			player.play();
-			livestreambuttons.each(function() {
-				// change look and feel of the button
-				$(this).html('<i class="icon-pause"></i> Livestream stoppen');
-				$(this).removeClass('success');
-				$(this).addClass('alert');
-			});		
-			// remember status
-			isLivestreamPlaying = true;
-		}
-	}
-</script>
+<%= javascript_include_tag 'livestreamplayer' %>
