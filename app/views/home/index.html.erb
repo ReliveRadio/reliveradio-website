@@ -3,9 +3,12 @@
 <!-- TOPIC -->
 <%= render 'topic' %>
 
+<%= javascript_include_tag "ajaxbutton" %>
+<div id="ajaxbutton" class="button">Ajax Reload</div>
+
 <div class="row">
 	<!-- EPISODES -->
-	<div class="large-9 columns">
+	<div id="episodes" class="large-9 columns">
 		<%= render 'episodes', :episodes => @episodes %>
 	</div>
 	<!-- SIDEBAR -->
@@ -13,15 +16,6 @@
 		<%= render 'sidebar', :live_podcasts => @live_podcasts %>
 	</div>
 </div>
-
-<% if !@episodes.blank? %>
-	<%= javascript_tag do %>
-		// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
-		window.starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
-		window.ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
-	<% end %>
-	<%= javascript_include_tag 'progressbar' %>
-<% end %>
 
 <!-- LIVESTREAM MEDIAELEMENT PLAYER -->
 <%= javascript_include_tag 'livestreamplayer' %>

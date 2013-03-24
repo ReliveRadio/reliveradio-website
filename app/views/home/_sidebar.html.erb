@@ -22,12 +22,12 @@
 	</a>
 </div>
 <!-- HOERSUPPE LIVE PODCASTS -->
-<% if !live_podcasts.blank? %>
+<% if !@live_podcasts.blank? %>
 	<div class="panel">
 		<h4>Mehr Live:</h4>
 		<p>Diese Podcasts werden gerade live aufgezeichnet und du kannst zuhören:</p>
 		<p>
-		<% live_podcasts.each do |podcast| %>
+		<% @live_podcasts.each do |podcast| %>
 			<div>
 				<a href="<%= podcast['streamurl'] %>"><i class="icon-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
 			</div>
