@@ -1,7 +1,10 @@
 class InfoController < ApplicationController
-  def about
-  end
 
-  def chat
-  end
+	caches_page :about, :chat
+
+	def about
+	end
+
+	def chat
+	end
 end
