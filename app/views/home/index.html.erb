@@ -4,16 +4,14 @@
 <%= render 'topic' %>
 
 <div class="row">
+	<!-- EPISODES -->
 	<div class="large-9 columns">
-		<% if !@episodes.blank? %>
-			<!-- SHOW ALL UPCOMING PODCASTS -->
-			<% @episodes.each do |episode| %>
-				<%= render 'episode', :episode => episode %>
-			<% end %>
-		<% end %>
+		<%= render 'episodes', :episodes => @episodes %>
 	</div>
 	<!-- SIDEBAR -->
-	<%= render 'sidebar', :live_podcasts => @live_podcasts %>
+	<div class="large-3 columns">
+		<%= render 'sidebar', :live_podcasts => @live_podcasts %>
+	</div>
 </div>
 
 <% if !@episodes.blank? %>
