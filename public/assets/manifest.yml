@@ -25,8 +25,12 @@ font/fontello.woff: font/fontello-3963f9b4100969cfa7461228c9d2e39a.woff
 font/fontello/index.woff: font/fontello-3963f9b4100969cfa7461228c9d2e39a.woff
 pwp/loading.gif: pwp/loading-600d9f5708b6ba125961edb7da6f0dca.gif
 pwp/loading/index.gif: pwp/loading-600d9f5708b6ba125961edb7da6f0dca.gif
-application.js: application-425e9c4a4979ccc297b55f328505b651.js
-application/index.js: application-425e9c4a4979ccc297b55f328505b651.js
+application.js: application-9ec0afc200d2bf4a79d970265452d4ee.js
+application/index.js: application-9ec0afc200d2bf4a79d970265452d4ee.js
+livestreamplayer.js: livestreamplayer-efbae0f4708294157ce5525117fff6bf.js
+livestreamplayer/index.js: livestreamplayer-efbae0f4708294157ce5525117fff6bf.js
+progressbar.js: progressbar-fc9ed775da7167b0d55dae12c53560bd.js
+progressbar/index.js: progressbar-fc9ed775da7167b0d55dae12c53560bd.js
 application.css: application-93aecd9a09972c4e58000cb129c594d1.css
 application/index.css: application-93aecd9a09972c4e58000cb129c594d1.css
 mediaelement_rails/background.png: mediaelement_rails/background-284bc60608d900c0e838b330f00d7dd6.png
