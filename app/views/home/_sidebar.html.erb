@@ -1,7 +1,7 @@
 <div class="panel">
 	<h4>Livestream</h4>
 	<audio id="player" preload="none" src="http://stream.reliveradio.de:8000/24.mp3"></audio>
-	<div class="livestreambutton button small success"></div>
+	<div class="livestreambutton button small success hide-for-small"></div>
 	<p>Falls du den Livestream mit einem externen Programm hören willst, dann benutze folgende Stream URLs:</p>
 	<ul class="inline-list">
 		<li><a href="http://stream.reliveradio.de:8000/24.mp3">mp3-high</a></li>
@@ -22,12 +22,12 @@
 	</a>
 </div>
 <!-- HOERSUPPE LIVE PODCASTS -->
-<% if !live_podcasts.blank? %>
+<% if !@live_podcasts.blank? %>
 	<div class="panel">
 		<h4>Mehr Live:</h4>
 		<p>Diese Podcasts werden gerade live aufgezeichnet und du kannst zuhören:</p>
 		<p>
-		<% live_podcasts.each do |podcast| %>
+		<% @live_podcasts.each do |podcast| %>
 			<div>
 				<a href="<%= podcast['streamurl'] %>"><i class="icon-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
 			</div>

@@ -51,8 +51,8 @@ $(function () {
 		// check if the episode is finished
 		var now = new Date();
 		if (now > ends) {
-			// if episode is finished, reload the page
-			location.reload();
+			// if episode is finished, do AJAX request and reload schedule
+			$.get("/", null, null, 'script');
 		}
 	}, intervalTime);
 

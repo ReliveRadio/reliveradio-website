@@ -1,6 +1,6 @@
-<% if !episodes.blank? %>
+<% if !@episodes.blank? %>
 	<!-- SHOW ALL UPCOMING PODCASTS -->
-	<% episodes.each do |episode| %>
+	<% @episodes.each do |episode| %>
 		<% podcast = episode["db"] %>
 		<div class="row episode">
 			<div class="small-3 columns">
@@ -84,12 +84,17 @@
 				    <!-- MORE INFO LINK FOR MOBILE VIEW -->
 					<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
 				<% end %>
-				<!-- START LIVESTREAM PLAYER BUTTON  FOR SMALL DEVICES-->
-				<% if episode["isLive"] %>
-					<div class="livestreambutton button success show-for-small"></div>
-				<% end %>
 			</div>
 		</div>
 		<hr />
 	<% end %>
+
+	<!-- PROGRESSBAR SETUP -->
+	<%= javascript_tag do %>
+		// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+		window.starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+		window.ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+	<% end %>
+	<%= javascript_include_tag 'progressbar' %>
+
 <% end %>
