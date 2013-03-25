@@ -1,7 +1,7 @@
 Reliveradio::Application.routes.draw do
 
   get "info/about", :as => :about
-
+  get "info/help", :as => :help
   get "info/chat", :as => :chat
 
   # enable podcasts csv import
