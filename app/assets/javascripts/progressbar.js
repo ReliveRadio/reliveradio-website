@@ -36,11 +36,6 @@ $(function () {
 		});
 	}
 
-	// january is 0 not 1 in JS, so decrease by 1 here.
-	starts.setMonth(starts.getMonth() - 1);
-	ends.setMonth(ends.getMonth() - 1);
-
-	// calc initial state
 	update_progressbar(starts, ends);
 
 	// refresh time in milliseconds

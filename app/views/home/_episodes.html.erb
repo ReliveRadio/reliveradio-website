@@ -89,12 +89,14 @@
 		<hr />
 	<% end %>
 
-	<!-- PROGRESSBAR SETUP -->
-	<%= javascript_tag do %>
-		// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
-		window.starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
-		window.ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
-	<% end %>
-	<%= javascript_include_tag 'progressbar' %>
+<!-- PROGRESSBAR SETUP -->
+<%= javascript_tag do %>
+	// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+	window.starts = new Date(<%= @episodes.first['starts'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+	window.ends = new Date(<%= @episodes.first['ends'].strftime('%Y,%m,%d,%H,%M,%S,0') %>);
+	// january is 0 not 1 in JS, so decrease by 1 here.
+	starts.setMonth(starts.getMonth() - 1);
+	ends.setMonth(ends.getMonth() - 1);
+<% end %>
 
 <% end %>
