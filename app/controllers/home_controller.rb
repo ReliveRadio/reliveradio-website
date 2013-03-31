@@ -6,6 +6,8 @@ class HomeController < ApplicationController
 
 	def index
 
+		# hoersuppe api returns local dates (CET)
+
 		#Rails.cache.delete("cacheID")
 		@live_podcasts = Rails.cache.fetch("hoersuppe_live", :expires_in => 1.hour) do
 			# read all podcasts that are really live today from the hoersuppe API
@@ -19,9 +21,9 @@ class HomeController < ApplicationController
 
 		if !@live_podcasts.blank?
 			# remove all passed podcasts
-			@live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"])+(podcast["duration"].to_i.minutes) < Time.now }
+			@live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"])+(podcast["duration"].to_i.minutes) < Time.now.utc.in_time_zone("Berlin") }
 			# remove all not started podcasts
-			@live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"]) > Time.now }
+			@live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"]) > Time.now.utc.in_time_zone("Berlin") }
 			# this will only keep all podcasts that are LIVE NOW
 			
 			# add some more metadata to podcasts array
@@ -31,7 +33,7 @@ class HomeController < ApplicationController
 			end
 		end
 
-
+		# airtime api returns UTC dates
 
 		#Rails.cache.delete("cacheID")
 		@episodes = Rails.cache.fetch("airtime_schedule", :expires_in => 10.minutes) do
@@ -45,7 +47,7 @@ class HomeController < ApplicationController
 
 		if !@episodes.blank?
 			# remove all passed podcasts from the episodes array
-			@episodes.delete_if { |episode| Time.parse(episode["ends"])+1.hour < Time.now }
+			@episodes.delete_if { |episode| DateTime.parse(episode["ends"]).utc.in_time_zone("Berlin") < Time.now.utc.in_time_zone("Berlin") }
 
 			# add some more metadata to episodes array
 			@episodes.each do |episode|
@@ -53,8 +55,8 @@ class HomeController < ApplicationController
 				episode["isLive"] = false;
 
 				# adjust time
-				starts = Time.parse(episode["starts"]) + 1.hour
-				ends = Time.parse(episode["ends"]) + 1.hour
+				starts = DateTime.parse(episode["starts"]).utc.in_time_zone("Berlin")
+				ends = DateTime.parse(episode["ends"]).utc.in_time_zone("Berlin")
 				episode["starts"] = starts
 				episode["ends"] = ends
 				# calculate the duration of this episode

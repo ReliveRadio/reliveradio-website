@@ -2,16 +2,10 @@
 
 $(function () {
 
-	// catch all the elements from dom
-	var progressbars = $(".liveprogress");
-	var time_left_views = $(".timeleft");
-	var percent_played_views = $(".percentplayed");
-	var percent_left_views = $(".percentleft");
-
-	function update_progressbar(start_time, end_time) {
+	function update_progressbar() {
 		// convert dates to milliseconds
-		var start = start_time.getTime();
-		var end = end_time.getTime();
+		var start = starts.getTime();
+		var end = ends.getTime();
 		var now = new Date().getTime();
 
 		// do some nice and fancy math
@@ -22,32 +16,32 @@ $(function () {
 		var time_left = Math.abs(end - now);
 
 		// update view elements
-		progressbars.each(function() {
+		$(".liveprogress").each(function() {
 				$(this).width(percent_played + '%');
 		});
-		time_left_views.each(function() {
+		$(".timeleft").each(function() {
 				$(this).text(Math.floor(time_left / 60 / 1000));
 		});
-		percent_played_views.each(function() {
+		$(".percentplayed").each(function() {
 				$(this).text(Math.floor(percent_played) + "%");
 		});
-		percent_played_views.each(function() {
+		$(".percentleft").each(function() {
 				$(this).text(percent_left + "%");
 		});
 	}
 
-	update_progressbar(starts, ends);
+	update_progressbar();
 
 	// refresh time in milliseconds
 	var intervalTime = 10 * 1000; // 10 seconds
 	// start timer
 	window.setInterval(function(){
-		update_progressbar(starts, ends);
+		update_progressbar();
 		// check if the episode is finished
 		var now = new Date();
 		if (now > ends) {
 			// if episode is finished, do AJAX request and reload schedule
-			$.get("/", null, null, 'script');
+			$.get("/", null, update_progressbar, 'script');
 		}
 	}, intervalTime);
 
