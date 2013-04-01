@@ -6,7 +6,7 @@
 			<div class="small-3 columns">
 
 				<!-- EPISODE PODCAST IMAGE -->
-				<% if !podcast.nil? %><h2><img src="http://reliveradio.de/podcasts/logos/<%= podcast.slugintern %>.jpg"></h2><% end %>
+				<% if !podcast.nil? %><h2><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></h2><% end %>
 
 				<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 				<div class="show-for-small playtime-small">

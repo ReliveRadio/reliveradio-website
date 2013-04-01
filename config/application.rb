@@ -60,3 +60,8 @@ module Reliveradio
     config.assets.version = '1.0'
   end
 end
+
+module Artwork
+    ARTWORK_BASE_URL = "http://static.reliveradio.de/logos/"
+end
+
