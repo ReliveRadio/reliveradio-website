@@ -6,6 +6,28 @@ class HomeController < ApplicationController
 
 	def index
 
+		# Listener statistics from xenim network
+		
+		xenim_statistics = Rails.cache.fetch("xenim_statistics", :expires_in => 1.minute) do
+			uri = URI.parse("http://feeds.streams.xenim.de/live/json/")
+			http = Net::HTTP.new(uri.host, uri.port)
+			request = Net::HTTP::Get.new(uri.request_uri)
+			response = http.request(request)
+			JSON.parse(response.body)["items"]
+		end
+
+		xenim_statistics.each do |podcast|
+			if podcast["author_name"] == "Reliveradio"
+				@listeners = podcast["listener"]
+			end
+		end
+
+
+
+
+
+
+
 		# hoersuppe api returns local dates (CET)
 
 		#Rails.cache.delete("cacheID")
@@ -32,6 +54,12 @@ class HomeController < ApplicationController
 				podcast["db"] = Podcast.where(["hoersuppeslug = ?", podcast['podcast']]).first
 			end
 		end
+
+
+
+
+
+
 
 		# airtime api returns UTC dates
 
