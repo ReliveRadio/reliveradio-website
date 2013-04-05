@@ -3,11 +3,12 @@ require "net/http"
 class HomeController < ApplicationController
 
 	caches_action :index, :expires_in => 60.seconds, :cache_path => 'index'
+	caches_action :listeners, :expires_in => 30.seconds, :cache_path => 'listeners'
 
-	def listeners
+	def fetch_listeners
 		# Listener statistics from xenim network
 		
-		xenim_statistics = Rails.cache.fetch("xenim_statistics", :expires_in => 1.minute) do
+		xenim_statistics = Rails.cache.fetch("xenim_statistics", :expires_in => 30.seconds) do
 			uri = URI.parse("http://feeds.streams.xenim.de/live/json/")
 			http = Net::HTTP.new(uri.host, uri.port)
 			request = Net::HTTP::Get.new(uri.request_uri)
@@ -17,8 +18,15 @@ class HomeController < ApplicationController
 
 		xenim_statistics.each do |podcast|
 			if podcast["author_name"] == "Reliveradio"
-				@listeners = podcast["listener"]
+				return podcast["listener"]
 			end
+		end
+	end
+
+	def listeners
+		@listeners = fetch_listeners
+		respond_to do |format|
+			format.js # listeners.js.erb
 		end
 	end
 
@@ -54,7 +62,7 @@ class HomeController < ApplicationController
 	def index
 
 		# fetch live listeners count
-		listeners
+		@listeners = fetch_listeners
 		# fetch really live podcasts
 		hoersuppe
 

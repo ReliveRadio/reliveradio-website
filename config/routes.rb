@@ -14,6 +14,8 @@ Reliveradio::Application.routes.draw do
   # This route can be invoked with info_url(:id => podcast.id)
   match '/:slugintern' => 'podcasts#info', :as => :info
 
+  get "home/listeners"
+
   get "home/index"
   root :to => "home#index"
   

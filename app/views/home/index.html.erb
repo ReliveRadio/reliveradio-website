@@ -24,4 +24,13 @@
 	</div>
 </div>
 
+<!-- LISTENERS COUNT SETUP -->
+<%= javascript_tag do %>
+	<% if !@listeners.blank? %>
+		window.listeners = <%= @listeners %>;
+	<% else %>
+		window.listeners = -1;
+	<% end %>
+<% end %>
+
 <%= javascript_include_tag 'home' %>
