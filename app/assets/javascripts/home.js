@@ -13,3 +13,4 @@
 //= require ./livestreamplayer
 //= require ./progressbar
 //= require ./listeners
+//= require ./hoersuppe_live

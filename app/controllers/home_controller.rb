@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 
 	caches_action :index, :expires_in => 60.seconds, :cache_path => 'index'
 	caches_action :listeners, :expires_in => 30.seconds, :cache_path => 'listeners'
+	caches_action :hoersuppe, :expires_in => 10.minutes, :cache_path => 'hoersuppe'
 
 	def fetch_listeners
 		# Listener statistics from xenim network
@@ -30,7 +31,7 @@ class HomeController < ApplicationController
 		end
 	end
 
-	def hoersuppe		
+	def fetch_hoersuppe_livepodcasts
 		# hoersuppe api returns local dates (CET)
 
 		#Rails.cache.delete("cacheID")
@@ -59,12 +60,19 @@ class HomeController < ApplicationController
 		end
 	end
 
+	def hoersuppe		
+		fetch_hoersuppe_livepodcasts
+		respond_to do |format|
+			format.js # hoersuppe.js.erb
+		end
+	end
+
 	def index
 
 		# fetch live listeners count
 		@listeners = fetch_listeners
 		# fetch really live podcasts
-		hoersuppe
+		fetch_hoersuppe_livepodcasts
 
 		# airtime api returns UTC dates
 

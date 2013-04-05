@@ -15,6 +15,7 @@ Reliveradio::Application.routes.draw do
   match '/:slugintern' => 'podcasts#info', :as => :info
 
   get "home/listeners"
+  get "home/hoersuppe"
 
   get "home/index"
   root :to => "home#index"
