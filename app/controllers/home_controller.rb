@@ -4,8 +4,7 @@ class HomeController < ApplicationController
 
 	caches_action :index, :expires_in => 60.seconds, :cache_path => 'index'
 
-	def index
-
+	def listeners
 		# Listener statistics from xenim network
 		
 		xenim_statistics = Rails.cache.fetch("xenim_statistics", :expires_in => 1.minute) do
@@ -21,13 +20,9 @@ class HomeController < ApplicationController
 				@listeners = podcast["listener"]
 			end
 		end
+	end
 
-
-
-
-
-
-
+	def hoersuppe		
 		# hoersuppe api returns local dates (CET)
 
 		#Rails.cache.delete("cacheID")
@@ -54,12 +49,14 @@ class HomeController < ApplicationController
 				podcast["db"] = Podcast.where(["hoersuppeslug = ?", podcast['podcast']]).first
 			end
 		end
+	end
 
+	def index
 
-
-
-
-
+		# fetch live listeners count
+		listeners
+		# fetch really live podcasts
+		hoersuppe
 
 		# airtime api returns UTC dates
 
