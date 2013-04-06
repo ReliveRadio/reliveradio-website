@@ -648,10 +648,20 @@
 // Panel Variables
 //
 
+
+
 // We use these to control the background and border styles
-// $panel-bg: darken(#fff, 5%);
-// $panel-border-style: solid;
-// $panel-border-size: 1px;
+	$panel-bg: darken(#fff, 5%);
+	$panel-border-style: solid;
+	$panel-border-size: 3px;
+
+div.panel {
+	border: none;
+	border-top: darken($panel-bg, 10%) $panel-border-size $panel-border-style;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
 
 // We use this % to control how much we darken things on hover
 // $panel-function-factor: 10%;
