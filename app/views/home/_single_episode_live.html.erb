@@ -1,6 +1,8 @@
+<div class="row">
+	<div class="small-12 columns"><div id="livebar">Jetzt Live!</div></div>
+</div>
 <div class="row episode live">
 	<div class="small-3 columns">
-
 		<!-- EPISODE PODCAST IMAGE -->
 		<% if !podcast.nil? %><h2><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></h2><% end %>
 
@@ -59,4 +61,7 @@
 			<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
 		<% end %>
 	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns"><div id="upcoming">Nächste Folgen</div></div>
 </div>
