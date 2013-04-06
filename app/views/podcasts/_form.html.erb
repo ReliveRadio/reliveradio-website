@@ -69,7 +69,11 @@
     </div>
     <div class="field">
       <%= f.label "Beschreibung" %><br />
-      <%= f.text_area :description, :placeholder => "Kurzbeschreibung des Podcasts." %>
+      <% if !@podcast.description.blank? %>
+        <%= f.text_area :description %>
+      <% else %>
+        <%= f.text_area :description, :value => "Keine Beschreibung vorhanden."  %>
+      <% end %>
       <%= f.submit "Beschreibung aus dem Feed importieren", :name => "import_from_feed", :class => "small secondary button" %>
     </div>
     <div class="actions">
@@ -78,4 +82,7 @@
     </div>
   </div>
 </div>
+
+
 <% end %>
+
