@@ -2,12 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.episode {
-	margin-bottom: 3em;
+div.row div.episode {
+
 }
 
-div.live {
+div.row div.live {
 	border: 5px solid red;
+	margin-bottom: 3em;
 }
 
 .playtime-small {
