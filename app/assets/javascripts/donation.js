@@ -6,6 +6,7 @@ $(function(){
 	}
 
 	$("#sofortueberweisung_button").click(function(){
+		$("#sofortueberweisung_input").removeClass("error");
 		var money = $("#sofortueberweisung_input").val();
 		// test cases
 		// empty
@@ -21,7 +22,11 @@ $(function(){
 		var number = parseFloat(money);
 		if (containsComma) number *= 100;
 
-		open_in_new_tab("https://billing.micropayment.de/sofort/event/?project=rlvrdo&title=Spende&amount=" + number);
+		if(number > 0){
+			open_in_new_tab("https://billing.micropayment.de/sofort/event/?project=rlvrdo&title=Spende&amount=" + number);
+		} else {
+			$("#sofortueberweisung_input").addClass("error");
+		}
 
 		// https://billing.micropayment.de/sofort/event/?project=rlvrdo&title=Spende&amount=1337
 	});
