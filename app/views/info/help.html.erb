@@ -17,52 +17,68 @@
 		<h4 class="subheader">Neue Tools und eigene Ideen</h4>
 		<p>Der Phantasie sind hier keine Grenzen gesetzt. Einfach loslegen, wenn du eine Idee hast. Hier einige konkrete Beispiele, wie wir das ReliveRadio für Hörer noch besser machen könnten.</p>
 		<table>
-		<tr>
-		<td><strong>Idee</strong></td>
-		<td><strong>Beschreibung</strong></td>
-		</tr>
-		<tr>
-		<td>ADN Bot</td>
-		<td>Sendungsankündigung auf App.net.</td>
-		</tr>
-		<tr>
-		<td>IRC Bot</td>
-		<td>Sensungsankündigung im #reliveradio IRC Channel auf freenode.</td>
-		</tr>
-		<tr>
-		<td>Optimierung Metadaten</td>
-		<td>Podcatcher oder Script, welches Informationen des Feeds in die Datei schreibt, sodass diese in der Radioautomation angezeigt werden.</td>
-		</tr>
-		<tr>
-		<td>Deine Idee</td>
-		<td>?</td>
-		</tr>
+			<tr>
+				<td><strong>Idee</strong></td>
+				<td><strong>Beschreibung</strong></td>
+			</tr>
+			<tr>
+				<td>ADN Bot</td>
+				<td>Sendungsankündigung auf App.net.</td>
+			</tr>
+			<tr>
+				<td>IRC Bot</td>
+				<td>Sensungsankündigung im #reliveradio IRC Channel auf freenode.</td>
+			</tr>
+			<tr>
+				<td>Optimierung Metadaten</td>
+				<td>Podcatcher oder Script, welches Informationen des Feeds in die Datei schreibt, sodass diese in der Radioautomation angezeigt werden.</td>
+			</tr>
+			<tr>
+				<td>Deine Idee</td>
+				<td>?</td>
+			</tr>
 		</table>
 
 		<h2>Spenden zur Deckung der Serverkosten</h2>
 		<p>Wir wurden nun mehrfach gefragt, ob es (neben dem Flattr Button) möglich ist, das Projekt auch finanziell zu unterstützen.</p>
 		<p>Zum Betrieb des ReliveRadios haben wir einen Server mit viel Festplattenkapazität angemietet, da wir sämtliche Podcastfolgen lokal speichern, um sie dann auch später auf dem Stream abspielen zu können. Hinzu kommt ein kleiner Mini-Testserver, auf dem wir neue Funktionen testen können, bevor sie live geschaltet werden. Der Spaß kostet z.Z. voraussichtlich 420-460 Euro im Jahr. Wir spielen keine Werbung. Wer Lust hat, etwas zu spenden, hat folgende Möglichkeiten:</p>
-		<table>
-		<tr>
-		<td>Sofortüberweisung</td>
-		<td>Noch nicht verfügbar. (dev: HTML Kommentar)</td>
-		<!-- An dieser Stelle könnten feste Beträge definiert werden. Lieber wäre mir persönlich, wenn jeder selbst genau bestimmen könnte, wie viel er denn geben möchte. 
 
-		Könnte man hier ein kleines Feld einbauen, in dem man einen Betrag eingeben kann und das ganze via GET an
+		<div class="row">
+			<div class="large-4 columns">
+				<ul class="pricing-table">
+					<li class="title">Flattr</li>
+					<li class="description">Du kannst entweder diesen Flattr Button klicken (vielleicht auch ein Flattr-Abo aktivieren) oder über den Spenden Button einen festen Betrag über Flattr an uns spenden.</li>
+					<li class="description">
+						<a class="FlattrButton" style="display:none;"
+						title="ReliveRadio"
+						data-flattr-uid="germanstudent"
+						data-flattr-tags="text, opensource"
+						data-flattr-category="text"
+						href="http://www.reliveradio.de">
 
-		https://billing.micropayment.de/sofort/event/?project=rlvrdo&title=Spende&amount=1337
+						ReliveRadio
+						</a></li>
+					<li class="cta-button"><a class="button" href="https://flattr.com/donation/give/to/germanstudent" target="_blank">Direkt spenden</a></li>
+				</ul>
+			</div>
+			<div class="large-4 columns">
+				<ul class="pricing-table">
+					<li class="title">Sofortüberweisung</li>
+					<li class="description">Wähle einen Betrag und klicke auf Spenden</li>
+					<li class="price"><input id="sofortueberweisung_input" type="text" value="13,37 €" style="text-align: center;"></li>
+					<li class="cta-button"><a class="button" id="sofortueberweisung_button">Spenden</a></li>
+				</ul>
+			</div>
+			<div class="large-4 columns">
+				<ul class="pricing-table">
+					<li class="title">Bitcoin</li>
+					<li class="description">Wir freuen uns auch über Spenden via Bitcoin. Hier ist unsere Adresse.</li>
+					<li class="bullet-item" style="word-break: break-all;">198h44RjB9WGZk4ZmoCoF4dhr9rfGgj5rs</li>
+				</ul>
+			</div>
+		</div>
 
-		übergeben Stefan? 1337 ist der zu spendene Betrag in Cent. Oder sticht sich das zu sehr mit dem Design? -->
-		</tr>
-		<tr>
-		<td>Flattr</td>
-		<td><a href="https://flattr.com/donation/give/to/germanstudent" target="_blank">Dies ist hier möglich</a></td>
-		</tr>
-		<tr>
-		<td>Bitcoin</td>
-		<td>198h44RjB9WGZk4ZmoCoF4dhr9rfGgj5rs</td>
-		</tr>
-		</table>
+		<%= javascript_include_tag 'donation' %>
 
 		<h2>Und sonst?</h2>
 		<p>Einfach weitersagen, wenn euch das ReliveRadio gefällt.</p>
