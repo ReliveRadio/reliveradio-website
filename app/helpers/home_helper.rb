@@ -16,6 +16,8 @@ module HomeHelper
 				return podcast["listener"]
 			end
 		end
+
+		return "Konnte nicht ermittelt werden"
 	end
 
 	def fetch_hoersuppe_livepodcasts
