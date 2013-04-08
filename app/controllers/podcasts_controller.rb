@@ -2,6 +2,8 @@ require 'feedzirra'
 
 class PodcastsController < ApplicationController
 
+  include PodcastsHelper
+
   # authentication for backend
   # set good password here for production use!
   http_basic_authenticate_with :name => "test", :password => "test", :except => ["info", "overview"]
