@@ -10,22 +10,16 @@ div.row div.live {
 	// border: 5px solid red;
 	// border-radius: 5px;
 	margin-bottom: 1em;
+	background: #FFF9D1;
+	padding: 1em 0 1em 0;
 }
 
 #livebar {
+	float: right;
 	color: #fff;
-	border-top: solid 3px darken(#5da423, 10%);
-	background: #5da423;
-	padding: .5em 2em .55em;
-	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-}
-
-#upcoming {
-	color: #fff;
-	border-top: solid 3px darken(#2ba6cb, 10%);
-	background: #2ba6cb;
-	padding: .5em 2em .55em;
-	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	background: #FF4C24;
+	padding: 0.8em;
+	text-shadow: 0px 1px 1px #000;
 }
 
 .playtime-small {

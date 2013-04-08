@@ -1,6 +1,3 @@
-<div class="row">
-	<div class="small-12 columns"><div id="livebar">Jetzt Live!</div></div>
-</div>
 <div class="row episode live">
 	<div class="small-3 columns">
 		<!-- EPISODE PODCAST IMAGE -->
@@ -29,6 +26,9 @@
 	</div>
 
 	<div class="small-9 columns">
+
+		<div id="livebar">Jetzt Live!</div>
+		
 		<!-- NAME OR TRACK DESCRIPTION -->
 		<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
 
@@ -61,7 +61,4 @@
 			<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
 		<% end %>
 	</div>
-</div>
-<div class="row">
-	<div class="small-12 columns"><div id="upcoming">Nächste Folgen</div></div>
 </div>
