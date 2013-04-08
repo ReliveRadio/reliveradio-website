@@ -14,12 +14,12 @@
         <div class="row podcast">
     <% end %>
 
-      <div class="large-4 columns">
+      <div class="small-4 columns">
 
         <a href="<%= info_url(:slugintern => podcast.slugintern) %>"><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></a>
-        <h3 class="breaklines"><%= podcast.name %></h3>
-        <p class="hide-for-small"><%= podcast.description %></p>
-        <p><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
+        <h3 class="hide-for-small breaklines"><%= podcast.name %></h3>
+        <p class="hide-for-small"><%= first_x_words(podcast.description, 20) %></p>
+        <p class="hide-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
       
       </div>
     <% if toggle%3 == 2 %>
