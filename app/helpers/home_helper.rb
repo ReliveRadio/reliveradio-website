@@ -1,19 +1,32 @@
 module HomeHelper
 
+	require 'timeout'
+
+	def fetch_json(url)
+		Timeout::timeout(1) do # 1 second
+			# operation that may cause a timeout
+			uri = URI.parse(url)
+			http = Net::HTTP.new(uri.host, uri.port)
+			request = Net::HTTP::Get.new(uri.request_uri)
+			response = http.request(request)
+			return JSON.parse(response.body)
+		end
+		rescue Timeout::Error, Errno::ECONNREFUSED, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
+			return ""
+	end
+
 	def fetch_listeners
 		# Listener statistics from xenim network
 		
 		xenim_statistics = Rails.cache.fetch("xenim_statistics", :expires_in => 30.seconds) do
-			uri = URI.parse("http://feeds.streams.xenim.de/live/json/")
-			http = Net::HTTP.new(uri.host, uri.port)
-			request = Net::HTTP::Get.new(uri.request_uri)
-			response = http.request(request)
-			JSON.parse(response.body)["items"]
+			fetch_json("http://feeds.streams.xenim.de/live/json/")["items"]
 		end
 
-		xenim_statistics.each do |podcast|
-			if podcast["author_name"] == "Reliveradio"
-				return podcast["listener"]
+		if !xenim_statistics.blank?
+			xenim_statistics.each do |podcast|
+				if podcast["author_name"] == "Reliveradio"
+					return podcast["listener"]
+				end
 			end
 		end
 
@@ -27,11 +40,7 @@ module HomeHelper
 		live_podcasts = Rails.cache.fetch("hoersuppe_live", :expires_in => 1.hour) do
 			# read all podcasts that are really live today from the hoersuppe API
 			# %F => 2007-11-19
-			uri = URI.parse("http://hoersuppe.de/api/?action=getLive&dateEnd="+ Time.now.strftime('%F'))
-			http = Net::HTTP.new(uri.host, uri.port)
-			request = Net::HTTP::Get.new(uri.request_uri)
-			response = http.request(request)
-			JSON.parse(response.body)["data"]
+			fetch_json("http://hoersuppe.de/api/?action=getLive&dateEnd="+ Time.now.strftime('%F'))["data"]
 		end
 
 		if !live_podcasts.blank?
@@ -57,11 +66,7 @@ module HomeHelper
 		#Rails.cache.delete("cacheID")
 		episodes = Rails.cache.fetch("airtime_schedule", :expires_in => 10.minutes) do
 			# read the program for today via GET request as JSON from the Airtime radio API
-			uri = URI.parse("http://programm.reliveradio.de/api/today-info")
-			http = Net::HTTP.new(uri.host, uri.port)
-			request = Net::HTTP::Get.new(uri.request_uri)
-			response = http.request(request)
-			JSON.parse(response.body)
+			fetch_json("http://programm.reliveradio.de/api/today-info")
 		end
 
 		if !episodes.blank?
