@@ -29,6 +29,7 @@ class HomeController < ApplicationController
 		@live_podcasts = fetch_hoersuppe_livepodcasts
 		# fetch episode schedule
 		@episodes = fetch_episode_schedule
+		@live_episode = @episodes.shift # returns the first element and removes it from the list
 
 		respond_to do |format|
 			format.html # index.html.erb
