@@ -1,4 +1,4 @@
-<div class="row episode live">
+<div class="row episode">
 	<div class="small-3 columns">
 		<!-- EPISODE PODCAST IMAGE -->
 		<% if !podcast.nil? %><h2><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></h2><% end %>
@@ -35,9 +35,6 @@
 		<!-- TRACK TITLE -->
 		<h5><%= episode['track_title'] %></h5>
 
-		<!-- PROGRESS BAR FOR SMALL DEVICES -->
-		<div class="progress show-for-small"><span class="meter liveprogress" style="width: 0%"></span></div>
-
 		<% if !podcast.nil? %>
 			<!-- PODCAST DESCRIPTION -->
 			<p class="hide-for-small"><%= podcast.description %></p>
@@ -60,5 +57,11 @@
 		    <!-- MORE INFO LINK FOR MOBILE VIEW -->
 			<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
 		<% end %>
+	</div>
+</div>
+<!-- START LIVESTREAM PLAYER BUTTON FOR SMALL DEVICES-->
+<div class="row">
+	<div class="small-12 columns">
+		<div class="livestreambutton button success show-for-small"></div>
 	</div>
 </div>

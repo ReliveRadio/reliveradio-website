@@ -1,13 +1,13 @@
 <% title "Sendeplan" %>
 
+<!-- PROGRESS BAR FOR SMALL DEVICES -->
+<div class="progress show-for-small"><span class="meter liveprogress" style="width: 0%"></span></div>
 
-<!-- TOPIC -->
-<%= render 'topic' %>
-
-<!-- START LIVESTREAM PLAYER BUTTON FOR SMALL DEVICES-->
-<div class="row">
-	<div class="small-12 columns">
-		<div class="livestreambutton button success show-for-small"></div>
+<div class="live">
+	<div class="row">
+		<div class="small-12 columns">
+			<%= render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"] %>
+		</div>
 	</div>
 </div>
 

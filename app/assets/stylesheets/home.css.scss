@@ -2,15 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+nav.top-bar {
+	margin-bottom: 0;
+}
+
 div.row div.episode {
 
 }
 
-div.row div.live {
+div.live {
+	background: #FFF9D1;
+}
+
+div.row {
 	// border: 5px solid red;
 	// border-radius: 5px;
 	margin-bottom: 1em;
-	background: #FFF9D1;
 	padding: 1em 0 1em 0;
 }
 

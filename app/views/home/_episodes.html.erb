@@ -2,11 +2,7 @@
 	<!-- SHOW ALL UPCOMING PODCASTS -->
 	<% @episodes.each do |episode| %>
 		<% podcast = episode["db"] %>
-			<% if episode["isLive"] %>
-				<%= render 'single_episode_live', :podcast => podcast, :episode => episode %>
-			<% else %>
-				<%= render 'single_episode', :podcast => podcast, :episode => episode %>
-			<% end %>
+			<%= render 'single_episode', :podcast => podcast, :episode => episode %>
 		<% end %>
 	<% end %>
 
