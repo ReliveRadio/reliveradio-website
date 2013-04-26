@@ -9,7 +9,7 @@ class PodcastsController < ApplicationController
   http_basic_authenticate_with :name => "test", :password => "test", :except => ["info", "overview"]
 
   # static page cache for all podcasts overview and detailed view for each podcast
-  caches_page :overview, :info
+  caches_page :info
   # action cache for all podcasts overview in the backend. action cache needed here to have authentication
   caches_action :index, :cache_path => 'all_podcasts_database_backend'
   # cache sweeper called after specific methods
