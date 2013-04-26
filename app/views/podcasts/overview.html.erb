@@ -8,13 +8,18 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="small-12 columns">
+<div id="searchbar" class="row">
+    <div class="small-5 small-centered columns">
         <%= form_tag overview_path, :method => 'get' do %>
-            <p>
-                <%= text_field_tag :search, params[:search] %>
-                <%= submit_tag "Search", :name => nil %>
-            </p>
+            <div class="row collapse">
+                <div class="small-10 columns">
+                    <%= text_field_tag :search, params[:search], :placeholder => "Verzeichnis durchsuchen" %>
+                </div>
+                <div class="small-2 columns">
+                    <%= submit_tag "Suchen", :name => nil, :class => "prefix button" %>
+                </div>
+            </div>
+            <div>Es wurden <%=@result_count %> Podcasts gefunden.</div>
         <% end %>
     </div>
 </div>
