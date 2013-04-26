@@ -15,6 +15,7 @@ gem 'rails', '3.2.12'
 gem 'sqlite3', '1.3.7'
 gem 'json', '1.7.7'
 gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git', :tag => 'v0.2.0.rc2'
+gem 'will_paginate'
 
 # Gems used only for assets and not required
 # in production environments by default.
