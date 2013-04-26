@@ -48,8 +48,10 @@
 <% end %>
 
 <div class="row">
-    <div class="small-12 columns center">
-        <%= will_paginate @podcasts %>
+    <div class="small-12 columns">
+        <div class="pagination-centered">
+            <%= will_paginate @podcasts %>        
+        </div>
     </div>
 </div>
 
