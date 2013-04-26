@@ -1,4 +1,4 @@
-<div class="row episode">
+<div id="live-episode" class="row episode">
 	<div class="small-3 columns">
 		<!-- EPISODE PODCAST IMAGE -->
 		<% if !podcast.nil? %><h2><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></h2><% end %>
@@ -25,10 +25,8 @@
 		</div>
 	</div>
 
-	<div class="small-9 columns">
+	<div class="small-6 columns">
 
-		<div id="livebar">Jetzt Live!</div>
-		
 		<!-- NAME OR TRACK DESCRIPTION -->
 		<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
 
@@ -57,11 +55,24 @@
 		    <!-- MORE INFO LINK FOR MOBILE VIEW -->
 			<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
 		<% end %>
+		<div class="hide-for-small" style="text-align: center;">
+			<span class="livestreambutton off">Livestream starten</span>
+		</div>
+	</div>
+
+	<div class="small-3 columns">
+		Aktuell 11 Livehörer!
 	</div>
 </div>
 <!-- START LIVESTREAM PLAYER BUTTON FOR SMALL DEVICES-->
-<div class="row">
+<div class="row show-for-small">
 	<div class="small-12 columns">
-		<div class="livestreambutton button success show-for-small"></div>
+		<div class="livestreambutton off"></div>
 	</div>
 </div>
+
+<!-- PROGRESSBAR SETUP -->
+<%= javascript_tag do %>
+	window.starts = new Date(<%= @live_episode['starts'].to_i %> * 1000);
+	window.ends = new Date(<%= @live_episode['ends'].to_i %> * 1000);
+<% end %>

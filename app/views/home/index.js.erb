@@ -1,1 +1,2 @@
 $("#episodes").html("<%= escape_javascript(render("episodes")) %>");
+$("#live-episode").html("<%= escape_javascript(render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"]) %>");
