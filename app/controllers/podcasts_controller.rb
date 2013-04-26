@@ -17,7 +17,7 @@ class PodcastsController < ApplicationController
   
   # three columns overview over all available podcasts in the DB
   def overview
-    @podcasts = Podcast.paginate(:per_page => 15, :page => params[:page])
+    @podcasts = Podcast.search(params[:search]).paginate(:per_page => 15, :page => params[:page])
 
     respond_to do |format|
       format.html # overview.html.erb

@@ -8,6 +8,17 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="small-12 columns">
+        <%= form_tag overview_path, :method => 'get' do %>
+            <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :name => nil %>
+            </p>
+        <% end %>
+    </div>
+</div>
+
 <% toggle = 0 %>
 <% @podcasts.each do |podcast| %>
     <% if toggle%3 == 0 %>

@@ -22,4 +22,12 @@ class Podcast < ActiveRecord::Base
 	  end
 	end
 
+	def self.search(search)
+		if search
+			where('name LIKE ?', "%#{search}%")
+		else
+			scoped # like all but without doing the query
+		end
+	end
+
 end
