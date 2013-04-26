@@ -1,13 +1,8 @@
+<div class="upcoming hide-for-small"><i class="icon-arrow-down"></i> Nächste Podcasts <i class="icon-arrow-down"></i></div>
 <% if !@episodes.blank? %>
 	<!-- SHOW ALL UPCOMING PODCASTS -->
 	<% @episodes.each do |episode| %>
 		<% podcast = episode["db"] %>
-			<%= render 'single_episode', :podcast => podcast, :episode => episode %>
-		<% end %>
+		<%= render 'single_episode', :podcast => podcast, :episode => episode %>
 	<% end %>
-
-	<!-- PROGRESSBAR SETUP -->
-	<%= javascript_tag do %>
-		window.starts = new Date(<%= @episodes.first['starts'].to_i %> * 1000);
-		window.ends = new Date(<%= @episodes.first['ends'].to_i %> * 1000);
 <% end %>

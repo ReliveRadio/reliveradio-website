@@ -48,8 +48,8 @@ $(function(){
 			livestreambuttons.each(function() {
 				// change look and feel of the button
 				$(this).html('<i class="icon-play"></i> Livestream starten');
-				$(this).removeClass('alert');
-				$(this).addClass('success');
+				$(this).removeClass('on');
+				$(this).addClass('off');
 			});
 			// remember status
 			isLivestreamPlaying = false;
@@ -59,8 +59,8 @@ $(function(){
 			livestreambuttons.each(function() {
 				// change look and feel of the button
 				$(this).html('<i class="icon-pause"></i> Livestream stoppen');
-				$(this).removeClass('success');
-				$(this).addClass('alert');
+				$(this).removeClass('off');
+				$(this).addClass('on');
 			});
 			// remember status
 			isLivestreamPlaying = true;
