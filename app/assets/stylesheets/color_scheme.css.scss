@@ -1,5 +1,10 @@
-$red-color: #ee2244;
-$blue-color: #77ccaa;
-$green-color: #aabb44;
-$brown-color: #886655;
+$red-color: #DD577A;
+$orange-color: #FE5A27;
+$blue-color: #49AEC0;
+$dark-color: #131723;
 $pastel-color: #eeeedd;
+
+
+$panel-bg: lighten($pastel-color, 5%);
+
+$topbar-bg: $dark-color;

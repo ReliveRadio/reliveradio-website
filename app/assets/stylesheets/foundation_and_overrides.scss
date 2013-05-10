@@ -1,4 +1,5 @@
 // Required global settings and mixins for Foundation
+@import "color_scheme";
 @import "foundation/variables";
 
 // Settings file to override Foundation variables
@@ -28,10 +29,10 @@
 // $text-direction: ltr;
 
 // We use these as default colors throughout
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$primary-color: $blue-color;
+$secondary-color: $red-color;
+// $alert-color: $red-color;
+// $success-color: $green-color;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -651,13 +652,16 @@
 
 
 // We use these to control the background and border styles
-	$panel-bg: darken(#fff, 5%);
-	$panel-border-style: solid;
-	$panel-border-size: 3px;
+	// $panel-bg: darken(#fff, 5%);
+	// $panel-border-style: solid;
+	// $panel-border-size: 3px;
 
 div.panel {
 	border: none;
-	border-top: darken($panel-bg, 10%) $panel-border-size $panel-border-style;
+}
+
+div.panel h4 {
+	color: $red-color;
 }
 
 // We use this % to control how much we darken things on hover

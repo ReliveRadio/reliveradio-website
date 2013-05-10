@@ -4,45 +4,30 @@
 
 @import "color_scheme";
 
+// NAVITAGION
 nav.top-bar {
 	margin-bottom: 0;
 }
 
-div.upcoming {
-	padding: 1em;
-	text-align: center;
-	margin: 0;
 
-	-moz-box-shadow: 0px 2px 5px #888;
-	-webkit-box-shadow: 0px 2px 5px #888;
-	box-shadow: 0px 2px 5px #888;
 
-	color:#fff;
-	text-shadow: 0px -1px 0px #000;
 
-	background: black;
-}
 
-div.progress {
-	margin-bottom: 0;
-}
-
-div.row div.episode {
-
-}
-
+// LIVE PODCAST
 div.live {
-	background-image: url(/assets/header_bg.png);
+	background-color: $dark-color;
+	color: #fff;
 }
 
 #live-episode, #live-episode h2, #live-episode h5 {
-	text-shadow: 0px 1px 0px #fff;
+	//text-shadow: 0px 1px 0px #fff;
+	color: #fff;
 }
 
 #live-episode a {
 	// text-shadow: none;
 	// text-shadow: 0px -1px 0px rgb(180,150,140);
-	// color: #fff;
+	 color: $blue-color;
 }
 
 #live-episode img {
@@ -51,6 +36,36 @@ div.live {
 	background: #fff;
 }
 
+div.progress {
+	margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+// UPCOMING BAR
+div.upcoming {
+	padding: 1em;
+	text-align: center;
+	margin: 0;
+	color:#fff;
+	background: $blue-color;
+}
+
+
+
+
+
+
+
+
+// LIVESTREAMBUTTON
 .off {
 	// text-shadow: 0 -1px 0 #6ebf17;
 	text-shadow: none;
@@ -71,6 +86,13 @@ div.live {
 	-webkit-font-smoothing: subpixel-antialiased;
 	padding: 1em;
 }
+
+
+
+
+
+
+
 
 div.live div.row {
 	margin-bottom: 0;
