@@ -1,13 +1,19 @@
+<div class="ribboncontainer"><div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1>Aktuelle Livehörer</h1></div><div class="ribbon-stitches-bottom"></div></div></div>
+
 <div class="panel">
-	<h4>Aktuelle Livehörer</h4>
-	<p>
 		<!-- Do not touch the following line. This is the identifier for the JS to update listeners count -->
-		<div id="listeners"><%= @listeners %></div>
-	</p>
+		<p id="listeners"><%= @listeners %></p>
 </div>
+
+<div class="ribboncontainer"><div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1>Livestream</h1></div><div class="ribbon-stitches-bottom"></div></div></div>
 <%= render 'livestream_widget' %>
+
+<div class="ribboncontainer"><div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1>Unterstützen</h1></div><div class="ribbon-stitches-bottom"></div></div></div>
 <%= render 'help_widget' %>
 <div id="hoersuppe-widget">
+	<div class="ribboncontainer"><div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1>Mehr Live</h1></div><div class="ribbon-stitches-bottom"></div></div></div>
 	<%= render 'hoersuppe_widget', :live_podcasts => @live_podcasts %>
 </div>
+
+<div class="ribboncontainer"><div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1>Chat</h1></div><div class="ribbon-stitches-bottom"></div></div></div>
 <%= render 'chat_widget' %>
