@@ -213,3 +213,55 @@ div.panel {
 //    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
 //    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
 //    }
+
+
+
+
+
+
+
+
+
+.ribboncontainer2 {
+	position: relative;
+	margin-bottom: 50px;
+	margin-top: 0.5em;
+}
+
+.ribbon2 {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	background: $red-color;
+}
+.ribbon2 h1 {
+	font-size: 1.2em;
+	font-weight: 300;
+	color: #fff;
+	margin:0px;
+	padding: 10px 10px 10px 10px;
+}
+.ribbon2 .ribbon2-content:before, .ribbon2 .ribbon2-content:after {
+	border-color: darken($red-color, 15%) transparent transparent transparent;
+	position: absolute;
+	display: block;
+	border-style: solid;
+	bottom: 2.9em;
+	content: '';
+}
+.ribbon2 .ribbon2-content:before {
+	right: 0;
+	-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	border-width: 0.5em 0 0 1em;
+}
+.ribbon2 .ribbon2-content:after {
+	left: 0;
+		-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	border-width: 0.5em 1em 0 0;
+}
