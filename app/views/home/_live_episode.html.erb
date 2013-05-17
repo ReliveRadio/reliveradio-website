@@ -58,7 +58,7 @@
 		      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
 		    </ul>
 		    <!-- MORE INFO LINK FOR MOBILE VIEW -->
-			<p class="show-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
+			<p class="show-for-small"><a target="_blank" href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
 		<% end %>
 		<div class="hide-for-small" style="text-align: center;">
 			<span class="livestreambutton off">Livestream starten</span>
