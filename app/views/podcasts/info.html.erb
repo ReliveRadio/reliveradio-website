@@ -15,6 +15,9 @@
       <% if !@podcast.flattrhandle.blank? %><li>
         <a href="https://flattr.com/submit/auto?user_id=<%= @podcast.flattrhandle %>&url=http://reliveradio.de/<%= @podcast.slugintern %>&title=<%= @podcast.name %> im ReliveRadio&language=de&category=audio"><i class="icon-heart"></i> Flattr</a>
       </li><% end %>
+      <% if !@podcast.adnhandle.blank? %><li>
+        <a href="https://alpha.app.net/<%= @podcast.adnhandle %>">ADN</a>
+      </li><% end %>
       <% if !@podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= @podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
     </ul>
   </div>
