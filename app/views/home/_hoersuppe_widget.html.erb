@@ -1,14 +1,14 @@
 <!-- HOERSUPPE LIVE PODCASTS -->
+
 <% if !@live_podcasts.blank? %>
-	<div class="panel">
-		<p>Diese Podcasts werden gerade live aufgezeichnet und du kannst zuhören:</p>
-		<p>
-		<% @live_podcasts.each do |podcast| %>
-			<div>
-				<a href="<%= podcast['streamurl'] %>"><i class="icon-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
-			</div>
-		<% end %>
-		</p>
-		<p>Das ist ein Service der <%= link_to "Hörsuppe", "http://hoersuppe.de/now/" %>.</p>
-	</div>
+  <h5>Mehr Live</h5>
+	<p>Diese Podcasts werden gerade live aufgezeichnet und du kannst zuhören:</p>
+	<p>
+	<% @live_podcasts.each do |podcast| %>
+		<div>
+			<a href="<%= podcast['streamurl'] %>"><i class="icon-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
+		</div>
+	<% end %>
+	</p>
+	<p>Das ist ein Service der <%= link_to "Hörsuppe", "http://hoersuppe.de/now/" %>.</p>
 <% end %>

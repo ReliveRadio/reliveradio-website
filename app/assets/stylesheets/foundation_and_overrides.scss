@@ -1,6 +1,12 @@
 // Required global settings and mixins for Foundation
-@import "color_scheme";
 @import "foundation/variables";
+@import "color_scheme";
+
+$topbar-bg: $dark-color;
+
+div.sidebar h5 {
+  font-size: 1.5em;
+}
 
 // Settings file to override Foundation variables
 
@@ -30,7 +36,7 @@
 
 // We use these as default colors throughout
 $primary-color: $blue-color;
-$secondary-color: $red-color;
+//$secondary-color: $red-color;
 // $alert-color: $red-color;
 // $success-color: $green-color;
 

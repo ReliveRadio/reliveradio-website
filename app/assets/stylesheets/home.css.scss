@@ -31,7 +31,6 @@ div.live {
 }
 
 #live-episode img {
-	border-radius: 3px;
 	padding: 5px;
 	background: #fff;
 }
@@ -107,108 +106,6 @@ div.time-info {
 
 
 
-div.panel {
-	padding-top: 3em;
-	font-size: 0.9em;
-}
-
-.ribboncontainer {
-	position: relative;
-}
-
-.ribbon {
-	 width: 114%;
-   position: absolute;
-   margin-left: -7%;
-   text-align: center;
-   background: $ribbon-color;
-   // background: -webkit-gradient(linear, left top, left bottom, from(#d64b4b), to(#ab2c2c));
-   // background: -webkit-linear-gradient(top, #d64b4b, #ab2c2c);
-   // background: -moz-linear-gradient(top, #d64b4b, #ab2c2c);
-   // background: -ms-linear-gradient(top, #d64b4b, #ab2c2c);
-   // background: -o-linear-gradient(top, #d64b4b, #ab2c2c);
-   // background-image: -ms-linear-gradient(top, #d64b4b 0%, #ab2c2c 100%);
-   // -webkit-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
-   // -moz-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
-   // box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
-   }
-.ribbon h1 {
-	 font-size: 1.2em;
-	 font-weight: 300;
-	 color: #fff;
-   // color: #801111;
-   // text-shadow: #d65c5c 0 1px 0;
-   margin:0px;
-   padding: 0 10px 0 10px;
-   }
-// .ribbon:before, .ribbon:after {
-//    content: '';
-//    position: absolute;
-//    display: block;
-//    bottom: -1em;
-//    border: 1.5em solid #c23a3a;
-//    z-index: -1;
-//    }
-.ribbon:before {
-   left: -2em;
-   border-right-width: 1.5em;
-   border-left-color: transparent;
-   -webkit-box-shadow: rgba(000,000,000,0.4) 1px 1px 1px;
-   -moz-box-shadow: rgba(000,000,000,0.4) 1px 1px 1px;
-   box-shadow: rgba(000,000,000,0.4) 1px 1px 1px;
-   }
-.ribbon:after {
-   right: -2em;
-   border-left-width: 1.5em;
-   border-right-color: transparent;
-   -webkit-box-shadow: rgba(000,000,000,0.4) -1px 1px 1px;
-   -moz-box-shadow: rgba(000,000,000,0.4) -1px 1px 1px;
-   box-shadow: rgba(000,000,000,0.4) -1px 1px 1px;
-   }
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
-   border-color: darken($ribbon-color, 15%) transparent transparent transparent;
-   position: absolute;
-   display: block;
-   border-style: solid;
-   bottom: -0.5em;
-   content: '';
-   }
-.ribbon .ribbon-content:before {
-   left: 0;
-   border-width: 0.5em 0 0 1em;
-   }
-.ribbon .ribbon-content:after {
-   right: 0;
-   border-width: 0.5em 1em 0 0;
-   }
-// .ribbon-stitches-top {
-//    margin-top:2px;
-//    border-top: 1px dashed rgba(0, 0, 0, 0.2);
-//    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-//    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-//    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
-//    }
-// .ribbon-stitches-bottom {
-//    margin-bottom:2px;
-//    border-top: 1px dashed rgba(0, 0, 0, 0.2);
-//    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
-//    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
-//    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // UPCOMING BAR
@@ -217,37 +114,37 @@ div.upcoming {
 	text-align: center;
 	margin: 0;
 	color:#fff;
-	background: $red-color;
+	background: $blue-color;
 }
 
-.ribboncontainer2 {
+.ribboncontainer {
 	position: relative;
 	margin-bottom: 50px;
 	margin-top: 0.5em;
 }
 
-.ribbon2 {
+.ribbon {
 	width: 100%;
 	position: absolute;
 	text-align: center;
-	background: $red-color;
+	background: $blue-color;
 }
-.ribbon2 h1 {
+.ribbon h1 {
 	font-size: 1.2em;
 	font-weight: 300;
 	color: #fff;
 	margin:0px;
 	padding: 10px 10px 10px 10px;
 }
-.ribbon2 .ribbon2-content:before, .ribbon2 .ribbon2-content:after {
-	border-color: darken($red-color, 15%) transparent transparent transparent;
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+	border-color: darken($blue-color, 15%) transparent transparent transparent;
 	position: absolute;
 	display: block;
 	border-style: solid;
 	bottom: 2.9em;
 	content: '';
 }
-.ribbon2 .ribbon2-content:before {
+.ribbon .ribbon-content:before {
 	right: 0;
 	-moz-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
@@ -255,7 +152,7 @@ div.upcoming {
 	-ms-transform:rotate(180deg);
 	border-width: 0.5em 0 0 1em;
 }
-.ribbon2 .ribbon2-content:after {
+.ribbon .ribbon-content:after {
 	left: 0;
 		-moz-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
