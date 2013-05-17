@@ -1,0 +1,45 @@
+<%= stylesheet_link_tag "technique_stream" %>
+
+<div class="row">
+	<div class="large-3 columns">
+		<%= image_tag "logo.png" %>
+		<ul id="stream-selector">
+			<li><%= link_to "Technik", :technique_stream, :class => "technique active" %></li>
+			<li><%= link_to "Kultur", :culture_stream, :class => "culture" %></li>
+		</ul>
+		<div class="hide-for-small">
+			<span class="livestreambutton off">Livestream starten</span>
+	  </div>
+<!-- 		<hr />
+		<ul>
+			<li>Verzeichnis</li>
+			<li>Unterstützen</li>
+			<li>Chat</li>
+			<li>Kram</li>
+		</ul> -->
+	</div>
+	<div class="large-9 columns">
+		<div id="live-episode">
+			<%= render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"] %>
+		</div>
+		<div class="upcoming show-for-small"><i class="icon-arrow-down"></i> Nächste Podcasts <i class="icon-arrow-down"></i></div>
+		<div class="ribboncontainer hide-for-small"><div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1><i class="icon-arrow-down"></i> Nächste Podcasts <i class="icon-arrow-down"></i></h1></div><div class="ribbon-stitches-bottom"></div></div></div>
+		<div id="episodes">
+			<%= render 'episodes', :episodes => @episodes %>
+		</div>
+	</div>
+</div>
+
+<audio id="player" preload="none" src="http://stream.reliveradio.de:8000/24.mp3"></audio>
+
+<!-- LISTENERS COUNT SETUP -->
+<%= javascript_tag do %>
+	<% if !@listeners.blank? %>
+		window.listeners = <%= @listeners %>;
+	<% else %>
+		window.listeners = -1;
+	<% end %>
+<% end %>
+
+<%= javascript_include_tag 'stream' %>
+<%= javascript_include_tag 'stream_technique' %>

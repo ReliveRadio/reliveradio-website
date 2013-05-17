@@ -1,6 +1,8 @@
 <div class="row episode">
 	<div class="small-3 columns">
 
+
+		<div class="live-banner">Jetzt Live</div>
 		<!-- EPISODE PODCAST IMAGE -->
 		<% if !podcast.nil? %><h2><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></h2><% end %>
 
@@ -25,14 +27,11 @@
 			<div class="time-info"><span class="percentleft"></span></div> -->
 		</div>
 
-			<!-- Do not touch the following line. This is the identifier for the JS to update listeners count -->
-			<p id="listeners"><%= @listeners %></p>
-					<div class="hide-for-small" style="text-align: center;">
-			<span class="livestreambutton off">Livestream starten</span>
-		</div>
+		<!-- Do not touch the following line. This is the identifier for the JS to update listeners count -->
+		<p id="listeners"><%= @listeners %></p>
 	</div>
 
-	<div class="small-6 columns">
+	<div class="small-9 columns">
 
 		<!-- NAME OR TRACK DESCRIPTION -->
 		<h2><%= !podcast.nil? ? podcast.name : episode['artist_name'] %></h2>
@@ -43,12 +42,6 @@
 		<% if !podcast.nil? %>
 			<!-- PODCAST DESCRIPTION -->
 			<p class="hide-for-small"><%= podcast.description %></p>
-		    <!-- MORE INFO LINK FOR MOBILE VIEW -->
-			<p class="show-for-small"><a target="_blank" href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
-		<% end %>
-	</div>
-
-	<div class="small-3 columns">
 			<!-- SOCIAL LINKS - MORE METAINFO FOR PODCAST -->
 		    <ul class="inline-list hide-for-small">
 		      <!-- WEBSITE -->
@@ -68,6 +61,9 @@
 		      <!-- HOERSUPPE -->
 		      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
 		    </ul>
+		    <!-- MORE INFO LINK FOR MOBILE VIEW -->
+			<p class="show-for-small"><a target="_blank" href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
+		<% end %>
 	</div>
 </div>
 <!-- START LIVESTREAM PLAYER BUTTON FOR SMALL DEVICES-->

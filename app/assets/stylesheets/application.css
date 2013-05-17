@@ -12,5 +12,5 @@
  *= require font-awesome
  *= require foundation_and_overrides
  *= require mediaelement_rails
- *= require_tree .
+ *= all
  */

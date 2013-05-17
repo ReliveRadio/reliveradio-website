@@ -4,6 +4,12 @@ Reliveradio::Application.routes.draw do
   get "info/help", :as => :help
   get "info/chat", :as => :chat
 
+  get "stream/technique", :as => :technique_stream
+  get "stream/culture", :as => :culture_stream
+  get "stream/listeners_technique"
+  get "stream/listeners_culture"
+  get "stream/hoersuppe"
+
   # enable podcasts csv import
   resources :podcasts do
     collection {post :import}
@@ -13,9 +19,6 @@ Reliveradio::Application.routes.draw do
 
   # This route can be invoked with info_url(:id => podcast.id)
   match '/:slugintern' => 'podcasts#info', :as => :info
-
-  get "home/listeners"
-  get "home/hoersuppe"
 
   get "home/index"
   root :to => "home#index"

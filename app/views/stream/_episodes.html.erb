@@ -1,0 +1,7 @@
+<% if !@episodes.blank? %>
+	<!-- SHOW ALL UPCOMING PODCASTS -->
+	<% @episodes.each do |episode| %>
+		<% podcast = episode["db"] %>
+		<%= render 'single_episode', :podcast => podcast, :episode => episode %>
+	<% end %>
+<% end %>

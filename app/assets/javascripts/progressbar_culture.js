@@ -41,7 +41,7 @@ $(function () {
 		var now = new Date();
 		if (now > ends) {
 			// if episode is finished, do AJAX request and reload schedule
-			$.get("/home/index.js", null, update_progressbar, 'script');
+			$.get("/stream/culture.js", null, update_progressbar, 'script');
 		}
 	}, intervalTime);
 

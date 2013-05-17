@@ -1,8 +1,9 @@
-module HomeHelper
+module StreamHelperTechnique
 
 	require 'timeout'
+	require 'net/http'
 
-	def fetch_json(url)
+	def self.fetch_json(url)
 		Timeout::timeout(1) do # 1 second
 			# operation that may cause a timeout
 			uri = URI.parse(url)
@@ -15,7 +16,7 @@ module HomeHelper
 			return ""
 	end
 
-	def fetch_listeners
+	def self.fetch_listeners
 		# Listener statistics from xenim network
 		
 		xenim_statistics = Rails.cache.fetch("xenim_statistics", :expires_in => 30.seconds) do
@@ -33,7 +34,7 @@ module HomeHelper
 		return "Konnte nicht ermittelt werden"
 	end
 
-	def fetch_hoersuppe_livepodcasts
+	def self.fetch_hoersuppe_livepodcasts
 		# hoersuppe api returns local dates (CET)
 
 		#Rails.cache.delete("cacheID")
@@ -60,7 +61,7 @@ module HomeHelper
 		return live_podcasts
 	end
 
-	def fetch_episode_schedule
+	def self.fetch_episode_schedule
 		# airtime api returns UTC dates
 
 		#Rails.cache.delete("cacheID")
