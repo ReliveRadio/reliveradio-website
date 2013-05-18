@@ -82,15 +82,13 @@ a:hover {
 
 // LIVESTREAMBUTTON
 .off {
-	// text-shadow: 0 -1px 0 #6ebf17;
-	text-shadow: none;
-	background: #66b115;
+	text-shadow: 0 -1px 0 darken($dark-color, 10%);
+	background: $dark-color;
 }
 
 .on {
-	background: #f67c1a;
-	text-shadow: none;
-	// text-shadow: 0 -1px 0 #6ebf17;
+	background: $red-color;
+	text-shadow: 0 -1px 0 darken($red-color, 10%);
 }
 
 .livestreambutton {
