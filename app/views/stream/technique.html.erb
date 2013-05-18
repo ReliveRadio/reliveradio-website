@@ -16,25 +16,26 @@
 			<span class="livestreambutton off">Livestream starten</span>
 	  </div>
 
-		<hr />
-		<h5>Links</h5>
-		<ul class="side-nav hide-for-small">
-		  <li class="active"><a href="#">Link 1</a></li>
-		  <li><a href="#">Link 2</a></li>
-		  <li><a href="#">Link 3</a></li>
-		  <li><a href="#">Link 4</a></li>
-		</ul>
+	  <div id="listeners-container" class="hide-for-small">
+	  	<hr />
+			<h1 id="listeners"><%= @listeners %></h1>
+			<p class="listeners-infotext">Livehörer</p>
+		</div>
 
+		<div class="hide-for-small">		
+			<hr />
+			<%= render "widgets/livestream_widget" %>
 
-		<hr />
-		<%= render "widgets/livestream_widget" %>
-
+			<hr />
+			<%= render "widgets/help_widget" %>
+		</div>
+		
 	</div>
 
 	<div class="large-9 columns">
-		<h1>TECHNIK Stream</h1>
-		<h3 class="subheader">Technik, Apple, Gadgets, Internet</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at, ipsum obcaecati optio similique mollitia neque pariatur architecto eaque voluptate. Impedit, vel amet eligendi magnam illo eius fugiat rem doloremque.</p>
+		<h1 class="hide-for-small">TECHNIK Stream</h1>
+		<h3 class="subheader hide-for-small">Technik, Apple, Gadgets, Internet</h3>
+		<p class="hide-for-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at, ipsum obcaecati optio similique mollitia neque pariatur architecto eaque voluptate. Impedit, vel amet eligendi magnam illo eius fugiat rem doloremque.</p>
 
 		<div id="live-episode" class="dropshadow">
 			<%= render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"] %>
