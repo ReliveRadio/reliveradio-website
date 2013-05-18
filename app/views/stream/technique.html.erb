@@ -32,14 +32,14 @@
 	</div>
 
 	<div class="large-9 columns">
-		<div id="live-episode">
 		<h1>TECHNIK Stream</h1>
 		<h3 class="subheader">Technik, Apple, Gadgets, Internet</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at, ipsum obcaecati optio similique mollitia neque pariatur architecto eaque voluptate. Impedit, vel amet eligendi magnam illo eius fugiat rem doloremque.</p>
+
+		<div id="live-episode" class="dropshadow">
 			<%= render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"] %>
 		</div>
-		<div class="upcoming show-for-small"><i class="icon-arrow-down"></i> Nächste Podcasts <i class="icon-arrow-down"></i></div>
-		<div class="ribboncontainer hide-for-small"><div class="ribbon"><div class="ribbon-stitches-top"></div><div class="ribbon-content"><h1><i class="icon-arrow-down"></i> Nächste Podcasts <i class="icon-arrow-down"></i></h1></div><div class="ribbon-stitches-bottom"></div></div></div>
+		<div class="upcoming"><i class="icon-arrow-down"></i> Nächste Podcasts <i class="icon-arrow-down"></i></div>
 		<div id="episodes">
 			<%= render 'episodes', :episodes => @episodes %>
 		</div>

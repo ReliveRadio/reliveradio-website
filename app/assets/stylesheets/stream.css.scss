@@ -2,13 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// NAVITAGION
-nav.top-bar {
+div.progress {
 	margin-bottom: 0;
 }
 
-div.progress {
-	margin-bottom: 0;
 img.logo {
 	margin-bottom: 1.3em;
 }
@@ -23,7 +20,7 @@ img.episode-image {
 
 #stream-selector {
 	list-style-type: none;
-	margin-top: 1.3em;
+	margin-top: 0;
 }
 
 #stream-selector a {
@@ -74,7 +71,60 @@ a:hover {
 	background: $theme-color;
 }
 
+h2 {
+	margin-top: 0;
+	line-height: 0.8em;
+}
 
+
+
+#live-episode > div.episode {
+	background-color: $pastel-color;
+	margin-bottom: 2em;
+	border: 1px solid darken($pastel-color, 20%);
+}
+
+
+.dropshadow {
+  position: relative;
+}
+.dropshadow:before, .dropshadow:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.dropshadow:after{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+
+#live-banner {
+	background-color: $theme-color;
+	color: #fff;
+	padding: 0.2em 1em 0.2em 1em;
+	text-align: center;
+	border-bottom: 1px solid #fff;
+}
 
 
 
@@ -96,8 +146,9 @@ a:hover {
 	letter-spacing: normal;
 	-webkit-font-smoothing: subpixel-antialiased;
 	padding: 1em;
-	margin-top: 4em;
 	border-radius: 3px;
+	display: block;
+	margin: 1em 0 1em 0;
 }
 
 .livestreambutton:hover {
@@ -140,54 +191,10 @@ div.time-info {
 
 
 
-
-
-
 div.upcoming {
 	background-color: $theme-color;
 	color: #fff;
 	text-align: center;
 	padding: 1em;
-}
-
-div.ribboncontainer {
-	height: 5em;
-}
-
-.ribbon {
-	width: 100%;
-	position: absolute;
-	text-align: center;
-	background: $theme-color;
-}
-.ribbon h1 {
-	font-size: 1.2em;
-	font-weight: 300;
-	color: #fff;
-	margin:0px;
-	padding: 10px 10px 10px 10px;
-}
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
-	border-color: darken($theme-color, 15%) transparent transparent transparent;
-	position: absolute;
-	display: block;
-	border-style: solid;
-	bottom: 2.9em;
-	content: '';
-}
-.ribbon .ribbon-content:before {
-	right: 0;
-	-moz-transform:rotate(180deg);
-	-webkit-transform:rotate(180deg);
-	-o-transform:rotate(180deg);
-	-ms-transform:rotate(180deg);
-	border-width: 0.5em 0 0 1em;
-}
-.ribbon .ribbon-content:after {
-	left: 0;
-		-moz-transform:rotate(180deg);
-	-webkit-transform:rotate(180deg);
-	-o-transform:rotate(180deg);
-	-ms-transform:rotate(180deg);
-	border-width: 0.5em 1em 0 0;
+	text-transform: uppercase;
 }
