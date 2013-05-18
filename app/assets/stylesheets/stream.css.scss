@@ -59,6 +59,10 @@ a {
 	color: $theme-color;
 }
 
+.side-nav li a {
+	color: $theme-color;
+}
+
 a:hover {
 	color: darken($theme-color, 20%);
 }

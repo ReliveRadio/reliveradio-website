@@ -15,14 +15,22 @@
 		<div class="hide-for-small">
 			<span class="livestreambutton off">Livestream starten</span>
 	  </div>
-<!-- 		<hr />
-		<ul>
-			<li>Verzeichnis</li>
-			<li>Unterstützen</li>
-			<li>Chat</li>
-			<li>Kram</li>
-		</ul> -->
+
+		<hr />
+		<h5>Links</h5>
+		<ul class="side-nav hide-for-small">
+		  <li class="active"><a href="#">Link 1</a></li>
+		  <li><a href="#">Link 2</a></li>
+		  <li><a href="#">Link 3</a></li>
+		  <li><a href="#">Link 4</a></li>
+		</ul>
+
+
+		<hr />
+		<%= render "widgets/livestream_widget" %>
+
 	</div>
+
 	<div class="large-9 columns">
 		<div id="live-episode">
 			<%= render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"] %>
