@@ -3,11 +3,15 @@
 
 <div class="row">
 	<div class="large-3 columns">
-		<%= image_tag "logo.png" %>
+
+		<div class="logo-container">
+			<%= image_tag "logo.png", :class => "logo" %>
+		</div>
 		<ul id="stream-selector">
 			<li><%= link_to "Technik", :technique_stream, :class => "technique active" %></li>
 			<li><%= link_to "Kultur", :culture_stream, :class => "culture" %></li>
 		</ul>
+
 		<div class="hide-for-small">
 			<span class="livestreambutton off">Livestream starten</span>
 	  </div>

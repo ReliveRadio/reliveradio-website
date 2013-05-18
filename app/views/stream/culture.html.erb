@@ -3,7 +3,9 @@
 
 <div class="row">
 	<div class="large-3 columns">
-		<%= image_tag "logo.png" %>
+		<div class="logo-container">
+			<%= image_tag "logo.png", :class => "logo" %>
+		</div>
 		<ul id="stream-selector">
 			<li><%= link_to "Technik", :technique_stream, :class => "technique" %></li>
 			<li><%= link_to "Kultur", :culture_stream, :class => "culture active" %></li>
