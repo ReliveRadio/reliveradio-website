@@ -1,0 +1,19 @@
+@import "color_scheme";
+
+h2.genre-header {
+	color: #fff;
+	padding-left: 10px;
+	font-weight: 400;
+}
+
+h2.culture {
+	background-color: $culture-color;
+}
+
+h2.technique {
+	background-color: $technique-color;
+}
+
+h2.foobar {
+	background-color: $classic-color;
+}

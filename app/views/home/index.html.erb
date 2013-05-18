@@ -1,36 +1,26 @@
-<% title "Sendeplan" %>
-
-<!-- PROGRESS BAR FOR SMALL DEVICES -->
-<div class="progress show-for-small"><span class="meter liveprogress" style="width: 0%"></span></div>
-
-<div class="live">
-	<div class="row">
-		<div id="live-episode" class="small-12 columns">
-			<%= render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"] %>
-		</div>
-	</div>
-</div>
-
-<div class="upcoming show-for-small"><i class="icon-arrow-down"></i> Nächste Podcasts <i class="icon-arrow-down"></i></div>
+<%= stylesheet_link_tag "home" %>
+<% title "Index" %>
 
 <div class="row">
-	<!-- EPISODES -->
-	<div id="episodes" class="large-9 columns">
-		<%= render 'episodes', :episodes => @episodes %>
+	<div class="small-12 columns">
+		<h1>Wilkommen beim ReliveRadio</h1>
+		<h2 class="subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, mollitia, deserunt, inventore nobis debitis maxime tempora omnis ab enim culpa quam rerum. Voluptas, laudantium, vel officiis adipisci reiciendis praesentium eos.</p>
 	</div>
-	<!-- SIDEBAR -->
-	<div class="large-3 columns">
-		<%= render 'sidebar', :live_podcasts => @live_podcasts %>
-	</div>
+
 </div>
 
-<!-- LISTENERS COUNT SETUP -->
-<%= javascript_tag do %>
-	<% if !@listeners.blank? %>
-		window.listeners = <%= @listeners %>;
-	<% else %>
-		window.listeners = -1;
-	<% end %>
-<% end %>
-
-<%= javascript_include_tag 'home' %>
+<div class="row">
+	<div class="large-4 columns">
+		<h2 class="genre-header technique">Technik</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, adipisci, eveniet, ratione, ut delectus illum iste nostrum sint nesciunt veritatis explicabo nemo suscipit minus quam sapiente fuga ducimus quaerat consequuntur!</p>
+	</div>
+	<div class="large-4 columns">
+		<h2 class="genre-header culture">Kultur</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, magni, maxime pariatur at repudiandae porro consectetur sed voluptatum sapiente autem eos minima iusto saepe? Ut sed tenetur velit ad ullam.</p>
+	</div>
+	<div class="large-4 columns">
+		<h2 class="genre-header foobar">Foobar</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, cupiditate, cumque asperiores odit sit sunt fugit necessitatibus. Ipsa, fuga, odio, consectetur voluptate a error debitis tenetur cumque dolor architecto sequi.</p>
+	</div>
+</div>
