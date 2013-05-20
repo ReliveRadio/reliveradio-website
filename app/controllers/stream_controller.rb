@@ -40,6 +40,8 @@ class StreamController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.js # index.js.erb
+      format.json  { render :json => {:live_episode => @live_episode, 
+                                  :upcoming_episodes => @episodes }}
     end
   end
 
@@ -55,6 +57,8 @@ class StreamController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.js # index.js.erb
+      format.json  { render :json => {:live_episode => @live_episode, 
+                                  :upcoming_episodes => @episodes }}
     end
   end
 
