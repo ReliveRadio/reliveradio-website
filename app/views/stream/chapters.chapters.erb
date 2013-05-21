@@ -1,0 +1,6 @@
+<% if !@episodes.blank? %>
+	<% @episodes.each do |episode| %>
+		<% podcast = episode["db"] %>
+<%= episode['starts'].strftime("%H:%M") %> <%= podcast.name %>: <%= episode['track_title'] %>
+	<% end %>
+<% end %>
