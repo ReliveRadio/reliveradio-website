@@ -42,7 +42,7 @@ class StreamController < ApplicationController
       format.js # index.js.erb
       format.json  { render :json => {:live_episode => @live_episode, 
                                   :upcoming_episodes => @episodes }}
-      format.chapters { render 'chapters', :epispdes => @episodes}
+      format.chapters { render 'chapters'}
     end
   end
 
@@ -60,7 +60,7 @@ class StreamController < ApplicationController
       format.js # index.js.erb
       format.json  { render :json => {:live_episode => @live_episode, 
                                   :upcoming_episodes => @episodes }}
-      format.chapters { render 'chapters', :epispdes => @episodes}
+      format.chapters { render 'chapters'}
     end
   end
 
