@@ -4,7 +4,7 @@
 
 		<!-- <div id="live-banner">Jetzt Live</div> -->
 		<!-- EPISODE PODCAST IMAGE -->
-		<% if !podcast.nil? %><img class="episode-image" src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"><% end %>
+		<% if !podcast.nil? %><img id="live-episode-image" class="episode-image" src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"><% end %>
 
 		<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 		<div class="show-for-small playtime-small">
@@ -18,11 +18,12 @@
 
 		<!-- EPISODE PLAYTIME INFO FOR LARGE DEVICES-->
 		<div class="hide-for-small playtime-large">
+			<!-- progress bar  -->
+			<div class="progress time-info"><span class="meter liveprogress" style="width: 0%"></span></div>
+			<!-- left time -->
+			<div class="time-info"><strong><i class="icon-arrow-right"></i> Rest:</strong> <span class="timeleft"></span> Min.</div>
 			<!-- end time -->
 			<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends'].strftime("%H:%M") %></div>
-			<!-- left time + progress bar -->
-			<div class="time-info"><strong><i class="icon-arrow-right"></i> Rest:</strong> <span class="timeleft"></span> Min.</div>
-			<div class="progress time-info"><span class="meter liveprogress" style="width: 0%"></span></div>
 			<!-- <div class="time-info"><span class="percentplayed"></span></div>
 			<div class="time-info"><span class="percentleft"></span></div> -->
 		</div>
