@@ -18,6 +18,8 @@ class IndexInfoController < ApplicationController
     @index_info = IndexInfo.find(params[:id])
     respond_to do |format|
       if @index_info.update_attributes(params[:index_info])
+        # expire index page static page cache
+        expire_page "/index.html"
         format.html { render action: "edit", :flash => { :success => "Podcast erfolgreich gespeichert" } }
         format.json { head :no_content }
       else
