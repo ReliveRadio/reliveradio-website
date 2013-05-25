@@ -31,16 +31,16 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :title %><br />
+      <h4>Titel</h4>
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label "Inhalt" %><br />
+      <h4>Inhalt</h4>
       <%= f.text_area :content %>
     </div>
     <div class="field">
-      <%= f.label "Anzeigen?" %><br />
       <%= f.check_box :display %>
+      <p>Soll die Information auf der Index Seite angezeigt werden?</p>
     </div>
     <div class="actions">
       <%= f.submit "Speichern", :class => "small button" %>
