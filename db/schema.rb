@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517082646) do
+ActiveRecord::Schema.define(:version => 20130525093007) do
+
+  create_table "index_infos", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 # Could not dump table "podcasts" because of following StandardError
 #   Unknown type 'str' for column 'adnhandle'
