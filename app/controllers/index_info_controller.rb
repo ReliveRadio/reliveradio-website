@@ -2,7 +2,7 @@ class IndexInfoController < ApplicationController
 
   # authentication for backend
   # set good password here for production use!
-  http_basic_authenticate_with :name => "test", :password => "test"
+  http_basic_authenticate_with :name => PasswordHelper.user, :password => PasswordHelper.password
 
 	def edit
     @index_info = IndexInfo.all.shift
