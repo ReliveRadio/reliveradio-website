@@ -10,10 +10,15 @@ Reliveradio::Application.routes.draw do
   get "stream/listeners_culture"
   get "stream/hoersuppe"
 
+  resources :index_info, :only => [:update]
+  match '/index_info/edit' => 'index_info#edit', :as => :index_info_edit
+
+
   # enable podcasts csv import
   resources :podcasts do
     collection {post :import}
   end
+
   
   match '/podcasts_overview' => 'podcasts#overview', :as => :overview
 

@@ -1,0 +1,54 @@
+<%= form_for(@index_info) do |f| %>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <!-- Error handling -->
+      <% if @index_info.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@index_info.errors.count, "error") %> prohibited this podcast from being saved:</h2>
+
+          <ul>
+          <% @index_info.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="large-12 columns">
+
+    <% if flash[:error] %>
+      <p><span class="alert label"><%= flash[:error] %></span></p>
+    <% end %>
+    <% if flash[:success] %>
+      <p><span class="success label"><%= flash[:success] %></span></p>
+    <% end %>
+    <% if flash[:notice] %>
+      <p><span class="label"><%= flash[:notice] %></span></p>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label "Inhalt" %><br />
+      <%= f.text_area :content %>
+    </div>
+    <div class="field">
+      <%= f.label "Anzeigen?" %><br />
+      <%= f.check_box :display %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Speichern", :class => "small button" %>
+      <%= link_to 'Abbrechen', podcasts_path, :class => "small button alert", :confirm => "Vorsicht, alle Änderungen gehen verloren!" %>
+    </div>
+  </div>
+</div>
+
+
+<% end %>
+

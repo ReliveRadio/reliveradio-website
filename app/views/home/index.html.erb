@@ -24,3 +24,12 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, cupiditate, cumque asperiores odit sit sunt fugit necessitatibus. Ipsa, fuga, odio, consectetur voluptate a error debitis tenetur cumque dolor architecto sequi.</p>
 	</div>
 </div>
+
+<% if !@index_info.blank? and @index_info.display %>
+<div class="row">
+	<div class="large-12 columns">
+		<h2><%= @index_info.title %></h2>
+		<p><%= raw @index_info.content %></p>
+	</div>
+</div>
+<% end %>
