@@ -13,8 +13,8 @@ Reliveradio::Application.configure do
   config.serve_static_assets = false
 
   # Precompile Settings
-  config.assets.precompile += ['stream.js', 'stream_technique.js', 'stream_culture.js', 'donation.js', 'select_overview_searchbar.js']
-  config.assets.precompile += ['technique_stream.css', 'culture_stream.css', 'home.css', 'podcasts.css', 'info.css']
+  config.assets.precompile += ['stream.js', 'stream_mix.js', 'stream_technique.js', 'stream_culture.js', 'donation.js', 'select_overview_searchbar.js']
+  config.assets.precompile += ['mix_stream.css', 'technique_stream.css', 'culture_stream.css', 'home.css', 'podcasts.css', 'info.css']
 
   # Compress JavaScripts and CSS
   config.assets.compress = true

@@ -6,8 +6,10 @@ Reliveradio::Application.routes.draw do
 
   get "stream/technique", :as => :technique_stream
   get "stream/culture", :as => :culture_stream
+  get "stream/mix", :as => :mix_stream
   get "stream/listeners_technique"
   get "stream/listeners_culture"
+  get "stream/listeners_mix"
   get "stream/hoersuppe"
 
   resources :index_info, :only => [:update]

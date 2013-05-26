@@ -45,6 +45,10 @@ img.episode-image {
 	background-color: $culture-color;
 }
 
+#stream-selector a.mix:hover {
+	background-color: $mix-color;
+}
+
 #stream-selector a:hover {
 	color: #fff;
 }
@@ -56,6 +60,11 @@ img.episode-image {
 
 #stream-selector a.culture.active {
 	background-color: $culture-color;
+	color: #fff;
+}
+
+#stream-selector a.mix.active {
+	background-color: $mix-color;
 	color: #fff;
 }
 
