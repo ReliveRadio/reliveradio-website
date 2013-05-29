@@ -1,3 +1,4 @@
+// set some colors
 $red-color: #DD577A;
 $orange-color: #FE5A27;
 $blue-color: #49AEC0;
@@ -5,8 +6,7 @@ $dark-color: #131723;
 $green-color: #1bb266;
 $pastel-color: lighten(#eeeedd, 5%);
 
-$ribbon-color: $blue-color;
-
+// define genre specific colors here
 $technique-color: $blue-color;
 $culture-color: $orange-color;
 $mix-color: $green-color;
