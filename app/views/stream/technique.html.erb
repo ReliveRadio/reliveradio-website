@@ -25,7 +25,7 @@
 
 		<div class="hide-for-small">		
 			<hr />
-			<%= render "widgets/livestream_widget" %>
+			<%= render "widgets/livestream_widget", :desktop_stream_url => @desktop_stream_url, :mobil_stream_url => @mobil_stream_url %>
 
 			<hr />
 			<%= render "widgets/help_widget" %>
@@ -48,7 +48,7 @@
 	</div>
 </div>
 
-<audio id="player" preload="none" src="http://stream.reliveradio.de:8000/24.mp3"></audio>
+<audio id="player" preload="none" src="<%= @desktop_stream_url %>"></audio>
 
 <!-- LISTENERS COUNT SETUP -->
 <%= javascript_tag do %>
