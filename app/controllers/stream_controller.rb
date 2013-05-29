@@ -11,21 +11,21 @@ class StreamController < ApplicationController
   def listeners_mix
     @listeners = StreamHelper.fetch_listeners("mix")
     respond_to do |format|
-      format.js # listeners.js.erb
+      format.js { render 'listeners'}
     end
   end
 
   def listeners_technique
     @listeners = StreamHelper.fetch_listeners("technique")
     respond_to do |format|
-      format.js # listeners.js.erb
+      format.js { render 'listeners'}
     end
   end
 
   def listeners_culture
     @listeners = StreamHelper.fetch_listeners("culture")
     respond_to do |format|
-      format.js # listeners.js.erb
+      format.js { render 'listeners'}
     end
   end
 
