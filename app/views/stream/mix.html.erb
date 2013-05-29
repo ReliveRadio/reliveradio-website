@@ -53,7 +53,8 @@
 	<% else %>
 		window.listeners = -1;
 	<% end %>
+  window.listenersURL = '/stream/listeners_mix.js';
+  window.episodesURL = '/stream/mix.js';
 <% end %>
 
 <%= javascript_include_tag 'stream' %>
-<%= javascript_include_tag 'stream_mix' %>

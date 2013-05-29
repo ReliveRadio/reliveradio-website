@@ -57,7 +57,8 @@
 	<% else %>
 		window.listeners = -1;
 	<% end %>
+	window.listenersURL = '/stream/listeners_technique.js';
+  window.episodesURL = '/stream/technique.js';
 <% end %>
 
 <%= javascript_include_tag 'stream' %>
-<%= javascript_include_tag 'stream_technique' %>

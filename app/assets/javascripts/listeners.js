@@ -12,6 +12,6 @@ $(function () {
 	var intervalTime = 30 * 1000; // 30 seconds
 	// start timer
 	window.setInterval(function(){
-		$.get("/stream/listeners_mix.js", null, update_listeners, 'script');
+		$.get(listenersURL, null, update_listeners, 'script');
 	}, intervalTime);
 });

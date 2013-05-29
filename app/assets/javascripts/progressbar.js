@@ -41,7 +41,7 @@ $(function () {
 		var now = new Date();
 		if (now > ends) {
 			// if episode is finished, do AJAX request and reload schedule
-			$.get("/stream/mix.js", null, update_progressbar, 'script');
+			$.get(episodesURL, null, update_progressbar, 'script');
 		}
 	}, intervalTime);
 
