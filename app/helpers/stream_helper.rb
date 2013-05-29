@@ -1,4 +1,4 @@
-module StreamHelperTechnique
+module StreamHelper
 
 	require 'timeout'
 	require 'net/http'
@@ -16,13 +16,15 @@ module StreamHelperTechnique
 			return ""
 	end
 
-	def self.fetch_listeners
+	def self.fetch_listeners(genre_name)
 		# Listener statistics from xenim network
 		
-		xenim_statistics = Rails.cache.fetch("xenim_statistics", :expires_in => 30.seconds) do
+		xenim_statistics = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
 			fetch_json("http://feeds.streams.xenim.de/live/json/")["items"]
 		end
 
+		# TODO: Change this to return the correct number for the correct genre_name parameter
+		# possible parameters: mix, technique, culture. As strings.
 		if !xenim_statistics.blank?
 			xenim_statistics.each do |podcast|
 				if podcast["author_name"] == "Reliveradio"
@@ -61,13 +63,13 @@ module StreamHelperTechnique
 		return live_podcasts
 	end
 
-	def self.fetch_episode_schedule
+	def self.fetch_episode_schedule(url)
 		# airtime api returns UTC dates
 
 		#Rails.cache.delete("cacheID")
-		episodes = Rails.cache.fetch("airtime_schedule", :expires_in => 10.minutes) do
+		episodes = Rails.cache.fetch(url, :expires_in => 10.minutes) do
 			# read the program for today via GET request as JSON from the Airtime radio API
-			fetch_json("http://programm.reliveradio.de/api/today-info")
+			fetch_json(url)
 		end
 
 		if !episodes.blank?
