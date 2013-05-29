@@ -47,7 +47,7 @@ class StreamController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.js # index.js.erb
+      format.js { render 'update_episodes'}
       format.json  { render :json => {:live_episode => @live_episode, 
                                   :upcoming_episodes => @episodes }}
       format.chapters { render 'chapters'}
