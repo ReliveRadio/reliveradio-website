@@ -21,12 +21,18 @@
 			<p class="listeners-infotext">Livehörer</p>
 		</div>
 		
-		<div class="hide-for-small">		
+		<div class="hide-for-small">
 			<hr />
 			<%= render "widgets/livestream_widget", :desktop_stream_url => @desktop_stream_url, :mobil_stream_url => @mobil_stream_url %>
 
 			<hr />
 			<%= render "widgets/help_widget" %>
+
+			<hr />
+			<%= render "widgets/chat_widget" %>
+
+			<hr />
+			<%= render "widgets/hoersuppe_widget" %>
 		</div>
 
 	</div>
