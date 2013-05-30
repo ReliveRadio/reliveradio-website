@@ -5,24 +5,25 @@ div.sidebar h5 {
 }
 
 footer {
-	font-size: 0.8em;
 	background-color: $dark-color;
 	color: #fff;
 	margin-top: 2em;
 }
 
-footer p {
+footer p, footer li a {
 	font-weight: 200;
 }
 
 footer h5 {
 	color: #fff;
+	font-weight: 400;
 }
 
 footer .row {
-	padding: 1.5em;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 }
 
 footer li {
-	margin-left: 2em;
+	margin-left: 1.2em;
 }
