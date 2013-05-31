@@ -2,7 +2,7 @@
 
 h2.genre-header {
 	color: #fff;
-	padding-left: 10px;
+	padding: 10px;
 	font-weight: 400;
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -35,6 +35,12 @@ h2.culture:hover {
 	background-color: darken($culture-color, 20%);
 }
 
+
+@media only screen and (min-width: 768px) {
+    h2.genre-header {
+      padding: 0 0 0 10px;
+    }
+}
 
 
 
