@@ -2,7 +2,7 @@
 <% title "Technik Stream" %>
 
 <div class="row">
-	<div class="large-3 columns">
+	<div class="large-3 columns hide-for-small">
 
 		<div class="logo-container">
 			<%= image_tag "logo.png", :class => "logo" %>
@@ -13,17 +13,17 @@
 			<li><%= link_to "Kultur", :culture_stream, :class => "culture" %></li>
 		</ul>
 
-		<div class="hide-for-small">
+		<div>
 			<span class="livestreambutton off">Livestream starten</span>
 	  </div>
 
-	  <div id="listeners-container" class="hide-for-small">
+	  <div id="listeners-container">
 	  	<hr />
 			<h1 id="listeners"><%= @listeners %></h1>
 			<p class="listeners-infotext">Livehörer</p>
 		</div>
 
-		<div class="hide-for-small">
+		<div>
 			<hr />
 			<%= render "widgets/livestream_widget", :desktop_stream_url => @desktop_stream_url, :mobil_stream_url => @mobil_stream_url %>
 
@@ -40,9 +40,11 @@
 	</div>
 
 	<div class="large-9 columns">
-		<h1 class="hide-for-small">TECHNIK Stream</h1>
-		<h3 class="subheader hide-for-small">Technik, Apple, Gadgets, Internet</h3>
-		<p class="hide-for-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at, ipsum obcaecati optio similique mollitia neque pariatur architecto eaque voluptate. Impedit, vel amet eligendi magnam illo eius fugiat rem doloremque.</p>
+		<div class="hide-for-small">
+			<h1>TECHNIK Stream</h1>
+			<h3 class="subheader">Technik, Apple, Gadgets, Internet</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at, ipsum obcaecati optio similique mollitia neque pariatur architecto eaque voluptate. Impedit, vel amet eligendi magnam illo eius fugiat rem doloremque.</p>
+		</div> 
 
 		<div id="live-episode" class="dropshadow">
 			<%= render 'live_episode', :episode => @live_episode, :podcast => @live_episode["db"] %>
