@@ -107,9 +107,17 @@ h2 {
 	border: 1px solid darken($pastel-color, 20%);
 }
 
+nav.top-bar {
+	margin-bottom: 0;
+}
+
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 @media only screen and (min-width: 768px) {
+
+	nav.top-bar {
+		margin-bottom: 1.875em;
+	}
 
 	#live-episode > div.episode {
 		margin-bottom: 2em;
