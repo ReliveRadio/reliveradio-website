@@ -104,13 +104,16 @@ h2 {
 
 #live-episode > div.episode {
 	background-color: $pastel-color;
-	margin-bottom: 2em;
 	border: 1px solid darken($pastel-color, 20%);
 }
 
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 @media only screen and (min-width: 768px) {
+
+	#live-episode > div.episode {
+		margin-bottom: 2em;
+	}
 
 	.dropshadow {
 	  position: relative;
