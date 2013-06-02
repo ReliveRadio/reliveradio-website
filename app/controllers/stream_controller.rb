@@ -5,9 +5,11 @@ class StreamController < ApplicationController
   caches_action :technique, :expires_in => 60.seconds, :cache_path => 'technique'
   caches_action :culture, :expires_in => 60.seconds, :cache_path => 'culture'
   caches_action :mix, :expires_in => 60.seconds, :cache_path => 'mix'
+
   caches_action :listeners_mix, :expires_in => 30.seconds, :cache_path => 'listeners_mix'
   caches_action :listeners_culture, :expires_in => 30.seconds, :cache_path => 'listeners_technique'
   caches_action :listeners_technique, :expires_in => 30.seconds, :cache_path => 'listeners_culture'
+  
   caches_action :hoersuppe, :expires_in => 10.minutes, :cache_path => 'hoersuppe'
 
   def listeners_mix
