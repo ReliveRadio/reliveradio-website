@@ -4,6 +4,10 @@
 	margin-bottom: 1em;
 }
 
+.breaklines {
+	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap;    word-wrap: break-word;
+}
+
 footer {
 	background-color: $dark-color;
 	color: #fff;
