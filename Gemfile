@@ -3,7 +3,7 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '~> 3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,22 +24,22 @@ group :assets do
 	gem 'coffee-rails', '~> 3.2.1'
 	gem 'zurb-foundation', '~> 4.1.5'
 	gem 'uglifier', '>= 1.0.3'
-	gem "font-awesome-rails", '~> 3.0.2.0'
-	gem "mediaelement_rails", '0.5.0'
+	gem "font-awesome-rails", '~> 3.1.1'
+	gem "mediaelement_rails"
 	gem 'jquery-rails', '2.2.1'
 	# See https://github.com/sstephenson/execjs#readme for more supported runtimes
 	# gem 'therubyracer', :platforms => :ruby
 end
 
 group :dev do
-	gem 'thin', '1.5.1'
+	gem 'thin', '~> 1.5.1'
 	
 	## testing
 	gem 'ruby-prof', '0.13.0'
 	gem 'test-unit', '2.5.4'
 	
 	# To use debugger
-	gem 'debugger', '1.5.0'
+	gem 'debugger', '~> 1.5'
 end
 
 
