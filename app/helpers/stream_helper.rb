@@ -35,6 +35,12 @@ module StreamHelper
 
 		return listeners
 	end
+
+	def self.fetch_total_listeners
+		listeners_statistic = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
+			fetch_json("http://stream.reliveradio.de:8000/json.xsl")
+		end
+		return listeners_statistic["total_listeners"]
 	end
 
 	def self.fetch_hoersuppe_livepodcasts
