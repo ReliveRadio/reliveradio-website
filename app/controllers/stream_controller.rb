@@ -13,21 +13,21 @@ class StreamController < ApplicationController
   caches_action :hoersuppe, :expires_in => 10.minutes, :cache_path => 'hoersuppe'
 
   def listeners_mix
-    @listeners = StreamHelper.fetch_listeners("mix")
+    @listeners = StreamHelper.fetch_listeners("Mix")
     respond_to do |format|
       format.js { render 'listeners'}
     end
   end
 
   def listeners_technique
-    @listeners = StreamHelper.fetch_listeners("technique")
+    @listeners = StreamHelper.fetch_listeners("Technik")
     respond_to do |format|
       format.js { render 'listeners'}
     end
   end
 
   def listeners_culture
-    @listeners = StreamHelper.fetch_listeners("culture")
+    @listeners = StreamHelper.fetch_listeners("Kultur")
     respond_to do |format|
       format.js { render 'listeners'}
     end
