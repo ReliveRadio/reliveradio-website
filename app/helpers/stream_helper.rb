@@ -16,15 +16,13 @@ module StreamHelper
 			return ""
 	end
 
+  # fetch listeners count of a specific genre
 	def self.fetch_listeners(genre_name)		
 		listeners_statistic = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
 			fetch_json("http://stream.reliveradio.de:8000/json.xsl")
 		end
 
 		listeners = 0
-
-		# TODO: Change this to return the correct number for the correct genre_name parameter
-		# possible parameters: mix, technique, culture. As strings.
 		if !listeners_statistic.blank?
 			listeners_statistic["mounts"].each do |mount|
 				if mount["genre"].include? genre_name
@@ -36,6 +34,7 @@ module StreamHelper
 		return listeners
 	end
 
+  # fetch total listeners count of all genres
 	def self.fetch_total_listeners
 		listeners_statistic = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
 			fetch_json("http://stream.reliveradio.de:8000/json.xsl")
