@@ -16,24 +16,25 @@ module StreamHelper
 			return ""
 	end
 
-	def self.fetch_listeners(genre_name)
-		# Listener statistics from xenim network
-		
-		xenim_statistics = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
-			fetch_json("http://feeds.streams.xenim.de/live/json/")["items"]
+	def self.fetch_listeners(genre_name)		
+		listeners_statistic = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
+			fetch_json("http://stream.reliveradio.de:8000/json.xsl")
 		end
+
+		listeners = 0
 
 		# TODO: Change this to return the correct number for the correct genre_name parameter
 		# possible parameters: mix, technique, culture. As strings.
-		if !xenim_statistics.blank?
-			xenim_statistics.each do |podcast|
-				if podcast["author_name"] == "Reliveradio"
-					return podcast["listener"]
+		if !listeners_statistic.blank?
+			listeners_statistic["mounts"].each do |mount|
+				if mount["genre"].include? genre_name
+					listeners += mount["listeners"].to_i
 				end
 			end
 		end
 
-		return "Konnte nicht ermittelt werden"
+		return listeners
+	end
 	end
 
 	def self.fetch_hoersuppe_livepodcasts
