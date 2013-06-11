@@ -1,12 +1,12 @@
 Reliveradio::Application.routes.draw do
 
-  get "info/about", :as => :about
-  get "info/help", :as => :help
-  get "info/chat", :as => :chat
+  match "info/ueber" => 'info#about', :as => :about
+  match "info/helfen" => 'info#help', :as => :help
+  match "info/chat", :as => :chat
 
-  get "stream/technique", :as => :technique_stream
-  get "stream/culture", :as => :culture_stream
-  get "stream/mix", :as => :mix_stream
+  match "stream/technik" => 'stream#technique', :as => :technique_stream
+  match "stream/kultur" => 'stream#culture', :as => :culture_stream
+  match "stream/mix" => 'stream#mix', :as => :mix_stream
   get "stream/listeners_technique"
   get "stream/listeners_culture"
   get "stream/listeners_mix"
@@ -22,7 +22,7 @@ Reliveradio::Application.routes.draw do
   end
 
   
-  match '/podcasts_overview' => 'podcasts#overview', :as => :overview
+  match '/verzeichnis' => 'podcasts#overview', :as => :overview
 
   # This route can be invoked with info_url(:id => podcast.id)
   match '/:slugintern' => 'podcasts#info', :as => :info
