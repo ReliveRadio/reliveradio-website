@@ -7,9 +7,9 @@ Reliveradio::Application.routes.draw do
   match "stream/technik" => 'stream#technique', :as => :technique_stream
   match "stream/kultur" => 'stream#culture', :as => :culture_stream
   match "stream/mix" => 'stream#mix', :as => :mix_stream
-  match "stream/technique" => 'stream#technique', :as => :technique_stream
-  match "stream/culture" => 'stream#culture', :as => :culture_stream
-  
+  match "stream/technique" => 'stream#technique'
+  match "stream/culture" => 'stream#culture'
+
   get "stream/listeners_technique"
   get "stream/listeners_culture"
   get "stream/listeners_mix"
