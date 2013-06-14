@@ -24,7 +24,7 @@ group :assets do
 	gem 'coffee-rails', '~> 3.2.1'
 	gem 'zurb-foundation', '~> 4.1.5'
 	gem 'uglifier', '>= 1.0.3'
-	gem "font-awesome-rails", '~> 3.1.1'
+	gem "font-awesome-rails", '~> 3.2.0'
 	gem "mediaelement_rails"
 	gem 'jquery-rails', '2.2.1'
 	# See https://github.com/sstephenson/execjs#readme for more supported runtimes
