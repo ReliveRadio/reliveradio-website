@@ -73,7 +73,13 @@ module StreamHelper
 		episodes_backup = Rails.cache.read(url)
 		episodes = Rails.cache.fetch(url, :expires_in => 10.minutes) do
 			# read the program for today via GET request as JSON from the Airtime radio API
-			fetch_json(url)
+			newAirtimeJSON = fetch_json(url)
+			if newAirtimeJSON.blank?
+				# if API fetch did not return valid data, return the old cache state
+				episodes_backup
+			else
+				newAirtimeJSON
+			end
 		end
 
 		if !episodes.blank?
@@ -101,10 +107,6 @@ module StreamHelper
 
 			# first episode in array is live!
 			episodes.first["isLive"] = true;
-		else
-			# if cache expired but fetch_json did retun an empty object, use the old cache data
-			episodes = episodes_backup
-			Rails.cache.write(url, episodes_backup) # reset the cache to still store valid data
 		end
 
 		return episodes
