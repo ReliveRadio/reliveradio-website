@@ -5,7 +5,7 @@ module StreamHelper
 
   # fetch listeners count of a specific genre
 	def self.fetch_listeners(genre_name)
-		listeners_statistic = ExternalApiHelper.fetch_json_with_cache("http://stream.reliveradio.de:8000/json.xsl", 30.seconds)
+		listeners_statistic = ExternalApiHelper.fetch_json_with_cache("http://stream.reliveradio.de:8000/json.xsl" + "?" + genre_name, 30.seconds)
 
 		listeners = 0
 		if !listeners_statistic.blank?
