@@ -3,24 +3,9 @@ module StreamHelper
 	require 'timeout'
 	require 'net/http'
 
-	def self.fetch_json(url)
-		Timeout::timeout(1) do # 1 second
-			# operation that may cause a timeout
-			uri = URI.parse(url)
-			http = Net::HTTP.new(uri.host, uri.port)
-			request = Net::HTTP::Get.new(uri.request_uri)
-			response = http.request(request)
-			return JSON.parse(response.body)
-		end
-		rescue Timeout::Error, Errno::ECONNREFUSED, Errno::EINVAL, Errno::ECONNRESET, EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError => e
-			return ""
-	end
-
   # fetch listeners count of a specific genre
-	def self.fetch_listeners(genre_name)		
-		listeners_statistic = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
-			fetch_json("http://stream.reliveradio.de:8000/json.xsl")
-		end
+	def self.fetch_listeners(genre_name)
+		listeners_statistic = ExternalApiHelper.fetch_json_with_cache("http://stream.reliveradio.de:8000/json.xsl", 30.seconds)
 
 		listeners = 0
 		if !listeners_statistic.blank?
@@ -36,21 +21,15 @@ module StreamHelper
 
   # fetch total listeners count of all genres
 	def self.fetch_total_listeners
-		listeners_statistic = Rails.cache.fetch("listeners_json", :expires_in => 30.seconds) do
-			fetch_json("http://stream.reliveradio.de:8000/json.xsl")
-		end
+		listeners_statistic = ExternalApiHelper.fetch_json_with_cache("http://stream.reliveradio.de:8000/json.xsl", 30.seconds)
 		return listeners_statistic["total_listeners"]
 	end
 
 	def self.fetch_hoersuppe_livepodcasts
 		# hoersuppe api returns local dates (CET)
 
-		#Rails.cache.delete("cacheID")
-		live_podcasts = Rails.cache.fetch("hoersuppe_live", :expires_in => 1.hour) do
-			# read all podcasts that are really live today from the hoersuppe API
-			# %F => 2007-11-19
-			fetch_json("http://hoersuppe.de/api/?action=getLive&dateEnd="+ Time.now.strftime('%F'))["data"]
-		end
+		live_podcasts = ExternalApiHelper.fetch_json_with_cache("http://hoersuppe.de/api/?action=getLive&dateEnd="+ Time.now.strftime('%F'), 1.hour)
+		live_podcasts = live_podcasts["data"]
 
 		if !live_podcasts.blank?
 			# remove all passed podcasts
@@ -70,17 +49,7 @@ module StreamHelper
 	end
 
 	def self.fetch_episode_schedule(url)
-		episodes_backup = Rails.cache.read(url)
-		episodes = Rails.cache.fetch(url, :expires_in => 10.minutes) do
-			# read the program for today via GET request as JSON from the Airtime radio API
-			newAirtimeJSON = fetch_json(url)
-			if newAirtimeJSON.blank?
-				# if API fetch did not return valid data, return the old cache state
-				episodes_backup
-			else
-				newAirtimeJSON
-			end
-		end
+		episodes = ExternalApiHelper.fetch_json_with_cache(url, 10.minutes)
 
 		if !episodes.blank?
 			# remove all passed podcasts from the episodes array
