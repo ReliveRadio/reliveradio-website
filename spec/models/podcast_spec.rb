@@ -7,9 +7,7 @@ describe Podcast do
 	end
 
 	it "is invalid without an artistname" do
-	    p = FactoryGirl.create(:podcast)
-	    p.artistname = nil
-	    p.should_not be_valid
+	    FactoryGirl.build(:podcast, artistname: nil).should_not be_valid
 	end
 
 	it "is invalid without a name" do
