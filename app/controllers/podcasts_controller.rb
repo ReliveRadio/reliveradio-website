@@ -31,6 +31,9 @@ class PodcastsController < ApplicationController
   def info
     @podcast = Podcast.where(["slugintern = ?", params[:slugintern]]).first
 
+    # show 404 if podcast does not exists
+    raise ActionController::RoutingError.new('Not Found') if @podcast.blank?
+
     respond_to do |format|
       format.html # info.html.erb
       format.json { render json: @podcast }
