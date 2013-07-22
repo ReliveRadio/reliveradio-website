@@ -29,19 +29,20 @@ module StreamHelper
 		# hoersuppe api returns local dates (CET)
 
 		live_podcasts = ExternalApiHelper.fetch_json_with_cache("http://hoersuppe.de/api/?action=getLive&dateEnd="+ Time.now.strftime('%F'), 1.hour)
-		live_podcasts = live_podcasts["data"]
-
 		if !live_podcasts.blank?
-			# remove all passed podcasts
-			live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"])+(podcast["duration"].to_i.minutes) < Time.now.utc.in_time_zone("Berlin") }
-			# remove all not started podcasts
-			live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"]) > Time.now.utc.in_time_zone("Berlin") }
-			# this will only keep all podcasts that are LIVE NOW
-			
-			# add some more metadata to podcasts array
-			live_podcasts.each do |podcast|
-				# add database information to this object to easily access that in view
-				podcast["db"] = Podcast.where(["hoersuppeslug = ?", podcast['podcast']]).first
+			live_podcasts = live_podcasts["data"]
+			if !live_podcasts.blank?
+				# remove all passed podcasts
+				live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"])+(podcast["duration"].to_i.minutes) < Time.now.utc.in_time_zone("Berlin") }
+				# remove all not started podcasts
+				live_podcasts.delete_if { |podcast| Time.parse(podcast["livedate"]) > Time.now.utc.in_time_zone("Berlin") }
+				# this will only keep all podcasts that are LIVE NOW
+				
+				# add some more metadata to podcasts array
+				live_podcasts.each do |podcast|
+					# add database information to this object to easily access that in view
+					podcast["db"] = Podcast.where(["hoersuppeslug = ?", podcast['podcast']]).first
+				end
 			end
 		end
 
