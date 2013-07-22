@@ -18,12 +18,10 @@ Reliveradio::Application.routes.draw do
   resources :index_info, :only => [:update]
   match '/index_info/edit' => 'index_info#edit', :as => :index_info_edit
 
-
   # enable podcasts csv import
   resources :podcasts do
     collection {post :import}
   end
-
   
   match '/verzeichnis' => 'podcasts#overview', :as => :overview
 
