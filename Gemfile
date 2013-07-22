@@ -4,14 +4,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 3.2.12'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-# 
-# gem 'rails', :git => 'git://github.com/rails/rails.git', :ref => '4aded'
-# gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '2-3-stable'
-# gem 'rails', :git => 'git://github.com/rails/rails.git', :tag => 'v2.3.5'
-
 gem 'sqlite3', '1.3.7'
 gem 'json', '1.7.7'
 gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git', :tag => 'v0.2.0.rc2'
@@ -32,11 +24,18 @@ group :assets do
 end
 
 group :dev do
+	# alternative test server
 	gem 'thin', '~> 1.5.1'
 	
-	## testing
+	# testing
 	gem 'ruby-prof', '0.13.0'
 	gem 'test-unit', '2.5.4'
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+	gem 'faker'
+	gem 'capybara'
+	gem 'guard-rspec'
+	gem 'launchy'
 	
 	# To use debugger
 	gem 'debugger', '~> 1.5'
