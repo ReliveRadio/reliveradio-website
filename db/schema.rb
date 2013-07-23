@@ -21,7 +21,19 @@ ActiveRecord::Schema.define(:version => 20130525094311) do
     t.boolean  "display"
   end
 
-# Could not dump table "podcasts" because of following StandardError
-#   Unknown type 'str' for column 'adnhandle'
+  create_table "podcasts", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "slugintern"
+    t.string   "flattrhandle"
+    t.string   "twitterhandle"
+    t.string   "hoersuppeslug"
+    t.string   "feedurl"
+    t.string   "artistname"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "description"
+    t.string   "adnhandle"
+  end
 
 end
