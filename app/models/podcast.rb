@@ -15,11 +15,12 @@ class Podcast < ActiveRecord::Base
 	end
 
 	def self.import(file)
-	  CSV.foreach(file.path, headers: true) do |row|
-	    podcast = find_by_id(row["id"]) || new
-	    podcast.attributes = row.to_hash.slice(*accessible_attributes)
-	    podcast.save!
-	  end
+		raise "Can not import CSV to database if no file is given" if file.blank?
+		CSV.foreach(file.path, headers: true) do |row|
+			podcast = find_by_id(row["id"]) || new
+			podcast.attributes = row.to_hash.slice(*accessible_attributes)
+			podcast.save!
+		end
 	end
 
 	def self.search(search)

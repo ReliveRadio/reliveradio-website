@@ -32,7 +32,6 @@ describe Podcast do
 		end
 	end
 
-
 	context "searching in podcast database" do  
 		it "finds the correct podcasts via search if it exists" do
 			p = FactoryGirl.create(:podcast)
@@ -46,6 +45,12 @@ describe Podcast do
 		it "returns an empty list if search does not find any matching podcast" do
 			Podcast.search("adfglhjaergouhadfgjhdfg").should be_empty
 		end
+	end
+
+	context "CSV import and export" do
+	  	it "raises an error if import file is blank" do
+	  	 	expect { Podcast.import() }.to raise_error
+	  	end
 	end
 
 end
