@@ -143,7 +143,9 @@ describe PodcastsController do
 	end
 
 	describe "POST #import" do
-		
+		it "should redirect to index action after import"
+		it "should show error flash message if import failed"
+		it "should show success flash message if import worked"
 	end
 
 	describe "POST #import_from_feed" do
