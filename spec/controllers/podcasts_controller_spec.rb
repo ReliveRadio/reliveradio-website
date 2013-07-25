@@ -13,28 +13,28 @@ describe PodcastsController do
 			get :index
 			response.should be_success
 		end
+		it "renders the :index view template" do
+			get :index
+			response.should render_template(:index)
+		end
 		it "populates an array of podcasts" do
 			p = FactoryGirl.create(:podcast)
 			get :index
 			# assigns reports @podcasts from the controller method
 			assigns[:podcasts].should == [p]
 		end
-		it "renders the :index view template" do
-			get :index
-			response.should render_template(:index)
-		end
 	end
 
 	describe "GET #show" do
-		it "renders the :show template" do
-			p = FactoryGirl.create(:podcast)
-			get :show, id: p.id
-			response.should render_template(:show)
-		end
 		it "should be successful" do
 			p = FactoryGirl.create(:podcast)
 			get :show, id: p.id
 			response.should be_success
+		end
+		it "renders the :show template" do
+			p = FactoryGirl.create(:podcast)
+			get :show, id: p.id
+			response.should render_template(:show)
 		end
 		it "assigns the requested id to @podcast" do
 			p = FactoryGirl.create(:podcast)
@@ -51,19 +51,19 @@ describe PodcastsController do
 	end
 
 	describe "GET #new" do
-		it "assigns a new Podcast object" do
+		it "should be successful" do
 			get :new
-			assigns[:podcast].should_not be_nil
-			assigns[:podcast].should be_kind_of(Podcast)
-			assigns[:podcast].should be_new_record
+			response.should be_success
 		end
 		it "renders the :new template" do
 			get :new
 			response.should render_template(:new)
 		end
-		it "should be successful" do
+		it "assigns a new Podcast object" do
 			get :new
-			response.should be_success
+			assigns[:podcast].should_not be_nil
+			assigns[:podcast].should be_kind_of(Podcast)
+			assigns[:podcast].should be_new_record
 		end
 	end
 
@@ -72,28 +72,28 @@ describe PodcastsController do
 			get :overview
 			response.should be_success
 		end
+		it "renders the :overview view template" do
+			get :overview
+			response.should render_template(:overview)
+		end	
 		it "populates an array of podcasts" do
 			p = FactoryGirl.create(:podcast)
 			get :overview
 			assigns[:podcasts].should == [p]
 			assigns[:result_count].should == 1
 		end
-		it "renders the :overview view template" do
-			get :overview
-			response.should render_template(:overview)
-		end	
 	end
 
 	describe "GET #info" do
-		it "renders the :info template" do
-			p = FactoryGirl.create(:podcast)
-			get :info, slugintern: p.slugintern
-			response.should render_template(:info)
-		end
 		it "should be successful" do
 			p = FactoryGirl.create(:podcast)
 			get :info, slugintern: p.slugintern
 			response.should be_success
+		end
+		it "renders the :info template" do
+			p = FactoryGirl.create(:podcast)
+			get :info, slugintern: p.slugintern
+			response.should render_template(:info)
 		end
 		it "assigns the requested slugintern to @podcast" do
 			p = FactoryGirl.create(:podcast)
@@ -111,15 +111,15 @@ describe PodcastsController do
 
 	# todo! need more tests here
 	describe "GET #edit" do
-		it "renders the :edit template" do
-			p = FactoryGirl.create(:podcast)
-			get :edit, id: p.id
-			response.should render_template(:edit)
-		end
 		it "should be successful" do
 			p = FactoryGirl.create(:podcast)
 			get :edit, id: p.id
 			response.should be_success
+		end
+		it "renders the :edit template" do
+			p = FactoryGirl.create(:podcast)
+			get :edit, id: p.id
+			response.should render_template(:edit)
 		end
 	end
 
