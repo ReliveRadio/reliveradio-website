@@ -11,16 +11,6 @@
     <h2><img src="<%= Artwork::ARTWORK_BASE_URL + @podcast.slugintern %>.jpg"></h2>
   </div>
   <div class="large-9 columns">
-    
-    <% if flash[:error] %>
-      <p><span class="alert label"><%= flash[:error] %></span></p>
-    <% end %>
-    <% if flash[:success] %>
-      <p><span class="success label"><%= flash[:success] %></span></p>
-    <% end %>
-    <% if flash[:notice] %>
-      <p><span class="label"><%= flash[:notice] %></span></p>
-    <% end %>
 
     <h2 class="subheader breaklines"><%= @podcast.name %></h2>
     <div class="breaklines datafield"><strong>url: </strong><%= link_to @podcast.url, @podcast.url %></div>

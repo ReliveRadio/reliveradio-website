@@ -25,16 +25,6 @@
   </div>
   <div class="large-9 columns">
 
-    <% if flash[:error] %>
-      <p><span class="alert label"><%= flash[:error] %></span></p>
-    <% end %>
-    <% if flash[:success] %>
-      <p><span class="success label"><%= flash[:success] %></span></p>
-    <% end %>
-    <% if flash[:notice] %>
-      <p><span class="label"><%= flash[:notice] %></span></p>
-    <% end %>
-
     <div class="field">
       <%= f.label :name %><br />
       <%= f.text_field :name %>
