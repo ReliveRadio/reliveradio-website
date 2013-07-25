@@ -46,6 +46,7 @@ describe PodcastsController do
 		it "should redirect to #index if no podcast can be found for the given id" do
 			get :show, id: "some_id_that_is_not_in_database"
 			response.should redirect_to(podcasts_path)
+			flash[:notice].should =~ /podcast existiert nicht/i
 		end
 	end
 
@@ -84,15 +85,42 @@ describe PodcastsController do
 	end
 
 	describe "GET #info" do
-		
+		it "renders the :info template" do
+			p = FactoryGirl.create(:podcast)
+			get :info, slugintern: p.slugintern
+			response.should render_template(:info)
+		end
+		it "should be successful" do
+			p = FactoryGirl.create(:podcast)
+			get :info, slugintern: p.slugintern
+			response.should be_success
+		end
+		it "assigns the requested slugintern to @podcast" do
+			p = FactoryGirl.create(:podcast)
+			get :info, slugintern: p.slugintern
+			assigns[:podcast].should_not be_nil
+			assigns[:podcast].should be_kind_of(Podcast)
+			assigns[:podcast].should == p
+		end
+		it "should redirect to #overview if no podcast can be found for the given slugintern" do
+			get :info, slugintern: "some_slugintern_that_is_not_in_database"
+			response.should redirect_to(overview_path)
+			flash[:notice].should =~ /podcast existiert nicht/i
+		end
 	end
 
+	# todo! need more tests here
 	describe "GET #edit" do
-		
-	end
-
-	describe "POST #import" do
-		
+		it "renders the :edit template" do
+			p = FactoryGirl.create(:podcast)
+			get :edit, id: p.id
+			response.should render_template(:edit)
+		end
+		it "should be successful" do
+			p = FactoryGirl.create(:podcast)
+			get :edit, id: p.id
+			response.should be_success
+		end
 	end
 
 	describe "POST #create" do
@@ -114,7 +142,7 @@ describe PodcastsController do
 		
 	end
 
-	describe "POST #create" do
+	describe "POST #import" do
 		
 	end
 

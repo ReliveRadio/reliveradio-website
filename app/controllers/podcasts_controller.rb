@@ -29,15 +29,18 @@ class PodcastsController < ApplicationController
 
   # detail page for a specific podcast
   def info
-    @podcast = Podcast.where(["slugintern = ?", params[:slugintern]]).first
+    @podcast = Podcast.where(["slugintern = ?", params[:slugintern]])
+    @podcast = @podcast.first if !@podcast.blank?
 
-    # show 404 if podcast does not exists
-    raise ActionController::RoutingError.new('Not Found') if @podcast.blank?
-
-    respond_to do |format|
-      format.html # info.html.erb
-      format.json { render json: @podcast }
-    end   
+    if @podcast.blank?
+      flash[:notice] = "Dieser Podcast existiert nicht in der Datenbank."
+      redirect_to :action => 'overview'
+    else
+      respond_to do |format|
+        format.html # info.html.erb
+        format.json { render json: @podcast }
+      end
+    end
   end
 
   # import CSV into DB
