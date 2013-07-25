@@ -46,8 +46,12 @@ class PodcastsController < ApplicationController
   # import CSV into DB
   # see model for implementation
   def import
-    Podcast.import(params[:file])
-    redirect_to podcasts_path, :flash => { :success => "Daten erfolgreich importiert" }
+    begin
+      Podcast.import(params[:file])
+      redirect_to podcasts_path, :flash => { :success => "Daten erfolgreich importiert." }
+    rescue
+      redirect_to podcasts_path, :flash => { :error => "Daten konnten nicht importiert werden." }
+    end
   end
 
   # all podcasts in backend view
