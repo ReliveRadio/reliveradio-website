@@ -67,7 +67,21 @@ describe PodcastsController do
 	end
 
 	describe "GET #overview" do
-		
+		it "should be successful" do
+			get :overview
+			response.should be_success
+		end
+		it "populates an array of podcasts" do
+			p = FactoryGirl.create(:podcast)
+			get :overview
+			# assigns reports @podcasts from the controller method
+			assigns[:podcasts].should == [p]
+			assigns[:result_count].should == 1
+		end
+		it "renders the :overview view template" do
+			get :overview
+			response.should render_template(:overview)
+		end	
 	end
 
 	describe "GET #info" do
