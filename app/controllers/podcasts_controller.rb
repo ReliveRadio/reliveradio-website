@@ -67,7 +67,7 @@ class PodcastsController < ApplicationController
         format.json { render json: @podcast }
       end
     rescue ActiveRecord::RecordNotFound
-      flash[:notice] = "Dieser Podcast existiert nicht in der Datenbank"
+      flash[:notice] = "Dieser Podcast existiert nicht in der Datenbank."
       redirect_to :action => 'index'
     end
 

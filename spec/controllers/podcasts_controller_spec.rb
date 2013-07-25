@@ -74,7 +74,6 @@ describe PodcastsController do
 		it "populates an array of podcasts" do
 			p = FactoryGirl.create(:podcast)
 			get :overview
-			# assigns reports @podcasts from the controller method
 			assigns[:podcasts].should == [p]
 			assigns[:result_count].should == 1
 		end
