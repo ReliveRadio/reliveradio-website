@@ -60,12 +60,17 @@ class PodcastsController < ApplicationController
 
   # detail view for a podcast in the backend
   def show
-    @podcast = Podcast.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @podcast }
+    begin
+      @podcast = Podcast.find(params[:id])
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @podcast }
+      end
+    rescue ActiveRecord::RecordNotFound
+      flash[:notice] = "Dieser Podcast existiert nicht in der Datenbank"
+      redirect_to :action => 'index'
     end
+
   end
 
   # create a new podcast in the backend to save in DB
