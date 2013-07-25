@@ -45,7 +45,6 @@ describe PodcastsController do
 		end
 		it "should redirect to #index if no podcast can be found for the given id" do
 			get :show, id: "some_id_that_is_not_in_database"
-			response.should be_success
 			response.should redirect_to(podcasts_path)
 		end
 	end
