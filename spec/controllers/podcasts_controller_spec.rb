@@ -124,13 +124,37 @@ describe PodcastsController do
 	end
 
 	describe "POST #create" do
+		before do
+			@post_params = {podcast: FactoryGirl.attributes_for(:podcast)}
+			@post_invalid_params = {podcast: FactoryGirl.attributes_for(:podcast, artistname: '')}
+		end
+		it "should assign the @podcast variable" do
+			post :create, @post_params
+			assigns[:podcast].should_not be_nil
+			assigns[:podcast].should be_kind_of(Podcast)
+		end
 		context "with valid attributes" do
-			it "saves the new contact in the database"
-			it "redirects to the home page"
+			it "saves the new podcast in the database" do
+				lambda{
+					post :create, @post_params
+				}.should change(Podcast, :count).by(1)
+			end
+			it "redirects to the show page" do
+				post :create, @post_params
+				response.should redirect_to :action => :show, :id => assigns(:podcast).id
+				#response.should redirect_to Podcast.last
+			end
 		end
 		context "with invalid attributes" do
-			it "does not save the new contact in the database"
-			it "re-renders the :new template"
+			it "does not save the new podcast in the database" do
+				lambda {
+					post :create, @post_invalid_params
+				}.should_not change(Podcast, :count)
+			end
+			it "re-renders the :new template" do
+				post :create, @post_invalid_params
+				response.should render_template(:new)
+			end
 		end
 	end
 
