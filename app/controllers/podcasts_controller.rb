@@ -124,9 +124,10 @@ class PodcastsController < ApplicationController
     else
       respond_to do |format|
         if @podcast.save
-          format.html { redirect_to @podcast, :flash => { :success => "Neuer Podcast angelegt" } }
+          format.html { redirect_to @podcast, :flash => { :success => "Neuer Podcast angelegt und gespeichert." } }
           format.json { head :no_content }
         else
+          flash[:error] = "Podcast konnte nicht gespeichert werden. Bitte überprüfe deine Eingaben."
           format.html { render action: "new" }
           format.json { render json: @podcast.errors, status: :unprocessable_entity }
         end

@@ -142,7 +142,7 @@ describe PodcastsController do
 			it "redirects to the show page" do
 				post :create, @post_params
 				response.should redirect_to :action => :show, :id => assigns(:podcast).id
-				#response.should redirect_to Podcast.last
+				flash[:success].should =~ /neuer podcast angelegt und gespeichert/i
 			end
 		end
 		context "with invalid attributes" do
@@ -153,6 +153,7 @@ describe PodcastsController do
 			end
 			it "re-renders the :new template" do
 				post :create, @post_invalid_params
+				flash[:error].should =~ /podcast konnte nicht gespeichert werden. bitte überprüfe deine eingaben/i
 				response.should render_template(:new)
 			end
 		end
