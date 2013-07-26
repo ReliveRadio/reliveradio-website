@@ -4,7 +4,7 @@ describe Podcast do
 
 	context "default model validation" do  
 		it "has a valid factory" do
-		 	FactoryGirl.create(:podcast).should be_valid
+		 	FactoryGirl.build(:podcast).should be_valid
 		end
 
 		it "is invalid without an artistname" do
