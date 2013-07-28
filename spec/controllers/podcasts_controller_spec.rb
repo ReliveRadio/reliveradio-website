@@ -159,7 +159,37 @@ describe PodcastsController do
 	end
 
 	describe "POST #destroy" do
-		
+		before(:each) do
+			@p = FactoryGirl.create(:podcast)
+		end
+		context "with valid attributes" do
+			it "should assign the correct podcast in database to @podcast" do
+				post :destroy, id: @p.id
+				assigns[:podcast].should == @p
+			end
+			it "should remove the podcast from the database" do
+				lambda {
+					post :destroy, id: @p.id
+				}.should change(Podcast, :count).by(-1)
+			end
+			it "should redirect to overview and show success message" do
+				post :destroy, id: @p.id
+				response.should redirect_to(podcasts_path)
+				flash[:success].should =~ /podcast wurde gelöscht/i
+			end
+		end
+		context "with invalid attributes" do
+			it "should not remove the podcast from the database" do
+				lambda {
+					post :destroy, id: 'unknown_id_of_no_podcast_in_database'
+				}.should_not change(Podcast, :count)
+			end
+			it "should redirect to overview" do
+				post :destroy, id: 'unknown_id_of_no_podcast_in_database'
+				response.should redirect_to(podcasts_path)
+				flash[:error].should =~ /podcast konnte nicht gefunden werden. kein podcast wurde gelöscht./i
+			end
+		end
 	end
 
 	describe "POST #update" do
