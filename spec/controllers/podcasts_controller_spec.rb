@@ -109,7 +109,6 @@ describe PodcastsController do
 		end
 	end
 
-	# todo! need more tests here
 	describe "GET #edit" do
 		it "should be successful" do
 			p = FactoryGirl.create(:podcast)
