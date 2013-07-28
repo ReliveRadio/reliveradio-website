@@ -202,11 +202,13 @@ class PodcastsController < ApplicationController
   # delete a podcast
   def destroy
     @podcast = Podcast.find(params[:id])
-    @podcast.destroy
-
-    respond_to do |format|
-      format.html { redirect_to podcasts_url }
-      format.json { head :no_content }
+    if @podcast.destroy
+      respond_to do |format|
+        format.html { redirect_to podcasts_url }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to overview_path, :flash => { :error => "Podcast konnte nicht gefunden werden. Kein Podcast wurde gelöscht." }
     end
   end
 end
