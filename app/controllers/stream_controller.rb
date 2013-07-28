@@ -47,15 +47,12 @@ class StreamController < ApplicationController
     @live_podcasts = StreamHelper.fetch_hoersuppe_livepodcasts
     # fetch episode schedule
     @episodes = StreamHelper.fetch_episode_schedule(airtime_url)
-    if !@episodes.blank?
-      @live_episode = @episodes.shift # returns the first element and removes it from the list
-    end
-
+    @live_episode = @episodes.shift # returns the first element and removes it from the list
     respond_to do |format|
       format.html # index.html.erb
       format.js { render 'update_episodes'}
       format.json  { render :json => {:live_episode => @live_episode, 
-                                  :upcoming_episodes => @episodes }}
+                                      :upcoming_episodes => @episodes }}
       format.chapters { render 'chapters'}
     end
   end
