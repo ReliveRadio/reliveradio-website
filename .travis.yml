@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - "1.9.3"
+#  - "1.9.3" # do not build 1.9.3 any more because it can not handle utf8 in rspec
   - "2.0.0"
 branches:
   only:
