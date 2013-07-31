@@ -245,7 +245,6 @@ describe PodcastsController do
 		end
 	end
 
-
 	describe "POST #import" do
 		it "should redirect to index action after import"
 		it "should show error flash message if import failed"
