@@ -4,7 +4,7 @@ module StreamHelper
 	require 'net/http'
 
   	# fetch listeners count of a specific genre
-	def self.fetch_listeners(genre_name)
+	def fetch_listeners(genre_name)
 		listeners_statistic = ExternalApiHelper.fetch_json_with_cache("http://stream.reliveradio.de:8000/json.xsl" + "?" + genre_name, 30.seconds)
 
 		listeners = 0
@@ -20,12 +20,12 @@ module StreamHelper
 	end
 
   	# fetch total listeners count of all genres
-	def self.fetch_total_listeners
+	def fetch_total_listeners
 		listeners_statistic = ExternalApiHelper.fetch_json_with_cache("http://stream.reliveradio.de:8000/json.xsl", 30.seconds)
 		return listeners_statistic["total_listeners"]
 	end
 
-	def self.fetch_hoersuppe_livepodcasts
+	def fetch_hoersuppe_livepodcasts
 		# hoersuppe api returns local dates (CET)
 
 		live_podcasts = ExternalApiHelper.fetch_json_with_cache("http://hoersuppe.de/api/?action=getLive&dateEnd="+ Time.now.strftime('%F'), 1.hour)
@@ -49,7 +49,7 @@ module StreamHelper
 		return live_podcasts
 	end
 
-	def self.fetch_episode_schedule(url)
+	def fetch_episode_schedule(url)
 		episodes = ExternalApiHelper.fetch_json_with_cache(url, 10.minutes)
 
 		if !episodes.blank?
