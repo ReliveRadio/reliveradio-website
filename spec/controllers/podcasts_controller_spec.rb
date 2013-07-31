@@ -158,6 +158,59 @@ describe PodcastsController do
 		end
 	end
 
+	describe "POST #update" do
+		before do
+			@p = FactoryGirl.create(:podcast)
+			@new_valid_podcast_hash = {podcast: FactoryGirl.attributes_for(:podcast)}
+			@update_params = {id: @p.id, podcast: @new_valid_podcast_hash[:podcast]}
+			@update_invalid_params = {id: @p.id, podcast: FactoryGirl.attributes_for(:podcast, artistname: '')}
+		end
+		context "with valid attributes" do
+			it "should assign the @podcast variable" do
+				post :update, @update_params
+				assigns[:podcast].should_not be_nil
+				assigns[:podcast].should be_kind_of(Podcast)
+				assigns[:podcast] == @p
+			end
+			it "does not change number of podcasts in database" do
+				lambda{
+					post :update, @update_params
+				}.should_not change(Podcast, :count)
+			end
+			it "should update the data of the podcast in database" do
+				post :update, @update_params
+				Podcast.find(@p.id).artistname == @new_valid_podcast_hash[:podcast][:artistname]
+			end
+			it "redirects to the show page" do
+				post :update, @update_params
+				response.should redirect_to :action => :show, :id => assigns(:podcast).id
+				flash[:success].should =~ /neue daten wurden gespeichert/i
+			end
+		end
+		context "with invalid attributes" do
+			it "should redirect to overview if no podcast with the given id exists in database" do
+				post :update, {id: 'some_unknown_id', podcast: @new_valid_podcast_hash[:podcast]}
+				response.should redirect_to(overview_path)
+				flash[:error].should =~ /dieser podcast existiert nicht in der datenbank./i
+			end
+			it "does not change number of podcasts in database" do
+				lambda{
+					post :update, @update_invalid_params
+				}.should_not change(Podcast, :count)
+			end
+			it "does not update the data of the podcast in database" do
+				lambda {
+					post :update, @update_invalid_params
+				}.should_not change(Podcast.find(@p.id), :artistname)
+			end
+			it "re-renders the :edit template" do
+				post :update, @update_invalid_params
+				flash[:error].should =~ /podcast konnte nicht gespeichert werden. bitte überprüfe deine eingaben/i
+				response.should render_template(:edit)
+			end
+		end
+	end
+
 	describe "POST #destroy" do
 		before(:each) do
 			@p = FactoryGirl.create(:podcast)
@@ -192,9 +245,6 @@ describe PodcastsController do
 		end
 	end
 
-	describe "POST #update" do
-		
-	end
 
 	describe "POST #import" do
 		it "should redirect to index action after import"

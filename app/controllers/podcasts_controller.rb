@@ -137,38 +137,43 @@ class PodcastsController < ApplicationController
 
   # change the data of an existing podcast in DB
   def update
-    @podcast = Podcast.find(params[:id])
-
-    # import feed description button clicked
-    if params[:import_from_feed]
-      respond_to do |format|
-        # save the form data first
-        if @podcast.update_attributes(params[:podcast])
-          if import_from_feed(@podcast)
-            # redirect to the edit page to make review possible
-            format.html { redirect_to edit_podcast_path(@podcast), :flash => { :success => "Beschreibung erfolgreich aus dem Feed importiert" }}
+    begin
+      @podcast = Podcast.find(params[:id])
+      # import feed description button clicked
+      if params[:import_from_feed]
+        respond_to do |format|
+          # save the form data first
+          if @podcast.update_attributes(params[:podcast])
+            if import_from_feed(@podcast)
+              # redirect to the edit page to make review possible
+              format.html { redirect_to edit_podcast_path(@podcast), :flash => { :success => "Beschreibung erfolgreich aus dem Feed importiert" }}
+              format.json { head :no_content }
+            else
+              # redirect to the edit page to mal review possible
+              format.html { redirect_to edit_podcast_path(@podcast), :flash => { :error => "Es konnte keine Beschreibung importiert werden" } }
+              format.json { head :no_content }
+            end           
+          else
+            format.html { render action: "edit" }
+            format.json { render json: @podcast.errors, status: :unprocessable_entity }
+          end
+        end
+      else
+        respond_to do |format|
+          if @podcast.update_attributes(params[:podcast])
+            format.html { redirect_to @podcast, :flash => { :success => "Neue Daten wurden gespeichert." } }
             format.json { head :no_content }
           else
-            # redirect to the edit page to mal review possible
-            format.html { redirect_to edit_podcast_path(@podcast), :flash => { :error => "Es konnte keine Beschreibung importiert werden" } }
-            format.json { head :no_content }
-          end           
-        else
-          format.html { render action: "edit" }
-          format.json { render json: @podcast.errors, status: :unprocessable_entity }
+            flash[:error] = "Podcast konnte nicht gespeichert werden. Bitte überprüfe deine Eingaben."
+            format.html { render action: "edit"}
+            format.json { render json: @podcast.errors, status: :unprocessable_entity }
+          end
         end
       end
-    else
-      respond_to do |format|
-        if @podcast.update_attributes(params[:podcast])
-          format.html { redirect_to @podcast, :flash => { :success => "Podcast erfolgreich gespeichert" } }
-          format.json { head :no_content }
-        else
-          format.html { render action: "edit" }
-          format.json { render json: @podcast.errors, status: :unprocessable_entity }
-        end
-      end
+    rescue ActiveRecord::RecordNotFound
+      redirect_to (overview_path), :flash => {:error => "Dieser Podcast existiert nicht in der Datenbank."}
     end
+
   end
 
   def import_from_feed (podcast)
