@@ -27,7 +27,7 @@ describe "ExternalApiHelper" do
 			}.to_not raise_error
 		end
 		it "should not return blank if the url is valid and reachable" do
-			ExternalApiHelper.fetch_json('http://stream.reliveradio.de:8000/json.xsl').should_not be_blank
+			ExternalApiHelper.fetch_json('http://mixzentrale.reliveradio.de/api/today-info').should_not be_blank
 		end
 	end
 
