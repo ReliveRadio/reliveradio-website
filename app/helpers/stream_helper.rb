@@ -76,7 +76,8 @@ module StreamHelper
 			end
 
 			# first episode in array is live!
-			episodes.first["isLive"] = true;
+			live_episode = episodes.first
+			live_episode["isLive"] = true if !live_episode.blank?
 		end
 
 		return episodes
