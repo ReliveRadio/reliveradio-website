@@ -54,7 +54,7 @@ module StreamHelper
 
 		if !episodes.blank?
 			# remove all passed podcasts from the episodes array
-			episodes.delete_if { |episode| DateTime.parse(episode["ends"]).utc.in_time_zone("Berlin") < Time.now.utc.in_time_zone("Berlin") }
+			episodes.delete_if { |episode| DateTime.parse(episode["ends"]).utc.in_time_zone("Berlin") < DateTime.now.utc.in_time_zone("Berlin") }
 			# do not display jingles in the schedule
 			episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
 
