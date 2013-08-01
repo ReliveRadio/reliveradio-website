@@ -4,6 +4,14 @@ describe "ExternalApiHelper" do
 
 	context "fetch_json_with_cache" do
 		# this is still todo, because it is very difficult to simulate chache problems
+		it "should raise an error if url is not reachable" do
+			expect {
+				ExternalApiHelper.fetch_json_with_cache('a really invalid url', 0.minutes)
+			}.to raise_error
+		end
+		it "should not return blank if the url is valid and reachable" do
+			ExternalApiHelper.fetch_json_with_cache('http://mixzentrale.reliveradio.de/api/today-info', 0.minutes).should_not be_blank
+		end
 	end
 
 	context "fetch_json" do
