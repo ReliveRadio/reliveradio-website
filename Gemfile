@@ -26,9 +26,12 @@ end
 group :dev do
 	# alternative test server
 	gem 'thin', '~> 1.5.1'
-	
-	# testing
+	# To use debugger
+	gem 'debugger', '~> 1.5'
 	gem 'ruby-prof', '0.13.0'
+end
+
+group :test do
 	gem 'test-unit', '2.5.4'
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'
@@ -36,9 +39,7 @@ group :dev do
 	gem 'capybara'
 	gem 'guard-rspec'
 	gem 'launchy'
-	
-	# To use debugger
-	gem 'debugger', '~> 1.5'
+	gem 'database_cleaner'
 end
 
 
