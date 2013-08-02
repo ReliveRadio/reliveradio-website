@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe "Index" do
+	it "should have a link to the impressum page" do
+		visit index_url
+		page.should have_link("Impressum", :href => 'http://blog.reliveradio.de/impressum/')
+	end
 	context "IndexInfo" do
 		it "shows index_info data if display is set to true" do
 			index_info = FactoryGirl.create(:index_info)
