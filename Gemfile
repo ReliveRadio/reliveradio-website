@@ -39,7 +39,7 @@ group :test do
 	gem 'capybara'
 	gem 'guard-rspec'
 	gem 'launchy'
-	gem 'database_cleaner'
+	gem 'database_cleaner', '< 1.1.0'
 end
 
 
