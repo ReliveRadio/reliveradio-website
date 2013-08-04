@@ -3,9 +3,9 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.12'
+gem 'rails', '~> 3.2.14'
 gem 'sqlite3', '1.3.7'
-gem 'json', '1.7.7'
+gem 'json', '1.8.0'
 gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git', :tag => 'v0.2.0.rc2'
 gem 'will_paginate'
 
@@ -14,7 +14,7 @@ gem 'will_paginate'
 group :assets do
 	gem 'sass-rails', '~> 3.2.3'
 	gem 'coffee-rails', '~> 3.2.1'
-	gem 'zurb-foundation', '~> 4.1.5'
+	gem 'zurb-foundation', '~> 4.3.1'
 	gem 'uglifier', '>= 1.0.3'
 	gem "font-awesome-rails", '~> 3.2.0'
 	gem "mediaelement_rails"
@@ -41,7 +41,6 @@ group :test do
 	gem 'launchy'
 	gem 'database_cleaner', '< 1.1.0'
 end
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
