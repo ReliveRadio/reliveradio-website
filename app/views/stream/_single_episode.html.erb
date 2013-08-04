@@ -39,21 +39,21 @@
 			<!-- SOCIAL LINKS - MORE METAINFO FOR PODCAST -->
 		    <ul class="inline-list hide-for-small">
 		      <!-- WEBSITE -->
-		      <% if !podcast.url.blank? %><li><a href="<%= podcast.url %>"><i class="icon-globe"></i> Webseite</a></li><% end %>
+		      <% if !podcast.url.blank? %><li><a href="<%= podcast.url %>" target="_blank"><i class="icon-globe"></i> Webseite</a></li><% end %>
 		      <!-- FEED -->
-		      <% if !podcast.feedurl.blank? %><li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>"><i class="icon-rss"></i> Abonnieren</a></li><% end %>
+		      <% if !podcast.feedurl.blank? %><li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>" target="_blank"><i class="icon-rss"></i> Abonnieren</a></li><% end %>
 		      <!-- TWITTER -->
-		      <% if !podcast.twitterhandle.blank? %><li><a href="http://www.twitter.com/<%= podcast.twitterhandle %>"><i class="icon-twitter"></i> Twitter</a></li><% end %>
+		      <% if !podcast.twitterhandle.blank? %><li><a href="http://www.twitter.com/<%= podcast.twitterhandle %>" target="_blank"><i class="icon-twitter"></i> Twitter</a></li><% end %>
 		      <!-- ADN -->
 		      <% if !podcast.adnhandle.blank? %><li>
-        		<a href="https://alpha.app.net/<%= podcast.adnhandle %>"><i class="icon-adn"></i> ADN</a>
+        		<a href="https://alpha.app.net/<%= podcast.adnhandle %>" target="_blank"><i class="icon-adn"></i> ADN</a>
       		</li><% end %>
 		      <!-- FLATTR -->
 		      <% if !podcast.flattrhandle.blank? %><li>
-		        <a href="https://flattr.com/submit/auto?user_id=<%= podcast.flattrhandle %>&url=http://reliveradio.de/<%= podcast.slugintern %>&title=<%= podcast.name %> im ReliveRadio&language=de&category=audio"><i class="icon-heart"></i> Flattr</a>
+		        <a href="https://flattr.com/submit/auto?user_id=<%= podcast.flattrhandle %>&url=http://reliveradio.de/<%= podcast.slugintern %>&title=<%= podcast.name %> im ReliveRadio&language=de&category=audio" target="_blank"><i class="icon-heart"></i> Flattr</a>
 		      </li><% end %>
 		      <!-- HOERSUPPE -->
-		      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
+		      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>" target="_blank"><i class="icon-headphones"></i> Hörsuppe</a></li><% end %>
 		    </ul>
 		    <!-- MORE INFO LINK FOR MOBILE VIEW -->
 			<p class="show-for-small"><a target="_blank" href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
