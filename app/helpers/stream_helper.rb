@@ -1,7 +1,6 @@
 module StreamHelper
 
-	require 'timeout'
-	require 'net/http'
+	require 'active_support/time_with_zone'
 
   	# fetch listeners count of a specific genre
 	def self.fetch_listeners(genre_name)
@@ -54,7 +53,7 @@ module StreamHelper
 
 		if !episodes.blank?
 			# remove all passed podcasts from the episodes array
-			#episodes.delete_if { |episode| DateTime.parse(episode["ends"]).utc.in_time_zone("Berlin") < DateTime.now.utc.in_time_zone("Berlin") }
+			episodes.delete_if { |episode| ActiveSupport::TimeWithZone.new(Time.parse(episode["ends"]), "Berlin") < ActiveSupport::TimeWithZone.new(Time.now, "Berlin") }
 			# do not display jingles in the schedule
 			episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
 

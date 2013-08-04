@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'active_support/time_with_zone'
 
 describe "StreamHelper" do
 
@@ -32,12 +33,15 @@ describe "StreamHelper" do
 			@episodes = StreamHelper.fetch_episode_schedule('http://mixzentrale.reliveradio.de/api/today-info')
 		end
 
+		it "should not be nil" do
+			@episodes.should_not be_nil
+		end
 		it "should not return blank" do
 			@episodes.should_not be_blank
 		end
 		it "should only return episodes in the array that are upcoming" do
 			@episodes.each do |episode|
-				(DateTime.parse(episode["ends"]).utc.in_time_zone("Berlin") > DateTime.now.utc.in_time_zone("Berlin")).should == true
+				( ActiveSupport::TimeWithZone.new(Time.parse(episode["ends"]), "Berlin") > ActiveSupport::TimeWithZone.new(Time.now, "Berlin") ).should == true
 			end
 		end
 		it "should have all episodes marked as not live except the first one" do
