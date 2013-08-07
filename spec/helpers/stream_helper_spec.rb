@@ -30,7 +30,7 @@ describe "StreamHelper" do
 	context "#fetch_episode_schedule" do
 
 		before(:all) do
-			@episodes = StreamHelper.fetch_episode_schedule('http://mixzentrale.reliveradio.de/api/today-info')
+			@episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
 		end
 
 		it "should not be nil" do

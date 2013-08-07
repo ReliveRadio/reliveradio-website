@@ -10,7 +10,7 @@ describe "ExternalApiHelper" do
 			}.to raise_error
 		end
 		it "should not return blank if the url is valid and reachable" do
-			ExternalApiHelper.fetch_json_with_cache('http://mixzentrale.reliveradio.de/api/today-info', 0.minutes).should_not be_blank
+			ExternalApiHelper.fetch_json_with_cache(APP_CONFIG['mix']['airtime_url'], 0.minutes).should_not be_blank
 		end
 	end
 
@@ -27,7 +27,7 @@ describe "ExternalApiHelper" do
 			}.to_not raise_error
 		end
 		it "should not return blank if the url is valid and reachable" do
-			ExternalApiHelper.fetch_json('http://mixzentrale.reliveradio.de/api/today-info').should_not be_blank
+			ExternalApiHelper.fetch_json(APP_CONFIG['mix']['airtime_url']).should_not be_blank
 		end
 	end
 
