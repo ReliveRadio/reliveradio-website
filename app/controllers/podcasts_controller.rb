@@ -6,7 +6,7 @@ class PodcastsController < ApplicationController
 
   # authentication for backend
   # set good password here for production use!
-  http_basic_authenticate_with :name => PasswordHelper.user, :password => PasswordHelper.password, :except => ["info", "overview"]
+  http_basic_authenticate_with :name => AUTHENTICATION_CONFIG['username'], :password => AUTHENTICATION_CONFIG['password'], :except => ["info", "overview"]
 
   # static page cache for all podcasts overview and detailed view for each podcast
   caches_page :info

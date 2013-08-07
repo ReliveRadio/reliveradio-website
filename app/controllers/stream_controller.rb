@@ -58,20 +58,20 @@ class StreamController < ApplicationController
   end
 
   def mix
-    @desktop_stream_url = "http://stream.reliveradio.de:8000/24.mp3"
-    @mobil_stream_url = "http://stream.reliveradio.de:8000/24mobile.mp3"
-    render_genre "Mix", "http://mixzentrale.reliveradio.de/api/today-info"
+    @desktop_stream_url = APP_CONFIG['mix']['desktop_stream_url']
+    @mobile_stream_url = APP_CONFIG['mix']['mobile_stream_url']
+    render_genre "Mix", APP_CONFIG['mix']['airtime_url']
   end
 
   def technique
-    @desktop_stream_url = "http://stream.reliveradio.de:8000/technik.mp3"
-    @mobil_stream_url = "http://stream.reliveradio.de:8000/technikmobile.mp3"
-    render_genre "Technik", "http://technikzentrale.reliveradio.de/api/today-info"
+    @desktop_stream_url = APP_CONFIG['technique']['desktop_stream_url']
+    @mobile_stream_url = APP_CONFIG['technique']['mobile_stream_url']
+    render_genre "Technik", APP_CONFIG['technique']['airtime_url']
   end
 
   def culture
-    @desktop_stream_url = "http://stream.reliveradio.de:8000/kultur.mp3"
-    @mobil_stream_url = "http://stream.reliveradio.de:8000/kulturmobile.mp3"
-    render_genre "Kultur", "http://kulturzentrale.reliveradio.de/api/today-info"
+    @desktop_stream_url = APP_CONFIG['culture']['desktop_stream_url']
+    @mobile_stream_url = APP_CONFIG['culture']['mobile_stream_url']
+    render_genre "Kultur", APP_CONFIG['culture']['airtime_url']
   end
 end

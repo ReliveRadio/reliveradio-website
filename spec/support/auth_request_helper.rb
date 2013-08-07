@@ -6,8 +6,8 @@ module AuthRequestHelper
   #
   def http_login
     @env ||= {}
-    user = PasswordHelper.user
-    pw = PasswordHelper.password
+    user = AUTHENTICATION_CONFIG['username']
+    pw = AUTHENTICATION_CONFIG['password']
     @env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(user,pw)
   end
 end

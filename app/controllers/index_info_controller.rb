@@ -1,7 +1,7 @@
 class IndexInfoController < ApplicationController
 
   # authentication for backend
-  http_basic_authenticate_with :name => PasswordHelper.user, :password => PasswordHelper.password
+  http_basic_authenticate_with :name => AUTHENTICATION_CONFIG['username'], :password => AUTHENTICATION_CONFIG['password']
 
 	def edit
     @index_info = IndexInfo.all.shift
