@@ -39,7 +39,7 @@ describe "StreamHelper" do
 		it "should not return blank" do
 			@episodes.should_not be_blank
 		end
-		it "should only contain 10 elements" do
+		it "should only contain 10 episodes" do
 			@episodes.count == 10
 		end
 		it "should have all episodes marked as not live except the first one" do
