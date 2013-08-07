@@ -41,7 +41,7 @@ describe "StreamHelper" do
 		end
 		it "should only return episodes in the array that are upcoming" do
 			@episodes.each do |episode|
-				( ActiveSupport::TimeWithZone.new(Time.parse(episode["ends"]), "Berlin") > ActiveSupport::TimeWithZone.new(Time.now, "Berlin") ).should == true
+				( episode['ends_locale'] > Time.now ).should == true
 			end
 		end
 		it "should have all episodes marked as not live except the first one" do

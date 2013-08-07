@@ -9,7 +9,7 @@
 		<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 		<div class="show-for-small playtime-small">
 			<!-- end time -->
-			<div class="time-info"><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
+			<div class="time-info"><i class="icon-stop"></i> <%= episode['ends_locale'].strftime("%H:%M") %></div>
 			<!-- time left -->
 			<div class="time-info"><i class="icon-arrow-right"></i> <span class="timeleft"></span> Min.</div>
 			<!-- <div class="time-info"><span class="percentplayed"></span></div>
@@ -23,7 +23,7 @@
 			<!-- left time -->
 			<div class="time-info"><strong><i class="icon-arrow-right"></i> Rest:</strong> <span class="timeleft"></span> Min.</div>
 			<!-- end time -->
-			<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends'].strftime("%H:%M") %></div>
+			<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends_locale'].strftime("%H:%M") %></div>
 			<!-- <div class="time-info"><span class="percentplayed"></span></div>
 			<div class="time-info"><span class="percentleft"></span></div> -->
 		</div>
@@ -73,6 +73,6 @@
 
 <!-- PROGRESSBAR SETUP -->
 <%= javascript_tag do %>
-	window.starts = new Date(<%= @live_episode['starts'].to_i %> * 1000);
-	window.ends = new Date(<%= @live_episode['ends'].to_i %> * 1000);
+	window.starts = new Date(<%= @live_episode['starts_locale'].to_i %> * 1000);
+	window.ends = new Date(<%= @live_episode['ends_locale'].to_i %> * 1000);
 <% end %>

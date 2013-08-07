@@ -7,9 +7,9 @@
 		<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 		<div class="show-for-small playtime-small">
 			<!-- start time -->
-			<div class="time-info"><i class="icon-play"></i> <%= episode['starts'].strftime("%H:%M") %></div>
+			<div class="time-info"><i class="icon-play"></i> <%= episode['starts_locale'].strftime("%H:%M") %></div>
 			<!-- end time -->
-			<div class="time-info"><i class="icon-stop"></i> <%= episode['ends'].strftime("%H:%M") %></div>
+			<div class="time-info"><i class="icon-stop"></i> <%= episode['ends_locale'].strftime("%H:%M") %></div>
 			<!-- duration -->
 			<div class="time-info"><i class="icon-time"></i> <%= episode['duration'] %> Min.</div>
 		</div>
@@ -17,9 +17,9 @@
 		<!-- EPISODE PLAYTIME INFO FOR LARGE DEVICES-->
 		<div class="hide-for-small playtime-large">
 			<!-- start time -->
-			<div class="time-info"><strong><i class="icon-play"></i> Beginn:</strong> <%= episode['starts'].strftime("%H:%M") %></div>
+			<div class="time-info"><strong><i class="icon-play"></i> Beginn:</strong> <%= episode['starts_locale'].strftime("%H:%M") %></div>
 			<!-- end time -->
-			<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends'].strftime("%H:%M") %></div>
+			<div class="time-info"><strong><i class="icon-stop"></i> Ende:</strong> <%= episode['ends_locale'].strftime("%H:%M") %></div>
 			<!-- duration -->
 			<div class="time-info"><strong><i class="icon-time"></i> Dauer:</strong> <%= episode['duration'] %> Min.</div>
 		</div>

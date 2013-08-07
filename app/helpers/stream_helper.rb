@@ -52,8 +52,10 @@ module StreamHelper
 		episodes = ExternalApiHelper.fetch_json_with_cache(url, 10.minutes)
 
 		if !episodes.blank?
+			episodes = episodes['files']
+
 			# remove all passed podcasts from the episodes array
-			episodes.delete_if { |episode| ActiveSupport::TimeWithZone.new(Time.parse(episode["ends"]), "Berlin") < ActiveSupport::TimeWithZone.new(Time.now, "Berlin") }
+			episodes.delete_if { |episode| Time.parse(episode['ends_locale']) < Time.now }
 			# do not display jingles in the schedule
 			episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
 
@@ -62,13 +64,13 @@ module StreamHelper
 				# set all to not being live (first one will be set to live after this iterator)
 				episode["isLive"] = false;
 
-				# adjust time
-				starts = DateTime.parse(episode["starts"]).utc.in_time_zone("Berlin")
-				ends = DateTime.parse(episode["ends"]).utc.in_time_zone("Berlin")
-				episode["starts"] = starts
-				episode["ends"] = ends
 				# calculate the duration of this episode
+				starts = Time.parse(episode['starts_locale'])
+				ends = Time.parse(episode['ends_locale'])
 				episode["duration"] = ((ends - starts) / 60).round
+				# update starts and ends to be a realy object => time formatting in view easier
+				episode['starts_locale'] = starts
+				episode['ends_locale'] = ends
 
 				# add database information to this object to easily access that in view
 				episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first
