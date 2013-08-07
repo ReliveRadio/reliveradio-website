@@ -47,7 +47,7 @@ class StreamController < ApplicationController
     @live_podcasts = StreamHelper.fetch_hoersuppe_livepodcasts
     # fetch episode schedule
     @episodes = StreamHelper.fetch_episode_schedule(airtime_url)
-    @live_episode = @episodes.shift # returns the first element and removes it from the list
+    @live_episode = @episodes.shift # assume the first episode as live
     respond_to do |format|
       format.html # index.html.erb
       format.js { render 'update_episodes'}

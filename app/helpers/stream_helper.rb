@@ -76,9 +76,18 @@ module StreamHelper
 				episode["db"] = Podcast.where(["artistname = ?", episode['artist_name']]).first
 			end
 
-			# first episode in array is live!
+			# check if first episode is live actually
 			live_episode = episodes.first
-			live_episode["isLive"] = true if !live_episode.blank?
+			if !live_episode.blank?
+				if !((live_episode['starts_locale'] < Time.now) && (live_episode['ends_locale'] > Time.now))
+					# first episode is NOT live actually
+					raise "Airtime API did not return a live episode: " + url
+				else
+					# first episode is live
+					live_episode["isLive"] = true
+				end
+			end
+
 		end
 
 		return episodes
