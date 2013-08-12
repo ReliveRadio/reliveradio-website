@@ -15,16 +15,8 @@ describe Podcast do
 		    FactoryGirl.build(:podcast, name: nil).should_not be_valid   
 		end
 
-		it "is invalid without a feedurl" do
-		    FactoryGirl.build(:podcast, feedurl: nil).should_not be_valid  
-		end
-
 		it "is invalid without a slugintern" do
 		    FactoryGirl.build(:podcast, slugintern: nil).should_not be_valid  
-		end
-
-		it "is invalid without an URL" do
-		    FactoryGirl.build(:podcast, url: nil).should_not be_valid	  
 		end
 
 		it "is invalid without a description" do
