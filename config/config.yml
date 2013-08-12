@@ -1,4 +1,5 @@
 # some general config here
+# be careful: yaml does not allow tabs. only spaces.
 
 listeners_url: "http://stream.reliveradio.de:8000/json.xsl"
 
