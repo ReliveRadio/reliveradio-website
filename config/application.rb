@@ -75,7 +75,3 @@ module Reliveradio
   end
 end
 
-module Artwork
-    ARTWORK_BASE_URL = "http://static.reliveradio.de/logos/"
-end
-

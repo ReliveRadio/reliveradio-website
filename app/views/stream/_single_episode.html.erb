@@ -2,7 +2,7 @@
 	<div class="small-3 columns">
 
 		<!-- EPISODE PODCAST IMAGE -->
-		<% if !podcast.nil? %><img  class="episode-image" src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"><% end %>
+		<% if !podcast.nil? %><img  class="episode-image" src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"><% end %>
 
 		<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 		<div class="show-for-small playtime-small">

@@ -33,7 +33,7 @@
         <ul class="small-block-grid-3 large-block-grid-3">
         <% @podcasts.each do |podcast| %>
           <li>
-                <a href="<%= info_url(:slugintern => podcast.slugintern) %>"><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></a>
+                <a href="<%= info_url(:slugintern => podcast.slugintern) %>"><img src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"></a>
                 <h3 class="hide-for-small breaklines"><%= podcast.name %></h3>
                 <p class="hide-for-small"><%= first_x_words(podcast.description, 20) %></p>
                 <p class="hide-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>

@@ -55,12 +55,12 @@ describe "StreamHelper" do
 			end
 		end
 		it "should only mark an episode as live if it is actually live" do
-		 	@episodes.first["isLive"].should == true
-		 	live_episode = @episodes.first
+			@episodes.first["isLive"].should == true
+			live_episode = @episodes.first
 		 	# should be started
-		 	(live_episode['starts_locale'] < Time.now).should == true
+			(live_episode['starts_locale'] < Time.now).should == true
 		 	# should not have ended yet
-		 	(live_episode['ends_locale'] > Time.now).should == true
+			(live_episode['ends_locale'] > Time.now).should == true
 		end
 		it "should not contain an episodes with an artistname = jingle" do
 			@episodes.each do |episode|

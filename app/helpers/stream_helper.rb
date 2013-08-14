@@ -2,7 +2,7 @@ module StreamHelper
 
 	require 'active_support/time_with_zone'
 
-  	# fetch listeners count of a specific genre
+	# fetch listeners count of a specific genre
 	def self.fetch_listeners(genre_name)
 		listeners_statistic = ExternalApiHelper.fetch_json_with_cache(APP_CONFIG['listeners_url'] + "?" + genre_name, 30.seconds)
 
@@ -18,7 +18,7 @@ module StreamHelper
 		return listeners
 	end
 
-  	# fetch total listeners count of all genres
+	# fetch total listeners count of all genres
 	def self.fetch_total_listeners
 		listeners_statistic = ExternalApiHelper.fetch_json_with_cache(APP_CONFIG['listeners_url'], 30.seconds)
 		return listeners_statistic["total_listeners"]

@@ -4,7 +4,7 @@
 
 		<!-- <div id="live-banner">Jetzt Live</div> -->
 		<!-- EPISODE PODCAST IMAGE -->
-		<% if !podcast.nil? %><img id="live-episode-image" class="episode-image" src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"><% end %>
+		<% if !podcast.nil? %><img id="live-episode-image" class="episode-image" src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"><% end %>
 
 		<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 		<div class="show-for-small playtime-small">

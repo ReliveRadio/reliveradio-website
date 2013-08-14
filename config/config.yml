@@ -2,6 +2,7 @@
 # be careful: yaml does not allow tabs. only spaces.
 
 listeners_url: "http://stream.reliveradio.de:8000/json.xsl"
+artwork_base_url: "http://static.reliveradio.de/logos/"
 
 mix:
   desktop_stream_url: "http://stream.reliveradio.de:8000/24.mp3"
