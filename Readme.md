@@ -17,7 +17,7 @@ Das hier ist eine Imprementierung für das [ReliveRadio](http://www.reliveradio.
 * rake assets:precompile
 * cp db/production.sqlite2 db/production.bkp.sqlite3
 * rake db:migrate
-* Das Passwort für den internen Bereich setzen in `app/helpers/password_helper.rb
+* Das Passwort für den internen Bereich setzen in `/config/authentication.yml`
 * Rails App neu starten
 * DONE :)
 
