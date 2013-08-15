@@ -125,7 +125,7 @@ describe PodcastsController do
 	describe "POST #create" do
 		before do
 			@post_params = {podcast: FactoryGirl.attributes_for(:podcast)}
-			@post_invalid_params = {podcast: FactoryGirl.attributes_for(:podcast, artistname: '')}
+			@post_invalid_params = {podcast: FactoryGirl.attributes_for(:podcast, name: '')}
 		end
 		it "should assign the @podcast variable" do
 			post :create, @post_params
@@ -163,7 +163,7 @@ describe PodcastsController do
 			@p = FactoryGirl.create(:podcast)
 			@new_valid_podcast_hash = {podcast: FactoryGirl.attributes_for(:podcast)}
 			@update_params = {id: @p.id, podcast: @new_valid_podcast_hash[:podcast]}
-			@update_invalid_params = {id: @p.id, podcast: FactoryGirl.attributes_for(:podcast, artistname: '')}
+			@update_invalid_params = {id: @p.id, podcast: FactoryGirl.attributes_for(:podcast, name: '')}
 		end
 		context "with valid attributes" do
 			it "should assign the @podcast variable" do
@@ -179,7 +179,7 @@ describe PodcastsController do
 			end
 			it "should update the data of the podcast in database" do
 				post :update, @update_params
-				Podcast.find(@p.id).artistname == @new_valid_podcast_hash[:podcast][:artistname]
+				Podcast.find(@p.id).name == @new_valid_podcast_hash[:podcast][:name]
 			end
 			it "redirects to the show page" do
 				post :update, @update_params
@@ -201,7 +201,7 @@ describe PodcastsController do
 			it "does not update the data of the podcast in database" do
 				lambda {
 					post :update, @update_invalid_params
-				}.should_not change(Podcast.find(@p.id), :artistname)
+				}.should_not change(Podcast.find(@p.id), :name)
 			end
 			it "re-renders the :edit template" do
 				post :update, @update_invalid_params

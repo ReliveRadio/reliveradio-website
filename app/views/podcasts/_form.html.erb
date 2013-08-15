@@ -58,10 +58,6 @@
       <%= f.text_field :feedurl %>
     </div>
     <div class="field">
-      <%= f.label "ArtistName" %><br />
-      <%= f.text_field :artistname %>
-    </div>
-    <div class="field">
       <%= f.label "Beschreibung" %><br />
       <% if !@podcast.description.blank? %>
         <%= f.text_area :description %>

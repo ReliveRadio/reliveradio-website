@@ -1,9 +1,9 @@
 require 'csv'
 
 class Podcast < ActiveRecord::Base
-	attr_accessible :artistname, :feedurl, :flattrhandle, :hoersuppeslug, :name, :slugintern, :twitterhandle, :url, :description, :adnhandle
+	attr_accessible :feedurl, :flattrhandle, :hoersuppeslug, :name, :slugintern, :twitterhandle, :url, :description, :adnhandle
 
-	validates_presence_of :artistname, :name, :slugintern, :description
+	validates_presence_of :name, :slugintern, :description
 
 	def self.to_csv(options = {})
 		CSV.generate(options) do |csv|

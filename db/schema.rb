@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130525094311) do
+ActiveRecord::Schema.define(:version => 20130815200510) do
 
   create_table "index_infos", :force => true do |t|
     t.string   "title"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20130525094311) do
     t.string   "twitterhandle"
     t.string   "hoersuppeslug"
     t.string   "feedurl"
-    t.string   "artistname"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.string   "description"

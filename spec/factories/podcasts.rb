@@ -2,7 +2,6 @@ require 'faker'
 
 FactoryGirl.define do
 	factory :podcast do |p|
-		p.artistname { Faker::Name.name }
 		p.feedurl { Faker::Internet.domain_name }
 		p.flattrhandle { Faker::Name.name }
 		p.hoersuppeslug { Faker::Name.name }
