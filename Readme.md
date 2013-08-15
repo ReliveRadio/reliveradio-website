@@ -8,7 +8,7 @@ Das hier ist eine Imprementierung für das [ReliveRadio](http://www.reliveradio.
 *Achtung:*
 
 * Die Datenbank ist *nicht* hier im Repository enthalten!
-* Setze ein ordentliches Passwort in `app/helpers/password_helper.rb`
+* Setze ein ordentliches Passwort in `/config/authentication.yml`
 
 #Die eigene Rails Installation updaten:
 
