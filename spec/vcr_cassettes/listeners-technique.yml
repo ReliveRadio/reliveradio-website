@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://stream.reliveradio.de:8000/json.xsl?Technik
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '1515'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJDb3B5cmlnaHQiOiJpY2VtYXN0ZXJAbG9jYWxob3N0IiwiTG9jYXRpb24i
+        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6IjIiLCJtb3VudHMiOlt7Im1v
+        dW50IjoiLzI0Lm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8gTWl4
+        IiwibGlzdGVuZXJzIjoiMTYiLCJkZXNjcmlwdGlvbiI6IlBvZGNhc3RzIHJ1
+        bmQgdW0gZGllIFVociEiLCJ0aXRsZSI6IkFwZmVsa2xhdHNjaCAtIEZvbGdl
+        IDkzOiBad2VpIGhlacOfZSBUeXBlbiIsImdlbnJlIjoiTWl4IC0gRGVza3Rv
+        cCIsImJpdHJhdGUiOiIxMjgiLCJ1cmwiOiJodHRwOi8vcmVsaXZlcmFkaW8u
+        ZGUifSx7Im1vdW50IjoiLzI0bW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoi
+        UmVsaXZlUmFkaW8gTWl4IiwibGlzdGVuZXJzIjoiMCIsImRlc2NyaXB0aW9u
+        IjoiUG9kY2FzdHMgcnVuZCB1bSBkaWUgVWhyISIsInRpdGxlIjoiQXBmZWxr
+        bGF0c2NoIC0gRm9sZ2UgOTM6IFp3ZWkgaGVpw59lIFR5cGVuIiwiZ2VucmUi
+        OiJNaXggLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwiOiJodHRwOi8v
+        cmVsaXZlcmFkaW8uZGUifSx7Im1vdW50IjoiL2t1bHR1ci5tcDMiLCJzZXJ2
+        ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIEt1bHR1ciIsImxpc3RlbmVycyI6IjUi
+        LCJkZXNjcmlwdGlvbiI6Ikt1bHR1ci1Qb2RjYXN0cyBydW5kIHVtIGRpZSBV
+        aHIhIiwidGl0bGUiOiI0RWNrZW4gMkVsZmVyIC0gRm9sZ2UgNDk6IFNwaWVs
+        ZSwgVG9yZSwgU2Vuc2F0aW9uZW4hIiwiZ2VucmUiOiJLdWx0dXIgLSBEZXNr
+        dG9wIiwiYml0cmF0ZSI6IjEyOCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRp
+        by5kZSJ9LHsibW91bnQiOiIva3VsdHVybW9iaWxlLm1wMyIsInNlcnZlcl9u
+        YW1lIjoiUmVsaXZlUmFkaW8gS3VsdHVyIiwibGlzdGVuZXJzIjoiMCIsImRl
+        c2NyaXB0aW9uIjoiS3VsdHVyLVBvZGNhc3RzIHJ1bmQgdW0gZGllIFVociEi
+        LCJ0aXRsZSI6IjRFY2tlbiAyRWxmZXIgLSBGb2xnZSA0OTogU3BpZWxlLCBU
+        b3JlLCBTZW5zYXRpb25lbiEiLCJnZW5yZSI6Ikt1bHR1ciAtIE1vYmlsZSIs
+        ImJpdHJhdGUiOiI0OCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZSJ9
+        LHsibW91bnQiOiIvdGVjaG5pay5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2
+        ZVJhZGlvIFRlY2huaWsiLCJsaXN0ZW5lcnMiOiIxIiwiZGVzY3JpcHRpb24i
+        OiJUZWNobmlrLVBvZGNhc3RzIHJ1bmQgdW0gZGllIFVociEiLCJ0aXRsZSI6
+        IiAtICIsImdlbnJlIjoiVGVjaG5payAtIERlc2t0b3AiLCJiaXRyYXRlIjoi
+        MTI4IiwidXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlIn0seyJtb3VudCI6
+        Ii90ZWNobmlrbW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFk
+        aW8gVGVjaG5payIsImxpc3RlbmVycyI6IjAiLCJkZXNjcmlwdGlvbiI6Ikt1
+        bHR1ci1Qb2RjYXN0cyBydW5kIHVtIGRpZSBVaHIhIiwidGl0bGUiOiIgLSAi
+        LCJnZW5yZSI6IlRlY2huaWsgLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1
+        cmwiOiJodHRwOi8vcmVsaXZlcmFkaW8uZGUifV19
+    http_version: 
+  recorded_at: Wed, 14 Aug 2013 13:33:48 GMT
+recorded_with: VCR 2.5.0

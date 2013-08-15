@@ -18,19 +18,17 @@ Reliveradio::Application.routes.draw do
   resources :index_info, :only => [:update]
   match '/index_info/edit' => 'index_info#edit', :as => :index_info_edit
 
-
   # enable podcasts csv import
   resources :podcasts do
     collection {post :import}
   end
-
   
   match '/verzeichnis' => 'podcasts#overview', :as => :overview
 
   # This route can be invoked with info_url(:id => podcast.id)
   match '/:slugintern' => 'podcasts#info', :as => :info
 
-  get "home/index"
+  get "home/index", :as => :index
   root :to => "home#index"
   
   # The priority is based upon order of creation:

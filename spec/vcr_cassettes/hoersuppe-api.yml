@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-08-14
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Aug 2013 13:38:26 GMT
+      Server:
+      - Apache/2.2.3 (CentOS)
+      X-Powered-By:
+      - PHP/5.3.11
+      Expires:
+      - Wed, 07 Aug 2013 13:38:26 GMT
+      Cache-Control:
+      - no-cache, must-revalidate, max-age=0
+      Pragma:
+      - no-cache
+      X-Pingback:
+      - http://hoersuppe.de/xmlrpc.php
+      Last-Modified:
+      - Wed, 14 Aug 2013 13:38:26 GMT
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"status":1,"msg":"ok","data":[{"id":"4444","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2013-08-14
+        16:00:00","duration":"90","twittered":"1"},{"id":"3158","podcast":"dcka","state":"1","type":"0","synced":"1","title":"Der
+        Computer kann alles","url":"http:\/\/www.freie-radios.net\/serie\/dercomputerkannalles","streamurl":"http:\/\/stream.fsk-hh.org:8000\/fsk.mp3.m3u","livedate":"2013-08-14
+        17:00:00","duration":"120","twittered":"0"}]}'
+    http_version: 
+  recorded_at: Wed, 14 Aug 2013 13:38:25 GMT
+recorded_with: VCR 2.5.0

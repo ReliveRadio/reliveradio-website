@@ -26,7 +26,7 @@
 <% @podcasts.each do |podcast| %>
     <div class="row podcast">
       <div class="large-3 columns">
-        <h2><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></h2>
+        <h2><img src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"></h2>
       </div>
       <div class="large-9 columns">
         <h2 class="breaklines"><%= podcast.name %></h2>

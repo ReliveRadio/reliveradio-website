@@ -47,34 +47,31 @@ class StreamController < ApplicationController
     @live_podcasts = StreamHelper.fetch_hoersuppe_livepodcasts
     # fetch episode schedule
     @episodes = StreamHelper.fetch_episode_schedule(airtime_url)
-    if !@episodes.blank?
-      @live_episode = @episodes.shift # returns the first element and removes it from the list
-    end
-
+    @live_episode = @episodes.shift # assume the first episode as live
     respond_to do |format|
       format.html # index.html.erb
       format.js { render 'update_episodes'}
       format.json  { render :json => {:live_episode => @live_episode, 
-                                  :upcoming_episodes => @episodes }}
+                                      :upcoming_episodes => @episodes }}
       format.chapters { render 'chapters'}
     end
   end
 
   def mix
-    @desktop_stream_url = "http://stream.reliveradio.de:8000/24.mp3"
-    @mobil_stream_url = "http://stream.reliveradio.de:8000/24mobile.mp3"
-    render_genre "Mix", "http://mixzentrale.reliveradio.de/api/today-info"
+    @desktop_stream_url = APP_CONFIG['mix']['desktop_stream_url']
+    @mobile_stream_url = APP_CONFIG['mix']['mobile_stream_url']
+    render_genre "Mix", APP_CONFIG['mix']['airtime_url']
   end
 
   def technique
-    @desktop_stream_url = "http://stream.reliveradio.de:8000/technik.mp3"
-    @mobil_stream_url = "http://stream.reliveradio.de:8000/technikmobile.mp3"
-    render_genre "Technik", "http://technikzentrale.reliveradio.de/api/today-info"
+    @desktop_stream_url = APP_CONFIG['technique']['desktop_stream_url']
+    @mobile_stream_url = APP_CONFIG['technique']['mobile_stream_url']
+    render_genre "Technik", APP_CONFIG['technique']['airtime_url']
   end
 
   def culture
-    @desktop_stream_url = "http://stream.reliveradio.de:8000/kultur.mp3"
-    @mobil_stream_url = "http://stream.reliveradio.de:8000/kulturmobile.mp3"
-    render_genre "Kultur", "http://kulturzentrale.reliveradio.de/api/today-info"
+    @desktop_stream_url = APP_CONFIG['culture']['desktop_stream_url']
+    @mobile_stream_url = APP_CONFIG['culture']['mobile_stream_url']
+    render_genre "Kultur", APP_CONFIG['culture']['airtime_url']
   end
 end

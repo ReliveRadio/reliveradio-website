@@ -8,6 +8,8 @@
 	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap;    word-wrap: break-word;
 }
 
+// FOOTER STYLE
+
 footer {
 	background-color: $dark-color;
 	color: #fff;
@@ -21,6 +23,10 @@ footer p, footer ul {
 
 footer a {
 	color: $blue-color;
+}
+
+footer a:hover {
+	color: darken($blue-color, 20%);
 }
 
 footer h5 {

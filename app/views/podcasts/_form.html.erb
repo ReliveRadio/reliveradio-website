@@ -20,20 +20,10 @@
 <div class="row">
   <div class="large-3 columns">
     <% if !@podcast.slugintern.blank? %>
-      <img src="<%= Artwork::ARTWORK_BASE_URL + @podcast.slugintern %>.jpg">
+      <img src="<%= APP_CONFIG['artwork_base_url'] + @podcast.slugintern %>.jpg">
     <% end %>
   </div>
   <div class="large-9 columns">
-
-    <% if flash[:error] %>
-      <p><span class="alert label"><%= flash[:error] %></span></p>
-    <% end %>
-    <% if flash[:success] %>
-      <p><span class="success label"><%= flash[:success] %></span></p>
-    <% end %>
-    <% if flash[:notice] %>
-      <p><span class="label"><%= flash[:notice] %></span></p>
-    <% end %>
 
     <div class="field">
       <%= f.label :name %><br />

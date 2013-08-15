@@ -3,17 +3,9 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.12'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-# 
-# gem 'rails', :git => 'git://github.com/rails/rails.git', :ref => '4aded'
-# gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '2-3-stable'
-# gem 'rails', :git => 'git://github.com/rails/rails.git', :tag => 'v2.3.5'
-
+gem 'rails', '~> 3.2.14'
 gem 'sqlite3', '1.3.7'
-gem 'json', '1.7.7'
+gem 'json', '1.8.0'
 gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git', :tag => 'v0.2.0.rc2'
 gem 'will_paginate'
 
@@ -22,7 +14,7 @@ gem 'will_paginate'
 group :assets do
 	gem 'sass-rails', '~> 3.2.3'
 	gem 'coffee-rails', '~> 3.2.1'
-	gem 'zurb-foundation', '~> 4.1.5'
+	gem 'zurb-foundation', '~> 4.3.1'
 	gem 'uglifier', '>= 1.0.3'
 	gem "font-awesome-rails", '~> 3.2.0'
 	gem "mediaelement_rails"
@@ -32,16 +24,26 @@ group :assets do
 end
 
 group :dev do
+	# alternative test server
 	gem 'thin', '~> 1.5.1'
-	
-	## testing
-	gem 'ruby-prof', '0.13.0'
-	gem 'test-unit', '2.5.4'
-	
 	# To use debugger
 	gem 'debugger', '~> 1.5'
+	gem 'ruby-prof', '0.13.0'
 end
 
+group :test do
+	gem 'test-unit', '2.5.4'
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+	gem 'faker'
+	gem 'capybara'
+	gem 'guard-rspec'
+	gem 'launchy'
+	gem 'database_cleaner', '< 1.1.0'
+	gem 'vcr'
+	gem 'webmock', '< 1.12'
+	gem 'timecop'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

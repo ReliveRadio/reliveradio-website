@@ -23,30 +23,25 @@
                     <a href="<%= overview_path %>" class="prefix button secondary">Clear</a>
                 </div>
             </div>
-            <div>Es wurden <%=@result_count %> Podcasts gefunden.</div>
+            <div>Es wurden <%= @result_count %> Podcasts gefunden.</div>
         <% end %>
     </div>
 </div>
 
-<% toggle = 0 %>
-<% @podcasts.each do |podcast| %>
-    <% if toggle%3 == 0 %>
-        <div class="row podcast">
-    <% end %>
-
-      <div class="small-4 columns">
-
-        <a href="<%= info_url(:slugintern => podcast.slugintern) %>"><img src="<%= Artwork::ARTWORK_BASE_URL + podcast.slugintern %>.jpg"></a>
-        <h3 class="hide-for-small breaklines"><%= podcast.name %></h3>
-        <p class="hide-for-small"><%= first_x_words(podcast.description, 20) %></p>
-        <p class="hide-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
-      
-      </div>
-    <% if toggle%3 == 2 %>
-        </div>
-    <% end %>
-    <% toggle = toggle + 1 %>
-<% end %>
+<div class="row">
+    <div class="small-12 columns">
+        <ul class="small-block-grid-3 large-block-grid-3">
+        <% @podcasts.each do |podcast| %>
+          <li>
+                <a href="<%= info_url(:slugintern => podcast.slugintern) %>"><img src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"></a>
+                <h3 class="hide-for-small breaklines"><%= podcast.name %></h3>
+                <p class="hide-for-small"><%= first_x_words(podcast.description, 20) %></p>
+                <p class="hide-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="icon-info-sign"></i> Mehr Informationen</a></p>
+          </li>
+        <% end %>
+        </ul>
+    </div>
+</div>
 
 <div class="row">
     <div class="small-12 columns">
