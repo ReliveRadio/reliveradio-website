@@ -1,5 +1,6 @@
 # Travis Build Status
-[![Build Status](https://travis-ci.org/i42n/reliveradio-sendeplan-rails.png?branch=master)](https://travis-ci.org/i42n/reliveradio-sendeplan-rails)
+* master: [![Build Status](https://travis-ci.org/i42n/reliveradio-sendeplan-rails.png?branch=master)](https://travis-ci.org/i42n/reliveradio-sendeplan-rails)
+* dev: [![Build Status](https://travis-ci.org/i42n/reliveradio-sendeplan-rails.png?branch=dev)](https://travis-ci.org/i42n/reliveradio-sendeplan-rails) 
 
 #ReliveRadio Sendeplan
 Das hier ist eine Imprementierung für das [ReliveRadio](www.reliveradio.de). Es geht vor allem darum, den Sendeplan des aktuellen Tages mit einigen Metainformationen zu den Podcasts anzuzeigen.
