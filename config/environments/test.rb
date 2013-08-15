@@ -19,6 +19,12 @@ Reliveradio::Application.configure do
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
+  config.after_initialize do
+    # Set Time.now to September 1, 2008 10:05:00 AM (at this instant), but allow it to move forward
+    t = Time.parse("2013-08-14 15:33:48")
+    Timecop.freeze(t)
+  end
+
   # Raise exceptions instead of rendering exception templates
   config.action_dispatch.show_exceptions = false
 

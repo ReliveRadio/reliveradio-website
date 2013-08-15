@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://stream.reliveradio.de:8000/json.xsl?Mix
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '1495'
+    body:
+      encoding: UTF-8
+      string: '{"Copyright":"icemaster@localhost","Location":"Earth","total_listeners":"1","mounts":[{"mount":"/24.mp3","server_name":"ReliveRadio
+        Mix","listeners":"15","description":"Podcasts rund um die Uhr!","title":"SneakPod
+        - Folge 296: Frances Ha","genre":"Mix - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/24mobile.mp3","server_name":"ReliveRadio
+        Mix","listeners":"0","description":"Podcasts rund um die Uhr!","title":"SneakPod
+        - Folge 296: Frances Ha","genre":"Mix - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/kultur.mp3","server_name":"ReliveRadio
+        Kultur","listeners":"5","description":"Kultur-Podcasts rund um die Uhr!","title":"4Ecken
+        2Elfer - Folge 49: Spiele, Tore, Sensationen!","genre":"Kultur - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/kulturmobile.mp3","server_name":"ReliveRadio
+        Kultur","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"4Ecken
+        2Elfer - Folge 49: Spiele, Tore, Sensationen!","genre":"Kultur - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/technik.mp3","server_name":"ReliveRadio
+        Technik","listeners":"1","description":"Technik-Podcasts rund um die Uhr!","title":"
+        - ","genre":"Technik - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/technikmobile.mp3","server_name":"ReliveRadio
+        Technik","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"
+        - ","genre":"Technik - Mobile","bitrate":"48","url":"http://reliveradio.de"}]}'
+    http_version: 
+  recorded_at: Wed, 14 Aug 2013 13:33:48 GMT
+recorded_with: VCR 2.5.0

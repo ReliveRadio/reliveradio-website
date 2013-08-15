@@ -40,6 +40,9 @@ group :test do
 	gem 'guard-rspec'
 	gem 'launchy'
 	gem 'database_cleaner', '< 1.1.0'
+	gem 'vcr'
+	gem 'webmock', '< 1.12'
+	gem 'timecop'
 end
 
 # To use ActiveModel has_secure_password

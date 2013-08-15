@@ -1,28 +1,35 @@
 require 'spec_helper'
-require 'active_support/time_with_zone'
 
 describe "StreamHelper" do
 
 	context "#fetch_total_listeners" do
 		it "should not return nil" do
-			StreamHelper.fetch_total_listeners.should_not be_nil
+			VCR.use_cassette('listeners-total') do
+				StreamHelper.fetch_total_listeners.should_not be_nil
+			end
 		end
 	end
 
 	context "#fetch_listeners" do
 		it "should not return nil" do
-			StreamHelper.fetch_listeners('mix').should_not be_nil
+			VCR.use_cassette('listeners-mix') do
+				StreamHelper.fetch_listeners('Mix').should_not be_nil
+			end
 		end
 	end
 
 	context "#fetch_hoersuppe_livepodcasts" do
 		it "should not return nil" do
-			StreamHelper.fetch_hoersuppe_livepodcasts.should_not be_nil
+			VCR.use_cassette('hoersuppe-api') do
+				StreamHelper.fetch_hoersuppe_livepodcasts.should_not be_nil
+			end
 		end
 		it "should only return episodes in the array that are live now" do
-			live_podcasts = StreamHelper.fetch_hoersuppe_livepodcasts
-			live_podcasts.each do |podcast|
-				(DateTime.parse(podcast["livedate"]) < DateTime.now.utc.in_time_zone("Berlin")) && (DateTime.parse(podcast["livedate"])+(podcast["duration"].to_i.minutes) > DateTime.now.utc.in_time_zone("Berlin"))
+			VCR.use_cassette('hoersuppe-api') do
+				live_podcasts = StreamHelper.fetch_hoersuppe_livepodcasts
+				live_podcasts.each do |podcast|
+					(DateTime.parse(podcast["livedate"]) < DateTime.now.utc.in_time_zone("Berlin")) && (DateTime.parse(podcast["livedate"])+(podcast["duration"].to_i.minutes) > DateTime.now.utc.in_time_zone("Berlin"))
+				end
 			end
 		end
 	end
@@ -30,7 +37,9 @@ describe "StreamHelper" do
 	context "#fetch_episode_schedule" do
 
 		before(:all) do
-			@episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
+			VCR.use_cassette('mix-airtime-max20') do
+				@episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
+			end
 		end
 
 		it "should not be nil" do
@@ -50,16 +59,18 @@ describe "StreamHelper" do
 			end
 		end
 		it "should only return episodes in the array that are upcoming or live" do
+			puts "timenowgreptag_test" + Time.now.to_s
 			@episodes.each do |episode|
 				( episode['ends_locale'] > Time.now ).should == true
 			end
 		end
 		it "should only mark an episode as live if it is actually live" do
+			puts "timenowgreptag_test" + Time.now.to_s
 			@episodes.first["isLive"].should == true
 			live_episode = @episodes.first
-		 	# should be started
+			# should be started
 			(live_episode['starts_locale'] < Time.now).should == true
-		 	# should not have ended yet
+			# should not have ended yet
 			(live_episode['ends_locale'] > Time.now).should == true
 		end
 		it "should not contain an episodes with an artistname = jingle" do

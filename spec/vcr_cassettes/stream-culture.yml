@@ -1,0 +1,228 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://stream.reliveradio.de:8000/json.xsl?Kultur
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '1515'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJDb3B5cmlnaHQiOiJpY2VtYXN0ZXJAbG9jYWxob3N0IiwiTG9jYXRpb24i
+        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6IjIiLCJtb3VudHMiOlt7Im1v
+        dW50IjoiLzI0Lm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8gTWl4
+        IiwibGlzdGVuZXJzIjoiMTYiLCJkZXNjcmlwdGlvbiI6IlBvZGNhc3RzIHJ1
+        bmQgdW0gZGllIFVociEiLCJ0aXRsZSI6IkFwZmVsa2xhdHNjaCAtIEZvbGdl
+        IDkzOiBad2VpIGhlacOfZSBUeXBlbiIsImdlbnJlIjoiTWl4IC0gRGVza3Rv
+        cCIsImJpdHJhdGUiOiIxMjgiLCJ1cmwiOiJodHRwOi8vcmVsaXZlcmFkaW8u
+        ZGUifSx7Im1vdW50IjoiLzI0bW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoi
+        UmVsaXZlUmFkaW8gTWl4IiwibGlzdGVuZXJzIjoiMCIsImRlc2NyaXB0aW9u
+        IjoiUG9kY2FzdHMgcnVuZCB1bSBkaWUgVWhyISIsInRpdGxlIjoiQXBmZWxr
+        bGF0c2NoIC0gRm9sZ2UgOTM6IFp3ZWkgaGVpw59lIFR5cGVuIiwiZ2VucmUi
+        OiJNaXggLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwiOiJodHRwOi8v
+        cmVsaXZlcmFkaW8uZGUifSx7Im1vdW50IjoiL2t1bHR1ci5tcDMiLCJzZXJ2
+        ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIEt1bHR1ciIsImxpc3RlbmVycyI6IjUi
+        LCJkZXNjcmlwdGlvbiI6Ikt1bHR1ci1Qb2RjYXN0cyBydW5kIHVtIGRpZSBV
+        aHIhIiwidGl0bGUiOiI0RWNrZW4gMkVsZmVyIC0gRm9sZ2UgNDk6IFNwaWVs
+        ZSwgVG9yZSwgU2Vuc2F0aW9uZW4hIiwiZ2VucmUiOiJLdWx0dXIgLSBEZXNr
+        dG9wIiwiYml0cmF0ZSI6IjEyOCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRp
+        by5kZSJ9LHsibW91bnQiOiIva3VsdHVybW9iaWxlLm1wMyIsInNlcnZlcl9u
+        YW1lIjoiUmVsaXZlUmFkaW8gS3VsdHVyIiwibGlzdGVuZXJzIjoiMCIsImRl
+        c2NyaXB0aW9uIjoiS3VsdHVyLVBvZGNhc3RzIHJ1bmQgdW0gZGllIFVociEi
+        LCJ0aXRsZSI6IjRFY2tlbiAyRWxmZXIgLSBGb2xnZSA0OTogU3BpZWxlLCBU
+        b3JlLCBTZW5zYXRpb25lbiEiLCJnZW5yZSI6Ikt1bHR1ciAtIE1vYmlsZSIs
+        ImJpdHJhdGUiOiI0OCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZSJ9
+        LHsibW91bnQiOiIvdGVjaG5pay5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2
+        ZVJhZGlvIFRlY2huaWsiLCJsaXN0ZW5lcnMiOiIxIiwiZGVzY3JpcHRpb24i
+        OiJUZWNobmlrLVBvZGNhc3RzIHJ1bmQgdW0gZGllIFVociEiLCJ0aXRsZSI6
+        IiAtICIsImdlbnJlIjoiVGVjaG5payAtIERlc2t0b3AiLCJiaXRyYXRlIjoi
+        MTI4IiwidXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlIn0seyJtb3VudCI6
+        Ii90ZWNobmlrbW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFk
+        aW8gVGVjaG5payIsImxpc3RlbmVycyI6IjAiLCJkZXNjcmlwdGlvbiI6Ikt1
+        bHR1ci1Qb2RjYXN0cyBydW5kIHVtIGRpZSBVaHIhIiwidGl0bGUiOiIgLSAi
+        LCJnZW5yZSI6IlRlY2huaWsgLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1
+        cmwiOiJodHRwOi8vcmVsaXZlcmFkaW8uZGUifV19
+    http_version: 
+  recorded_at: Wed, 14 Aug 2013 13:33:48 GMT
+- request:
+    method: get
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-08-14
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 15 Aug 2013 05:52:51 GMT
+      Server:
+      - Apache/2.2.3 (CentOS)
+      X-Powered-By:
+      - PHP/5.3.11
+      Expires:
+      - Thu, 08 Aug 2013 05:52:51 GMT
+      Cache-Control:
+      - no-cache, must-revalidate, max-age=0
+      Pragma:
+      - no-cache
+      X-Pingback:
+      - http://hoersuppe.de/xmlrpc.php
+      Last-Modified:
+      - Thu, 15 Aug 2013 05:52:51 GMT
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"status":1,"msg":"ok","data":[]}'
+    http_version: 
+  recorded_at: Wed, 14 Aug 2013 13:33:48 GMT
+- request:
+    method: get
+    uri: http://newapi.reliveradio.de/api/upcoming-info?num=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 15 Aug 2013 05:52:52 GMT
+      Server:
+      - Apache/2.2.22 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.7
+      Set-Cookie:
+      - PHPSESSID=ou1jo36ic99d0h66cegirr2pv1; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1167'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"from":"2013-08-14 15:33:48","utc_from":"2013-08-14 13:33:48","num":25,"AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"K\u00fcchenessenz","track_title":"Folge
+        5: Spargel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        13:00:52","ends":"2013-08-14 13:43:52","starts_locale":"2013-08-14 15:00:52","ends_locale":"2013-08-14
+        15:43:52"},{"artist_name":"K\u00fcchenessenz","track_title":"Folge
+        5: Spargel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        13:43:52","ends":"2013-08-14 13:50:57","starts_locale":"2013-08-14 15:43:52","ends_locale":"2013-08-14
+        15:50:57"},{"artist_name":"ABSradio","track_title":"Folge 5: Zur\u00fcckspulen
+        mit Bohrmaschinen","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        13:50:57","ends":"2013-08-14 15:29:20","starts_locale":"2013-08-14 15:50:57","ends_locale":"2013-08-14
+        17:29:20"},{"artist_name":"@funkenstrahlen","track_title":"Folge 6: Aus dem
+        Urwald","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        15:29:20","ends":"2013-08-14 15:40:49","starts_locale":"2013-08-14 17:29:20","ends_locale":"2013-08-14
+        17:40:49"},{"artist_name":"angegraben - Der arch\u00e4ologische Podcast","track_title":"Folge
+        6: Die Grube des Reformators","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        15:40:49","ends":"2013-08-14 16:12:08","starts_locale":"2013-08-14 17:40:49","ends_locale":"2013-08-14
+        18:12:08"},{"artist_name":"@bahncast","track_title":"Folge 6: Eisenbahnsignale","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        16:12:08","ends":"2013-08-14 17:04:21","starts_locale":"2013-08-14 18:12:08","ends_locale":"2013-08-14
+        19:04:21"},{"artist_name":"@funkenstrahlen","track_title":"Folge 7: Einfach
+        mal die Klappe halten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        17:04:21","ends":"2013-08-14 17:10:26","starts_locale":"2013-08-14 19:04:21","ends_locale":"2013-08-14
+        19:10:26"},{"artist_name":"ABSradio","track_title":"Folge 7: Radio, ABSradio","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        17:10:26","ends":"2013-08-14 19:05:42","starts_locale":"2013-08-14 19:10:26","ends_locale":"2013-08-14
+        21:05:42"},{"artist_name":"@vorleserey","track_title":"Folge 7: Reise nach
+        dem Mittelpunkt der Erde - Kapitel 31 bis 35","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        19:05:42","ends":"2013-08-14 20:02:18","starts_locale":"2013-08-14 21:05:42","ends_locale":"2013-08-14
+        22:02:18"},{"artist_name":"@bahncast","track_title":"Folge 7: Schienenfahrwege","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        20:02:18","ends":"2013-08-14 20:49:36","starts_locale":"2013-08-14 22:02:18","ends_locale":"2013-08-14
+        22:49:36"},{"artist_name":"@funkenstrahlen","track_title":"Folge 8: Dark Vampir","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        20:49:36","ends":"2013-08-14 21:22:06","starts_locale":"2013-08-14 22:49:36","ends_locale":"2013-08-14
+        23:22:06"},{"artist_name":"@vorleserey","track_title":"Folge 5: Reise nach
+        dem Mittelpunkt der Erde - Kapitel 21 bis 25","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        21:22:06","ends":"2013-08-14 22:01:27","starts_locale":"2013-08-14 23:22:06","ends_locale":"2013-08-15
+        00:01:27"},{"artist_name":"@bahncast","track_title":"Folge 2: Triebfahrzeugf\u00fchrer","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        22:00:00","ends":"2013-08-14 22:51:25","starts_locale":"2013-08-15 00:00:00","ends_locale":"2013-08-15
+        00:51:25"},{"artist_name":"@funkenstrahlen","track_title":"Folge 3: Aus Alt
+        mach Neu","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        22:51:25","ends":"2013-08-14 23:09:24","starts_locale":"2013-08-15 00:51:25","ends_locale":"2013-08-15
+        01:09:24"},{"artist_name":"ABSradio","track_title":"Folge 3: Der Veganer ist
+        hAppy","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-14
+        23:09:24","ends":"2013-08-15 01:33:33","starts_locale":"2013-08-15 01:09:24","ends_locale":"2013-08-15
+        03:33:33"},{"artist_name":"angegraben - Der arch\u00e4ologische Podcast","track_title":"Folge
+        3: Die r\u00e4tselhaften Toten von Eulau","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        01:33:33","ends":"2013-08-15 02:00:31","starts_locale":"2013-08-15 03:33:33","ends_locale":"2013-08-15
+        04:00:31"},{"artist_name":"K\u00fcchenessenz","track_title":"Folge 3: Gem\u00fcse","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        02:00:31","ends":"2013-08-15 02:05:01","starts_locale":"2013-08-15 04:00:31","ends_locale":"2013-08-15
+        04:05:01"},{"artist_name":"@vorleserey","track_title":"Folge 3: Reise nach
+        dem Mittelpunkt der Erde - Kapitel 11 bis 15","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        02:05:01","ends":"2013-08-15 03:01:18","starts_locale":"2013-08-15 04:05:01","ends_locale":"2013-08-15
+        05:01:18"},{"artist_name":"@podccast","track_title":"Folge 3: Scharfe Kurven","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        03:01:18","ends":"2013-08-15 04:18:16","starts_locale":"2013-08-15 05:01:18","ends_locale":"2013-08-15
+        06:18:16"},{"artist_name":"@bahncast","track_title":"Folge 3: Zugbegleiter","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        04:18:16","ends":"2013-08-15 04:58:22","starts_locale":"2013-08-15 06:18:16","ends_locale":"2013-08-15
+        06:58:22"},{"artist_name":"@bahncast","track_title":"Folge 4: 48 Stunden im
+        Nahverkehr","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        04:58:22","ends":"2013-08-15 05:47:12","starts_locale":"2013-08-15 06:58:22","ends_locale":"2013-08-15
+        07:47:12"},{"artist_name":"ABSradio","track_title":"Folge 4: ABradio: daf\u00fcr
+        EIN Applaus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        05:47:12","ends":"2013-08-15 07:25:38","starts_locale":"2013-08-15 07:47:12","ends_locale":"2013-08-15
+        09:25:38"},{"artist_name":"K\u00fcchenessenz","track_title":"Folge 4: Anrichten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        07:25:38","ends":"2013-08-15 07:32:04","starts_locale":"2013-08-15 09:25:38","ends_locale":"2013-08-15
+        09:32:04"},{"artist_name":"@podccast","track_title":"Folge 4: Drunk Popollution
+        for the Braindead","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        07:32:04","ends":"2013-08-15 08:42:49","starts_locale":"2013-08-15 09:32:04","ends_locale":"2013-08-15
+        10:42:49"},{"artist_name":"@funkenstrahlen","track_title":"Folge 4: Internet
+        durchgespielt","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        08:42:49","ends":"2013-08-15 08:50:17","starts_locale":"2013-08-15 10:42:49","ends_locale":"2013-08-15
+        10:50:17"},{"artist_name":"angegraben - Der arch\u00e4ologische Podcast","track_title":"Folge
+        4: Magische Beschw\u00f6rungen in Blei","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-08-15
+        08:50:17","ends":"2013-08-15 09:21:28","starts_locale":"2013-08-15 10:50:17","ends_locale":"2013-08-15
+        11:21:28"}]}'
+    http_version: 
+  recorded_at: Wed, 14 Aug 2013 13:33:48 GMT
+recorded_with: VCR 2.5.0
