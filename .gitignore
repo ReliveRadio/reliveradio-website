@@ -17,3 +17,6 @@ public/assets
 /log/*.log
 /tmp
 db
+
+# Ignore Vagrant VMs
+/.vagrant
