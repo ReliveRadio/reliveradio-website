@@ -12,6 +12,13 @@ describe "Streams" do
 				page.should have_content "Das Programm auf diesem Kanal wird von"
 			end
 		end
+		it "it should link to the correct live stream URLs" do
+			VCR.use_cassette('stream-mix') do
+				visit mix_stream_url
+				page.should have_link("Desktop", :href => APP_CONFIG['mix']['desktop_stream_url'])
+				page.should have_link("Mobil", :href => APP_CONFIG['mix']['mobile_stream_url'])
+			end
+		end
 	end
 
 	describe "#Technique" do
@@ -21,6 +28,13 @@ describe "Streams" do
 				page.should have_content "Das Programm auf diesem Kanal wird von"
 			end
 		end
+		it "it should link to the correct live stream URLs" do
+			VCR.use_cassette('stream-technique') do
+				visit technique_stream_url
+				page.should have_link("Desktop", :href => APP_CONFIG['technique']['desktop_stream_url'])
+				page.should have_link("Mobil", :href => APP_CONFIG['technique']['mobile_stream_url'])
+			end
+		end
 	end
 
 	describe "#Culture" do
@@ -28,6 +42,13 @@ describe "Streams" do
 			VCR.use_cassette('stream-culture') do
 				visit culture_stream_url
 				page.should have_content "Das Programm auf diesem Kanal wird von"
+			end
+		end
+		it "it should link to the correct live stream URLs" do
+			VCR.use_cassette('stream-culture') do
+				visit culture_stream_url
+				page.should have_link("Desktop", :href => APP_CONFIG['culture']['desktop_stream_url'])
+				page.should have_link("Mobil", :href => APP_CONFIG['culture']['mobile_stream_url'])
 			end
 		end
 	end
