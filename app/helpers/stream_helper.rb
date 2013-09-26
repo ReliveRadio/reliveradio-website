@@ -49,10 +49,9 @@ module StreamHelper
 	end
 
 	def self.fetch_episode_schedule(url)
-		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=20", 10.minutes)
-
+		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=20", 10.minutes)['files']
 		if !episodes.blank?
-			episodes = episodes['files'].first(10)
+			episodes = episodes.first(10)
 
 			# remove all passed podcasts from the episodes array
 			episodes.delete_if { |episode| Time.parse(episode['ends_locale']) < Time.now }
