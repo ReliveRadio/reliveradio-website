@@ -84,12 +84,12 @@ module StreamHelper
 				else
 					# first episode is live
 					live_episode["isLive"] = true
+					return episodes
 				end
 			end
-
+		else
+			raise "Airtime cache returned an empty episodes list."
 		end
-
-		return episodes
 	end
 
 end
