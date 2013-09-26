@@ -2,7 +2,18 @@
 	<div class="small-3 columns">
 
 		<!-- EPISODE PODCAST IMAGE -->
-		<% if !podcast.nil? %><img  class="episode-image" src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"><% end %>
+		<% if !podcast.nil? %>
+			<div class="ribbon-wrapper">
+				<img  class="episode-image" src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg">
+				<div class="hide-for-small">
+					<div class="ribbon-wrapper-red">
+					<span data-tooltip class="has-tip tip-top" title="Das ist eine Erstausstrahlung. Höre diese Episode vor Veröffentlichung hier beim ReliveRadio!">
+						<div class="ribbon-red"><i class="icon-star"></i></div>
+					</span>
+					</div>
+				</div>
+			</div>
+		<% end %>
 
 		<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 		<div class="show-for-small playtime-small">
