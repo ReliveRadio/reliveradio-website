@@ -29,7 +29,7 @@ module ExternalApiHelper
 		cache = Rails.cache.read(cache_id) # get cache content
 
 		# if cache is not expired and contains valid data, return cache
-		if ((@last_mod_time - Time.now < expire_time) && !cache.blank?)
+		if (( (Time.now - @last_mod_time) < expire_time ) && !cache.blank?)
 			return cache
 		else
 			# cache is expired or does not contain valid data
