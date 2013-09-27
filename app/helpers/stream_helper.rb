@@ -63,6 +63,9 @@ module StreamHelper
 				# set all to not being live (first one will be set to live after this iterator)
 				episode["isLive"] = false;
 
+				# check if this is a Relive episode
+				episode["first_live"] = episode["track_title"].include? "Erstausstrahlung"
+
 				# calculate the duration of this episode
 				starts = Time.parse(episode['starts_locale'])
 				ends = Time.parse(episode['ends_locale'])

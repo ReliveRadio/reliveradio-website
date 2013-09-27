@@ -1,10 +1,21 @@
 <div class="row episode">
 	<div class="small-3 columns">
 
-
-		<!-- <div id="live-banner">Jetzt Live</div> -->
 		<!-- EPISODE PODCAST IMAGE -->
-		<% if !podcast.nil? %><img id="live-episode-image" class="episode-image" src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"><% end %>
+		<% if !podcast.nil? %>
+			<div class="ribbon-wrapper">
+				<img  class="episode-image" src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg">
+				<% if episode["first_live"] %>
+					<div class="hide-for-small">
+						<div class="ribbon-wrapper-red">
+						<span data-tooltip class="has-tip tip-top" title="Das ist eine Erstausstrahlung. Höre diese Episode schon vor Veröffentlichung hier beim ReliveRadio!">
+							<div class="ribbon-red"><i class="icon-star"></i></div>
+						</span>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
 
 		<!-- EPISODE PLAYTIME INFO FOR SMALL DEVICES-->
 		<div class="show-for-small playtime-small">

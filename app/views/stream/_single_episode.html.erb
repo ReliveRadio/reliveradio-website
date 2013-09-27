@@ -5,13 +5,15 @@
 		<% if !podcast.nil? %>
 			<div class="ribbon-wrapper">
 				<img  class="episode-image" src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg">
-				<div class="hide-for-small">
-					<div class="ribbon-wrapper-red">
-					<span data-tooltip class="has-tip tip-top" title="Das ist eine Erstausstrahlung. Höre diese Episode vor Veröffentlichung hier beim ReliveRadio!">
-						<div class="ribbon-red"><i class="icon-star"></i></div>
-					</span>
+				<% if episode["first_live"] %>
+					<div class="hide-for-small">
+						<div class="ribbon-wrapper-red">
+						<span data-tooltip class="has-tip tip-top" title="Das ist eine Erstausstrahlung. Höre diese Episode schon vor Veröffentlichung hier beim ReliveRadio!">
+							<div class="ribbon-red"><i class="icon-star"></i></div>
+						</span>
+						</div>
 					</div>
-				</div>
+				<% end %>
 			</div>
 		<% end %>
 
