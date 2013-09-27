@@ -1,6 +1,6 @@
-module StreamHelper
+require 'active_support/time_with_zone'
 
-	require 'active_support/time_with_zone'
+module StreamHelper
 
 	# fetch listeners count of a specific genre
 	def self.fetch_listeners(genre_name)
