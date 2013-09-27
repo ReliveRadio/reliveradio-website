@@ -1,9 +1,7 @@
+require 'timeout'
+require 'net/http'
+
 module ExternalApiHelper
-
-	require 'timeout'
-	require 'net/http'
-
-	@last_mod_time = Time.now
 
 	def self.fetch_json(url)
 		begin
@@ -29,7 +27,8 @@ module ExternalApiHelper
 		cache = Rails.cache.read(cache_id) # get cache content
 
 		# if cache is not expired and contains valid data, return cache
-		if (( (Time.now - @last_mod_time) < expire_time ) && !cache.blank?)
+		# cache_fresh is nil, if cache time is expired
+		if ( !Rails.cache.read('cache_fresh' + cache_id).blank? && !cache.blank?)
 			return cache
 		else
 			# cache is expired or does not contain valid data
@@ -38,7 +37,8 @@ module ExternalApiHelper
 			if !new_data.blank?
 				# if new data is valid, save it in cache and return it
 				Rails.cache.write(cache_id, new_data)
-				@last_mod_time = Time.now # cache was refilled, reset expire time
+				# setup cache_fresh to know when the cache has to be refilled in the future
+				Rails.cache.write('cache_fresh' + cache_id, 'fresh', :expires_in => expire_time)
 				return new_data
 			else
 				# new data is invalid. maybe the old cache data is ok
