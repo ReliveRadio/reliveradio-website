@@ -49,12 +49,16 @@ module StreamHelper
 	end
 
 	def self.fetch_episode_schedule(url, episode_count = 10)
-		episode_count = episode_count.to_i
-		if episode_count < 2
-			episode_count = 2
-		end
-		if episode_count > 100
-			episode_count = 100
+		if !episode_count.blank?
+			episode_count = episode_count.to_i
+			if episode_count < 2
+				episode_count = 2
+			end
+			if episode_count > 100
+				episode_count = 100
+			end
+		else
+			episode_count = 10
 		end
 		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=" + (episode_count + 5).to_s, 10.minutes)['files']
 		if !episodes.blank?

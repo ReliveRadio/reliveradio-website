@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:10:13 GMT
+      - Sat, 28 Sep 2013 09:22:29 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=7n5pcnc46r2jkjotppmupmsra6; path=/
+      - PHPSESSID=t79ac777m5i7jo5re0ikapmlj7; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -40,7 +40,7 @@ http_interactions:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-09-28 11:10:13","utc_from":"2013-09-28 09:10:13","num":25,"AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
+      string: '{"from":"2013-09-28 11:22:29","utc_from":"2013-09-28 09:22:29","num":25,"AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
         3: Der Veganer ist hAppy","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
         08:07:12","ends":"2013-09-28 10:31:21","starts_locale":"2013-09-28 10:07:12","ends_locale":"2013-09-28
         12:31:21"},{"artist_name":"piratte looking at things","track_title":"Folge
@@ -125,5 +125,5 @@ http_interactions:
         01:28:56","ends":"2013-09-29 01:38:39","starts_locale":"2013-09-29 03:28:56","ends_locale":"2013-09-29
         03:38:39"}]}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:08:48 GMT
+  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
 recorded_with: VCR 2.5.0

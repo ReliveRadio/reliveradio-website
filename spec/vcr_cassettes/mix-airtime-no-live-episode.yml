@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:10:17 GMT
+      - Sat, 28 Sep 2013 09:22:29 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=e63diqn9evdo06f3nh6edu3fo1; path=/
+      - PHPSESSID=iksh4s00q5kh8o6a3su7gjqej3; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,12 +35,15 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1041'
+      - '1040'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-09-28 11:10:17","utc_from":"2013-09-28 09:10:17","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge 1: Alles auf Anfang","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+      string: '{"from":"2013-09-28 11:22:29","utc_from":"2013-09-28 09:22:29","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Metrolaut","track_title":"Folge 4: Tennis-Hools,
+        Fanboys und die linksextreme Mafia","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        14:09:35","ends":"2013-09-28 15:06:30","starts_locale":"2013-09-28 16:09:35","ends_locale":"2013-09-28
+        17:06:30"},{"artist_name":"ABSradio","track_title":"Folge 1: Alles auf Anfang","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
         15:06:30","ends":"2013-09-28 16:39:08","starts_locale":"2013-09-28 17:06:30","ends_locale":"2013-09-28
         18:39:08"},{"artist_name":"Sternengeschichten","track_title":"Folge 9: Immer
         um den Stern herum: Das Sonnensystem im Computer","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
@@ -67,5 +70,5 @@ http_interactions:
         21:37:57","ends":"2013-09-28 21:49:26","starts_locale":"2013-09-28 23:37:57","ends_locale":"2013-09-28
         23:49:26"}]}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:08:48 GMT
+  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
 recorded_with: VCR 2.5.0

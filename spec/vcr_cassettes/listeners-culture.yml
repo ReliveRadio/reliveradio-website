@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - text/plain
       Content-Length:
-      - '1596'
+      - '1590'
     body:
       encoding: UTF-8
       string: '{"Copyright":"icemaster@localhost","Location":"Earth","total_listeners":"35","mounts":[{"mount":"/24.mp3","server_name":"ReliveRadio
@@ -29,10 +29,10 @@ http_interactions:
         - ","genre":"Mix - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/24mobile.mp3","server_name":"ReliveRadio
         Mix","listeners":"1","description":"Podcasts rund um die Uhr!","title":" -
         ","genre":"Mix - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/kultur.mp3","server_name":"ReliveRadio
-        Kultur","listeners":"9","description":"Kultur-Podcasts rund um die Uhr!","title":"omega
-        tau - Folge 131: Superzellen und Sturmjagd","genre":"Kultur - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/kulturmobile.mp3","server_name":"ReliveRadio
-        Kultur","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"omega
-        tau - Folge 131: Superzellen und Sturmjagd","genre":"Kultur - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/technik.mp3","server_name":"ReliveRadio
+        Kultur","listeners":"9","description":"Kultur-Podcasts rund um die Uhr!","title":"Hoaxilla
+        - Special 7: Interview Daniel Graves","genre":"Kultur - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/kulturmobile.mp3","server_name":"ReliveRadio
+        Kultur","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"Hoaxilla
+        - Special 7: Interview Daniel Graves","genre":"Kultur - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/technik.mp3","server_name":"ReliveRadio
         Technik","listeners":"5","description":"Technik-Podcasts rund um die Uhr!","title":"Abends
         in der Kreativwirtschaft - Folge 33: Pidoco, Startups und Software as a Service","genre":"Technik
         - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/technikmobile.mp3","server_name":"ReliveRadio
@@ -40,5 +40,5 @@ http_interactions:
         in der Kreativwirtschaft - Folge 33: Pidoco, Startups und Software as a Service","genre":"Technik
         - Mobile","bitrate":"48","url":"http://reliveradio.de"}]}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:08:48 GMT
+  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
 recorded_with: VCR 2.5.0
