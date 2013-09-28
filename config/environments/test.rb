@@ -21,7 +21,7 @@ Reliveradio::Application.configure do
 
   config.after_initialize do
     # Set Time.now to September 1, 2008 10:05:00 AM (at this instant), but allow it to move forward
-    t = Time.parse("2013-09-20 12:23:48")
+    t = Time.parse("2013-09-28 11:08:48")
     Timecop.freeze(t)
   end
 

@@ -41,13 +41,17 @@ class StreamController < ApplicationController
   end
 
   def render_genre(genre_name, airtime_url)
+
     # fetch live listeners count
     @listeners = StreamHelper.fetch_listeners(genre_name)
+
     # fetch really live podcasts
     @live_podcasts = StreamHelper.fetch_hoersuppe_livepodcasts
+
     # fetch episode schedule
-    @episodes = StreamHelper.fetch_episode_schedule(airtime_url)
+    @episodes = StreamHelper.fetch_episode_schedule(airtime_url, params[:episode_count])
     @live_episode = @episodes.shift # assume the first episode as live
+
     respond_to do |format|
       format.html # index.html.erb
       format.js { render 'update_episodes'}

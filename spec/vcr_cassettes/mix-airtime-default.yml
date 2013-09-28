@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://newapi.reliveradio.de/api/upcoming-info
+    uri: http://newapi.reliveradio.de/api/upcoming-info?num=15
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:10:13 GMT
+      - Sat, 28 Sep 2013 09:10:15 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=7n5pcnc46r2jkjotppmupmsra6; path=/
+      - PHPSESSID=i1v387rdsrtu4ohu07jrbs6k52; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,12 +35,12 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1522'
+      - '1039'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-09-28 11:10:13","utc_from":"2013-09-28 09:10:13","num":25,"AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
+      string: '{"from":"2013-09-28 11:10:15","utc_from":"2013-09-28 09:10:15","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
         3: Der Veganer ist hAppy","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
         08:07:12","ends":"2013-09-28 10:31:21","starts_locale":"2013-09-28 10:07:12","ends_locale":"2013-09-28
         12:31:21"},{"artist_name":"piratte looking at things","track_title":"Folge
@@ -87,43 +87,7 @@ http_interactions:
         Folge 6: Aus dem Urwald","comments":null,"year":"","url":null,"info_url":"","artist_url":null,"copyright":"2013
         Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":"","starts":"2013-09-28
         21:37:57","ends":"2013-09-28 21:49:26","starts_locale":"2013-09-28 23:37:57","ends_locale":"2013-09-28
-        23:49:26"},{"artist_name":"Sternengeschichten","track_title":"Folge 31: Trojaner
-        am Himmel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        21:49:26","ends":"2013-09-28 21:59:54","starts_locale":"2013-09-28 23:49:26","ends_locale":"2013-09-28
-        23:59:54"},{"artist_name":"Sternengeschichten","track_title":"Folge 34: Supererden
-        und Wasserwelten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        22:00:00","ends":"2013-09-28 22:08:38","starts_locale":"2013-09-29 00:00:00","ends_locale":"2013-09-29
-        00:08:38"},{"artist_name":"piratte looking at things","track_title":"Folge
-        8: Hebamme","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        22:08:38","ends":"2013-09-28 23:00:48","starts_locale":"2013-09-29 00:08:38","ends_locale":"2013-09-29
-        01:00:48"},{"artist_name":"Funkenstrahlen Podcast","track_title":"Folge 7:
-        Einfach mal die Klappe halten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        23:00:48","ends":"2013-09-28 23:06:54","starts_locale":"2013-09-29 01:00:48","ends_locale":"2013-09-29
-        01:06:54"},{"artist_name":"Segelradio","track_title":"Folge 7: White Spot
-        Pirates, mit Nike Steiger in Hamburg","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        2013 Hinnerk Weiler","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        23:06:54","ends":"2013-09-28 23:48:46","starts_locale":"2013-09-29 01:06:54","ends_locale":"2013-09-29
-        01:48:46"},{"artist_name":"Funkenstrahlen Podcast","track_title":"Folge 2:
-        Arduino Blinkenlichter","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        23:48:46","ends":"2013-09-29 00:20:50","starts_locale":"2013-09-29 01:48:46","ends_locale":"2013-09-29
-        02:20:50"},{"artist_name":"Der Lila Podcast","track_title":"Folge 2: Ab auf
-        die Arbeit!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        CC-BY-NC-SA 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-09-29
-        00:20:50","ends":"2013-09-29 01:10:54","starts_locale":"2013-09-29 02:20:50","ends_locale":"2013-09-29
-        03:10:54"},{"artist_name":"Funkenstrahlen Podcast","track_title":"Folge 4:
-        Internet durchgespielt","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-09-29
-        01:10:54","ends":"2013-09-29 01:18:22","starts_locale":"2013-09-29 03:10:54","ends_locale":"2013-09-29
-        03:18:22"},{"artist_name":"Sternengeschichten","track_title":"Folge 33: Was
-        sind Galaxien?","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-29
-        01:18:22","ends":"2013-09-29 01:28:56","starts_locale":"2013-09-29 03:18:22","ends_locale":"2013-09-29
-        03:28:56"},{"artist_name":"Sternengeschichten","track_title":"Folge 39: Die
-        Radiostrahlung des Zuckers und die Entstehung des Lebens","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-29
-        01:28:56","ends":"2013-09-29 01:38:39","starts_locale":"2013-09-29 03:28:56","ends_locale":"2013-09-29
-        03:38:39"}]}'
+        23:49:26"}]}'
     http_version: 
   recorded_at: Sat, 28 Sep 2013 09:08:48 GMT
 recorded_with: VCR 2.5.0
