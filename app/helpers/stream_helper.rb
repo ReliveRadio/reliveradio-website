@@ -62,12 +62,13 @@ module StreamHelper
 		end
 		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=" + (episode_count + 5).to_s, 10.minutes)['files']
 		if !episodes.blank?
-			episodes = episodes.first(episode_count)
 
 			# remove all passed podcasts from the episodes array
 			episodes.delete_if { |episode| Time.parse(episode['ends_locale']) < Time.now }
 			# do not display jingles in the schedule
 			episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
+			# only display the first $episode_count of them
+			episodes = episodes.first(episode_count)
 
 			# add some more metadata to episodes array
 			episodes.each do |episode|
