@@ -2,102 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://stream.reliveradio.de:8000/json.xsl?Technik
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - text/plain
-      Content-Length:
-      - '1590'
-    body:
-      encoding: UTF-8
-      string: '{"Copyright":"icemaster@localhost","Location":"Earth","total_listeners":"35","mounts":[{"mount":"/24.mp3","server_name":"ReliveRadio
-        Mix","listeners":"20","description":"Podcasts rund um die Uhr!","title":"
-        - ","genre":"Mix - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/24mobile.mp3","server_name":"ReliveRadio
-        Mix","listeners":"1","description":"Podcasts rund um die Uhr!","title":" -
-        ","genre":"Mix - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/kultur.mp3","server_name":"ReliveRadio
-        Kultur","listeners":"9","description":"Kultur-Podcasts rund um die Uhr!","title":"Hoaxilla
-        - Special 7: Interview Daniel Graves","genre":"Kultur - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/kulturmobile.mp3","server_name":"ReliveRadio
-        Kultur","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"Hoaxilla
-        - Special 7: Interview Daniel Graves","genre":"Kultur - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/technik.mp3","server_name":"ReliveRadio
-        Technik","listeners":"5","description":"Technik-Podcasts rund um die Uhr!","title":"Abends
-        in der Kreativwirtschaft - Folge 33: Pidoco, Startups und Software as a Service","genre":"Technik
-        - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/technikmobile.mp3","server_name":"ReliveRadio
-        Technik","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"Abends
-        in der Kreativwirtschaft - Folge 33: Pidoco, Startups und Software as a Service","genre":"Technik
-        - Mobile","bitrate":"48","url":"http://reliveradio.de"}]}'
-    http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
-- request:
-    method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-09-28
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 28 Sep 2013 09:22:22 GMT
-      Server:
-      - Apache/2.2.3 (CentOS)
-      X-Powered-By:
-      - PHP/5.3.11
-      Expires:
-      - Sat, 21 Sep 2013 09:22:22 GMT
-      Cache-Control:
-      - no-cache, must-revalidate, max-age=0
-      Pragma:
-      - no-cache
-      X-Pingback:
-      - http://hoersuppe.de/xmlrpc.php
-      Last-Modified:
-      - Sat, 28 Sep 2013 09:22:22 GMT
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/html; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4858","podcast":"quasselstrippen","state":"1","type":"0","synced":"1","title":"Quasselstrippen","url":"http:\/\/die-quasselstrippen.de\/","streamurl":"http:\/\/streams.xenim.de\/quasselstrippen.mp3.m3u","livedate":"2013-09-28
-        11:00:00","duration":"120","twittered":"1"},{"id":"3265","podcast":"dradio-online-talk","state":"1","type":"0","synced":"1","title":"DRadio
-        Wissen Online Talk","url":"http:\/\/wissen.dradio.de\/online-talk.125.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-09-28
-        11:00:00","duration":"60","twittered":"1"},{"id":"5344","podcast":"raidenger","state":"1","type":"0","synced":"1","title":"Raidenger","url":"http:\/\/raidenger.de\/","streamurl":"http:\/\/176.28.50.139:8000\/high","livedate":"2013-09-28
-        13:00:00","duration":"120","twittered":"0"},{"id":"5450","podcast":"1337kultur","state":"1","type":"0","synced":"1","title":"1337kultur
-        - Tabletop Rollenspiele","url":"http:\/\/xsn.io\/eaK","streamurl":"http:\/\/xsn.io\/1337kultur.mp3","livedate":"2013-09-28
-        13:37:00","duration":"180","twittered":"0"},{"id":"3135","podcast":"breitband","state":"1","type":"0","synced":"1","title":"Breitband","url":"http:\/\/breitband.dradio.de\/","streamurl":"http:\/\/www.dradio.de\/streaming\/dkultur.m3u","livedate":"2013-09-28
-        14:00:00","duration":"60","twittered":"0"},{"id":"5317","podcast":"culinaricast","state":"1","type":"3","synced":"1","title":"H\u00f6rertreffen
-        Culinaricast Berlin","url":"http:\/\/www.culinaricast.de\/2013\/08\/20\/hoerertreffen-28-09-2013-berlin\/","streamurl":"https:\/\/www.google.de\/maps\/preview#!q=+Frankfurter+Allee+35+-+37++10247+Berlin&data=!1m4!1m3!1d1786!2d13.4617917!3d52.5150419!4m10!1m9!4m8!1m3!1d119878!2d7.5885547!3d50.3462931!3m2!1i1024!2i1130!4f13.1","livedate":"2013-09-28
-        14:00:00","duration":"255","twittered":"0"},{"id":"3617","podcast":"trackback","state":"1","type":"0","synced":"1","title":"trackback","url":"http:\/\/www.fritz.de\/programm\/trackback.html","streamurl":"http:\/\/www.fritz.de\/live.m3u","livedate":"2013-09-28
-        18:00:00","duration":"120","twittered":"0"}]}'
-    http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
-- request:
-    method: get
     uri: http://newapi.reliveradio.de/api/upcoming-info?num=15
     body:
       encoding: US-ASCII
@@ -115,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:22:23 GMT
+      - Sat, 28 Sep 2013 09:22:27 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=afduh1ab9dmf7mfaem2k6h1u14; path=/
+      - PHPSESSID=ullhqj9i78vlme58fo09bmv055; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -136,7 +40,7 @@ http_interactions:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-09-28 11:22:23","utc_from":"2013-09-28 09:22:23","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
+      string: '{"from":"2013-09-28 11:22:27","utc_from":"2013-09-28 09:22:27","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
         3: Der Veganer ist hAppy","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
         08:07:12","ends":"2013-09-28 10:31:21","starts_locale":"2013-09-28 10:07:12","ends_locale":"2013-09-28
         12:31:21"},{"artist_name":"piratte looking at things","track_title":"Folge

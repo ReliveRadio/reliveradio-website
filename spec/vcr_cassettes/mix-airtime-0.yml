@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://newapi.reliveradio.de/api/upcoming-info?num=7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Sep 2013 09:22:28 GMT
+      Server:
+      - Apache/2.2.22 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.8
+      Set-Cookie:
+      - PHPSESSID=jnb5rkseivkagg2a29klapkta4; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '639'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"from":"2013-09-28 11:22:28","utc_from":"2013-09-28 09:22:28","num":"7","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
+        3: Der Veganer ist hAppy","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        08:07:12","ends":"2013-09-28 10:31:21","starts_locale":"2013-09-28 10:07:12","ends_locale":"2013-09-28
+        12:31:21"},{"artist_name":"piratte looking at things","track_title":"Folge
+        9: Pausenclown","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        10:31:21","ends":"2013-09-28 10:45:17","starts_locale":"2013-09-28 12:31:21","ends_locale":"2013-09-28
+        12:45:17"},{"artist_name":"Sternengeschichten","track_title":"Folge 35: Das
+        Paradoxon der schwachen jungen Sonne","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        10:45:17","ends":"2013-09-28 10:53:20","starts_locale":"2013-09-28 12:45:17","ends_locale":"2013-09-28
+        12:53:20"},{"artist_name":"Sternengeschichten","track_title":"Folge 1: Was
+        sind Sterne?","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        10:53:20","ends":"2013-09-28 10:59:21","starts_locale":"2013-09-28 12:53:20","ends_locale":"2013-09-28
+        12:59:21"},{"artist_name":"Metrolaut","track_title":"Folge 7: Castor, Kohle,
+        Katastrophe","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        10:59:21","ends":"2013-09-28 12:13:43","starts_locale":"2013-09-28 12:59:21","ends_locale":"2013-09-28
+        14:13:43"},{"artist_name":"Metrolaut","track_title":"Folge 16: Licht im Club","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        12:13:43","ends":"2013-09-28 14:09:35","starts_locale":"2013-09-28 14:13:43","ends_locale":"2013-09-28
+        16:09:35"},{"artist_name":"Metrolaut","track_title":"Folge 4: Tennis-Hools,
+        Fanboys und die linksextreme Mafia","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
+        14:09:35","ends":"2013-09-28 15:06:30","starts_locale":"2013-09-28 16:09:35","ends_locale":"2013-09-28
+        17:06:30"}]}'
+    http_version: 
+  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
+recorded_with: VCR 2.5.0

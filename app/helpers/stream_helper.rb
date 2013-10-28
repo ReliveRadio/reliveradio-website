@@ -48,15 +48,27 @@ module StreamHelper
 		return live_podcasts
 	end
 
-	def self.fetch_episode_schedule(url)
-		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=20", 10.minutes)['files']
+	def self.fetch_episode_schedule(url, episode_count = 10)
+		if !episode_count.blank?
+			episode_count = episode_count.to_i
+			if episode_count < 2
+				episode_count = 2
+			end
+			if episode_count > 100
+				episode_count = 100
+			end
+		else
+			episode_count = 10
+		end
+		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=" + (episode_count + 5).to_s, 10.minutes)['files']
 		if !episodes.blank?
-			episodes = episodes.first(10)
 
 			# remove all passed podcasts from the episodes array
 			episodes.delete_if { |episode| Time.parse(episode['ends_locale']) < Time.now }
 			# do not display jingles in the schedule
 			episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
+			# only display the first $episode_count of them
+			episodes = episodes.first(episode_count)
 
 			# add some more metadata to episodes array
 			episodes.each do |episode|
