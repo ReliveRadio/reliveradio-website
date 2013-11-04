@@ -83,7 +83,7 @@ module StreamHelper
 			if !live_episode.blank?
 				if !((live_episode['starts_locale'] < Time.now) && (live_episode['ends_locale'] > Time.now))
 					# first episode is NOT live actually
-					raise "Airtime API did not return a live episode: " + url
+					raise "Airtime API did not return a live episode: " + url + "\nCACHE CONTENT IS:\n" + Rails.cache.read(url + "?num=50") + "\nFINAL EPISODES LIST IS:\n" + episodes + "\nAIRTIME API RETURNS NOW:\n" + ExternalApiHelper.fetch_json(url + "?num=50")
 				else
 					# first episode is live
 					live_episode["isLive"] = true
