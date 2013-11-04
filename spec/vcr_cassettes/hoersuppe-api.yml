@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-09-20
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-04
     body:
       encoding: US-ASCII
       string: ''
@@ -19,21 +19,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 20 Sep 2013 10:23:52 GMT
+      - Mon, 04 Nov 2013 08:41:19 GMT
       Server:
       - Apache/2.2.3 (CentOS)
       X-Powered-By:
       - PHP/5.3.11
       Expires:
-      - Fri, 13 Sep 2013 10:23:52 GMT
+      - Mon, 28 Oct 2013 08:41:19 GMT
       Cache-Control:
       - no-cache, must-revalidate, max-age=0
       Pragma:
       - no-cache
       X-Pingback:
       - http://hoersuppe.de/xmlrpc.php
+      Link:
+      - <http://hoersuppe.de/?p=43845>; rel=shortlink
       Last-Modified:
-      - Fri, 20 Sep 2013 10:23:52 GMT
+      - Mon, 04 Nov 2013 08:41:19 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -42,10 +44,10 @@ http_interactions:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4444","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2013-08-14
-        16:00:00","duration":"90","twittered":"1"},{"id":"3158","podcast":"dcka","state":"1","type":"0","synced":"1","title":"Der
-        Computer kann alles","url":"http:\/\/www.freie-radios.net\/serie\/dercomputerkannalles","streamurl":"http:\/\/stream.fsk-hh.org:8000\/fsk.mp3.m3u","livedate":"2013-08-14
-        17:00:00","duration":"120","twittered":"0"}]}'
+      string: '{"status":1,"msg":"ok","data":[{"id":"4909","podcast":"working-draft","state":"1","type":"0","synced":"1","title":"working
+        draft","url":"http:\/\/workingdraft.de\/","streamurl":"http:\/\/www.livestream.com\/workingdraft","livedate":"2013-11-04
+        20:00:00","duration":"100","twittered":"0"},{"id":"6777","podcast":"rautenradio","state":"1","type":"0","synced":"1","title":"Rautenradio","url":"http:\/\/rautenradio.de","streamurl":"http:\/\/live.fnordkurve.de\/mp3","livedate":"2013-11-04
+        20:00:00","duration":"150","twittered":"0"}]}'
     http_version: 
-  recorded_at: Fri, 20 Sep 2013 10:23:48 GMT
+  recorded_at: Mon, 04 Nov 2013 08:40:00 GMT
 recorded_with: VCR 2.5.0
