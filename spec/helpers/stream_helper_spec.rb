@@ -76,14 +76,37 @@ describe "StreamHelper" do
 					episode["isLive"].should == false
 				end
 			end
+			it "should still work if a jingle is currently live" do
+				expect {
+					VCR.use_cassette('mix-airtime-jingle-live') do
+						@episodes_jingle_live = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
+					end
+				}.not_to raise_error
+
+				@episodes_jingle_live.first["isLive"].should == true
+				@episodes_jingle_live.each_with_index do |episode, i|
+					next if i == 0 # skip the first one as it is live 
+					episode["isLive"].should == false
+				end
+
+				live_episode = @episodes_jingle_live.first
+				# should not have started yet
+				(live_episode['starts_locale'] > Time.now).should == true
+				# should not have ended yet
+				(live_episode['ends_locale'] > Time.now).should == true
+
+				@episodes_jingle_live.each do |episode|
+					episode["artist_name"].should_not == "jingle"
+				end
+			end
 			it "should only return episodes in the array that are upcoming or live" do
-				puts "timenowgreptag_test" + Time.now.to_s
+				#puts "timenowgreptag_test" + Time.now.to_s
 				@episodes.each do |episode|
 					( episode['ends_locale'] > Time.now ).should == true
 				end
 			end
 			it "should only mark an episode as live if it is actually live" do
-				puts "timenowgreptag_test" + Time.now.to_s
+				#puts "timenowgreptag_test" + Time.now.to_s
 				@episodes.first["isLive"].should == true
 				live_episode = @episodes.first
 				# should be started

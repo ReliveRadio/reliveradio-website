@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-04
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-07
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 04 Nov 2013 08:41:19 GMT
+      - Thu, 07 Nov 2013 20:02:33 GMT
       Server:
       - Apache/2.2.3 (CentOS)
       X-Powered-By:
       - PHP/5.3.11
       Expires:
-      - Mon, 28 Oct 2013 08:41:19 GMT
+      - Thu, 31 Oct 2013 20:02:33 GMT
       Cache-Control:
       - no-cache, must-revalidate, max-age=0
       Pragma:
@@ -35,7 +35,7 @@ http_interactions:
       Link:
       - <http://hoersuppe.de/?p=43845>; rel=shortlink
       Last-Modified:
-      - Mon, 04 Nov 2013 08:41:19 GMT
+      - Thu, 07 Nov 2013 20:02:33 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -44,10 +44,12 @@ http_interactions:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4909","podcast":"working-draft","state":"1","type":"0","synced":"1","title":"working
-        draft","url":"http:\/\/workingdraft.de\/","streamurl":"http:\/\/www.livestream.com\/workingdraft","livedate":"2013-11-04
-        20:00:00","duration":"100","twittered":"0"},{"id":"6777","podcast":"rautenradio","state":"1","type":"0","synced":"1","title":"Rautenradio","url":"http:\/\/rautenradio.de","streamurl":"http:\/\/live.fnordkurve.de\/mp3","livedate":"2013-11-04
-        20:00:00","duration":"150","twittered":"0"}]}'
+      string: '{"status":1,"msg":"ok","data":[{"id":"4456","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2013-11-07
+        16:00:00","duration":"90","twittered":"1"},{"id":"3664","podcast":"wasmitmedien","state":"1","type":"0","synced":"1","title":"Was
+        mit Medien","url":"http:\/\/wissen.dradio.de\/daniel-fiene-und-herr-paehler.1669.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-11-07
+        18:00:00","duration":"90","twittered":"1"},{"id":"3043","podcast":"binaergewitter","state":"1","type":"0","synced":"1","title":"Bin\u00e4rgewitter-Talk","url":"http:\/\/blog.binaergewitter.de\/","streamurl":"http:\/\/streams.xenim.de\/binaergewitter.mp3.m3u","livedate":"2013-11-07
+        19:30:00","duration":"180","twittered":"1"},{"id":"6847","podcast":"wir-mussen-reden","state":"1","type":"0","synced":"1","title":"WMR","url":"http:\/\/wir.muessenreden.de","streamurl":"http:\/\/streams.xenim.de\/wmr.mp3","livedate":"2013-11-07
+        20:00:00","duration":"150","twittered":"1"}]}'
     http_version: 
-  recorded_at: Mon, 04 Nov 2013 08:40:00 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 recorded_with: VCR 2.5.0

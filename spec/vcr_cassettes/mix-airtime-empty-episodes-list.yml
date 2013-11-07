@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 04 Nov 2013 08:41:22 GMT
+      - Thu, 07 Nov 2013 20:02:33 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=c69cde9ehubc68e8f1ak9gc7e0; path=/
+      - PHPSESSID=q045msvpa8savh5ib6dv712rg7; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,12 +35,12 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1737'
+      - '651'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-04 09:41:22","utc_from":"2013-11-04 08:41:22","num":"50","AIRTIME_API_VERSION":"1.1","files":[]}'
+      string: '{"from":"2013-11-07 21:02:33","utc_from":"2013-11-07 20:02:33","num":"50","AIRTIME_API_VERSION":"1.1","files":[]}'
     http_version: 
-  recorded_at: Mon, 04 Nov 2013 08:40:00 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 recorded_with: VCR 2.5.0

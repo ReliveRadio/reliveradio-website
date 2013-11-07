@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 04 Nov 2013 08:41:22 GMT
+      - Thu, 07 Nov 2013 20:02:34 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=peu9nvc655ur31htdh7qcabol6; path=/
+      - PHPSESSID=o7nriu1oiq8kv7lvr1ed36pq20; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,121 +35,33 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1737'
+      - '652'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-04 09:41:22","utc_from":"2013-11-04 08:41:22","num":"50","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"M\u00e4nnerabend","track_title":"Folge
-        19: German Craft Beer Ipas","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        06:10:47.178736","ends":"2013-11-04 09:15:36.978736","starts_locale":"2013-11-04
-        07:10:47","ends_locale":"2013-11-04 10:15:36"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        09:15:36.978736","ends":"2013-11-04 09:16:30.138578","starts_locale":"2013-11-04
-        10:15:36","ends_locale":"2013-11-04 10:16:30"},{"artist_name":"Wrestling Diaries","track_title":"Special:
-        #IRBFGSeries \u2013 Dennis vs. Sven vs. Matze","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        09:16:30.138578","ends":"2013-11-04 10:05:57.438578","starts_locale":"2013-11-04
-        10:16:30","ends_locale":"2013-11-04 11:05:57"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        10:05:57.438578","ends":"2013-11-04 10:06:50.59842","starts_locale":"2013-11-04
-        11:05:57","ends_locale":"2013-11-04 11:06:50"},{"artist_name":"K\u00fcchen-Funk","track_title":"Folge
-        30: Pinienkern-Schmelze und ein W\u00fcrfelspiel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen
-        3.0 Deutschland","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        10:06:50.59842","ends":"2013-11-04 11:08:27.69842","starts_locale":"2013-11-04
-        11:06:50","ends_locale":"2013-11-04 12:08:27"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        11:08:27.69842","ends":"2013-11-04 11:09:20.858262","starts_locale":"2013-11-04
-        12:08:27","ends_locale":"2013-11-04 12:09:20"},{"artist_name":"Herrenabend","track_title":"Die
-        Folge 009","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        11:09:20.858262","ends":"2013-11-04 12:20:06.358262","starts_locale":"2013-11-04
-        12:09:20","ends_locale":"2013-11-04 13:20:06"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        12:20:06.358262","ends":"2013-11-04 12:20:59.518104","starts_locale":"2013-11-04
-        13:20:06","ends_locale":"2013-11-04 13:20:59"},{"artist_name":"Ganz einfach
-        leben Podcast","track_title":"Folge 34: Gespraech mit Daniel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        12:20:59.518104","ends":"2013-11-04 13:22:20.618104","starts_locale":"2013-11-04
-        13:20:59","ends_locale":"2013-11-04 14:22:20"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        13:22:20.618104","ends":"2013-11-04 13:23:13.777946","starts_locale":"2013-11-04
-        14:22:20","ends_locale":"2013-11-04 14:23:13"},{"artist_name":"angegraben
-        - Der arch\u00e4ologische Podcast","track_title":"Folge 13: Wundebare Dinge
-        - Lesung aus Howrd Carters Tut-ench-Amun - Ein \u00c4gyptisches K\u00f6nigsgrab","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        13:23:13.777946","ends":"2013-11-04 13:51:29.777946","starts_locale":"2013-11-04
-        14:23:13","ends_locale":"2013-11-04 14:51:29"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        13:51:29.777946","ends":"2013-11-04 13:52:22.937788","starts_locale":"2013-11-04
-        14:51:29","ends_locale":"2013-11-04 14:52:22"},{"artist_name":"Radio Bastard","track_title":"Folge
-        757: Feiertage my ass!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        13:52:22.937788","ends":"2013-11-04 13:57:46.937788","starts_locale":"2013-11-04
-        14:52:22","ends_locale":"2013-11-04 14:57:46"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        13:57:46.937788","ends":"2013-11-04 13:58:40.09763","starts_locale":"2013-11-04
-        14:57:46","ends_locale":"2013-11-04 14:58:40"},{"artist_name":"Viva Britannia","track_title":"Folge
-        21: Doctor Who","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        13:58:40.09763","ends":"2013-11-04 14:31:54.49763","starts_locale":"2013-11-04
-        14:58:40","ends_locale":"2013-11-04 15:31:54"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        14:31:54.49763","ends":"2013-11-04 14:32:47.657472","starts_locale":"2013-11-04
-        15:31:54","ends_locale":"2013-11-04 15:32:47"},{"artist_name":"Hoaxilla","track_title":"Folge
-        139: Polybius","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        14:32:47.657472","ends":"2013-11-04 15:03:05.157472","starts_locale":"2013-11-04
-        15:32:47","ends_locale":"2013-11-04 16:03:05"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        15:03:05.157472","ends":"2013-11-04 15:03:58.317314","starts_locale":"2013-11-04
-        16:03:05","ends_locale":"2013-11-04 16:03:58"},{"artist_name":"Sunday Moaning","track_title":"Folge
-        61: Sodom und Safari Club","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        15:03:58.317314","ends":"2013-11-04 17:22:32.617314","starts_locale":"2013-11-04
-        16:03:58","ends_locale":"2013-11-04 18:22:32"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        17:22:32.617314","ends":"2013-11-04 17:23:25.777156","starts_locale":"2013-11-04
-        18:22:32","ends_locale":"2013-11-04 18:23:25"},{"artist_name":"Kastenfisch","track_title":"Folge
-        214: Kastenfisch","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        17:23:25.777156","ends":"2013-11-04 18:01:34.777156","starts_locale":"2013-11-04
-        18:23:25","ends_locale":"2013-11-04 19:01:34"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        18:01:34.777156","ends":"2013-11-04 18:02:27.936998","starts_locale":"2013-11-04
-        19:01:34","ends_locale":"2013-11-04 19:02:27"},{"artist_name":"Compod","track_title":"Folge
-        400: RZapf, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        18:02:27.936998","ends":"2013-11-04 19:02:32.336998","starts_locale":"2013-11-04
-        19:02:27","ends_locale":"2013-11-04 20:02:32"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        19:02:32.336998","ends":"2013-11-04 19:03:25.49684","starts_locale":"2013-11-04
-        20:02:32","ends_locale":"2013-11-04 20:03:25"},{"artist_name":"Compod","track_title":"Folge
-        400: RZapf, Teil 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        19:03:25.49684","ends":"2013-11-04 19:51:17.79684","starts_locale":"2013-11-04
-        20:03:25","ends_locale":"2013-11-04 20:51:17"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        19:51:17.79684","ends":"2013-11-04 19:52:10.956682","starts_locale":"2013-11-04
-        20:51:17","ends_locale":"2013-11-04 20:52:10"},{"artist_name":"ComPod","track_title":"Folge
-        400: RZapf, Teil 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        19:52:10.956682","ends":"2013-11-04 20:42:29.856682","starts_locale":"2013-11-04
-        20:52:10","ends_locale":"2013-11-04 21:42:29"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        20:42:29.856682","ends":"2013-11-04 20:43:23.016524","starts_locale":"2013-11-04
-        21:42:29","ends_locale":"2013-11-04 21:43:23"},{"artist_name":"WRINT: Flaschen","track_title":"Andreas
-        Bogk (auch Ortsgespr\u00e4ch)","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        20:43:23.016524","ends":"2013-11-04 22:25:35.616524","starts_locale":"2013-11-04
-        21:43:23","ends_locale":"2013-11-04 23:25:35"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        22:25:35.616524","ends":"2013-11-04 22:26:28.776366","starts_locale":"2013-11-04
-        23:25:35","ends_locale":"2013-11-04 23:26:28"},{"artist_name":"Einschlafen
-        Podcast","track_title":"Folge 184: Einiges neues und Immanuel Kant","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        22:26:28.776366","ends":"2013-11-04 22:56:31.076366","starts_locale":"2013-11-04
-        23:26:28","ends_locale":"2013-11-04 23:56:31"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        22:56:31.076366","ends":"2013-11-04 22:57:24.236208","starts_locale":"2013-11-04
-        23:56:31","ends_locale":"2013-11-04 23:57:24"},{"artist_name":"St\u00f6bercast","track_title":"Folge
-        25: Feuerklosett","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-04
-        22:57:24.236208","ends":"2013-11-04 23:00:06.219201","starts_locale":"2013-11-04
-        23:57:24","ends_locale":"2013-11-05 00:00:06"}]}'
+      string: '{"from":"2013-11-07 21:02:34","utc_from":"2013-11-07 20:02:34","num":"50","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Stammtischphilosophen","track_title":"Folge
+        59: New York, Rio, Eichenb\u00fchl","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        19:39:42.663208","ends":"2013-11-07 21:28:51.163208","starts_locale":"2013-11-07
+        20:39:42","ends_locale":"2013-11-07 22:28:51"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        21:28:51.163208","ends":"2013-11-07 21:29:30.927902","starts_locale":"2013-11-07
+        22:28:51","ends_locale":"2013-11-07 22:29:30"},{"artist_name":"Krimikiste","track_title":"Folge
+        1019: Roman Voosen, Kerstin Danielsson - Rotwild","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        21:29:30.927902","ends":"2013-11-07 21:33:51.327902","starts_locale":"2013-11-07
+        22:29:30","ends_locale":"2013-11-07 22:33:51"},{"artist_name":"Methodisch
+        inkorrekt","track_title":"Folge 12b: Previously (on) Lost","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        21:33:51.327902","ends":"2013-11-07 22:15:25.027902","starts_locale":"2013-11-07
+        22:33:51","ends_locale":"2013-11-07 23:15:25"},{"artist_name":"SharePoint
+        Podcast","track_title":"Folge 282: Infos Infos Infos","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NoDerivs 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        22:15:25.027902","ends":"2013-11-07 22:31:29.727902","starts_locale":"2013-11-07
+        23:15:25","ends_locale":"2013-11-07 23:31:29"},{"artist_name":"Hitmist","track_title":"Folge
+        65: Tochtergesellschaft v\u00e4terlicherseits","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        22:31:29.727902","ends":"2013-11-07 22:59:06.427902","starts_locale":"2013-11-07
+        23:31:29","ends_locale":"2013-11-07 23:59:06"}]}'
     http_version: 
-  recorded_at: Mon, 04 Nov 2013 08:40:00 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 recorded_with: VCR 2.5.0
