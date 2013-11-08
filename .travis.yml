@@ -4,8 +4,8 @@ rvm:
   - "2.0.0"
 branches:
   only:
-    - master
-    - develop
+    #- master
+    #- develop
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
