@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-07
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-09
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Nov 2013 20:02:33 GMT
+      - Sat, 09 Nov 2013 15:45:14 GMT
       Server:
       - Apache/2.2.3 (CentOS)
       X-Powered-By:
       - PHP/5.3.11
       Expires:
-      - Thu, 31 Oct 2013 20:02:33 GMT
+      - Sat, 02 Nov 2013 15:45:14 GMT
       Cache-Control:
       - no-cache, must-revalidate, max-age=0
       Pragma:
@@ -35,7 +35,7 @@ http_interactions:
       Link:
       - <http://hoersuppe.de/?p=43845>; rel=shortlink
       Last-Modified:
-      - Thu, 07 Nov 2013 20:02:33 GMT
+      - Sat, 09 Nov 2013 15:45:14 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -44,12 +44,13 @@ http_interactions:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4456","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2013-11-07
-        16:00:00","duration":"90","twittered":"1"},{"id":"3664","podcast":"wasmitmedien","state":"1","type":"0","synced":"1","title":"Was
-        mit Medien","url":"http:\/\/wissen.dradio.de\/daniel-fiene-und-herr-paehler.1669.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-11-07
-        18:00:00","duration":"90","twittered":"1"},{"id":"3043","podcast":"binaergewitter","state":"1","type":"0","synced":"1","title":"Bin\u00e4rgewitter-Talk","url":"http:\/\/blog.binaergewitter.de\/","streamurl":"http:\/\/streams.xenim.de\/binaergewitter.mp3.m3u","livedate":"2013-11-07
-        19:30:00","duration":"180","twittered":"1"},{"id":"6847","podcast":"wir-mussen-reden","state":"1","type":"0","synced":"1","title":"WMR","url":"http:\/\/wir.muessenreden.de","streamurl":"http:\/\/streams.xenim.de\/wmr.mp3","livedate":"2013-11-07
-        20:00:00","duration":"150","twittered":"1"}]}'
+      string: '{"status":1,"msg":"ok","data":[{"id":"4864","podcast":"quasselstrippen","state":"1","type":"0","synced":"1","title":"Quasselstrippen","url":"http:\/\/die-quasselstrippen.de\/","streamurl":"http:\/\/streams.xenim.de\/quasselstrippen.mp3.m3u","livedate":"2013-11-09
+        11:00:00","duration":"120","twittered":"1"},{"id":"3271","podcast":"dradio-online-talk","state":"1","type":"0","synced":"1","title":"DRadio
+        Wissen Online Talk","url":"http:\/\/wissen.dradio.de\/online-talk.125.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-11-09
+        11:00:00","duration":"60","twittered":"1"},{"id":"3141","podcast":"breitband","state":"1","type":"0","synced":"1","title":"Breitband","url":"http:\/\/breitband.dradio.de\/","streamurl":"http:\/\/www.dradio.de\/streaming\/dkultur.m3u","livedate":"2013-11-09
+        14:00:00","duration":"60","twittered":"1"},{"id":"6591","podcast":"raidenger","state":"1","type":"0","synced":"1","title":"Raidenger","url":"http:\/\/raidenger.de\/","streamurl":"http:\/\/176.28.50.139:8000\/high","livedate":"2013-11-09
+        14:00:00","duration":"120","twittered":"1"},{"id":"3623","podcast":"trackback","state":"1","type":"0","synced":"1","title":"trackback","url":"http:\/\/www.fritz.de\/programm\/trackback.html","streamurl":"http:\/\/www.fritz.de\/live.m3u","livedate":"2013-11-09
+        18:00:00","duration":"120","twittered":"0"}]}'
     http_version: 
-  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
+recorded_with: VCR 2.6.0
