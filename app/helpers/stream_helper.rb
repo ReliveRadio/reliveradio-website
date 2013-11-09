@@ -107,8 +107,8 @@ module StreamHelper
 					# do not display jingles in the schedule
 					episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
 
-					# only show the first 10 episodes from the remaining episodes
-					episodes = episodes.first(10)
+					# only show the first episode_count episodes from the remaining episodes
+					episodes = episodes.first(episode_count)
 					return episodes
 				end
 			end
