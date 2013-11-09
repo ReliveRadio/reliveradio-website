@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://mixzentrale.reliveradio.de/api/upcoming-info
+    uri: http://mixzentrale.reliveradio.de/api/upcoming-info?num=50
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Nov 2013 20:02:33 GMT
+      - Thu, 07 Nov 2013 20:02:34 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=tjps97tvq7lvbqtmf88agkls70; path=/
+      - PHPSESSID=vk3097smbrovtsp7va142re771; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -40,7 +40,7 @@ http_interactions:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-07 21:02:33","utc_from":"2013-11-07 20:02:33","num":25,"AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Stammtischphilosophen","track_title":"Folge
+      string: '{"from":"2013-11-07 21:02:34","utc_from":"2013-11-07 20:02:34","num":"50","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"jingle","track_title":"Folge
         59: New York, Rio, Eichenb\u00fchl","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
         19:39:42.663208","ends":"2013-11-07 21:28:51.163208","starts_locale":"2013-11-07
         20:39:42","ends_locale":"2013-11-07 22:28:51"},{"artist_name":"jingle","track_title":"Jingle

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://newapi.reliveradio.de/api/upcoming-info?num=15
+    uri: http://mixzentrale.reliveradio.de/api/upcoming-info?num=50
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:22:29 GMT
+      - Thu, 07 Nov 2013 20:02:33 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=iksh4s00q5kh8o6a3su7gjqej3; path=/
+      - PHPSESSID=adnbfhcared6mpi7gcorgdrpl7; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,40 +35,24 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1040'
+      - '652'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-09-28 11:22:29","utc_from":"2013-09-28 09:22:29","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Metrolaut","track_title":"Folge 4: Tennis-Hools,
-        Fanboys und die linksextreme Mafia","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        14:09:35","ends":"2013-09-28 15:06:30","starts_locale":"2013-09-28 16:09:35","ends_locale":"2013-09-28
-        17:06:30"},{"artist_name":"ABSradio","track_title":"Folge 1: Alles auf Anfang","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        15:06:30","ends":"2013-09-28 16:39:08","starts_locale":"2013-09-28 17:06:30","ends_locale":"2013-09-28
-        18:39:08"},{"artist_name":"Sternengeschichten","track_title":"Folge 9: Immer
-        um den Stern herum: Das Sonnensystem im Computer","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        16:39:08","ends":"2013-09-28 16:48:22","starts_locale":"2013-09-28 18:39:08","ends_locale":"2013-09-28
-        18:48:22"},{"artist_name":"Metrolaut","track_title":"Folge 13: Piraten auf
-        der Flucht nach Berlin","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2012
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        16:48:22","ends":"2013-09-28 19:09:09","starts_locale":"2013-09-28 18:48:22","ends_locale":"2013-09-28
-        21:09:09"},{"artist_name":"Viva Britannia","track_title":"Folge 14: Das K\u00f6nigshaus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        19:09:09","ends":"2013-09-28 19:26:01","starts_locale":"2013-09-28 21:09:09","ends_locale":"2013-09-28
-        21:26:01"},{"artist_name":"Metrolaut","track_title":"Folge 18.2: Gezi-Park","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        19:26:01","ends":"2013-09-28 19:40:57","starts_locale":"2013-09-28 21:26:01","ends_locale":"2013-09-28
-        21:40:57"},{"artist_name":"ABSradio","track_title":"Folge 9: Modern Dingens
-        Merto Scheiss","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        19:40:57","ends":"2013-09-28 21:25:19","starts_locale":"2013-09-28 21:40:57","ends_locale":"2013-09-28
-        23:25:19"},{"artist_name":"Viva Britannia","track_title":"Folge 4: Das Jahr","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        21:25:19","ends":"2013-09-28 21:37:57","starts_locale":"2013-09-28 23:25:19","ends_locale":"2013-09-28
-        23:37:57"},{"artist_name":"Funkenstrahlen Podcast","track_title":"Erstausstrahlung
-        Folge 6: Aus dem Urwald","comments":null,"year":"","url":null,"info_url":"","artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":"","starts":"2013-09-28
-        21:37:57","ends":"2013-09-28 21:49:26","starts_locale":"2013-09-28 23:37:57","ends_locale":"2013-09-28
-        23:49:26"}]}'
+      string: '{"from":"2013-11-07 21:02:34","utc_from":"2013-11-07 20:02:34","num":"50","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Methodisch
+        inkorrekt","track_title":"Folge 12b: Previously (on) Lost","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        21:33:51.327902","ends":"2013-11-07 22:15:25.027902","starts_locale":"2013-11-07
+        22:33:51","ends_locale":"2013-11-07 23:15:25"},{"artist_name":"SharePoint
+        Podcast","track_title":"Folge 282: Infos Infos Infos","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NoDerivs 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        22:15:25.027902","ends":"2013-11-07 22:31:29.727902","starts_locale":"2013-11-07
+        23:15:25","ends_locale":"2013-11-07 23:31:29"},{"artist_name":"Hitmist","track_title":"Folge
+        65: Tochtergesellschaft v\u00e4terlicherseits","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        22:31:29.727902","ends":"2013-11-07 22:59:06.427902","starts_locale":"2013-11-07
+        23:31:29","ends_locale":"2013-11-07 23:59:06"}]}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 recorded_with: VCR 2.5.0

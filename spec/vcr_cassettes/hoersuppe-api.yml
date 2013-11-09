@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-09-28
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-07
     body:
       encoding: US-ASCII
       string: ''
@@ -19,21 +19,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:22:26 GMT
+      - Thu, 07 Nov 2013 20:02:33 GMT
       Server:
       - Apache/2.2.3 (CentOS)
       X-Powered-By:
       - PHP/5.3.11
       Expires:
-      - Sat, 21 Sep 2013 09:22:26 GMT
+      - Thu, 31 Oct 2013 20:02:33 GMT
       Cache-Control:
       - no-cache, must-revalidate, max-age=0
       Pragma:
       - no-cache
       X-Pingback:
       - http://hoersuppe.de/xmlrpc.php
+      Link:
+      - <http://hoersuppe.de/?p=43845>; rel=shortlink
       Last-Modified:
-      - Sat, 28 Sep 2013 09:22:26 GMT
+      - Thu, 07 Nov 2013 20:02:33 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -42,17 +44,12 @@ http_interactions:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4858","podcast":"quasselstrippen","state":"1","type":"0","synced":"1","title":"Quasselstrippen","url":"http:\/\/die-quasselstrippen.de\/","streamurl":"http:\/\/streams.xenim.de\/quasselstrippen.mp3.m3u","livedate":"2013-09-28
-        11:00:00","duration":"120","twittered":"1"},{"id":"3265","podcast":"dradio-online-talk","state":"1","type":"0","synced":"1","title":"DRadio
-        Wissen Online Talk","url":"http:\/\/wissen.dradio.de\/online-talk.125.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-09-28
-        11:00:00","duration":"60","twittered":"1"},{"id":"5344","podcast":"raidenger","state":"1","type":"0","synced":"1","title":"Raidenger","url":"http:\/\/raidenger.de\/","streamurl":"http:\/\/176.28.50.139:8000\/high","livedate":"2013-09-28
-        13:00:00","duration":"120","twittered":"0"},{"id":"5450","podcast":"1337kultur","state":"1","type":"0","synced":"1","title":"1337kultur
-        - Tabletop Rollenspiele","url":"http:\/\/xsn.io\/eaK","streamurl":"http:\/\/xsn.io\/1337kultur.mp3","livedate":"2013-09-28
-        13:37:00","duration":"180","twittered":"0"},{"id":"3135","podcast":"breitband","state":"1","type":"0","synced":"1","title":"Breitband","url":"http:\/\/breitband.dradio.de\/","streamurl":"http:\/\/www.dradio.de\/streaming\/dkultur.m3u","livedate":"2013-09-28
-        14:00:00","duration":"60","twittered":"0"},{"id":"5317","podcast":"culinaricast","state":"1","type":"3","synced":"1","title":"H\u00f6rertreffen
-        Culinaricast Berlin","url":"http:\/\/www.culinaricast.de\/2013\/08\/20\/hoerertreffen-28-09-2013-berlin\/","streamurl":"https:\/\/www.google.de\/maps\/preview#!q=+Frankfurter+Allee+35+-+37++10247+Berlin&data=!1m4!1m3!1d1786!2d13.4617917!3d52.5150419!4m10!1m9!4m8!1m3!1d119878!2d7.5885547!3d50.3462931!3m2!1i1024!2i1130!4f13.1","livedate":"2013-09-28
-        14:00:00","duration":"255","twittered":"0"},{"id":"3617","podcast":"trackback","state":"1","type":"0","synced":"1","title":"trackback","url":"http:\/\/www.fritz.de\/programm\/trackback.html","streamurl":"http:\/\/www.fritz.de\/live.m3u","livedate":"2013-09-28
-        18:00:00","duration":"120","twittered":"0"}]}'
+      string: '{"status":1,"msg":"ok","data":[{"id":"4456","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2013-11-07
+        16:00:00","duration":"90","twittered":"1"},{"id":"3664","podcast":"wasmitmedien","state":"1","type":"0","synced":"1","title":"Was
+        mit Medien","url":"http:\/\/wissen.dradio.de\/daniel-fiene-und-herr-paehler.1669.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-11-07
+        18:00:00","duration":"90","twittered":"1"},{"id":"3043","podcast":"binaergewitter","state":"1","type":"0","synced":"1","title":"Bin\u00e4rgewitter-Talk","url":"http:\/\/blog.binaergewitter.de\/","streamurl":"http:\/\/streams.xenim.de\/binaergewitter.mp3.m3u","livedate":"2013-11-07
+        19:30:00","duration":"180","twittered":"1"},{"id":"6847","podcast":"wir-mussen-reden","state":"1","type":"0","synced":"1","title":"WMR","url":"http:\/\/wir.muessenreden.de","streamurl":"http:\/\/streams.xenim.de\/wmr.mp3","livedate":"2013-11-07
+        20:00:00","duration":"150","twittered":"1"}]}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 recorded_with: VCR 2.5.0

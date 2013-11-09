@@ -21,29 +21,71 @@ http_interactions:
       Content-Type:
       - text/plain
       Content-Length:
-      - '1590'
+      - '2489'
     body:
-      encoding: UTF-8
-      string: '{"Copyright":"icemaster@localhost","Location":"Earth","total_listeners":"35","mounts":[{"mount":"/24.mp3","server_name":"ReliveRadio
-        Mix","listeners":"20","description":"Podcasts rund um die Uhr!","title":"
-        - ","genre":"Mix - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/24mobile.mp3","server_name":"ReliveRadio
-        Mix","listeners":"1","description":"Podcasts rund um die Uhr!","title":" -
-        ","genre":"Mix - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/kultur.mp3","server_name":"ReliveRadio
-        Kultur","listeners":"9","description":"Kultur-Podcasts rund um die Uhr!","title":"Hoaxilla
-        - Special 7: Interview Daniel Graves","genre":"Kultur - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/kulturmobile.mp3","server_name":"ReliveRadio
-        Kultur","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"Hoaxilla
-        - Special 7: Interview Daniel Graves","genre":"Kultur - Mobile","bitrate":"48","url":"http://reliveradio.de"},{"mount":"/technik.mp3","server_name":"ReliveRadio
-        Technik","listeners":"5","description":"Technik-Podcasts rund um die Uhr!","title":"Abends
-        in der Kreativwirtschaft - Folge 33: Pidoco, Startups und Software as a Service","genre":"Technik
-        - Desktop","bitrate":"128","url":"http://reliveradio.de"},{"mount":"/technikmobile.mp3","server_name":"ReliveRadio
-        Technik","listeners":"0","description":"Kultur-Podcasts rund um die Uhr!","title":"Abends
-        in der Kreativwirtschaft - Folge 33: Pidoco, Startups und Software as a Service","genre":"Technik
-        - Mobile","bitrate":"48","url":"http://reliveradio.de"}]}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJDb3B5cmlnaHQiOiJpY2VtYXN0ZXJAbG9jYWxob3N0IiwiTG9jYXRpb24i
+        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6Ii0yMSIsIm1vdW50cyI6W3si
+        bW91bnQiOiIvMjQubXAzIiwic2VydmVyX25hbWUiOiJSZWxpdmVSYWRpbyBN
+        aXgiLCJsaXN0ZW5lcnMiOiIyIiwiZGVzY3JpcHRpb24iOiJEZXIgTWl4IGlz
+        dCB1bnNlciBWb2xscHJvZ3JhbW0uIFZvbSBBdWRpb3RhZ2VidWNoIMODwrxi
+        ZXIgZGllIENvbWVkeS1TaG93IHVuZCBkZW4gU3BvcnRrb21tZW50YXIgYmlz
+        IGhpbiB6dW0gU3BpZWxlcmF0Z2ViZXIgd2lyZCBoaWVyIGFsbGVzIGdlc2Vu
+        ZGV0LCB3YXMgZGFzIEhlcnogYmVnZWhydC4iLCJ0aXRsZSI6IlN0YW1tdGlz
+        Y2hwaGlsb3NvcGhlbiAtIEZvbGdlIDU5OiBOZXcgWW9yaywgUmlvLCBFaWNo
+        ZW5iw7xobCIsImdlbnJlIjoiTWl4IC0gRGVza3RvcCIsImJpdHJhdGUiOiIx
+        MjgiLCJ1cmwiOiJodHRwOi8vcmVsaXZlcmFkaW8uZGUvc3RyZWFtL21peCJ9
+        LHsibW91bnQiOiIvMjRtb2JpbGUubXAzIiwic2VydmVyX25hbWUiOiJSZWxp
+        dmVSYWRpbyBNaXgiLCJsaXN0ZW5lcnMiOiIwIiwiZGVzY3JpcHRpb24iOiJE
+        ZXIgTWl4IGlzdCB1bnNlciBWb2xscHJvZ3JhbW0uIFZvbSBBdWRpb3RhZ2Vi
+        dWNoIMODwrxiZXIgZGllIENvbWVkeS1TaG93IHVuZCBkZW4gU3BvcnRrb21t
+        ZW50YXIgYmlzIGhpbiB6dW0gU3BpZWxlcmF0Z2ViZXIgd2lyZCBoaWVyIGFs
+        bGVzIGdlc2VuZGV0LCB3YXMgZGFzIEhlcnogYmVnZWhydC4iLCJ0aXRsZSI6
+        IlN0YW1tdGlzY2hwaGlsb3NvcGhlbiAtIEZvbGdlIDU5OiBOZXcgWW9yaywg
+        UmlvLCBFaWNoZW5iw7xobCIsImdlbnJlIjoiTWl4IC0gTW9iaWxlIiwiYml0
+        cmF0ZSI6IjQ4IiwidXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVh
+        bS9taXgifSx7Im1vdW50IjoiL2t1bHR1ci5tcDMiLCJzZXJ2ZXJfbmFtZSI6
+        IlJlbGl2ZVJhZGlvIEt1bHR1ciIsImxpc3RlbmVycyI6IjEiLCJkZXNjcmlw
+        dGlvbiI6IldpZSBoZWlzc3QgZGVyIG5ldWUgRmlsbSBtaXQgQnVkIFNwZW5j
+        ZXI/IFdlbGNoZXMgQnVjaCBzb2xsIGljaCBhbHMgbsODwqRjaHN0ZXMgbGVz
+        ZW4gdW5kIHdhcyBzb2xsIG1pciBkaWVzZXIgU29uZ3RleHQgc2FnZW4/IElt
+        IEt1bHR1ci1TdHJlYW0gZmluZGVzdCBkdSBQb2RjYXN0cywgZGllIHNpY2gg
+        bWl0IGdlbmF1IHNvbGNoZW4gVGhlbWVuIGJlZmFzc2VuLiIsInRpdGxlIjoi
+        IC0gIiwiZ2VucmUiOiJLdWx0dXIgLSBEZXNrdG9wIiwiYml0cmF0ZSI6IjEy
+        OCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJlYW0va3VsdHVy
+        In0seyJtb3VudCI6Ii9rdWx0dXJtb2JpbGUubXAzIiwic2VydmVyX25hbWUi
+        OiJSZWxpdmVSYWRpbyBLdWx0dXIiLCJsaXN0ZW5lcnMiOiIwIiwiZGVzY3Jp
+        cHRpb24iOiJXaWUgaGVpc3N0IGRlciBuZXVlIEZpbG0gbWl0IEJ1ZCBTcGVu
+        Y2VyPyBXZWxjaGVzIEJ1Y2ggc29sbCBpY2ggYWxzIG7Dg8KkY2hzdGVzIGxl
+        c2VuIHVuZCB3YXMgc29sbCBtaXIgZGllc2VyIFNvbmd0ZXh0IHNhZ2VuPyBJ
+        bSBLdWx0dXItU3RyZWFtIGZpbmRlc3QgZHUgUG9kY2FzdHMsIGRpZSBzaWNo
+        IG1pdCBnZW5hdSBzb2xjaGVuIFRoZW1lbiBiZWZhc3Nlbi4iLCJ0aXRsZSI6
+        IiAtICIsImdlbnJlIjoiS3VsdHVyIC0gTW9iaWxlIiwiYml0cmF0ZSI6IjQ4
+        IiwidXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS9rdWx0dXIi
+        fSx7Im1vdW50IjoiL3RlY2huaWsubXAzIiwic2VydmVyX25hbWUiOiJSZWxp
+        dmVSYWRpbyBUZWNobmlrIiwibGlzdGVuZXJzIjoiMSIsImRlc2NyaXB0aW9u
+        IjoiV2FzIHR1dCBzaWNoIGltIEludGVybmV0PyBXZWxjaGUgRmVhdHVyZXMg
+        aGF0IGRpZSBuZXVlIFNtYXJ0cGhvbmUtQXBwIHVuZCB3YXMgc2FnZW4gRGF0
+        ZW5zY2jDg8K8dHplciBkYXp1PyBJbSBUZWNobmlrLVN0cmVhbSBmaW5kZXN0
+        IGR1IFBvZGNhc3RzLCBkaWUgc2ljaCBtaXQgZ2VuYXUgc29sY2hlbiBEaW5n
+        ZW4gYmVmYXNzZW4uIiwidGl0bGUiOiIgLSAiLCJnZW5yZSI6IlRlY2huaWsg
+        LSBEZXNrdG9wIiwiYml0cmF0ZSI6IjEyOCIsInVybCI6Imh0dHA6Ly9yZWxp
+        dmVyYWRpby5kZS9zdHJlYW0vdGVjaG5payJ9LHsibW91bnQiOiIvdGVjaG5p
+        a21vYmlsZS5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIFRlY2hu
+        aWsiLCJsaXN0ZW5lcnMiOiIwIiwiZGVzY3JpcHRpb24iOiJXYXMgdHV0IHNp
+        Y2ggaW0gSW50ZXJuZXQ/IFdlbGNoZSBGZWF0dXJlcyBoYXQgZGllIG5ldWUg
+        U21hcnRwaG9uZS1BcHAgdW5kIHdhcyBzYWdlbiBEYXRlbnNjaMODwrx0emVy
+        IGRhenU/IEltIFRlY2huaWstU3RyZWFtIGZpbmRlc3QgZHUgUG9kY2FzdHMs
+        IGRpZSBzaWNoIG1pdCBnZW5hdSBzb2xjaGVuIERpbmdlbiBiZWZhc3Nlbi4i
+        LCJ0aXRsZSI6IiAtICIsImdlbnJlIjoiVGVjaG5payAtIE1vYmlsZSIsImJp
+        dHJhdGUiOiI0OCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJl
+        YW0vdGVjaG5payJ9XX0=
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 - request:
     method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-09-28
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-07
     body:
       encoding: US-ASCII
       string: ''
@@ -60,21 +102,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:22:25 GMT
+      - Thu, 07 Nov 2013 20:02:37 GMT
       Server:
       - Apache/2.2.3 (CentOS)
       X-Powered-By:
       - PHP/5.3.11
       Expires:
-      - Sat, 21 Sep 2013 09:22:25 GMT
+      - Thu, 31 Oct 2013 20:02:37 GMT
       Cache-Control:
       - no-cache, must-revalidate, max-age=0
       Pragma:
       - no-cache
       X-Pingback:
       - http://hoersuppe.de/xmlrpc.php
+      Link:
+      - <http://hoersuppe.de/?p=43845>; rel=shortlink
       Last-Modified:
-      - Sat, 28 Sep 2013 09:22:25 GMT
+      - Thu, 07 Nov 2013 20:02:37 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -83,22 +127,17 @@ http_interactions:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4858","podcast":"quasselstrippen","state":"1","type":"0","synced":"1","title":"Quasselstrippen","url":"http:\/\/die-quasselstrippen.de\/","streamurl":"http:\/\/streams.xenim.de\/quasselstrippen.mp3.m3u","livedate":"2013-09-28
-        11:00:00","duration":"120","twittered":"1"},{"id":"3265","podcast":"dradio-online-talk","state":"1","type":"0","synced":"1","title":"DRadio
-        Wissen Online Talk","url":"http:\/\/wissen.dradio.de\/online-talk.125.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-09-28
-        11:00:00","duration":"60","twittered":"1"},{"id":"5344","podcast":"raidenger","state":"1","type":"0","synced":"1","title":"Raidenger","url":"http:\/\/raidenger.de\/","streamurl":"http:\/\/176.28.50.139:8000\/high","livedate":"2013-09-28
-        13:00:00","duration":"120","twittered":"0"},{"id":"5450","podcast":"1337kultur","state":"1","type":"0","synced":"1","title":"1337kultur
-        - Tabletop Rollenspiele","url":"http:\/\/xsn.io\/eaK","streamurl":"http:\/\/xsn.io\/1337kultur.mp3","livedate":"2013-09-28
-        13:37:00","duration":"180","twittered":"0"},{"id":"3135","podcast":"breitband","state":"1","type":"0","synced":"1","title":"Breitband","url":"http:\/\/breitband.dradio.de\/","streamurl":"http:\/\/www.dradio.de\/streaming\/dkultur.m3u","livedate":"2013-09-28
-        14:00:00","duration":"60","twittered":"0"},{"id":"5317","podcast":"culinaricast","state":"1","type":"3","synced":"1","title":"H\u00f6rertreffen
-        Culinaricast Berlin","url":"http:\/\/www.culinaricast.de\/2013\/08\/20\/hoerertreffen-28-09-2013-berlin\/","streamurl":"https:\/\/www.google.de\/maps\/preview#!q=+Frankfurter+Allee+35+-+37++10247+Berlin&data=!1m4!1m3!1d1786!2d13.4617917!3d52.5150419!4m10!1m9!4m8!1m3!1d119878!2d7.5885547!3d50.3462931!3m2!1i1024!2i1130!4f13.1","livedate":"2013-09-28
-        14:00:00","duration":"255","twittered":"0"},{"id":"3617","podcast":"trackback","state":"1","type":"0","synced":"1","title":"trackback","url":"http:\/\/www.fritz.de\/programm\/trackback.html","streamurl":"http:\/\/www.fritz.de\/live.m3u","livedate":"2013-09-28
-        18:00:00","duration":"120","twittered":"0"}]}'
+      string: '{"status":1,"msg":"ok","data":[{"id":"4456","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2013-11-07
+        16:00:00","duration":"90","twittered":"1"},{"id":"3664","podcast":"wasmitmedien","state":"1","type":"0","synced":"1","title":"Was
+        mit Medien","url":"http:\/\/wissen.dradio.de\/daniel-fiene-und-herr-paehler.1669.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-11-07
+        18:00:00","duration":"90","twittered":"1"},{"id":"3043","podcast":"binaergewitter","state":"1","type":"0","synced":"1","title":"Bin\u00e4rgewitter-Talk","url":"http:\/\/blog.binaergewitter.de\/","streamurl":"http:\/\/streams.xenim.de\/binaergewitter.mp3.m3u","livedate":"2013-11-07
+        19:30:00","duration":"180","twittered":"1"},{"id":"6847","podcast":"wir-mussen-reden","state":"1","type":"0","synced":"1","title":"WMR","url":"http:\/\/wir.muessenreden.de","streamurl":"http:\/\/streams.xenim.de\/wmr.mp3","livedate":"2013-11-07
+        20:00:00","duration":"150","twittered":"1"}]}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 - request:
     method: get
-    uri: http://newapi.reliveradio.de/api/upcoming-info?num=15
+    uri: http://kulturzentrale.reliveradio.de/api/upcoming-info?num=50
     body:
       encoding: US-ASCII
       string: ''
@@ -115,13 +154,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 09:22:25 GMT
+      - Thu, 07 Nov 2013 20:02:37 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=k5vkpq436sb7rqoab5nvrfnnc0; path=/
+      - PHPSESSID=ta6pj87u873vjtq0bfclen9c34; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -131,59 +170,126 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1039'
+      - '2075'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-09-28 11:22:25","utc_from":"2013-09-28 09:22:25","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"ABSradio","track_title":"Folge
-        3: Der Veganer ist hAppy","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        08:07:12","ends":"2013-09-28 10:31:21","starts_locale":"2013-09-28 10:07:12","ends_locale":"2013-09-28
-        12:31:21"},{"artist_name":"piratte looking at things","track_title":"Folge
-        9: Pausenclown","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        10:31:21","ends":"2013-09-28 10:45:17","starts_locale":"2013-09-28 12:31:21","ends_locale":"2013-09-28
-        12:45:17"},{"artist_name":"Sternengeschichten","track_title":"Folge 35: Das
-        Paradoxon der schwachen jungen Sonne","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        10:45:17","ends":"2013-09-28 10:53:20","starts_locale":"2013-09-28 12:45:17","ends_locale":"2013-09-28
-        12:53:20"},{"artist_name":"Sternengeschichten","track_title":"Folge 1: Was
-        sind Sterne?","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        10:53:20","ends":"2013-09-28 10:59:21","starts_locale":"2013-09-28 12:53:20","ends_locale":"2013-09-28
-        12:59:21"},{"artist_name":"Metrolaut","track_title":"Folge 7: Castor, Kohle,
-        Katastrophe","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        10:59:21","ends":"2013-09-28 12:13:43","starts_locale":"2013-09-28 12:59:21","ends_locale":"2013-09-28
-        14:13:43"},{"artist_name":"Metrolaut","track_title":"Folge 16: Licht im Club","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        12:13:43","ends":"2013-09-28 14:09:35","starts_locale":"2013-09-28 14:13:43","ends_locale":"2013-09-28
-        16:09:35"},{"artist_name":"Metrolaut","track_title":"Folge 4: Tennis-Hools,
-        Fanboys und die linksextreme Mafia","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        14:09:35","ends":"2013-09-28 15:06:30","starts_locale":"2013-09-28 16:09:35","ends_locale":"2013-09-28
-        17:06:30"},{"artist_name":"ABSradio","track_title":"Folge 1: Alles auf Anfang","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        15:06:30","ends":"2013-09-28 16:39:08","starts_locale":"2013-09-28 17:06:30","ends_locale":"2013-09-28
-        18:39:08"},{"artist_name":"Sternengeschichten","track_title":"Folge 9: Immer
-        um den Stern herum: Das Sonnensystem im Computer","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        16:39:08","ends":"2013-09-28 16:48:22","starts_locale":"2013-09-28 18:39:08","ends_locale":"2013-09-28
-        18:48:22"},{"artist_name":"Metrolaut","track_title":"Folge 13: Piraten auf
-        der Flucht nach Berlin","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2012
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        16:48:22","ends":"2013-09-28 19:09:09","starts_locale":"2013-09-28 18:48:22","ends_locale":"2013-09-28
-        21:09:09"},{"artist_name":"Viva Britannia","track_title":"Folge 14: Das K\u00f6nigshaus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        19:09:09","ends":"2013-09-28 19:26:01","starts_locale":"2013-09-28 21:09:09","ends_locale":"2013-09-28
-        21:26:01"},{"artist_name":"Metrolaut","track_title":"Folge 18.2: Gezi-Park","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        19:26:01","ends":"2013-09-28 19:40:57","starts_locale":"2013-09-28 21:26:01","ends_locale":"2013-09-28
-        21:40:57"},{"artist_name":"ABSradio","track_title":"Folge 9: Modern Dingens
-        Merto Scheiss","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        19:40:57","ends":"2013-09-28 21:25:19","starts_locale":"2013-09-28 21:40:57","ends_locale":"2013-09-28
-        23:25:19"},{"artist_name":"Viva Britannia","track_title":"Folge 4: Das Jahr","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-09-28
-        21:25:19","ends":"2013-09-28 21:37:57","starts_locale":"2013-09-28 23:25:19","ends_locale":"2013-09-28
-        23:37:57"},{"artist_name":"Funkenstrahlen Podcast","track_title":"Erstausstrahlung
-        Folge 6: Aus dem Urwald","comments":null,"year":"","url":null,"info_url":"","artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":"","starts":"2013-09-28
-        21:37:57","ends":"2013-09-28 21:49:26","starts_locale":"2013-09-28 23:37:57","ends_locale":"2013-09-28
-        23:49:26"}]}'
+      string: '{"from":"2013-11-07 21:02:37","utc_from":"2013-11-07 20:02:37","num":"50","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"TREKcast","track_title":"Folge
+        23: Klingonisch f\u00fcr Anf\u00e4nger","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        19:02:59.173046","ends":"2013-11-07 20:42:15.966832","starts_locale":"2013-11-07
+        20:02:59","ends_locale":"2013-11-07 21:42:15"},{"artist_name":"Geschichtendose","track_title":"Special
+        1: Aufruf: Jahresendfestkalender","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        20:42:15.966832","ends":"2013-11-07 20:45:46.723272","starts_locale":"2013-11-07
+        21:42:15","ends_locale":"2013-11-07 21:45:46"},{"artist_name":"Retrozirkel","track_title":"Folge
+        28: The Secret of Monkey Island","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        20:45:46.723272","ends":"2013-11-07 21:53:45.010982","starts_locale":"2013-11-07
+        21:45:46","ends_locale":"2013-11-07 22:53:45"},{"artist_name":"PodUnion Magazin
+        Podcast","track_title":"Folge 1: Einmal Berlin und zur\u00fcck","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Namensnennung 3.0 Schweiz Lizenz","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        21:53:45.010982","ends":"2013-11-07 22:59:43.01895","starts_locale":"2013-11-07
+        22:53:45","ends_locale":"2013-11-07 23:59:43"},{"artist_name":"jingle","track_title":"Jingle
+        Flattr - Polly","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        22:59:43.01895","ends":"2013-11-07 23:00:07.138519","starts_locale":"2013-11-07
+        23:59:43","ends_locale":"2013-11-08 00:00:07"},{"artist_name":"Polyeder Podcast","track_title":"Folge
+        45: Essen Spiel 2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        23:00:00","ends":"2013-11-07 23:26:02.890068","starts_locale":"2013-11-08
+        00:00:00","ends_locale":"2013-11-08 00:26:02"},{"artist_name":"Pottcast","track_title":"Folge
+        13: Verspielt vs. Verzockt","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
+        23:26:02.890068","ends":"2013-11-08 00:57:58.112381","starts_locale":"2013-11-08
+        00:26:02","ends_locale":"2013-11-08 01:57:58"},{"artist_name":"megamagisch","track_title":"Folge
+        11: Grrrrrruuuselig","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        CC BY-NC-SA 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        00:57:58.112381","ends":"2013-11-08 02:14:06.402857","starts_locale":"2013-11-08
+        01:57:58","ends_locale":"2013-11-08 03:14:06"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        02:14:06.402857","ends":"2013-11-08 02:14:46.167551","starts_locale":"2013-11-08
+        03:14:06","ends_locale":"2013-11-08 03:14:46"},{"artist_name":"Krimikiste","track_title":"Folge
+        1018: Derek B. Miller - Ein seltsamer Ort zum Sterben","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        02:14:46.167551","ends":"2013-11-08 02:19:25.916055","starts_locale":"2013-11-08
+        03:14:46","ends_locale":"2013-11-08 03:19:25"},{"artist_name":"Ganz einfach
+        leben Podcast","track_title":"Folge 34: Gespraech mit Daniel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        02:19:25.916055","ends":"2013-11-08 03:20:47.00743","starts_locale":"2013-11-08
+        03:19:25","ends_locale":"2013-11-08 04:20:47"},{"artist_name":"Radio GFM","track_title":"Folge
+        53","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        03:20:47.00743","ends":"2013-11-08 04:23:33.745548","starts_locale":"2013-11-08
+        04:20:47","ends_locale":"2013-11-08 05:23:33"},{"artist_name":"Hysterika","track_title":"Folge
+        4: Medieneintopf","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        04:23:33.745548","ends":"2013-11-08 06:22:39.800106","starts_locale":"2013-11-08
+        05:23:33","ends_locale":"2013-11-08 07:22:39"},{"artist_name":"SneakPod","track_title":"Folge
+        309: Gravity","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        06:22:39.800106","ends":"2013-11-08 07:14:19.247169","starts_locale":"2013-11-08
+        07:22:39","ends_locale":"2013-11-08 08:14:19"},{"artist_name":"jingle","track_title":"Jingle
+        Allgmein - Genervt","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        07:14:19.247169","ends":"2013-11-08 07:14:32.757237","starts_locale":"2013-11-08
+        08:14:19","ends_locale":"2013-11-08 08:14:32"},{"artist_name":"Viva Britannia","track_title":"Folge
+        21: Doctor Who","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        07:14:32.757237","ends":"2013-11-08 07:47:43.908757","starts_locale":"2013-11-08
+        08:14:32","ends_locale":"2013-11-08 08:47:43"},{"artist_name":"Whocast","track_title":"Folge
+        258: Die News mit dem Schotton","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        07:47:43.908757","ends":"2013-11-08 08:31:45.668215","starts_locale":"2013-11-08
+        08:47:43","ends_locale":"2013-11-08 09:31:45"},{"artist_name":"TREKcast","track_title":"Folge
+        23: Klingonisch f\u00fcr Anf\u00e4nger","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        08:31:45.668215","ends":"2013-11-08 10:11:02.462001","starts_locale":"2013-11-08
+        09:31:45","ends_locale":"2013-11-08 11:11:02"},{"artist_name":"Serienabfertigung","track_title":"Folge
+        19: Agents of S.H.I.E.L.D.","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        10:11:02.462001","ends":"2013-11-08 11:06:43.680028","starts_locale":"2013-11-08
+        11:11:02","ends_locale":"2013-11-08 12:06:43"},{"artist_name":"jingle","track_title":"Jingle
+        Flattr - Kleingeld","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        11:06:43.680028","ends":"2013-11-08 11:07:02.353634","starts_locale":"2013-11-08
+        12:06:43","ends_locale":"2013-11-08 12:07:02"},{"artist_name":"Retinacast","track_title":"Folge
+        23: Orange is the New Black","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        11:07:02.353634","ends":"2013-11-08 12:05:16.488384","starts_locale":"2013-11-08
+        12:07:02","ends_locale":"2013-11-08 13:05:16"},{"artist_name":"Landfunker
+        Podcast","track_title":"Folge 16: Freiheit f\u00fcr Uli und das Lama","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        12:05:16.488384","ends":"2013-11-08 13:07:43.63682","starts_locale":"2013-11-08
+        13:05:16","ends_locale":"2013-11-08 14:07:43"},{"artist_name":"Krimikiste","track_title":"Folge
+        1019: Roman Voosen, Kerstin Danielsson - Rotwild","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        13:07:43.63682","ends":"2013-11-08 13:12:02.379246","starts_locale":"2013-11-08
+        14:07:43","ends_locale":"2013-11-08 14:12:02"},{"artist_name":"Pflaster","track_title":"Folge
+        28: Niko Alm","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        CC BY 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        13:12:02.379246","ends":"2013-11-08 14:19:14.706366","starts_locale":"2013-11-08
+        14:12:02","ends_locale":"2013-11-08 15:19:14"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        14:19:14.706366","ends":"2013-11-08 14:20:07.866208","starts_locale":"2013-11-08
+        15:19:14","ends_locale":"2013-11-08 15:20:07"},{"artist_name":"M\u00e4nnerabend","track_title":"Folge
+        19: German Craft Beer Ipas","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        14:20:07.866208","ends":"2013-11-08 17:24:57.645505","starts_locale":"2013-11-08
+        15:20:07","ends_locale":"2013-11-08 18:24:57"},{"artist_name":"So redma do","track_title":"Folge
+        11: Do kummt die gaunze Bagage","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Austria","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        17:24:57.645505","ends":"2013-11-08 18:33:19.474281","starts_locale":"2013-11-08
+        18:24:57","ends_locale":"2013-11-08 19:33:19"},{"artist_name":"jingle","track_title":"Jingle
+        Allgemein - Bus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        18:33:19.474281","ends":"2013-11-08 18:33:57.016957","starts_locale":"2013-11-08
+        19:33:19","ends_locale":"2013-11-08 19:33:57"},{"artist_name":"megamagisch","track_title":"Folge
+        11: Grrrrrruuuselig","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        CC BY-NC-SA 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        18:33:57.016957","ends":"2013-11-08 19:50:05.307433","starts_locale":"2013-11-08
+        19:33:57","ends_locale":"2013-11-08 20:50:05"},{"artist_name":"KonScience","track_title":"Folge
+        11: Ey Alter, mach'' Protein!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        19:50:05.307433","ends":"2013-11-08 21:04:45.287999","starts_locale":"2013-11-08
+        20:50:05","ends_locale":"2013-11-08 22:04:45"},{"artist_name":"Methodisch
+        inkorrekt","track_title":"Folge 12b: Previously (on) Lost","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        21:04:45.287999","ends":"2013-11-08 21:46:09.637717","starts_locale":"2013-11-08
+        22:04:45","ends_locale":"2013-11-08 22:46:09"},{"artist_name":"jingle","track_title":"Jingle
+        Flattr - Polly","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        21:46:09.637717","ends":"2013-11-08 21:46:33.757286","starts_locale":"2013-11-08
+        22:46:09","ends_locale":"2013-11-08 22:46:33"},{"artist_name":"Einschlafen
+        Podcast","track_title":"Folge 257: Beschleuniger und Frau Jenny Treibel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        21:46:33.757286","ends":"2013-11-08 22:27:10.932434","starts_locale":"2013-11-08
+        22:46:33","ends_locale":"2013-11-08 23:27:10"},{"artist_name":"Hitmist","track_title":"Folge
+        37: Leslie und der S\u00e4urehagel","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-08
+        22:27:10.932434","ends":"2013-11-08 23:00:05.927371","starts_locale":"2013-11-08
+        23:27:10","ends_locale":"2013-11-09 00:00:05"}]}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 09:22:48 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 recorded_with: VCR 2.5.0
