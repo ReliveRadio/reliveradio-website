@@ -49,14 +49,11 @@ module StreamHelper
 	end
 
 	def self.fetch_episode_schedule(url)
-		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=20", 10.minutes)['files']
+		episodes = ExternalApiHelper.fetch_json_with_cache(url + "?num=50", 15.minutes)['files']
 		if !episodes.blank?
-			episodes = episodes.first(10)
 
 			# remove all passed podcasts from the episodes array
 			episodes.delete_if { |episode| Time.parse(episode['ends_locale']) < Time.now }
-			# do not display jingles in the schedule
-			episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
 
 			# add some more metadata to episodes array
 			episodes.each do |episode|
@@ -83,10 +80,24 @@ module StreamHelper
 			if !live_episode.blank?
 				if !((live_episode['starts_locale'] < Time.now) && (live_episode['ends_locale'] > Time.now))
 					# first episode is NOT live actually
-					raise "Airtime API did not return a live episode: " + url
+					raise "Could not find a live episode: " + url + "\nCACHE CONTENT IS:\n" + Rails.cache.read(url + "?num=50").to_s + "\nFINAL EPISODES LIST IS:\n" + episodes.to_s + "\nAIRTIME API RETURNS NOW:\n" + ExternalApiHelper.fetch_json(url + "?num=50").to_s
 				else
 					# first episode is live
-					live_episode["isLive"] = true
+					
+					# however it could be a jingle!
+					episodes.each do |episode|
+						# find the first episode that is not a jingle
+						if episode["artist_name"] != "jingle"
+							episode["isLive"] = true # and mark it as live for the view later
+							break
+						end
+					end
+					
+					# do not display jingles in the schedule
+					episodes.delete_if { |episode| episode["artist_name"] == "jingle" }
+
+					# only show the first 10 episodes from the remaining episodes
+					episodes = episodes.first(10)
 					return episodes
 				end
 			end

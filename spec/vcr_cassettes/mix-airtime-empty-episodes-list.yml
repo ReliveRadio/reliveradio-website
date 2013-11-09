@@ -2,70 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://stream.reliveradio.de:8000/json.xsl?Mix
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - text/plain
-      Content-Length:
-      - '1586'
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJDb3B5cmlnaHQiOiJpY2VtYXN0ZXJAbG9jYWxob3N0IiwiTG9jYXRpb24i
-        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6Ii02IiwibW91bnRzIjpbeyJt
-        b3VudCI6Ii8yNC5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIE1p
-        eCIsImxpc3RlbmVycyI6IjEzIiwiZGVzY3JpcHRpb24iOiJQb2RjYXN0cyBy
-        dW5kIHVtIGRpZSBVaHIhIiwidGl0bGUiOiJLw7xjaGVucmFkaW8gLSBGb2xn
-        ZSAxMjc6IFdvbGZnYW5nIE5lc2tvdmljIiwiZ2VucmUiOiJNaXggLSBEZXNr
-        dG9wIiwiYml0cmF0ZSI6IjEyOCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRp
-        by5kZSJ9LHsibW91bnQiOiIvMjRtb2JpbGUubXAzIiwic2VydmVyX25hbWUi
-        OiJSZWxpdmVSYWRpbyBNaXgiLCJsaXN0ZW5lcnMiOiIwIiwiZGVzY3JpcHRp
-        b24iOiJQb2RjYXN0cyBydW5kIHVtIGRpZSBVaHIhIiwidGl0bGUiOiJLw7xj
-        aGVucmFkaW8gLSBGb2xnZSAxMjc6IFdvbGZnYW5nIE5lc2tvdmljIiwiZ2Vu
-        cmUiOiJNaXggLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwiOiJodHRw
-        Oi8vcmVsaXZlcmFkaW8uZGUifSx7Im1vdW50IjoiL2t1bHR1ci5tcDMiLCJz
-        ZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIEt1bHR1ciIsImxpc3RlbmVycyI6
-        IjUiLCJkZXNjcmlwdGlvbiI6Ikt1bHR1ci1Qb2RjYXN0cyBydW5kIHVtIGRp
-        ZSBVaHIhIiwidGl0bGUiOiJUZXh0bGFzdGlnIC0gRm9sZ2UgNTU6IElGLVRy
-        ZWZmZW4gTcO8bmNoZW4gMjAxMyIsImdlbnJlIjoiS3VsdHVyIC0gRGVza3Rv
-        cCIsImJpdHJhdGUiOiIxMjgiLCJ1cmwiOiJodHRwOi8vcmVsaXZlcmFkaW8u
-        ZGUifSx7Im1vdW50IjoiL2t1bHR1cm1vYmlsZS5tcDMiLCJzZXJ2ZXJfbmFt
-        ZSI6IlJlbGl2ZVJhZGlvIEt1bHR1ciIsImxpc3RlbmVycyI6IjAiLCJkZXNj
-        cmlwdGlvbiI6Ikt1bHR1ci1Qb2RjYXN0cyBydW5kIHVtIGRpZSBVaHIhIiwi
-        dGl0bGUiOiJUZXh0bGFzdGlnIC0gRm9sZ2UgNTU6IElGLVRyZWZmZW4gTcO8
-        bmNoZW4gMjAxMyIsImdlbnJlIjoiS3VsdHVyIC0gTW9iaWxlIiwiYml0cmF0
-        ZSI6IjQ4IiwidXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlIn0seyJtb3Vu
-        dCI6Ii90ZWNobmlrLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8g
-        VGVjaG5payIsImxpc3RlbmVycyI6IjEiLCJkZXNjcmlwdGlvbiI6IlRlY2hu
-        aWstUG9kY2FzdHMgcnVuZCB1bSBkaWUgVWhyISIsInRpdGxlIjoiR2FkZ2V0
-        IFJhZGlvIC0gRm9sZ2UgMTU6IENvbWViYWNrIGF1ZiBaZWl0IiwiZ2VucmUi
-        OiJUZWNobmlrIC0gRGVza3RvcCIsImJpdHJhdGUiOiIxMjgiLCJ1cmwiOiJo
-        dHRwOi8vcmVsaXZlcmFkaW8uZGUifSx7Im1vdW50IjoiL3RlY2huaWttb2Jp
-        bGUubXAzIiwic2VydmVyX25hbWUiOiJSZWxpdmVSYWRpbyBUZWNobmlrIiwi
-        bGlzdGVuZXJzIjoiMCIsImRlc2NyaXB0aW9uIjoiS3VsdHVyLVBvZGNhc3Rz
-        IHJ1bmQgdW0gZGllIFVociEiLCJ0aXRsZSI6IkdhZGdldCBSYWRpbyAtIEZv
-        bGdlIDE1OiBDb21lYmFjayBhdWYgWmVpdCIsImdlbnJlIjoiVGVjaG5payAt
-        IE1vYmlsZSIsImJpdHJhdGUiOiI0OCIsInVybCI6Imh0dHA6Ly9yZWxpdmVy
-        YWRpby5kZSJ9XX0=
-    http_version: 
-  recorded_at: Fri, 20 Sep 2013 10:23:48 GMT
-- request:
-    method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-09-20
+    uri: http://mixzentrale.reliveradio.de/api/upcoming-info?num=50
     body:
       encoding: US-ASCII
       string: ''
@@ -82,58 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 20 Sep 2013 10:23:50 GMT
-      Server:
-      - Apache/2.2.3 (CentOS)
-      X-Powered-By:
-      - PHP/5.3.11
-      Expires:
-      - Fri, 13 Sep 2013 10:23:50 GMT
-      Cache-Control:
-      - no-cache, must-revalidate, max-age=0
-      Pragma:
-      - no-cache
-      X-Pingback:
-      - http://hoersuppe.de/xmlrpc.php
-      Last-Modified:
-      - Fri, 20 Sep 2013 10:23:50 GMT
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/html; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[]}'
-    http_version: 
-  recorded_at: Fri, 20 Sep 2013 10:23:48 GMT
-- request:
-    method: get
-    uri: http://newapi.reliveradio.de/api/upcoming-info?num=20
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Fri, 20 Sep 2013 10:23:51 GMT
+      - Thu, 07 Nov 2013 20:02:33 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=o07epfpk3iqg21m8ho9hvnv0s3; path=/
+      - PHPSESSID=q045msvpa8savh5ib6dv712rg7; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -143,12 +35,12 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1290'
+      - '651'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-09-20 12:23:51","utc_from":"2013-09-20 10:23:51","num":"20","AIRTIME_API_VERSION":"1.1","files":[]}'
+      string: '{"from":"2013-11-07 21:02:33","utc_from":"2013-11-07 20:02:33","num":"50","AIRTIME_API_VERSION":"1.1","files":[]}'
     http_version: 
-  recorded_at: Fri, 20 Sep 2013 10:23:48 GMT
+  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
 recorded_with: VCR 2.5.0
