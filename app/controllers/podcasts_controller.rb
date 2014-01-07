@@ -19,7 +19,7 @@ class PodcastsController < ApplicationController
   def overview
     @podcasts = Podcast.search(params[:search])
     @result_count = @podcasts.count
-    @podcasts = @podcasts.order("name").paginate(:per_page => 15, :page => params[:page])
+    @podcasts = @podcasts.order('lower("name")').paginate(:per_page => 15, :page => params[:page])
 
     respond_to do |format|
       format.html # overview.html.erb
