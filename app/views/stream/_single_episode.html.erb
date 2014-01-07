@@ -54,7 +54,15 @@
 		      <!-- WEBSITE -->
 		      <% if !podcast.url.blank? %><li><a href="<%= podcast.url %>" target="_blank"><i class="icon-globe"></i> Webseite</a></li><% end %>
 		      <!-- FEED -->
-		      <% if !podcast.feedurl.blank? %><li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>" target="_blank"><i class="icon-rss"></i> Abonnieren</a></li><% end %>
+		      <% if !podcast.feedurl.blank? %>
+			  <li>
+				<a href="#" data-dropdown="subscription-dropdown"><i class="icon-rss"></i> Abonnieren</a>
+				<ul id="subscription-dropdown" class="f-dropdown" data-dropdown-content>
+		      		<li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>" target="_blank">Instacast</a></li>
+					<li><a href="<%= podcast.feedurl %>">FeedURL</a></li>
+				</ul>
+		      </li>
+				<% end %>
 		      <!-- TWITTER -->
 		      <% if !podcast.twitterhandle.blank? %><li><a href="http://www.twitter.com/<%= podcast.twitterhandle %>" target="_blank"><i class="icon-twitter"></i> Twitter</a></li><% end %>
 		      <!-- ADN -->
