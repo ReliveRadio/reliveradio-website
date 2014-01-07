@@ -83,7 +83,7 @@ module StreamHelper
 				episode['ends_locale'] = ends
 
 				# add database information to this object to easily access that in view
-				episode["db"] = Podcast.where(["name = ?", episode['artist_name']]).first
+				episode["db"] = Podcast.where(["lower(name) = ?", episode['artist_name'].downcase]).first
 			end
 
 			# check if first episode is live actually
