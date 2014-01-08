@@ -16,4 +16,4 @@
 //= require mediaelement_rails
 //= require_tree ./sitewide
 
-$(document).foundation();
+$(function(){ $(document).foundation(); });
