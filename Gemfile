@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 3.2.14'
 gem 'sqlite3', '1.3.7'
 gem 'json', '1.8.0'
-gem 'feedzirra', :git => 'git://github.com/pauldix/feedzirra.git', :tag => 'v0.2.0.rc2'
+gem 'feedzirra', '~> 0.2.1'
 gem 'will_paginate'
 
 # Gems used only for assets and not required
@@ -14,13 +14,11 @@ gem 'will_paginate'
 group :assets do
 	gem 'sass-rails', '~> 3.2.3'
 	gem 'coffee-rails', '~> 3.2.1'
-	gem 'zurb-foundation', '~> 4.3.1'
+	gem 'zurb-foundation', '~> 4.3'
 	gem 'uglifier', '>= 1.0.3'
 	gem "font-awesome-rails", '~> 3.2.0'
 	gem "mediaelement_rails"
 	gem 'jquery-rails', '2.2.1'
-	# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-	# gem 'therubyracer', :platforms => :ruby
 end
 
 group :dev do
@@ -32,14 +30,14 @@ group :dev do
 end
 
 group :test do
-	gem 'test-unit', '2.5.4'
+	gem 'test-unit', '~> 2.5.4'
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'
 	gem 'faker'
 	gem 'capybara'
 	gem 'guard-rspec'
 	gem 'launchy'
-	gem 'database_cleaner', '< 1.1.0'
+	gem 'database_cleaner'
 	gem 'vcr'
 	gem 'webmock', '< 1.12'
 	gem 'timecop'

@@ -3,6 +3,8 @@ Reliveradio::Application.routes.draw do
   match "info/ueber" => 'info#about', :as => :about
   match "info/helfen" => 'info#help', :as => :help
   match "info/chat", :as => :chat
+  match "info/downloads" => 'info#downloads', :as => :downloads
+  match "info/faq" => 'info#faq', :as => :faq
 
   match "stream/technik" => 'stream#technique', :as => :technique_stream
   match "stream/kultur" => 'stream#culture', :as => :culture_stream

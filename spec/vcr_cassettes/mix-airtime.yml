@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Nov 2013 20:02:33 GMT
+      - Sat, 09 Nov 2013 15:45:19 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.8
       Set-Cookie:
-      - PHPSESSID=tjps97tvq7lvbqtmf88agkls70; path=/
+      - PHPSESSID=kt2da47ejsq5d8ku35cf6f8ge5; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,33 +35,62 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '652'
+      - '1006'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-07 21:02:33","utc_from":"2013-11-07 20:02:33","num":25,"AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Stammtischphilosophen","track_title":"Folge
-        59: New York, Rio, Eichenb\u00fchl","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
-        19:39:42.663208","ends":"2013-11-07 21:28:51.163208","starts_locale":"2013-11-07
-        20:39:42","ends_locale":"2013-11-07 22:28:51"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
-        21:28:51.163208","ends":"2013-11-07 21:29:30.927902","starts_locale":"2013-11-07
-        22:28:51","ends_locale":"2013-11-07 22:29:30"},{"artist_name":"Krimikiste","track_title":"Folge
-        1019: Roman Voosen, Kerstin Danielsson - Rotwild","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-07
-        21:29:30.927902","ends":"2013-11-07 21:33:51.327902","starts_locale":"2013-11-07
-        22:29:30","ends_locale":"2013-11-07 22:33:51"},{"artist_name":"Methodisch
-        inkorrekt","track_title":"Folge 12b: Previously (on) Lost","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
-        21:33:51.327902","ends":"2013-11-07 22:15:25.027902","starts_locale":"2013-11-07
-        22:33:51","ends_locale":"2013-11-07 23:15:25"},{"artist_name":"SharePoint
-        Podcast","track_title":"Folge 282: Infos Infos Infos","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NoDerivs 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
-        22:15:25.027902","ends":"2013-11-07 22:31:29.727902","starts_locale":"2013-11-07
-        23:15:25","ends_locale":"2013-11-07 23:31:29"},{"artist_name":"Hitmist","track_title":"Folge
-        65: Tochtergesellschaft v\u00e4terlicherseits","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-07
-        22:31:29.727902","ends":"2013-11-07 22:59:06.427902","starts_locale":"2013-11-07
-        23:31:29","ends_locale":"2013-11-07 23:59:06"}]}'
+      string: '{"from":"2013-11-09 16:45:19","utc_from":"2013-11-09 15:45:19","num":25,"AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
+        Ortsgespr\u00e4che","track_title":"Folge 221: Lauersb\u00fcrofieber","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        15:19:27.635104","ends":"2013-11-09 17:11:45.135104","starts_locale":"2013-11-09
+        16:19:27","ends_locale":"2013-11-09 18:11:45"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        17:11:45.135104","ends":"2013-11-09 17:12:24.899798","starts_locale":"2013-11-09
+        18:11:45","ends_locale":"2013-11-09 18:12:24"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
+        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
+        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
+        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
+        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
+        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
+        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
+        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
+        21:33:54","ends_locale":"2013-11-09 23:08:45"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:08:45.629186","ends":"2013-11-09 22:09:25.39388","starts_locale":"2013-11-09
+        23:08:45","ends_locale":"2013-11-09 23:09:25"},{"artist_name":"Ganz einfach
+        leben Podcast","track_title":"Folge 35: Wanderkarte und so","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:09:25.39388","ends":"2013-11-09 22:16:59.89388","starts_locale":"2013-11-09
+        23:09:25","ends_locale":"2013-11-09 23:16:59"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:16:59.89388","ends":"2013-11-09 22:17:39.658574","starts_locale":"2013-11-09
+        23:16:59","ends_locale":"2013-11-09 23:17:39"},{"artist_name":"Talker-Lounge","track_title":"Talker-Lounge
+        Interview 20.9.2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:17:39.658574","ends":"2013-11-09 22:42:19.058574","starts_locale":"2013-11-09
+        23:17:39","ends_locale":"2013-11-09 23:42:19"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:42:19.058574","ends":"2013-11-09 22:42:58.823268","starts_locale":"2013-11-09
+        23:42:19","ends_locale":"2013-11-09 23:42:58"},{"artist_name":"Radio Bastard","track_title":"Folge
+        760: Meer T\u00fcten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:42:58.823268","ends":"2013-11-09 22:50:04.323268","starts_locale":"2013-11-09
+        23:42:58","ends_locale":"2013-11-09 23:50:04"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:50:04.323268","ends":"2013-11-09 22:50:44.087962","starts_locale":"2013-11-09
+        23:50:04","ends_locale":"2013-11-09 23:50:44"},{"artist_name":"Wir h\u00f6ren
+        Stimmen","track_title":"Folge 9: Comic Review","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Copyright (c) Benjamin Behnke, Stephanie Dahn, Lars Engelmann, Stefan Thesing
+        2013, CreativeCommons Attribution-ShareAlike 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        22:50:44.087962","ends":"2013-11-09 23:00:00.36159","starts_locale":"2013-11-09
+        23:50:44","ends_locale":"2013-11-10 00:00:00"}]}'
     http_version: 
-  recorded_at: Thu, 07 Nov 2013 20:02:00 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
+recorded_with: VCR 2.6.0

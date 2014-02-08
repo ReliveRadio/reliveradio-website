@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://mixzentrale.reliveradio.de/api/upcoming-info?num=7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Nov 2013 15:45:21 GMT
+      Server:
+      - Apache/2.2.22 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.8
+      Set-Cookie:
+      - PHPSESSID=bu7mabfq6s5trk2vrif08v4ah2; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '600'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"from":"2013-11-09 16:45:21","utc_from":"2013-11-09 15:45:21","num":"7","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
+        Ortsgespr\u00e4che","track_title":"Folge 221: Lauersb\u00fcrofieber","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        15:19:27.635104","ends":"2013-11-09 17:11:45.135104","starts_locale":"2013-11-09
+        16:19:27","ends_locale":"2013-11-09 18:11:45"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        17:11:45.135104","ends":"2013-11-09 17:12:24.899798","starts_locale":"2013-11-09
+        18:11:45","ends_locale":"2013-11-09 18:12:24"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
+        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
+        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
+        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
+        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
+        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
+        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
+        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
+        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
+        21:33:54","ends_locale":"2013-11-09 23:08:45"}]}'
+    http_version: 
+  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
+recorded_with: VCR 2.6.0

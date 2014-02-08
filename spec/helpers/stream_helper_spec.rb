@@ -40,22 +40,43 @@ describe "StreamHelper" do
 			it "should should raise an error if airtime returns an empty episodes list" do
 				expect {
 					VCR.use_cassette('mix-airtime-empty-episodes-list') do
-						@episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
+						episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
 					end
 				}.to raise_error
 			end
 			it "should should raise an error if airtime returns an episodes list without a live episode" do
 				expect {
 					VCR.use_cassette('mix-airtime-no-live-episode') do
-						@episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
+						episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
 					end
 				}.to raise_error
 			end
 		end
 
-		context "valid API call" do
+		context "custom number of episodes" do
+			it "should return 40 episodes as requested" do
+				VCR.use_cassette('mix-airtime-40') do
+					episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'], 40)
+					episodes.count.should == 40
+				end
+			end
+			it "should not return less than 2 episodes" do
+				VCR.use_cassette('mix-airtime-0') do
+					episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'], 0)
+					episodes.count.should == 2
+				end
+			end
+			it "should return 100 episodes at max" do
+				VCR.use_cassette('mix-airtime-100') do
+					episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'], 200)
+					episodes.count.should == 100
+				end
+			end
+		end
+
+		context "default valid API call" do
 			before(:all) do
-				VCR.use_cassette('mix-airtime-max20') do
+				VCR.use_cassette('mix-airtime-default') do
 					@episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'])
 				end
 			end
@@ -66,8 +87,8 @@ describe "StreamHelper" do
 			it "should not return blank" do
 				@episodes.should_not be_blank
 			end
-			it "should only contain 10 episodes" do
-				@episodes.count == 10
+			it "should return 10 episodes by default" do
+				@episodes.count.should == 10
 			end
 			it "should have all episodes marked as not live except the first one" do
 				@episodes.first["isLive"].should == true

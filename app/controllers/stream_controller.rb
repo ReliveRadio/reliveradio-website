@@ -2,9 +2,9 @@ require 'feedzirra'
 
 class StreamController < ApplicationController
 
-  caches_action :technique, :expires_in => 60.seconds, :cache_path => 'technique'
-  caches_action :culture, :expires_in => 60.seconds, :cache_path => 'culture'
-  caches_action :mix, :expires_in => 60.seconds, :cache_path => 'mix'
+  caches_action :technique, :expires_in => 60.seconds, :cache_path => Proc.new { |c| c.params }
+  caches_action :culture, :expires_in => 60.seconds, :cache_path => Proc.new { |c| c.params }
+  caches_action :mix, :expires_in => 60.seconds, :cache_path => Proc.new { |c| c.params }
 
   caches_action :listeners_mix, :expires_in => 30.seconds, :cache_path => 'listeners_mix'
   caches_action :listeners_culture, :expires_in => 30.seconds, :cache_path => 'listeners_technique'
@@ -41,13 +41,17 @@ class StreamController < ApplicationController
   end
 
   def render_genre(genre_name, airtime_url)
+
     # fetch live listeners count
     @listeners = StreamHelper.fetch_listeners(genre_name)
+
     # fetch really live podcasts
     @live_podcasts = StreamHelper.fetch_hoersuppe_livepodcasts
+
     # fetch episode schedule
-    @episodes = StreamHelper.fetch_episode_schedule(airtime_url)
+    @episodes = StreamHelper.fetch_episode_schedule(airtime_url, params[:episode_count])
     @live_episode = @episodes.shift # assume the first episode as live
+
     respond_to do |format|
       format.html # index.html.erb
       format.js { render 'update_episodes'}
