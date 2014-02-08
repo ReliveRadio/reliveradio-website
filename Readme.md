@@ -41,3 +41,11 @@ Darin sind aber nur begrenzt Informationen zum Podcast vorhanden - schließlich 
 ##Zugriff auf den Sendeplan
 
 ##Livestream URLs
+
+# How to add a new feature
+
+* open new feature with git flow
+* write test
+* implement
+* add to changelog
+* finish feature with git flow
