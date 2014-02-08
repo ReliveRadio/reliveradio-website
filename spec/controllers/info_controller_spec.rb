@@ -34,4 +34,27 @@ describe InfoController do
 			response.should render_template(:chat)
 		end
 	end
+
+	describe "GET #downloads" do
+		it "should be successful" do
+			get :downloads
+			response.should be_success
+		end
+		it "renders the :downloads view template" do
+			get :downloads
+			response.should render_template(:downloads)
+		end
+	end
+
+	describe "GET #faq" do
+		it "should be successful" do
+			get :faq
+			response.should be_success
+		end
+		it "renders the :faq view template" do
+			get :faq
+			response.should render_template(:faq)
+		end
+	end
+
 end
