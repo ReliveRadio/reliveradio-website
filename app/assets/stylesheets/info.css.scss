@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "color_scheme";
+
 div.row div.team {
 	margin-bottom: 1em;
 }
@@ -13,4 +15,8 @@ img.download_element_image {
 
 .panel.callout a.button {
 	color: white;
+}
+
+.fa.fa-question-circle {
+	color: $blue-color;
 }
