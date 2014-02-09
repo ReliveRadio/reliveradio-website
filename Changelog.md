@@ -8,13 +8,13 @@
 * Add downloads page
 * Add FAQ page
 
-###2.0.1
+####v2.0.1
 
 * Fix Rails error when a jingle was live
 * Update rspec tests
 * Extend Airtime API cache to 50 episodes for 15 minutes
 
-##2.0.0
+##v2.0
 
 The following changes are only the most important changes from 1.0.0 to 2.0.0.
 
@@ -24,6 +24,6 @@ The following changes are only the most important changes from 1.0.0 to 2.0.0.
 * MIT license
 * Fix external API caching
 
-##1.0.0
+##v1.0
 
 No changelog before this release.
