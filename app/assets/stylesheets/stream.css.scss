@@ -113,13 +113,21 @@ nav.top-bar {
 	margin-bottom: 0;
 }
 
+@media only screen and (max-width: 45.063em) {
+
+	h5 {
+		font-size: 1em;
+		font-weight: normal;
+	}
+
+	h2 {
+		font-size: 1em;
+	}
+ }
+
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 @media only screen and (min-width: 45.063em) {
-
-	nav.top-bar {
-		margin-bottom: 1.875em;
-	}
 
 	#live-episode > div.episode {
 		margin-bottom: 2em;
