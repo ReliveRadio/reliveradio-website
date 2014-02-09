@@ -2,10 +2,10 @@
 <%= stylesheet_link_tag "podcasts" %>
 
 <div class="row">
-  <div class="large-3 columns">
+  <div class="medium-3 columns">
     <h2><img src="<%= APP_CONFIG['artwork_base_url'] + @podcast.slugintern %>.jpg"></h2>
   </div>
-  <div class="large-9 columns">
+  <div class="medium-9 columns">
     <h1 class="breaklines"><%= @podcast.name %></h1>
       <!-- PODCAST DESCRIPTION -->
       <p><%= @podcast.description %></p>

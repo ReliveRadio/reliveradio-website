@@ -2,18 +2,18 @@
 <%= stylesheet_link_tag "podcasts" %>
 
 <div class="row">
-    <div class="large-12 columns">
+    <div class="medium-12 columns">
         <h1>Alle Podcasts in der Datenbank</h1>
     </div>
 </div>
 
 <div class="row">
-  <div class="large-6 columns">    
+  <div class="medium-6 columns">    
       <%= link_to 'Neuen Podcast anlegen', new_podcast_path, :class => "button secondary" %>
       <%= link_to "CSV herunterladen", podcasts_path(format: "csv"), :class => "button secondary" %>
       <%= link_to 'Index Info anpasssen', index_info_edit_path, :class => "button secondary" %>
   </div>
-  <div class="large-6 columns">
+  <div class="medium-6 columns">
       <%= form_tag import_podcasts_path, multipart: true do %>
         <%= file_field_tag :file %>
         <%= submit_tag "CSV importieren", :class => "button secondary" %>
@@ -25,10 +25,10 @@
 
 <% @podcasts.each do |podcast| %>
     <div class="row podcast">
-      <div class="large-3 columns">
+      <div class="medium-3 columns">
         <h2><img src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"></h2>
       </div>
-      <div class="large-9 columns">
+      <div class="medium-9 columns">
         <h2 class="breaklines"><%= podcast.name %></h2>
         <div class="breaklines datafield"><strong>url: </strong><%= link_to podcast.url, podcast.url %></div>
         <div class="breaklines datafield"><strong>slugintern: </strong><%= podcast.slugintern %></div>

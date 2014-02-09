@@ -11,18 +11,18 @@
 </div>
 
 <div class="row">
-	<div class="large-4 columns">
-		<a href="<%= mix_stream_url %>"><h2 class="genre-header mix animated flipInX"><i class="icon-circle-arrow-right"></i> Mix</h2></a>
+	<div class="medium-4 columns">
+		<a href="<%= mix_stream_url %>"><h2 class="genre-header mix animated flipInX"><i class="fa fa-arrow-circle-right"></i> Mix</h2></a>
 		<h5 class="subheader">Technik, Kultur, 42</h5>
 		<p>Der Mix ist unser Vollprogramm. Vom Audiotagebuch über die Comedy-Show und den Sportkommentar bis hin zum Spieleratgeber wird hier alles gesendet, was das Herz begehrt.</p>
 	</div>
-	<div class="large-4 columns">
-		<a href="<%= technique_stream_url %>"><h2 class="genre-header technique animated flipInX"><i class="icon-circle-arrow-right"></i> Technik</h2></a>
+	<div class="medium-4 columns">
+		<a href="<%= technique_stream_url %>"><h2 class="genre-header technique animated flipInX"><i class="fa fa-arrow-circle-right"></i> Technik</h2></a>
 		<h5 class="subheader">Internet, Software, Gadgets</h5>
 		<p>Was tut sich im Internet? Welche Features hat die neue Smartphone-App und was sagen Datenschützer dazu? Im Technik-Stream findest du Podcasts, die sich mit genau solchen Dingen befassen.</p>
 	</div>
-	<div class="large-4 columns">
-		<a href="<%= culture_stream_url %>"><h2 class="genre-header culture animated flipInX"><i class="icon-circle-arrow-right"></i> Kultur</h2></a>
+	<div class="medium-4 columns">
+		<a href="<%= culture_stream_url %>"><h2 class="genre-header culture animated flipInX"><i class="fa fa-arrow-circle-right"></i> Kultur</h2></a>
 		<h5 class="subheader">Filme, Kochen, Gesellschaft</h5>
 		<p>Wie heisst der neue Film mit Bud Spencer? Welches Buch soll ich als nächstes lesen und was soll mir dieser Songtext sagen? Im Kultur-Stream findest du Podcasts, die sich mit genau solchen Themen befassen.</p>
 	</div>
@@ -30,7 +30,7 @@
 
 <% if !@index_info.blank? and @index_info.display %>
 <div class="row">
-	<div class="large-12 columns">
+	<div class="medium-12 columns">
 		<h2><%= @index_info.title %></h2>
 		<p><%= raw @index_info.content %></p>
 	</div>

@@ -1,6 +1,12 @@
 #Changelog
 
-###2.1
+###v2.2
+
+* Move Impressum and Intern links to the footer
+* Update font-awesome
+* Update foundation framework to 5.1
+
+###v2.1
 
 * Fix sorting in podcast directory. Now case sensitive.
 * Fix matching of airtime strings to DB strings now case insensitive. however it the DB string does not match the slugintern use for the podcast icon, the icon can not be displayed.

@@ -1,7 +1,7 @@
 <%= form_for(@index_info) do |f| %>
 
 <div class="row">
-  <div class="large-12 columns">
+  <div class="medium-12 columns">
     <!-- Error handling -->
     <% if @index_info.errors.any? %>
       <div id="error_explanation">
@@ -18,7 +18,7 @@
 </div>
 
 <div class="row">
-  <div class="large-8 small-12 large-centered columns">
+  <div class="medium-8 small-12 large-centered columns">
     <div class="field">
       <h4>Titel</h4>
       <%= f.text_field :title %>
