@@ -109,12 +109,13 @@ h2 {
 	border: 1px solid darken($pastel-color, 20%);
 }
 
-nav.top-bar {
-	margin-bottom: 0;
-}
 
 @media only screen and (max-width: 45.063em) {
 
+	nav.top-bar {
+		margin-bottom: 0;
+	}
+	
 	h5 {
 		font-size: 1em;
 		font-weight: normal;
