@@ -31,7 +31,8 @@ img.episode-image {
 	text-decoration: none;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	font-size: 1.8em;
+	font-size: 1.7em;
+	font-weight: 300;
 	color: #444;
 	padding: 0 10px;
 	display: block;
@@ -114,7 +115,7 @@ nav.top-bar {
 
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 45.063em) {
 
 	nav.top-bar {
 		margin-bottom: 1.875em;
