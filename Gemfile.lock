@@ -224,6 +224,7 @@ DEPENDENCIES
   launchy
   mediaelement_rails
   rails (~> 3.2.14)
+  rake
   rspec-rails
   ruby-prof (= 0.13.0)
   sass-rails (~> 3.2.3)

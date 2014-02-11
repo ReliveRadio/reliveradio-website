@@ -27,6 +27,7 @@ group :dev do
 	# To use debugger
 	gem 'debugger', '~> 1.6'
 	gem 'ruby-prof', '0.13.0'
+	gem 'rake'
 end
 
 group :test do
