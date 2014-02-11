@@ -1,5 +1,9 @@
 #Changelog
 
+####v2.2.1
+
+* Fix Gemfile as foundation gem was accidentally reveresed to older version
+
 ###v2.2
 
 * Move Impressum and Intern links to the footer
