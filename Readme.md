@@ -1,5 +1,5 @@
-**master** [![Build Status](https://travis-ci.org/i42n/reliveradio-sendeplan-rails.png?branch=master)](https://travis-ci.org/i42n/reliveradio-sendeplan-rails)
-, **develop** [![Build Status](https://travis-ci.org/i42n/reliveradio-sendeplan-rails.png?branch=develop)](https://travis-ci.org/i42n/reliveradio-sendeplan-rails) 
+**master** [![Build Status](https://travis-ci.org/ReliveRadio/reliveradio-website.png?branch=master)](https://travis-ci.org/i42n/reliveradio-sendeplan-rails)
+, **develop** [![Build Status](https://travis-ci.org/ReliveRadio/reliveradio-website.png?branch=develop)](https://travis-ci.org/i42n/reliveradio-sendeplan-rails) 
 
 #ReliveRadio
 
