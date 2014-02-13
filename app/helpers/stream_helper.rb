@@ -66,6 +66,9 @@ module StreamHelper
 			# remove all passed podcasts from the episodes array
 			episodes.delete_if { |episode| Time.parse(episode['ends_locale']) < Time.now }
 
+			# remove everything that is further away than 24 hours
+			episodes.delete_if { |episode| Time.parse(episode['starts_locale']) > Time.now + 24.hours }
+
 			# add some more metadata to episodes array
 			episodes.each do |episode|
 				# set all to not being live (first one will be set to live after this iterator)

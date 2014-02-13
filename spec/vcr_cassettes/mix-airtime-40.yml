@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://mixzentrale.reliveradio.de/api/upcoming-info?num=45
+    uri: http://mixzentrale.reliveradio.de/api/upcoming-info?num=10
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Nov 2013 15:45:21 GMT
+      - Thu, 13 Feb 2014 10:37:23 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.8
+      - PHP/5.3.10-1ubuntu3.9
       Set-Cookie:
-      - PHPSESSID=3mrtgaj9h1ntsuqmk47v0jsoc7; path=/
+      - PHPSESSID=0ooor787nfoo9kem6t1l6tv375; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,263 +35,45 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1006'
+      - '736'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-09 16:45:21","utc_from":"2013-11-09 15:45:21","num":"45","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
-        Ortsgespr\u00e4che","track_title":"Folge 221: Lauersb\u00fcrofieber","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        15:19:27.635104","ends":"2013-11-09 17:11:45.135104","starts_locale":"2013-11-09
-        16:19:27","ends_locale":"2013-11-09 18:11:45"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:11:45.135104","ends":"2013-11-09 17:12:24.899798","starts_locale":"2013-11-09
-        18:11:45","ends_locale":"2013-11-09 18:12:24"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
-        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
-        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
-        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
-        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
-        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
-        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
-        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
-        21:33:54","ends_locale":"2013-11-09 23:08:45"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:08:45.629186","ends":"2013-11-09 22:09:25.39388","starts_locale":"2013-11-09
-        23:08:45","ends_locale":"2013-11-09 23:09:25"},{"artist_name":"Ganz einfach
-        leben Podcast","track_title":"Folge 35: Wanderkarte und so","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:09:25.39388","ends":"2013-11-09 22:16:59.89388","starts_locale":"2013-11-09
-        23:09:25","ends_locale":"2013-11-09 23:16:59"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:16:59.89388","ends":"2013-11-09 22:17:39.658574","starts_locale":"2013-11-09
-        23:16:59","ends_locale":"2013-11-09 23:17:39"},{"artist_name":"Talker-Lounge","track_title":"Talker-Lounge
-        Interview 20.9.2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:17:39.658574","ends":"2013-11-09 22:42:19.058574","starts_locale":"2013-11-09
-        23:17:39","ends_locale":"2013-11-09 23:42:19"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:19.058574","ends":"2013-11-09 22:42:58.823268","starts_locale":"2013-11-09
-        23:42:19","ends_locale":"2013-11-09 23:42:58"},{"artist_name":"Radio Bastard","track_title":"Folge
-        760: Meer T\u00fcten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:58.823268","ends":"2013-11-09 22:50:04.323268","starts_locale":"2013-11-09
-        23:42:58","ends_locale":"2013-11-09 23:50:04"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:04.323268","ends":"2013-11-09 22:50:44.087962","starts_locale":"2013-11-09
-        23:50:04","ends_locale":"2013-11-09 23:50:44"},{"artist_name":"Wir h\u00f6ren
-        Stimmen","track_title":"Folge 9: Comic Review","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright (c) Benjamin Behnke, Stephanie Dahn, Lars Engelmann, Stefan Thesing
-        2013, CreativeCommons Attribution-ShareAlike 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:44.087962","ends":"2013-11-09 23:00:00.36159","starts_locale":"2013-11-09
-        23:50:44","ends_locale":"2013-11-10 00:00:00"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
-        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
-        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
-        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
-        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
-        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
-        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
-        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
-        21:33:54","ends_locale":"2013-11-09 23:08:45"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:08:45.629186","ends":"2013-11-09 22:09:25.39388","starts_locale":"2013-11-09
-        23:08:45","ends_locale":"2013-11-09 23:09:25"},{"artist_name":"Ganz einfach
-        leben Podcast","track_title":"Folge 35: Wanderkarte und so","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:09:25.39388","ends":"2013-11-09 22:16:59.89388","starts_locale":"2013-11-09
-        23:09:25","ends_locale":"2013-11-09 23:16:59"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:16:59.89388","ends":"2013-11-09 22:17:39.658574","starts_locale":"2013-11-09
-        23:16:59","ends_locale":"2013-11-09 23:17:39"},{"artist_name":"Talker-Lounge","track_title":"Talker-Lounge
-        Interview 20.9.2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:17:39.658574","ends":"2013-11-09 22:42:19.058574","starts_locale":"2013-11-09
-        23:17:39","ends_locale":"2013-11-09 23:42:19"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:19.058574","ends":"2013-11-09 22:42:58.823268","starts_locale":"2013-11-09
-        23:42:19","ends_locale":"2013-11-09 23:42:58"},{"artist_name":"Radio Bastard","track_title":"Folge
-        760: Meer T\u00fcten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:58.823268","ends":"2013-11-09 22:50:04.323268","starts_locale":"2013-11-09
-        23:42:58","ends_locale":"2013-11-09 23:50:04"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:04.323268","ends":"2013-11-09 22:50:44.087962","starts_locale":"2013-11-09
-        23:50:04","ends_locale":"2013-11-09 23:50:44"},{"artist_name":"Wir h\u00f6ren
-        Stimmen","track_title":"Folge 9: Comic Review","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright (c) Benjamin Behnke, Stephanie Dahn, Lars Engelmann, Stefan Thesing
-        2013, CreativeCommons Attribution-ShareAlike 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:44.087962","ends":"2013-11-09 23:00:00.36159","starts_locale":"2013-11-09
-        23:50:44","ends_locale":"2013-11-10 00:00:00"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
-        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
-        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
-        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
-        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
-        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
-        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
-        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
-        21:33:54","ends_locale":"2013-11-09 23:08:45"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:08:45.629186","ends":"2013-11-09 22:09:25.39388","starts_locale":"2013-11-09
-        23:08:45","ends_locale":"2013-11-09 23:09:25"},{"artist_name":"Ganz einfach
-        leben Podcast","track_title":"Folge 35: Wanderkarte und so","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:09:25.39388","ends":"2013-11-09 22:16:59.89388","starts_locale":"2013-11-09
-        23:09:25","ends_locale":"2013-11-09 23:16:59"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:16:59.89388","ends":"2013-11-09 22:17:39.658574","starts_locale":"2013-11-09
-        23:16:59","ends_locale":"2013-11-09 23:17:39"},{"artist_name":"Talker-Lounge","track_title":"Talker-Lounge
-        Interview 20.9.2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:17:39.658574","ends":"2013-11-09 22:42:19.058574","starts_locale":"2013-11-09
-        23:17:39","ends_locale":"2013-11-09 23:42:19"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:19.058574","ends":"2013-11-09 22:42:58.823268","starts_locale":"2013-11-09
-        23:42:19","ends_locale":"2013-11-09 23:42:58"},{"artist_name":"Radio Bastard","track_title":"Folge
-        760: Meer T\u00fcten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:58.823268","ends":"2013-11-09 22:50:04.323268","starts_locale":"2013-11-09
-        23:42:58","ends_locale":"2013-11-09 23:50:04"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:04.323268","ends":"2013-11-09 22:50:44.087962","starts_locale":"2013-11-09
-        23:50:04","ends_locale":"2013-11-09 23:50:44"},{"artist_name":"Wir h\u00f6ren
-        Stimmen","track_title":"Folge 9: Comic Review","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright (c) Benjamin Behnke, Stephanie Dahn, Lars Engelmann, Stefan Thesing
-        2013, CreativeCommons Attribution-ShareAlike 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:44.087962","ends":"2013-11-09 23:00:00.36159","starts_locale":"2013-11-09
-        23:50:44","ends_locale":"2013-11-10 00:00:00"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
-        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
-        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
-        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
-        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
-        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
-        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
-        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
-        21:33:54","ends_locale":"2013-11-09 23:08:45"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:08:45.629186","ends":"2013-11-09 22:09:25.39388","starts_locale":"2013-11-09
-        23:08:45","ends_locale":"2013-11-09 23:09:25"},{"artist_name":"Ganz einfach
-        leben Podcast","track_title":"Folge 35: Wanderkarte und so","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:09:25.39388","ends":"2013-11-09 22:16:59.89388","starts_locale":"2013-11-09
-        23:09:25","ends_locale":"2013-11-09 23:16:59"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:16:59.89388","ends":"2013-11-09 22:17:39.658574","starts_locale":"2013-11-09
-        23:16:59","ends_locale":"2013-11-09 23:17:39"},{"artist_name":"Talker-Lounge","track_title":"Talker-Lounge
-        Interview 20.9.2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:17:39.658574","ends":"2013-11-09 22:42:19.058574","starts_locale":"2013-11-09
-        23:17:39","ends_locale":"2013-11-09 23:42:19"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:19.058574","ends":"2013-11-09 22:42:58.823268","starts_locale":"2013-11-09
-        23:42:19","ends_locale":"2013-11-09 23:42:58"},{"artist_name":"Radio Bastard","track_title":"Folge
-        760: Meer T\u00fcten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:58.823268","ends":"2013-11-09 22:50:04.323268","starts_locale":"2013-11-09
-        23:42:58","ends_locale":"2013-11-09 23:50:04"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:04.323268","ends":"2013-11-09 22:50:44.087962","starts_locale":"2013-11-09
-        23:50:04","ends_locale":"2013-11-09 23:50:44"},{"artist_name":"Wir h\u00f6ren
-        Stimmen","track_title":"Folge 9: Comic Review","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright (c) Benjamin Behnke, Stephanie Dahn, Lars Engelmann, Stefan Thesing
-        2013, CreativeCommons Attribution-ShareAlike 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:44.087962","ends":"2013-11-09 23:00:00.36159","starts_locale":"2013-11-09
-        23:50:44","ends_locale":"2013-11-10 00:00:00"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
-        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
-        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
-        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
-        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
-        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
-        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
-        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
-        21:33:54","ends_locale":"2013-11-09 23:08:45"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:08:45.629186","ends":"2013-11-09 22:09:25.39388","starts_locale":"2013-11-09
-        23:08:45","ends_locale":"2013-11-09 23:09:25"},{"artist_name":"Ganz einfach
-        leben Podcast","track_title":"Folge 35: Wanderkarte und so","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:09:25.39388","ends":"2013-11-09 22:16:59.89388","starts_locale":"2013-11-09
-        23:09:25","ends_locale":"2013-11-09 23:16:59"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:16:59.89388","ends":"2013-11-09 22:17:39.658574","starts_locale":"2013-11-09
-        23:16:59","ends_locale":"2013-11-09 23:17:39"},{"artist_name":"Talker-Lounge","track_title":"Talker-Lounge
-        Interview 20.9.2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:17:39.658574","ends":"2013-11-09 22:42:19.058574","starts_locale":"2013-11-09
-        23:17:39","ends_locale":"2013-11-09 23:42:19"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:19.058574","ends":"2013-11-09 22:42:58.823268","starts_locale":"2013-11-09
-        23:42:19","ends_locale":"2013-11-09 23:42:58"},{"artist_name":"Radio Bastard","track_title":"Folge
-        760: Meer T\u00fcten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:58.823268","ends":"2013-11-09 22:50:04.323268","starts_locale":"2013-11-09
-        23:42:58","ends_locale":"2013-11-09 23:50:04"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:04.323268","ends":"2013-11-09 22:50:44.087962","starts_locale":"2013-11-09
-        23:50:04","ends_locale":"2013-11-09 23:50:44"},{"artist_name":"Wir h\u00f6ren
-        Stimmen","track_title":"Folge 9: Comic Review","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright (c) Benjamin Behnke, Stephanie Dahn, Lars Engelmann, Stefan Thesing
-        2013, CreativeCommons Attribution-ShareAlike 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:44.087962","ends":"2013-11-09 23:00:00.36159","starts_locale":"2013-11-09
-        23:50:44","ends_locale":"2013-11-10 00:00:00"},{"artist_name":"Ganz einfach
-        leben Podcast","track_title":"Folge 35: Wanderkarte und so","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:09:25.39388","ends":"2013-11-09 22:16:59.89388","starts_locale":"2013-11-09
-        23:09:25","ends_locale":"2013-11-09 23:16:59"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:16:59.89388","ends":"2013-11-09 22:17:39.658574","starts_locale":"2013-11-09
-        23:16:59","ends_locale":"2013-11-09 23:17:39"},{"artist_name":"Talker-Lounge","track_title":"Talker-Lounge
-        Interview 20.9.2013","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:17:39.658574","ends":"2013-11-09 22:42:19.058574","starts_locale":"2013-11-09
-        23:17:39","ends_locale":"2013-11-09 23:42:19"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:19.058574","ends":"2013-11-09 22:42:58.823268","starts_locale":"2013-11-09
-        23:42:19","ends_locale":"2013-11-09 23:42:58"},{"artist_name":"Radio Bastard","track_title":"Folge
-        760: Meer T\u00fcten","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright 2013 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:42:58.823268","ends":"2013-11-09 22:50:04.323268","starts_locale":"2013-11-09
-        23:42:58","ends_locale":"2013-11-09 23:50:04"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:04.323268","ends":"2013-11-09 22:50:44.087962","starts_locale":"2013-11-09
-        23:50:04","ends_locale":"2013-11-09 23:50:44"},{"artist_name":"Wir h\u00f6ren
-        Stimmen","track_title":"Folge 9: Comic Review","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Copyright (c) Benjamin Behnke, Stephanie Dahn, Lars Engelmann, Stefan Thesing
-        2013, CreativeCommons Attribution-ShareAlike 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:50:44.087962","ends":"2013-11-09 23:00:00.36159","starts_locale":"2013-11-09
-        23:50:44","ends_locale":"2013-11-10 00:00:00"}]}'
+      string: '{"from":"2014-02-13 11:37:23","utc_from":"2014-02-13 10:37:23","num":"10","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
+        Flaschen","track_title":"Frau Diener verreist nach Schottland","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        09:23:51.052339","ends":"2014-02-13 10:59:22.352339","starts_locale":"2014-02-13
+        10:23:51","ends_locale":"2014-02-13 11:59:22"},{"artist_name":"jingle","track_title":"Jingle
+        Allgemein - Bus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        10:59:22.352339","ends":"2014-02-13 10:59:59.895015","starts_locale":"2014-02-13
+        11:59:22","ends_locale":"2014-02-13 11:59:59"},{"artist_name":"Radio Bastard","track_title":"Folge
+        813: Rumfackeln im Sturm","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Copyright 2014 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        10:59:59.895015","ends":"2014-02-13 11:07:10.295015","starts_locale":"2014-02-13
+        11:59:59","ends_locale":"2014-02-13 12:07:10"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 4","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:07:10.295015","ends":"2014-02-13 11:08:05.591342","starts_locale":"2014-02-13
+        12:07:10","ends_locale":"2014-02-13 12:08:05"},{"artist_name":"Michaelas Welt","track_title":"Folge
+        141: Computerzeugs","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Michaela-W","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:08:05.591342","ends":"2014-02-13 11:22:01.291342","starts_locale":"2014-02-13
+        12:08:05","ends_locale":"2014-02-13 12:22:01"},{"artist_name":"jingle","track_title":"Jingle
+        Allgemein - Bus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:22:01.291342","ends":"2014-02-13 11:22:38.834018","starts_locale":"2014-02-13
+        12:22:01","ends_locale":"2014-02-13 12:22:38"},{"artist_name":"Comic Review","track_title":"Folge
+        65: Alisik Winter Band 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:22:38.834018","ends":"2014-02-13 11:41:34.834018","starts_locale":"2014-02-13
+        12:22:38","ends_locale":"2014-02-13 12:41:34"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 4","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:41:34.834018","ends":"2014-02-13 11:42:30.130343","starts_locale":"2014-02-13
+        12:41:34","ends_locale":"2014-02-13 12:42:30"},{"artist_name":"Die Spielb\u00e4lle","track_title":"Folge
+        38: Die B\u00e4lle und der HSV","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Creative Commons Attribution-NoDerivs 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:42:30.130342","ends":"2014-02-13 12:45:53.930342","starts_locale":"2014-02-13
+        12:42:30","ends_locale":"2014-02-13 13:45:53"},{"artist_name":"jingle","track_title":"Jingle
+        Allgemein - Bus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        12:45:53.930342","ends":"2014-02-13 12:46:31.473018","starts_locale":"2014-02-13
+        13:45:53","ends_locale":"2014-02-13 13:46:31"}]}'
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
+recorded_with: VCR 2.8.0

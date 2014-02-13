@@ -54,10 +54,10 @@ describe "StreamHelper" do
 		end
 
 		context "custom number of episodes" do
-			it "should return 40 episodes as requested" do
+			it "should return 5 episodes as requested" do
 				VCR.use_cassette('mix-airtime-40') do
-					episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'], 40)
-					episodes.count.should == 40
+					episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'], 5)
+					episodes.count.should == 5
 				end
 			end
 			it "should not return less than 2 episodes" do
@@ -66,10 +66,13 @@ describe "StreamHelper" do
 					episodes.count.should == 2
 				end
 			end
-			it "should return 100 episodes at max" do
-				VCR.use_cassette('mix-airtime-100') do
+			it "should only return episodes for the next 24 hours" do
+				VCR.use_cassette('mix-airtime-large-schedule') do
 					episodes = StreamHelper.fetch_episode_schedule(APP_CONFIG['mix']['airtime_url'], 200)
-					episodes.count.should == 100
+					episodes.should_not be_blank
+					episodes.each do |episode|
+						episode['starts_locale'].should_not > Time.now + 24.hours
+					end
 				end
 			end
 		end
@@ -86,9 +89,6 @@ describe "StreamHelper" do
 			end
 			it "should not return blank" do
 				@episodes.should_not be_blank
-			end
-			it "should return 10 episodes by default" do
-				@episodes.count.should == 10
 			end
 			it "should have all episodes marked as not live except the first one" do
 				@episodes.first["isLive"].should == true

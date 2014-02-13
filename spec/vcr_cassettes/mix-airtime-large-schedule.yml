@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Feb 2014 10:37:23 GMT
+      - Thu, 13 Feb 2014 10:37:24 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.10-1ubuntu3.9
       Set-Cookie:
-      - PHPSESSID=jeiucfbfud4jcnmvgg7upr7n37; path=/
+      - PHPSESSID=b97q7qc2k8h59c7uvs88704g40; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -40,7 +40,7 @@ http_interactions:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2014-02-13 11:37:23","utc_from":"2014-02-13 10:37:23","num":"105","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
+      string: '{"from":"2014-02-13 11:37:24","utc_from":"2014-02-13 10:37:24","num":"105","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
         Flaschen","track_title":"Frau Diener verreist nach Schottland","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
         09:23:51.052339","ends":"2014-02-13 10:59:22.352339","starts_locale":"2014-02-13
         10:23:51","ends_locale":"2014-02-13 11:59:22"},{"artist_name":"jingle","track_title":"Jingle
