@@ -1,5 +1,10 @@
 #Changelog
 
+####v2.2.2
+
+* Fix modernizr not precompiled bug in foundation
+* Link to github ressources repo instead of providing a zip download
+
 ####v2.2.1
 
 * Fix Gemfile as foundation gem was accidentally reveresed to older version
