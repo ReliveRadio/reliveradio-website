@@ -21,72 +21,72 @@ http_interactions:
       Content-Type:
       - text/plain
       Content-Length:
-      - '2553'
+      - '2546'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJDb3B5cmlnaHQiOiJpY2VtYXN0ZXJAbG9jYWxob3N0IiwiTG9jYXRpb24i
-        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6Ii0zIiwibW91bnRzIjpbeyJt
-        b3VudCI6Ii8yNC5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIE1p
-        eCIsImxpc3RlbmVycyI6IjExIiwiZGVzY3JpcHRpb24iOiJEZXIgTWl4IGlz
-        dCB1bnNlciBWb2xscHJvZ3JhbW0uIFZvbSBBdWRpb3RhZ2VidWNoIMODwrxi
-        ZXIgZGllIENvbWVkeS1TaG93IHVuZCBkZW4gU3BvcnRrb21tZW50YXIgYmlz
-        IGhpbiB6dW0gU3BpZWxlcmF0Z2ViZXIgd2lyZCBoaWVyIGFsbGVzIGdlc2Vu
-        ZGV0LCB3YXMgZGFzIEhlcnogYmVnZWhydC4iLCJ0aXRsZSI6IldSSU5UOiBP
-        cnRzZ2VzcHLDpGNoZSAtIEZvbGdlIDIyMTogTGF1ZXJzYsO8cm9maWViZXIi
-        LCJnZW5yZSI6Ik1peCAtIERlc2t0b3AiLCJiaXRyYXRlIjoiMTI4IiwidXJs
-        IjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS9taXgifSx7Im1vdW50
-        IjoiLzI0bW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8g
-        TWl4IiwibGlzdGVuZXJzIjoiMCIsImRlc2NyaXB0aW9uIjoiRGVyIE1peCBp
+        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6Ii0xMiIsIm1vdW50cyI6W3si
+        bW91bnQiOiIvMjQubXAzIiwic2VydmVyX25hbWUiOiJSZWxpdmVSYWRpbyBN
+        aXgiLCJsaXN0ZW5lcnMiOiIxMiIsImRlc2NyaXB0aW9uIjoiRGVyIE1peCBp
         c3QgdW5zZXIgVm9sbHByb2dyYW1tLiBWb20gQXVkaW90YWdlYnVjaCDDg8K8
         YmVyIGRpZSBDb21lZHktU2hvdyB1bmQgZGVuIFNwb3J0a29tbWVudGFyIGJp
         cyBoaW4genVtIFNwaWVsZXJhdGdlYmVyIHdpcmQgaGllciBhbGxlcyBnZXNl
         bmRldCwgd2FzIGRhcyBIZXJ6IGJlZ2VocnQuIiwidGl0bGUiOiJXUklOVDog
-        T3J0c2dlc3Byw6RjaGUgLSBGb2xnZSAyMjE6IExhdWVyc2LDvHJvZmllYmVy
-        IiwiZ2VucmUiOiJNaXggLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwi
-        OiJodHRwOi8vcmVsaXZlcmFkaW8uZGUvc3RyZWFtL21peCJ9LHsibW91bnQi
-        OiIva3VsdHVyLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8gS3Vs
-        dHVyIiwibGlzdGVuZXJzIjoiNiIsImRlc2NyaXB0aW9uIjoiV2llIGhlaXNz
-        dCBkZXIgbmV1ZSBGaWxtIG1pdCBCdWQgU3BlbmNlcj8gV2VsY2hlcyBCdWNo
-        IHNvbGwgaWNoIGFscyBuw4PCpGNoc3RlcyBsZXNlbiB1bmQgd2FzIHNvbGwg
-        bWlyIGRpZXNlciBTb25ndGV4dCBzYWdlbj8gSW0gS3VsdHVyLVN0cmVhbSBm
-        aW5kZXN0IGR1IFBvZGNhc3RzLCBkaWUgc2ljaCBtaXQgZ2VuYXUgc29sY2hl
-        biBUaGVtZW4gYmVmYXNzZW4uIiwidGl0bGUiOiIgLSAiLCJnZW5yZSI6Ikt1
-        bHR1ciAtIERlc2t0b3AiLCJiaXRyYXRlIjoiMTI4IiwidXJsIjoiaHR0cDov
-        L3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS9rdWx0dXIifSx7Im1vdW50IjoiL2t1
-        bHR1cm1vYmlsZS5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIEt1
-        bHR1ciIsImxpc3RlbmVycyI6IjAiLCJkZXNjcmlwdGlvbiI6IldpZSBoZWlz
-        c3QgZGVyIG5ldWUgRmlsbSBtaXQgQnVkIFNwZW5jZXI/IFdlbGNoZXMgQnVj
-        aCBzb2xsIGljaCBhbHMgbsODwqRjaHN0ZXMgbGVzZW4gdW5kIHdhcyBzb2xs
-        IG1pciBkaWVzZXIgU29uZ3RleHQgc2FnZW4/IEltIEt1bHR1ci1TdHJlYW0g
-        ZmluZGVzdCBkdSBQb2RjYXN0cywgZGllIHNpY2ggbWl0IGdlbmF1IHNvbGNo
-        ZW4gVGhlbWVuIGJlZmFzc2VuLiIsInRpdGxlIjoiIC0gIiwiZ2VucmUiOiJL
-        dWx0dXIgLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwiOiJodHRwOi8v
-        cmVsaXZlcmFkaW8uZGUvc3RyZWFtL2t1bHR1ciJ9LHsibW91bnQiOiIvdGVj
-        aG5pay5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIFRlY2huaWsi
-        LCJsaXN0ZW5lcnMiOiI1IiwiZGVzY3JpcHRpb24iOiJXYXMgdHV0IHNpY2gg
-        aW0gSW50ZXJuZXQ/IFdlbGNoZSBGZWF0dXJlcyBoYXQgZGllIG5ldWUgU21h
-        cnRwaG9uZS1BcHAgdW5kIHdhcyBzYWdlbiBEYXRlbnNjaMODwrx0emVyIGRh
-        enU/IEltIFRlY2huaWstU3RyZWFtIGZpbmRlc3QgZHUgUG9kY2FzdHMsIGRp
-        ZSBzaWNoIG1pdCBnZW5hdSBzb2xjaGVuIERpbmdlbiBiZWZhc3Nlbi4iLCJ0
-        aXRsZSI6IklOQ0VSSU8gUG9kY2FzdCAtIElOQ0VSSU8gIzA1MiAtIERpZSB3
-        YXIncyEiLCJnZW5yZSI6IlRlY2huaWsgLSBEZXNrdG9wIiwiYml0cmF0ZSI6
-        IjEyOCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJlYW0vdGVj
-        aG5payJ9LHsibW91bnQiOiIvdGVjaG5pa21vYmlsZS5tcDMiLCJzZXJ2ZXJf
-        bmFtZSI6IlJlbGl2ZVJhZGlvIFRlY2huaWsiLCJsaXN0ZW5lcnMiOiIwIiwi
-        ZGVzY3JpcHRpb24iOiJXYXMgdHV0IHNpY2ggaW0gSW50ZXJuZXQ/IFdlbGNo
-        ZSBGZWF0dXJlcyBoYXQgZGllIG5ldWUgU21hcnRwaG9uZS1BcHAgdW5kIHdh
-        cyBzYWdlbiBEYXRlbnNjaMODwrx0emVyIGRhenU/IEltIFRlY2huaWstU3Ry
+        Rmxhc2NoZW4gLSBGcmF1IERpZW5lciB2ZXJyZWlzdCBuYWNoIFNjaG90dGxh
+        bmQiLCJnZW5yZSI6Ik1peCAtIERlc2t0b3AiLCJiaXRyYXRlIjoiMTI4Iiwi
+        dXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS9taXgifSx7Im1v
+        dW50IjoiLzI0bW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFk
+        aW8gTWl4IiwibGlzdGVuZXJzIjoiMSIsImRlc2NyaXB0aW9uIjoiRGVyIE1p
+        eCBpc3QgdW5zZXIgVm9sbHByb2dyYW1tLiBWb20gQXVkaW90YWdlYnVjaCDD
+        g8K8YmVyIGRpZSBDb21lZHktU2hvdyB1bmQgZGVuIFNwb3J0a29tbWVudGFy
+        IGJpcyBoaW4genVtIFNwaWVsZXJhdGdlYmVyIHdpcmQgaGllciBhbGxlcyBn
+        ZXNlbmRldCwgd2FzIGRhcyBIZXJ6IGJlZ2VocnQuIiwidGl0bGUiOiJXUklO
+        VDogRmxhc2NoZW4gLSBGcmF1IERpZW5lciB2ZXJyZWlzdCBuYWNoIFNjaG90
+        dGxhbmQiLCJnZW5yZSI6Ik1peCAtIE1vYmlsZSIsImJpdHJhdGUiOiI0OCIs
+        InVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJlYW0vbWl4In0seyJt
+        b3VudCI6Ii9rdWx0dXIubXAzIiwic2VydmVyX25hbWUiOiJSZWxpdmVSYWRp
+        byBLdWx0dXIiLCJsaXN0ZW5lcnMiOiI0IiwiZGVzY3JpcHRpb24iOiJXaWUg
+        aGVpc3N0IGRlciBuZXVlIEZpbG0gbWl0IEJ1ZCBTcGVuY2VyPyBXZWxjaGVz
+        IEJ1Y2ggc29sbCBpY2ggYWxzIG7Dg8KkY2hzdGVzIGxlc2VuIHVuZCB3YXMg
+        c29sbCBtaXIgZGllc2VyIFNvbmd0ZXh0IHNhZ2VuPyBJbSBLdWx0dXItU3Ry
         ZWFtIGZpbmRlc3QgZHUgUG9kY2FzdHMsIGRpZSBzaWNoIG1pdCBnZW5hdSBz
-        b2xjaGVuIERpbmdlbiBiZWZhc3Nlbi4iLCJ0aXRsZSI6IklOQ0VSSU8gUG9k
-        Y2FzdCAtIElOQ0VSSU8gIzA1MiAtIERpZSB3YXIncyEiLCJnZW5yZSI6IlRl
-        Y2huaWsgLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwiOiJodHRwOi8v
-        cmVsaXZlcmFkaW8uZGUvc3RyZWFtL3RlY2huaWsifV19
+        b2xjaGVuIFRoZW1lbiBiZWZhc3Nlbi4iLCJ0aXRsZSI6IiAtICIsImdlbnJl
+        IjoiS3VsdHVyIC0gRGVza3RvcCIsImJpdHJhdGUiOiIxMjgiLCJ1cmwiOiJo
+        dHRwOi8vcmVsaXZlcmFkaW8uZGUvc3RyZWFtL2t1bHR1ciJ9LHsibW91bnQi
+        OiIva3VsdHVybW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFk
+        aW8gS3VsdHVyIiwibGlzdGVuZXJzIjoiMCIsImRlc2NyaXB0aW9uIjoiV2ll
+        IGhlaXNzdCBkZXIgbmV1ZSBGaWxtIG1pdCBCdWQgU3BlbmNlcj8gV2VsY2hl
+        cyBCdWNoIHNvbGwgaWNoIGFscyBuw4PCpGNoc3RlcyBsZXNlbiB1bmQgd2Fz
+        IHNvbGwgbWlyIGRpZXNlciBTb25ndGV4dCBzYWdlbj8gSW0gS3VsdHVyLVN0
+        cmVhbSBmaW5kZXN0IGR1IFBvZGNhc3RzLCBkaWUgc2ljaCBtaXQgZ2VuYXUg
+        c29sY2hlbiBUaGVtZW4gYmVmYXNzZW4uIiwidGl0bGUiOiIgLSAiLCJnZW5y
+        ZSI6Ikt1bHR1ciAtIE1vYmlsZSIsImJpdHJhdGUiOiI0OCIsInVybCI6Imh0
+        dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJlYW0va3VsdHVyIn0seyJtb3VudCI6
+        Ii90ZWNobmlrLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8gVGVj
+        aG5payIsImxpc3RlbmVycyI6IjYiLCJkZXNjcmlwdGlvbiI6IldhcyB0dXQg
+        c2ljaCBpbSBJbnRlcm5ldD8gV2VsY2hlIEZlYXR1cmVzIGhhdCBkaWUgbmV1
+        ZSBTbWFydHBob25lLUFwcCB1bmQgd2FzIHNhZ2VuIERhdGVuc2Now4PCvHR6
+        ZXIgZGF6dT8gSW0gVGVjaG5pay1TdHJlYW0gZmluZGVzdCBkdSBQb2RjYXN0
+        cywgZGllIHNpY2ggbWl0IGdlbmF1IHNvbGNoZW4gRGluZ2VuIGJlZmFzc2Vu
+        LiIsInRpdGxlIjoiYXBmZWxrbGF0c2NoIC0gRm9sZ2UgMTEwOiBUYWkgR2lu
+        c2VuZyIsImdlbnJlIjoiVGVjaG5payAtIERlc2t0b3AiLCJiaXRyYXRlIjoi
+        MTI4IiwidXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS90ZWNo
+        bmlrIn0seyJtb3VudCI6Ii90ZWNobmlrbW9iaWxlLm1wMyIsInNlcnZlcl9u
+        YW1lIjoiUmVsaXZlUmFkaW8gVGVjaG5payIsImxpc3RlbmVycyI6IjAiLCJk
+        ZXNjcmlwdGlvbiI6IldhcyB0dXQgc2ljaCBpbSBJbnRlcm5ldD8gV2VsY2hl
+        IEZlYXR1cmVzIGhhdCBkaWUgbmV1ZSBTbWFydHBob25lLUFwcCB1bmQgd2Fz
+        IHNhZ2VuIERhdGVuc2Now4PCvHR6ZXIgZGF6dT8gSW0gVGVjaG5pay1TdHJl
+        YW0gZmluZGVzdCBkdSBQb2RjYXN0cywgZGllIHNpY2ggbWl0IGdlbmF1IHNv
+        bGNoZW4gRGluZ2VuIGJlZmFzc2VuLiIsInRpdGxlIjoiYXBmZWxrbGF0c2No
+        IC0gRm9sZ2UgMTEwOiBUYWkgR2luc2VuZyIsImdlbnJlIjoiVGVjaG5payAt
+        IE1vYmlsZSIsImJpdHJhdGUiOiI0OCIsInVybCI6Imh0dHA6Ly9yZWxpdmVy
+        YWRpby5kZS9zdHJlYW0vdGVjaG5payJ9XX0=
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
 - request:
     method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-09
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2014-02-13
     body:
       encoding: US-ASCII
       string: ''
@@ -103,23 +103,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Nov 2013 15:45:17 GMT
+      - Thu, 13 Feb 2014 10:37:21 GMT
       Server:
       - Apache/2.2.3 (CentOS)
       X-Powered-By:
       - PHP/5.3.11
-      Expires:
-      - Sat, 02 Nov 2013 15:45:17 GMT
-      Cache-Control:
-      - no-cache, must-revalidate, max-age=0
-      Pragma:
-      - no-cache
       X-Pingback:
       - http://hoersuppe.de/xmlrpc.php
       Link:
       - <http://hoersuppe.de/?p=43845>; rel=shortlink
-      Last-Modified:
-      - Sat, 09 Nov 2013 15:45:17 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -128,15 +120,17 @@ http_interactions:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4864","podcast":"quasselstrippen","state":"1","type":"0","synced":"1","title":"Quasselstrippen","url":"http:\/\/die-quasselstrippen.de\/","streamurl":"http:\/\/streams.xenim.de\/quasselstrippen.mp3.m3u","livedate":"2013-11-09
-        11:00:00","duration":"120","twittered":"1"},{"id":"3271","podcast":"dradio-online-talk","state":"1","type":"0","synced":"1","title":"DRadio
-        Wissen Online Talk","url":"http:\/\/wissen.dradio.de\/online-talk.125.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-11-09
-        11:00:00","duration":"60","twittered":"1"},{"id":"3141","podcast":"breitband","state":"1","type":"0","synced":"1","title":"Breitband","url":"http:\/\/breitband.dradio.de\/","streamurl":"http:\/\/www.dradio.de\/streaming\/dkultur.m3u","livedate":"2013-11-09
-        14:00:00","duration":"60","twittered":"1"},{"id":"6591","podcast":"raidenger","state":"1","type":"0","synced":"1","title":"Raidenger","url":"http:\/\/raidenger.de\/","streamurl":"http:\/\/176.28.50.139:8000\/high","livedate":"2013-11-09
-        14:00:00","duration":"120","twittered":"1"},{"id":"3623","podcast":"trackback","state":"1","type":"0","synced":"1","title":"trackback","url":"http:\/\/www.fritz.de\/programm\/trackback.html","streamurl":"http:\/\/www.fritz.de\/live.m3u","livedate":"2013-11-09
-        18:00:00","duration":"120","twittered":"0"}]}'
+      string: '{"status":1,"msg":"ok","data":[{"id":"6073","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2014-02-13
+        16:00:00","duration":"90","twittered":"0"},{"id":"7283","podcast":"touchtalk","state":"1","type":"0","synced":"1","title":"Touchtalk","url":"http:\/\/touchtalk.at\/","streamurl":"http:\/\/live.touchtalk.at\/","livedate":"2014-02-13
+        19:00:00","duration":"120","twittered":"0"},{"id":"7398","podcast":"dirty-minutes-left","state":"1","type":"0","synced":"1","title":"Dirty
+        Minutes Left","url":"http:\/\/www.dirtyminutesleft.de","streamurl":"http:\/\/xsn.io\/dirtyminutesleft.mp3","livedate":"2014-02-13
+        19:00:00","duration":"60","twittered":"0"},{"id":"7480","podcast":"teezeit","state":"1","type":"0","synced":"1","title":"Teezeit
+        Talkradio","url":"http:\/\/teezeit.org\/","streamurl":"http:\/\/xsn.io\/teezeit.mp3","livedate":"2014-02-13
+        19:00:00","duration":"150","twittered":"0"},{"id":"7400","podcast":"binaergewitter","state":"1","type":"0","synced":"1","title":"Bin\u00e4rgewitter-Talk","url":"http:\/\/blog.binaergewitter.de\/","streamurl":"http:\/\/streams.xenim.de\/binaergewitter.mp3.m3u","livedate":"2014-02-13
+        20:00:00","duration":"180","twittered":"0"},{"id":"5106","podcast":"c-radar","state":"1","type":"0","synced":"1","title":"C-RadaR","url":"http:\/\/c-radar.ccc.de\/","streamurl":"http:\/\/www.radiodarmstadt.de\/fileadmin\/templates\/stream.m3u","livedate":"2014-02-13
+        21:00:00","duration":"180","twittered":"0"}]}'
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
 - request:
     method: get
     uri: http://technikzentrale.reliveradio.de/api/upcoming-info?num=15
@@ -156,13 +150,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Nov 2013 15:45:18 GMT
+      - Thu, 13 Feb 2014 10:37:21 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.8
+      - PHP/5.3.10-1ubuntu3.9
       Set-Cookie:
-      - PHPSESSID=9pp5mqvrap0dr3mh5tlq4mo6i5; path=/
+      - PHPSESSID=g2ia68iol55kqdqceqabd9sk94; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -172,46 +166,33 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '786'
+      - '668'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-09 16:45:18","utc_from":"2013-11-09 15:45:18","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Incerio
-        Podcast","track_title":"Folge 52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        14:35:49.558262","ends":"2013-11-09 16:10:41.158262","starts_locale":"2013-11-09
-        15:35:49","ends_locale":"2013-11-09 17:10:41"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        16:10:41.158262","ends":"2013-11-09 16:11:34.318104","starts_locale":"2013-11-09
-        17:10:41","ends_locale":"2013-11-09 17:11:34"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
-        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        16:11:34.318104","ends":"2013-11-09 18:39:48.018104","starts_locale":"2013-11-09
-        17:11:34","ends_locale":"2013-11-09 19:39:48"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        18:39:48.018104","ends":"2013-11-09 18:40:41.177946","starts_locale":"2013-11-09
-        19:39:48","ends_locale":"2013-11-09 19:40:41"},{"artist_name":"Geektalk Podcast","track_title":"44\/13:
-        Gerd und seine Updates","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        18:40:41.177946","ends":"2013-11-09 19:21:22.877946","starts_locale":"2013-11-09
-        19:40:41","ends_locale":"2013-11-09 20:21:22"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:21:22.877946","ends":"2013-11-09 19:22:16.037788","starts_locale":"2013-11-09
-        20:21:22","ends_locale":"2013-11-09 20:22:16"},{"artist_name":"WRINT: Holger
-        ruft an","track_title":"Robert Helling (wg. Stringtheorie)","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:22:16.037788","ends":"2013-11-09 21:12:48.337788","starts_locale":"2013-11-09
-        20:22:16","ends_locale":"2013-11-09 22:12:48"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        21:12:48.337788","ends":"2013-11-09 21:13:41.49763","starts_locale":"2013-11-09
-        22:12:48","ends_locale":"2013-11-09 22:13:41"},{"artist_name":"Smarter Home","track_title":"Folge
-        7: Elektroautos","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        21:13:41.49763","ends":"2013-11-09 22:26:57.29763","starts_locale":"2013-11-09
-        22:13:41","ends_locale":"2013-11-09 23:26:57"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 3","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:26:57.29763","ends":"2013-11-09 22:27:50.457472","starts_locale":"2013-11-09
-        23:26:57","ends_locale":"2013-11-09 23:27:50"},{"artist_name":"Pentaradio","track_title":"Skype
-        und andere Internettelefonie: Nur Thema: Skype und andere Internettelefonie","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        22:27:50.457472","ends":"2013-11-09 23:00:23.236247","starts_locale":"2013-11-09
-        23:27:50","ends_locale":"2013-11-10 00:00:23"}]}'
+      string: '{"from":"2014-02-13 11:37:21","utc_from":"2014-02-13 10:37:21","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"apfelklatsch","track_title":"Folge
+        110: Tai Ginseng","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        09:46:45.415106","ends":"2014-02-13 11:01:07.40082","starts_locale":"2014-02-13
+        10:46:45","ends_locale":"2014-02-13 12:01:07"},{"artist_name":"Abends in der
+        Kreativwirtschaft","track_title":"Folge 56: Website-Konzeption. Planen, umsetzen,
+        betreiben.","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Namens nennung -Nicht Kommerziell - Keine Bearbeitung 3.0
+        Deutschland","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:01:07.40082","ends":"2014-02-13 11:41:46.797963","starts_locale":"2014-02-13
+        12:01:07","ends_locale":"2014-02-13 12:41:46"},{"artist_name":"PodUnion Magazin
+        Podcast","track_title":"Folge 7: Nachgrfragt","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Namensnennung 3.0 Schweiz Lizenz","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:41:46.797963","ends":"2014-02-13 12:51:13.067401","starts_locale":"2014-02-13
+        12:41:46","ends_locale":"2014-02-13 13:51:13"},{"artist_name":"Robotiklabor","track_title":"Folge
+        29: M\u00e4nner die auf Boards starren","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2012
+        CC BY-NC-SA","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        12:51:13.067401","ends":"2014-02-13 17:54:23.949759","starts_locale":"2014-02-13
+        13:51:13","ends_locale":"2014-02-13 18:54:23"},{"artist_name":"Wikigeeks","track_title":"Folge
+        42: Nordische Syndrome","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
+        Creative Commons Attribution 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        17:54:23.949759","ends":"2014-02-13 21:51:42.870598","starts_locale":"2014-02-13
+        18:54:23","ends_locale":"2014-02-13 22:51:42"}]}'
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
+recorded_with: VCR 2.8.0

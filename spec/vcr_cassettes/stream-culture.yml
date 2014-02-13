@@ -21,72 +21,72 @@ http_interactions:
       Content-Type:
       - text/plain
       Content-Length:
-      - '2553'
+      - '2546'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJDb3B5cmlnaHQiOiJpY2VtYXN0ZXJAbG9jYWxob3N0IiwiTG9jYXRpb24i
-        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6Ii0zIiwibW91bnRzIjpbeyJt
-        b3VudCI6Ii8yNC5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIE1p
-        eCIsImxpc3RlbmVycyI6IjExIiwiZGVzY3JpcHRpb24iOiJEZXIgTWl4IGlz
-        dCB1bnNlciBWb2xscHJvZ3JhbW0uIFZvbSBBdWRpb3RhZ2VidWNoIMODwrxi
-        ZXIgZGllIENvbWVkeS1TaG93IHVuZCBkZW4gU3BvcnRrb21tZW50YXIgYmlz
-        IGhpbiB6dW0gU3BpZWxlcmF0Z2ViZXIgd2lyZCBoaWVyIGFsbGVzIGdlc2Vu
-        ZGV0LCB3YXMgZGFzIEhlcnogYmVnZWhydC4iLCJ0aXRsZSI6IldSSU5UOiBP
-        cnRzZ2VzcHLDpGNoZSAtIEZvbGdlIDIyMTogTGF1ZXJzYsO8cm9maWViZXIi
-        LCJnZW5yZSI6Ik1peCAtIERlc2t0b3AiLCJiaXRyYXRlIjoiMTI4IiwidXJs
-        IjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS9taXgifSx7Im1vdW50
-        IjoiLzI0bW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8g
-        TWl4IiwibGlzdGVuZXJzIjoiMCIsImRlc2NyaXB0aW9uIjoiRGVyIE1peCBp
+        OiJFYXJ0aCIsInRvdGFsX2xpc3RlbmVycyI6Ii0xMiIsIm1vdW50cyI6W3si
+        bW91bnQiOiIvMjQubXAzIiwic2VydmVyX25hbWUiOiJSZWxpdmVSYWRpbyBN
+        aXgiLCJsaXN0ZW5lcnMiOiIxMiIsImRlc2NyaXB0aW9uIjoiRGVyIE1peCBp
         c3QgdW5zZXIgVm9sbHByb2dyYW1tLiBWb20gQXVkaW90YWdlYnVjaCDDg8K8
         YmVyIGRpZSBDb21lZHktU2hvdyB1bmQgZGVuIFNwb3J0a29tbWVudGFyIGJp
         cyBoaW4genVtIFNwaWVsZXJhdGdlYmVyIHdpcmQgaGllciBhbGxlcyBnZXNl
         bmRldCwgd2FzIGRhcyBIZXJ6IGJlZ2VocnQuIiwidGl0bGUiOiJXUklOVDog
-        T3J0c2dlc3Byw6RjaGUgLSBGb2xnZSAyMjE6IExhdWVyc2LDvHJvZmllYmVy
-        IiwiZ2VucmUiOiJNaXggLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwi
-        OiJodHRwOi8vcmVsaXZlcmFkaW8uZGUvc3RyZWFtL21peCJ9LHsibW91bnQi
-        OiIva3VsdHVyLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8gS3Vs
-        dHVyIiwibGlzdGVuZXJzIjoiNiIsImRlc2NyaXB0aW9uIjoiV2llIGhlaXNz
-        dCBkZXIgbmV1ZSBGaWxtIG1pdCBCdWQgU3BlbmNlcj8gV2VsY2hlcyBCdWNo
-        IHNvbGwgaWNoIGFscyBuw4PCpGNoc3RlcyBsZXNlbiB1bmQgd2FzIHNvbGwg
-        bWlyIGRpZXNlciBTb25ndGV4dCBzYWdlbj8gSW0gS3VsdHVyLVN0cmVhbSBm
-        aW5kZXN0IGR1IFBvZGNhc3RzLCBkaWUgc2ljaCBtaXQgZ2VuYXUgc29sY2hl
-        biBUaGVtZW4gYmVmYXNzZW4uIiwidGl0bGUiOiIgLSAiLCJnZW5yZSI6Ikt1
-        bHR1ciAtIERlc2t0b3AiLCJiaXRyYXRlIjoiMTI4IiwidXJsIjoiaHR0cDov
-        L3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS9rdWx0dXIifSx7Im1vdW50IjoiL2t1
-        bHR1cm1vYmlsZS5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIEt1
-        bHR1ciIsImxpc3RlbmVycyI6IjAiLCJkZXNjcmlwdGlvbiI6IldpZSBoZWlz
-        c3QgZGVyIG5ldWUgRmlsbSBtaXQgQnVkIFNwZW5jZXI/IFdlbGNoZXMgQnVj
-        aCBzb2xsIGljaCBhbHMgbsODwqRjaHN0ZXMgbGVzZW4gdW5kIHdhcyBzb2xs
-        IG1pciBkaWVzZXIgU29uZ3RleHQgc2FnZW4/IEltIEt1bHR1ci1TdHJlYW0g
-        ZmluZGVzdCBkdSBQb2RjYXN0cywgZGllIHNpY2ggbWl0IGdlbmF1IHNvbGNo
-        ZW4gVGhlbWVuIGJlZmFzc2VuLiIsInRpdGxlIjoiIC0gIiwiZ2VucmUiOiJL
-        dWx0dXIgLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwiOiJodHRwOi8v
-        cmVsaXZlcmFkaW8uZGUvc3RyZWFtL2t1bHR1ciJ9LHsibW91bnQiOiIvdGVj
-        aG5pay5tcDMiLCJzZXJ2ZXJfbmFtZSI6IlJlbGl2ZVJhZGlvIFRlY2huaWsi
-        LCJsaXN0ZW5lcnMiOiI1IiwiZGVzY3JpcHRpb24iOiJXYXMgdHV0IHNpY2gg
-        aW0gSW50ZXJuZXQ/IFdlbGNoZSBGZWF0dXJlcyBoYXQgZGllIG5ldWUgU21h
-        cnRwaG9uZS1BcHAgdW5kIHdhcyBzYWdlbiBEYXRlbnNjaMODwrx0emVyIGRh
-        enU/IEltIFRlY2huaWstU3RyZWFtIGZpbmRlc3QgZHUgUG9kY2FzdHMsIGRp
-        ZSBzaWNoIG1pdCBnZW5hdSBzb2xjaGVuIERpbmdlbiBiZWZhc3Nlbi4iLCJ0
-        aXRsZSI6IklOQ0VSSU8gUG9kY2FzdCAtIElOQ0VSSU8gIzA1MiAtIERpZSB3
-        YXIncyEiLCJnZW5yZSI6IlRlY2huaWsgLSBEZXNrdG9wIiwiYml0cmF0ZSI6
-        IjEyOCIsInVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJlYW0vdGVj
-        aG5payJ9LHsibW91bnQiOiIvdGVjaG5pa21vYmlsZS5tcDMiLCJzZXJ2ZXJf
-        bmFtZSI6IlJlbGl2ZVJhZGlvIFRlY2huaWsiLCJsaXN0ZW5lcnMiOiIwIiwi
-        ZGVzY3JpcHRpb24iOiJXYXMgdHV0IHNpY2ggaW0gSW50ZXJuZXQ/IFdlbGNo
-        ZSBGZWF0dXJlcyBoYXQgZGllIG5ldWUgU21hcnRwaG9uZS1BcHAgdW5kIHdh
-        cyBzYWdlbiBEYXRlbnNjaMODwrx0emVyIGRhenU/IEltIFRlY2huaWstU3Ry
+        Rmxhc2NoZW4gLSBGcmF1IERpZW5lciB2ZXJyZWlzdCBuYWNoIFNjaG90dGxh
+        bmQiLCJnZW5yZSI6Ik1peCAtIERlc2t0b3AiLCJiaXRyYXRlIjoiMTI4Iiwi
+        dXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS9taXgifSx7Im1v
+        dW50IjoiLzI0bW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFk
+        aW8gTWl4IiwibGlzdGVuZXJzIjoiMSIsImRlc2NyaXB0aW9uIjoiRGVyIE1p
+        eCBpc3QgdW5zZXIgVm9sbHByb2dyYW1tLiBWb20gQXVkaW90YWdlYnVjaCDD
+        g8K8YmVyIGRpZSBDb21lZHktU2hvdyB1bmQgZGVuIFNwb3J0a29tbWVudGFy
+        IGJpcyBoaW4genVtIFNwaWVsZXJhdGdlYmVyIHdpcmQgaGllciBhbGxlcyBn
+        ZXNlbmRldCwgd2FzIGRhcyBIZXJ6IGJlZ2VocnQuIiwidGl0bGUiOiJXUklO
+        VDogRmxhc2NoZW4gLSBGcmF1IERpZW5lciB2ZXJyZWlzdCBuYWNoIFNjaG90
+        dGxhbmQiLCJnZW5yZSI6Ik1peCAtIE1vYmlsZSIsImJpdHJhdGUiOiI0OCIs
+        InVybCI6Imh0dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJlYW0vbWl4In0seyJt
+        b3VudCI6Ii9rdWx0dXIubXAzIiwic2VydmVyX25hbWUiOiJSZWxpdmVSYWRp
+        byBLdWx0dXIiLCJsaXN0ZW5lcnMiOiI0IiwiZGVzY3JpcHRpb24iOiJXaWUg
+        aGVpc3N0IGRlciBuZXVlIEZpbG0gbWl0IEJ1ZCBTcGVuY2VyPyBXZWxjaGVz
+        IEJ1Y2ggc29sbCBpY2ggYWxzIG7Dg8KkY2hzdGVzIGxlc2VuIHVuZCB3YXMg
+        c29sbCBtaXIgZGllc2VyIFNvbmd0ZXh0IHNhZ2VuPyBJbSBLdWx0dXItU3Ry
         ZWFtIGZpbmRlc3QgZHUgUG9kY2FzdHMsIGRpZSBzaWNoIG1pdCBnZW5hdSBz
-        b2xjaGVuIERpbmdlbiBiZWZhc3Nlbi4iLCJ0aXRsZSI6IklOQ0VSSU8gUG9k
-        Y2FzdCAtIElOQ0VSSU8gIzA1MiAtIERpZSB3YXIncyEiLCJnZW5yZSI6IlRl
-        Y2huaWsgLSBNb2JpbGUiLCJiaXRyYXRlIjoiNDgiLCJ1cmwiOiJodHRwOi8v
-        cmVsaXZlcmFkaW8uZGUvc3RyZWFtL3RlY2huaWsifV19
+        b2xjaGVuIFRoZW1lbiBiZWZhc3Nlbi4iLCJ0aXRsZSI6IiAtICIsImdlbnJl
+        IjoiS3VsdHVyIC0gRGVza3RvcCIsImJpdHJhdGUiOiIxMjgiLCJ1cmwiOiJo
+        dHRwOi8vcmVsaXZlcmFkaW8uZGUvc3RyZWFtL2t1bHR1ciJ9LHsibW91bnQi
+        OiIva3VsdHVybW9iaWxlLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFk
+        aW8gS3VsdHVyIiwibGlzdGVuZXJzIjoiMCIsImRlc2NyaXB0aW9uIjoiV2ll
+        IGhlaXNzdCBkZXIgbmV1ZSBGaWxtIG1pdCBCdWQgU3BlbmNlcj8gV2VsY2hl
+        cyBCdWNoIHNvbGwgaWNoIGFscyBuw4PCpGNoc3RlcyBsZXNlbiB1bmQgd2Fz
+        IHNvbGwgbWlyIGRpZXNlciBTb25ndGV4dCBzYWdlbj8gSW0gS3VsdHVyLVN0
+        cmVhbSBmaW5kZXN0IGR1IFBvZGNhc3RzLCBkaWUgc2ljaCBtaXQgZ2VuYXUg
+        c29sY2hlbiBUaGVtZW4gYmVmYXNzZW4uIiwidGl0bGUiOiIgLSAiLCJnZW5y
+        ZSI6Ikt1bHR1ciAtIE1vYmlsZSIsImJpdHJhdGUiOiI0OCIsInVybCI6Imh0
+        dHA6Ly9yZWxpdmVyYWRpby5kZS9zdHJlYW0va3VsdHVyIn0seyJtb3VudCI6
+        Ii90ZWNobmlrLm1wMyIsInNlcnZlcl9uYW1lIjoiUmVsaXZlUmFkaW8gVGVj
+        aG5payIsImxpc3RlbmVycyI6IjYiLCJkZXNjcmlwdGlvbiI6IldhcyB0dXQg
+        c2ljaCBpbSBJbnRlcm5ldD8gV2VsY2hlIEZlYXR1cmVzIGhhdCBkaWUgbmV1
+        ZSBTbWFydHBob25lLUFwcCB1bmQgd2FzIHNhZ2VuIERhdGVuc2Now4PCvHR6
+        ZXIgZGF6dT8gSW0gVGVjaG5pay1TdHJlYW0gZmluZGVzdCBkdSBQb2RjYXN0
+        cywgZGllIHNpY2ggbWl0IGdlbmF1IHNvbGNoZW4gRGluZ2VuIGJlZmFzc2Vu
+        LiIsInRpdGxlIjoiYXBmZWxrbGF0c2NoIC0gRm9sZ2UgMTEwOiBUYWkgR2lu
+        c2VuZyIsImdlbnJlIjoiVGVjaG5payAtIERlc2t0b3AiLCJiaXRyYXRlIjoi
+        MTI4IiwidXJsIjoiaHR0cDovL3JlbGl2ZXJhZGlvLmRlL3N0cmVhbS90ZWNo
+        bmlrIn0seyJtb3VudCI6Ii90ZWNobmlrbW9iaWxlLm1wMyIsInNlcnZlcl9u
+        YW1lIjoiUmVsaXZlUmFkaW8gVGVjaG5payIsImxpc3RlbmVycyI6IjAiLCJk
+        ZXNjcmlwdGlvbiI6IldhcyB0dXQgc2ljaCBpbSBJbnRlcm5ldD8gV2VsY2hl
+        IEZlYXR1cmVzIGhhdCBkaWUgbmV1ZSBTbWFydHBob25lLUFwcCB1bmQgd2Fz
+        IHNhZ2VuIERhdGVuc2Now4PCvHR6ZXIgZGF6dT8gSW0gVGVjaG5pay1TdHJl
+        YW0gZmluZGVzdCBkdSBQb2RjYXN0cywgZGllIHNpY2ggbWl0IGdlbmF1IHNv
+        bGNoZW4gRGluZ2VuIGJlZmFzc2VuLiIsInRpdGxlIjoiYXBmZWxrbGF0c2No
+        IC0gRm9sZ2UgMTEwOiBUYWkgR2luc2VuZyIsImdlbnJlIjoiVGVjaG5payAt
+        IE1vYmlsZSIsImJpdHJhdGUiOiI0OCIsInVybCI6Imh0dHA6Ly9yZWxpdmVy
+        YWRpby5kZS9zdHJlYW0vdGVjaG5payJ9XX0=
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
 - request:
     method: get
-    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2013-11-09
+    uri: http://hoersuppe.de/api/?action=getLive&dateEnd=2014-02-13
     body:
       encoding: US-ASCII
       string: ''
@@ -103,23 +103,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Nov 2013 15:45:14 GMT
+      - Thu, 13 Feb 2014 10:37:19 GMT
       Server:
       - Apache/2.2.3 (CentOS)
       X-Powered-By:
       - PHP/5.3.11
-      Expires:
-      - Sat, 02 Nov 2013 15:45:14 GMT
-      Cache-Control:
-      - no-cache, must-revalidate, max-age=0
-      Pragma:
-      - no-cache
       X-Pingback:
       - http://hoersuppe.de/xmlrpc.php
       Link:
       - <http://hoersuppe.de/?p=43845>; rel=shortlink
-      Last-Modified:
-      - Sat, 09 Nov 2013 15:45:14 GMT
       Connection:
       - close
       Transfer-Encoding:
@@ -128,15 +120,17 @@ http_interactions:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"status":1,"msg":"ok","data":[{"id":"4864","podcast":"quasselstrippen","state":"1","type":"0","synced":"1","title":"Quasselstrippen","url":"http:\/\/die-quasselstrippen.de\/","streamurl":"http:\/\/streams.xenim.de\/quasselstrippen.mp3.m3u","livedate":"2013-11-09
-        11:00:00","duration":"120","twittered":"1"},{"id":"3271","podcast":"dradio-online-talk","state":"1","type":"0","synced":"1","title":"DRadio
-        Wissen Online Talk","url":"http:\/\/wissen.dradio.de\/online-talk.125.de.html","streamurl":"http:\/\/www.dradio.de\/streaming\/dradiowissen.m3u","livedate":"2013-11-09
-        11:00:00","duration":"60","twittered":"1"},{"id":"3141","podcast":"breitband","state":"1","type":"0","synced":"1","title":"Breitband","url":"http:\/\/breitband.dradio.de\/","streamurl":"http:\/\/www.dradio.de\/streaming\/dkultur.m3u","livedate":"2013-11-09
-        14:00:00","duration":"60","twittered":"1"},{"id":"6591","podcast":"raidenger","state":"1","type":"0","synced":"1","title":"Raidenger","url":"http:\/\/raidenger.de\/","streamurl":"http:\/\/176.28.50.139:8000\/high","livedate":"2013-11-09
-        14:00:00","duration":"120","twittered":"1"},{"id":"3623","podcast":"trackback","state":"1","type":"0","synced":"1","title":"trackback","url":"http:\/\/www.fritz.de\/programm\/trackback.html","streamurl":"http:\/\/www.fritz.de\/live.m3u","livedate":"2013-11-09
-        18:00:00","duration":"120","twittered":"0"}]}'
+      string: '{"status":1,"msg":"ok","data":[{"id":"6073","podcast":"fanb0ys","state":"1","type":"0","synced":"1","title":"fanb0ys","url":"http:\/\/fanboys.fm","streamurl":"http:\/\/streams.xenim.de\/fanboys.mp3","livedate":"2014-02-13
+        16:00:00","duration":"90","twittered":"0"},{"id":"7283","podcast":"touchtalk","state":"1","type":"0","synced":"1","title":"Touchtalk","url":"http:\/\/touchtalk.at\/","streamurl":"http:\/\/live.touchtalk.at\/","livedate":"2014-02-13
+        19:00:00","duration":"120","twittered":"0"},{"id":"7398","podcast":"dirty-minutes-left","state":"1","type":"0","synced":"1","title":"Dirty
+        Minutes Left","url":"http:\/\/www.dirtyminutesleft.de","streamurl":"http:\/\/xsn.io\/dirtyminutesleft.mp3","livedate":"2014-02-13
+        19:00:00","duration":"60","twittered":"0"},{"id":"7480","podcast":"teezeit","state":"1","type":"0","synced":"1","title":"Teezeit
+        Talkradio","url":"http:\/\/teezeit.org\/","streamurl":"http:\/\/xsn.io\/teezeit.mp3","livedate":"2014-02-13
+        19:00:00","duration":"150","twittered":"0"},{"id":"7400","podcast":"binaergewitter","state":"1","type":"0","synced":"1","title":"Bin\u00e4rgewitter-Talk","url":"http:\/\/blog.binaergewitter.de\/","streamurl":"http:\/\/streams.xenim.de\/binaergewitter.mp3.m3u","livedate":"2014-02-13
+        20:00:00","duration":"180","twittered":"0"},{"id":"5106","podcast":"c-radar","state":"1","type":"0","synced":"1","title":"C-RadaR","url":"http:\/\/c-radar.ccc.de\/","streamurl":"http:\/\/www.radiodarmstadt.de\/fileadmin\/templates\/stream.m3u","livedate":"2014-02-13
+        21:00:00","duration":"180","twittered":"0"}]}'
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
 - request:
     method: get
     uri: http://kulturzentrale.reliveradio.de/api/upcoming-info?num=15
@@ -156,13 +150,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Nov 2013 15:45:16 GMT
+      - Thu, 13 Feb 2014 10:37:20 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.8
+      - PHP/5.3.10-1ubuntu3.9
       Set-Cookie:
-      - PHPSESSID=sh7botqn27r6ch3mhoeu552rd6; path=/
+      - PHPSESSID=vbuuc5v3uubrhplg9jjvmal9b5; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -172,61 +166,62 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '1101'
+      - '1112'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-09 16:45:16","utc_from":"2013-11-09 15:45:16","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"megamagisch","track_title":"Folge
-        11: Grrrrrruuuselig","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        CC BY-NC-SA 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        15:09:33.35295","ends":"2013-11-09 16:25:41.643426","starts_locale":"2013-11-09
-        16:09:33","ends_locale":"2013-11-09 17:25:41"},{"artist_name":"Landfunker
-        Podcast","track_title":"Folge 16: Freiheit f\u00fcr Uli und das Lama","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        16:25:41.643426","ends":"2013-11-09 17:28:08.791862","starts_locale":"2013-11-09
-        17:25:41","ends_locale":"2013-11-09 18:28:08"},{"artist_name":"jingle","track_title":"Jingle
-        Flattr - Polly","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:28:08.791862","ends":"2013-11-09 17:28:32.911431","starts_locale":"2013-11-09
-        18:28:08","ends_locale":"2013-11-09 18:28:32"},{"artist_name":"Sch\u00f6ne
-        Ecken","track_title":"Folge 65: USA, San Francisco","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:28:32.911431","ends":"2013-11-09 18:24:06.581953","starts_locale":"2013-11-09
-        18:28:32","ends_locale":"2013-11-09 19:24:06"},{"artist_name":"Nerdtalk","track_title":"Folge
-        320","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        18:24:06.581953","ends":"2013-11-09 19:47:54.21311","starts_locale":"2013-11-09
-        19:24:06","ends_locale":"2013-11-09 20:47:54"},{"artist_name":"Second Unit","track_title":"Folge
-        84: The Long Good Friday","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:47:54.21311","ends":"2013-11-09 21:09:11.628008","starts_locale":"2013-11-09
-        20:47:54","ends_locale":"2013-11-09 22:09:11"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 4","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        21:09:11.628008","ends":"2013-11-09 21:10:06.924335","starts_locale":"2013-11-09
-        22:09:11","ends_locale":"2013-11-09 22:10:06"},{"artist_name":"K\u00fcchenradio","track_title":"Folge
-        227: Herbstradio","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        21:10:06.924335","ends":"2013-11-09 23:00:06.922339","starts_locale":"2013-11-09
-        22:10:06","ends_locale":"2013-11-10 00:00:06"},{"artist_name":"Wir. M\u00fcssen
-        reden","track_title":"Folge 74: Save Habitus (mit Lorena Jaume-Palas\u00ed)","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        23:00:00","ends":"2013-11-10 02:34:19.952958","starts_locale":"2013-11-10
-        00:00:00","ends_locale":"2013-11-10 03:34:19"},{"artist_name":"jingle","track_title":"Jingle
-        Flattr - Kleingeld","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-10
-        02:34:19.952958","ends":"2013-11-10 02:34:38.626564","starts_locale":"2013-11-10
-        03:34:19","ends_locale":"2013-11-10 03:34:38"},{"artist_name":"Staatsb\u00fcrgerkunde
-        Podcast","track_title":"Folge 29: Post und Telefon","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        CC BY-NC-ND 3.0","subject":null,"contributor":null,"language":null,"starts":"2013-11-10
-        02:34:38.626564","ends":"2013-11-10 03:19:52.563866","starts_locale":"2013-11-10
-        03:34:38","ends_locale":"2013-11-10 04:19:52"},{"artist_name":"PodUnion Magazin
-        Podcast","track_title":"Folge 1: Einmal Berlin und zur\u00fcck","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Namensnennung 3.0 Schweiz Lizenz","subject":null,"contributor":null,"language":null,"starts":"2013-11-10
-        03:19:52.563866","ends":"2013-11-10 04:25:50.571834","starts_locale":"2013-11-10
-        04:19:52","ends_locale":"2013-11-10 05:25:50"},{"artist_name":"Sunday Moaning","track_title":"Folge
-        61: Sodom und Safari Club","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-10
-        04:25:50.571834","ends":"2013-11-10 06:44:23.405076","starts_locale":"2013-11-10
-        05:25:50","ends_locale":"2013-11-10 07:44:23"},{"artist_name":"jingle","track_title":"Jingle
-        Allgemein - G\u00fcnni","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-10
-        06:44:23.405076","ends":"2013-11-10 06:44:57.707049","starts_locale":"2013-11-10
-        07:44:23","ends_locale":"2013-11-10 07:44:57"},{"artist_name":"Kinocast","track_title":"Folge
-        180: Lebanon","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-10
-        06:44:57.707049","ends":"2013-11-10 07:04:01.282922","starts_locale":"2013-11-10
-        07:44:57","ends_locale":"2013-11-10 08:04:01"}]}'
+      string: '{"from":"2014-02-13 11:37:20","utc_from":"2014-02-13 10:37:20","num":"15","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"Das
+        Klangspektrum","track_title":"Folge 2: Harmonie ist eine Strategie","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        09:10:01.463679","ends":"2014-02-13 11:13:40.602319","starts_locale":"2014-02-13
+        10:10:01","ends_locale":"2014-02-13 12:13:40"},{"artist_name":"Leetkultur","track_title":"Folge
+        7: K\u00f6stliche Musik","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:13:40.602319","ends":"2014-02-13 13:19:10.669802","starts_locale":"2014-02-13
+        12:13:40","ends_locale":"2014-02-13 14:19:10"},{"artist_name":"jingle","track_title":"Jingle
+        Allgmein - Genervt","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        13:19:10.669802","ends":"2014-02-13 13:19:24.17987","starts_locale":"2014-02-13
+        14:19:10","ends_locale":"2014-02-13 14:19:24"},{"artist_name":"Medienwelten","track_title":"Folge
+        7: Vortrag Heinz Moser","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        13:19:24.17987","ends":"2014-02-13 15:17:08.217126","starts_locale":"2014-02-13
+        14:19:24","ends_locale":"2014-02-13 16:17:08"},{"artist_name":"KonScience","track_title":"Folge
+        16: Sondersendung - Graduiertenschulen","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Creative Commons Attribution 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        15:17:08.217126","ends":"2014-02-13 16:28:06.782001","starts_locale":"2014-02-13
+        16:17:08","ends_locale":"2014-02-13 17:28:06"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        16:28:06.782001","ends":"2014-02-13 16:28:46.546695","starts_locale":"2014-02-13
+        17:28:06","ends_locale":"2014-02-13 17:28:46"},{"artist_name":"Open Science
+        Radio","track_title":"Folge 14: Open Access 101","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        16:28:46.546695","ends":"2014-02-13 18:29:10.70606","starts_locale":"2014-02-13
+        17:28:46","ends_locale":"2014-02-13 19:29:10"},{"artist_name":"SneakPod","track_title":"Folge
+        324: Philomena","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        18:29:10.70606","ends":"2014-02-13 19:29:35.95806","starts_locale":"2014-02-13
+        19:29:10","ends_locale":"2014-02-13 20:29:35"},{"artist_name":"jingle","track_title":"Jingle
+        Flattr - Kleingeld","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        19:29:35.95806","ends":"2014-02-13 19:29:54.631666","starts_locale":"2014-02-13
+        20:29:35","ends_locale":"2014-02-13 20:29:54"},{"artist_name":"Second Unit","track_title":"Folge
+        89: Before Midnight","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        19:29:54.631666","ends":"2014-02-13 20:43:13.890305","starts_locale":"2014-02-13
+        20:29:54","ends_locale":"2014-02-13 21:43:13"},{"artist_name":"Retinauten","track_title":"Folge
+        32: Staub satteln","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        20:43:13.890305","ends":"2014-02-13 21:34:14.862555","starts_locale":"2014-02-13
+        21:43:13","ends_locale":"2014-02-13 22:34:14"},{"artist_name":"Der Vorleser","track_title":"Episode
+        11: Weisheiten, Kurzgeschichten - Der Bauer und der Apfelbaum","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        21:34:14.862555","ends":"2014-02-13 21:36:55.711603","starts_locale":"2014-02-13
+        22:34:14","ends_locale":"2014-02-13 22:36:55"},{"artist_name":"Black Sweet
+        Stories","track_title":"Folge 51: Die Nachtkutsche der Nordpost","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        21:36:55.711603","ends":"2014-02-13 22:17:30.233191","starts_locale":"2014-02-13
+        22:36:55","ends_locale":"2014-02-13 23:17:30"},{"artist_name":"Podsafe Metal
+        Pilot","track_title":"Folge 198","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        22:17:30.233191","ends":"2014-02-13 22:59:15.237296","starts_locale":"2014-02-13
+        23:17:30","ends_locale":"2014-02-13 23:59:15"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        22:59:15.237296","ends":"2014-02-13 23:00:08.208725","starts_locale":"2014-02-13
+        23:59:15","ends_locale":"2014-02-14 00:00:08"}]}'
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
+recorded_with: VCR 2.8.0

@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Nov 2013 15:45:21 GMT
+      - Thu, 13 Feb 2014 10:37:23 GMT
       Server:
       - Apache/2.2.22 (Ubuntu)
       X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.8
+      - PHP/5.3.10-1ubuntu3.9
       Set-Cookie:
-      - PHPSESSID=bu7mabfq6s5trk2vrif08v4ah2; path=/
+      - PHPSESSID=d5snclrp2al3g5f5fb9n53n7c0; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -35,34 +35,35 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '600'
+      - '593'
       Content-Type:
       - application/json
     body:
       encoding: UTF-8
-      string: '{"from":"2013-11-09 16:45:21","utc_from":"2013-11-09 15:45:21","num":"7","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
-        Ortsgespr\u00e4che","track_title":"Folge 221: Lauersb\u00fcrofieber","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        15:19:27.635104","ends":"2013-11-09 17:11:45.135104","starts_locale":"2013-11-09
-        16:19:27","ends_locale":"2013-11-09 18:11:45"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:11:45.135104","ends":"2013-11-09 17:12:24.899798","starts_locale":"2013-11-09
-        18:11:45","ends_locale":"2013-11-09 18:12:24"},{"artist_name":"Bin\u00e4rgewitter","track_title":"Folge
-        73: St\u00f6rerhaftung as a Service","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2013
-        Creative Commons Attribution-ShareAlike 3.0 Germany","subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        17:12:24.899798","ends":"2013-11-09 19:40:38.599798","starts_locale":"2013-11-09
-        18:12:24","ends_locale":"2013-11-09 20:40:38"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:40:38.599798","ends":"2013-11-09 19:41:18.364492","starts_locale":"2013-11-09
-        20:40:38","ends_locale":"2013-11-09 20:41:18"},{"artist_name":"ComPod","track_title":"Folge
-        401: Maudaten, Teil 1","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        19:41:18.364492","ends":"2013-11-09 20:33:14.264492","starts_locale":"2013-11-09
-        20:41:18","ends_locale":"2013-11-09 21:33:14"},{"artist_name":"jingle","track_title":"Jingle
-        Support - 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:14.264492","ends":"2013-11-09 20:33:54.029186","starts_locale":"2013-11-09
-        21:33:14","ends_locale":"2013-11-09 21:33:54"},{"artist_name":"Incerio Podcast","track_title":"Folge
-        52: Die war''s!","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2013-11-09
-        20:33:54.029186","ends":"2013-11-09 22:08:45.629186","starts_locale":"2013-11-09
-        21:33:54","ends_locale":"2013-11-09 23:08:45"}]}'
+      string: '{"from":"2014-02-13 11:37:23","utc_from":"2014-02-13 10:37:23","num":"7","AIRTIME_API_VERSION":"1.1","files":[{"artist_name":"WRINT:
+        Flaschen","track_title":"Frau Diener verreist nach Schottland","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        09:23:51.052339","ends":"2014-02-13 10:59:22.352339","starts_locale":"2014-02-13
+        10:23:51","ends_locale":"2014-02-13 11:59:22"},{"artist_name":"jingle","track_title":"Jingle
+        Allgemein - Bus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        10:59:22.352339","ends":"2014-02-13 10:59:59.895015","starts_locale":"2014-02-13
+        11:59:22","ends_locale":"2014-02-13 11:59:59"},{"artist_name":"Radio Bastard","track_title":"Folge
+        813: Rumfackeln im Sturm","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Copyright 2014 Jochen Kowalski","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        10:59:59.895015","ends":"2014-02-13 11:07:10.295015","starts_locale":"2014-02-13
+        11:59:59","ends_locale":"2014-02-13 12:07:10"},{"artist_name":"jingle","track_title":"Jingle
+        Support - 4","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:07:10.295015","ends":"2014-02-13 11:08:05.591342","starts_locale":"2014-02-13
+        12:07:10","ends_locale":"2014-02-13 12:08:05"},{"artist_name":"Michaelas Welt","track_title":"Folge
+        141: Computerzeugs","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":"2014
+        Michaela-W","subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:08:05.591342","ends":"2014-02-13 11:22:01.291342","starts_locale":"2014-02-13
+        12:08:05","ends_locale":"2014-02-13 12:22:01"},{"artist_name":"jingle","track_title":"Jingle
+        Allgemein - Bus","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:22:01.291342","ends":"2014-02-13 11:22:38.834018","starts_locale":"2014-02-13
+        12:22:01","ends_locale":"2014-02-13 12:22:38"},{"artist_name":"Comic Review","track_title":"Folge
+        65: Alisik Winter Band 2","comments":null,"year":null,"url":null,"info_url":null,"artist_url":null,"copyright":null,"subject":null,"contributor":null,"language":null,"starts":"2014-02-13
+        11:22:38.834018","ends":"2014-02-13 11:41:34.834018","starts_locale":"2014-02-13
+        12:22:38","ends_locale":"2014-02-13 12:41:34"}]}'
     http_version: 
-  recorded_at: Sat, 09 Nov 2013 15:45:00 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Thu, 13 Feb 2014 10:37:14 GMT
+recorded_with: VCR 2.8.0
