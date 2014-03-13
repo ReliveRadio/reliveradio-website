@@ -1,5 +1,12 @@
 #Changelog
 
+####v2.2.3
+
+* Update Bitcoin address
+* Add direct zip download link for ressource pack in downloads page
+* Update links to github projects on downloads page as the github pages were moved
+* Fix font-awesome icons
+
 ####v2.2.2
 
 * Fix modernizr not precompiled bug in foundation
