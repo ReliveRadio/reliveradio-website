@@ -11,13 +11,13 @@
 				<h3>Mac App</h3>
 				<%= image_tag "desktop_app.png", :class => "download_element_image" %>
 				<p>Wer einen Mac besitzt, der möchte vielleicht einmal unsere Desktop App ausprobieren, mit der sich alle Kanäle des ReliveRadio hören lassen. Auch werden aktuell gespielte Folgen mit Infos immer direkt angezeigt.</p>
-				<p><a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Relive-Desktop-App" class="button">Download</a></p>
+				<p><a href="https://github.com/ReliveRadio/reliveradio-desktop-app-mac-os" class="button"><i class="fa fa-download"></i> Download</a></p>
 			</div>
 			<div class="medium-6 columns">
 				<h3>Xenim App</h3>
 				<%= image_tag "xenim_icon.png", :class => "download_element_image" %>
 				<p>Das ReliveRadio ist mit allen Radio Apps auf Smartphones hörbar, da wir in den Radioverzeichnissen eingetragen sind. Falls ihr eine App sucht, um das ReliveRadio zu hören, dann sei euch die Xenim App empfohlen. Damit lassen sich alle Kanäle von überall hören.</p>
-				<p><a href="https://itunes.apple.com/de/app/xenim/id478586970?mt=8" class="button">Download</a></p>
+				<p><a href="https://itunes.apple.com/de/app/xenim/id478586970?mt=8" class="button"><i class="fa fa-download"></i> Download</a></p>
 			</div>
 		</div>
 
@@ -28,19 +28,27 @@
 				<p>Aktuell entwickelt Florian eine ReliveRadio App. Ihr könnt euch also schon einmal darauf freuen, dass es bald eine eigene App für das ReliveRadio geben wird!</p>
 			</div>
 			<div class="medium-6 columns">
-				<h3>Webplayer, Generator</h3>
+				<h3>Webplayer</h3>
 				<%= image_tag "large_player.png", :class => "download_element_image" %>
-				<p>Du möchtest das ReliveRadio auf deiner eigenen Webseite einbinden? Kein Problem! Wir bieten dafür einen Generator an, mit dem du dir den HTML Code zur Einbettung einfach generieren lassen kannst.</p>
+				<p>Du möchtest das ReliveRadio auf deiner eigenen Webseite einbinden? Kein Problem! Wir bieten dafür einen Generator an, mit dem du dir den HTML Code zur Einbettung einfach generieren lassen kannst. Falls du Wordpress verwendst, kannst du aber auch direkt unser Plugin nutzen.</p>
 					<div class="row">
 						<div class="medium-6 columns">
 							<h5>Mini Player</h5>
 							<%= image_tag "small_player.png", :class => "download_element_image" %>
-							<p><a href="http://cm.wikibyte.org/testcodes/MiniPlayerGenator/" class="button">Einbetten</a></p>
+							<a href="#" data-dropdown="drop1" class="button dropdown"><i class="fa fa-download"></i> Einbetten</a><br>
+							<ul id="drop1" data-dropdown-content class="f-dropdown">
+								<li><a href="https://github.com/ReliveRadio/reliveradio-wordpress-plugin_miniplayer">Anleitung</a></li>
+								<li><a href="https://github.com/ReliveRadio/reliveradio-wordpress-plugin_miniplayer/raw/master/relive-radio-widget.zip">Download Plugin (ZIP)</a></li>
+							</ul>
 						</div>
 						<div class="medium-6 columns">
 							<h5>Großer Player</h5>
 							<%= image_tag "large_player.png", :class => "download_element_image" %>
-							<p><a href="https://gist.github.com/i42n/8840757" class="button">Einbetten</a></p>
+							<a href="#" data-dropdown="drop2" class="button dropdown"><i class="fa fa-download"></i> Einbetten</a><br>
+							<ul id="drop2" data-dropdown-content class="f-dropdown">
+								<li><a href="https://github.com/ReliveRadio/reliveradio-wordpress-plugin_liveplayer">Anleitung</a></li>
+								<li><a href="https://github.com/ReliveRadio/reliveradio-wordpress-plugin_liveplayer/raw/master/relive-radio-shortcode.zip">Download Plugin (ZIP)</a></li>
+							</ul>
 						</div>
 					</div>
 			</div>
@@ -48,33 +56,18 @@
 
 		<div class="row">
 			<div class="medium-6 columns">
-				<h3>Wordpress Plugins</h3>
-				<%= image_tag "plugin_symbolic.jpg", :class => "download_element_image" %>
-				<p>Du nutzt Wordpress und möchtest deinen Lesern die Möglichkeit bieten in das Programm des ReliveRadio reinzuhören? Dann kannst du mit diesem Wordpress Plugin den Webplayer ganz bequem als Widget auf deinem Wordpress Blog einbetten.</p>
-				<p>
-					<%= link_to "Download Plugin", "https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Wordpress-ReliveRadio-Shortcode/relive-plugin-widget.php.zip?raw=true", :class => "button" %>
-					<%= link_to "Anleitung", "http://doc.wikibyte.org/ReliveRadio/PlugIns/Shortcode_Webplayer", :class => "button" %>
-				</p>
-			</div>
-			<div class="medium-6 columns">
 				<h3>Ressourcen</h3>
 				<%= image_tag "ressources_symbolic.jpg", :class => "download_element_image" %>
 				<p>Du möchtest über das ReliveRadio berichten, oder in irgendeiner Art auf uns verweisen? Hier bieten wir eine kleine Sammlung an Grafiken, die du nutzen kannst.</p>
 				<p>
-					<%= link_to "Download ZIP", "https://github.com/ReliveRadio/reliveradio-ressources/archive/master.zip", :class => "button" %>
+					<a href="https://github.com/ReliveRadio/reliveradio-ressources/archive/master.zip" class="button"><i class="fa fa-download"></i> Download ZIP</a>
 					<%= link_to "Material ansehen", "https://github.com/ReliveRadio/reliveradio-ressources", :class => "button" %>
 				</p>
 			</div>
-		</div>
-
-		<div class="row">
 			<div class="medium-6 columns">
 				<h3>Was ist mit ...?</h3>
 				<%= image_tag "missing_downloads.png", :class => "download_element_image" %>
 				<p>Du vermisst hier was? <%= link_to 'Bringe dich ein', help_url %> oder <%= link_to 'schreibe uns eine Mail', 'mailto:mail@reliveradio.de' %>.</p>
-			</div>
-			<div class="medium-6 columns">
-				
 			</div>
 		</div>
 
