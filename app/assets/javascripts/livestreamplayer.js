@@ -36,7 +36,7 @@ $(function(){
 	// initialize the buttons
 	livestreambuttons.each(function() {
 		$(this).click(liveStreamButtonClicked);
-		$(this).html('<i class="icon-play"></i> Livestream starten');
+		$(this).html('<i class="fa fa-play"></i> Livestream starten');
 	});
 
 	var isLivestreamPlaying = false;
@@ -47,7 +47,7 @@ $(function(){
 			player.pause();
 			livestreambuttons.each(function() {
 				// change look and feel of the button
-				$(this).html('<i class="icon-play"></i> Livestream starten');
+				$(this).html('<i class="fa fa-play"></i> Livestream starten');
 				$(this).removeClass('on');
 				$(this).addClass('off');
 			});
@@ -58,7 +58,7 @@ $(function(){
 			player.play();
 			livestreambuttons.each(function() {
 				// change look and feel of the button
-				$(this).html('<i class="icon-pause"></i> Livestream stoppen');
+				$(this).html('<i class="fa fa-pause"></i> Livestream stoppen');
 				$(this).removeClass('off');
 				$(this).addClass('on');
 			});

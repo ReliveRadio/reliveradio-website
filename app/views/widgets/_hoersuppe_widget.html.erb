@@ -6,7 +6,7 @@
 	<p>
 	<% @live_podcasts.each do |podcast| %>
 		<div>
-			<a href="<%= podcast['streamurl'] %>"><i class="icon-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
+			<a href="<%= podcast['streamurl'] %>"><i class="fa fa-volume-up"></i> <%= podcast["db"].nil? ? podcast["podcast"] : podcast["db"].name %></a>
 		</div>
 	<% end %>
 	</p>
