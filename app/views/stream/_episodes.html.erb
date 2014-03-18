@@ -1,7 +1,7 @@
 <% if !@episodes.blank? %>
 	<!-- SHOW ALL UPCOMING PODCASTS -->
-	<% @episodes.each do |episode| %>
+	<% @episodes.each_with_index do |episode, index| %>
 		<% podcast = episode["db"] %>
-		<%= render 'single_episode', :podcast => podcast, :episode => episode %>
+		<%= render 'single_episode', :podcast => podcast, :episode => episode, :index => index %>
 	<% end %>
 <% end %>

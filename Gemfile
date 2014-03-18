@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 3.2.14'
 gem 'sqlite3', '~> 1.3.7'
 gem 'json', '~> 1.8.0'
-gem 'feedzirra', '~> 0.2'
+gem 'feedjira', '~> 1.0'
 gem 'will_paginate'
 
 # Gems used only for assets and not required

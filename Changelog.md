@@ -1,5 +1,11 @@
 #Changelog
 
+###v2.2.4
+
+* Fix subscribe dropdown bug
+* Feedzirra was renamed to feedjira
+* Update gems to work with ruby 2.1.1
+
 ####v2.2.3
 
 * Update Bitcoin address
