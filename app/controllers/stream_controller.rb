@@ -1,4 +1,4 @@
-require 'feedzirra'
+require 'feedjira'
 
 class StreamController < ApplicationController
 

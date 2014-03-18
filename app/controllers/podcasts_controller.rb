@@ -1,4 +1,4 @@
-require 'feedzirra'
+require 'feedjira'
 
 class PodcastsController < ApplicationController
 
@@ -178,7 +178,7 @@ class PodcastsController < ApplicationController
 
   def import_from_feed (podcast)
     # read the podcast feed
-    feed = Feedzirra::Feed.fetch_and_parse(podcast.feedurl)
+    feed = Feedjira::Feed.fetch_and_parse(podcast.feedurl)
 
     # fetch the itunes summary and save it as podcast description
     if !feed.nil?
