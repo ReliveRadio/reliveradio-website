@@ -58,8 +58,8 @@
 		      <!-- FEED -->
 		      <% if !podcast.feedurl.blank? %>
 			  <li>
-				<a href="#" data-dropdown="subscription-dropdown"><i class="fa fa-rss"></i> Abonnieren</a>
-				<ul id="subscription-dropdown" class="f-dropdown" data-dropdown-content>
+				<a href="#" data-dropdown="subscription-dropdown-live"><i class="fa fa-rss"></i> Abonnieren</a>
+				<ul id="subscription-dropdown-live" class="f-dropdown" data-dropdown-content>
 		      		<li><a href="http://b.instaca.st/button/subscribe?url=<%= podcast.feedurl %>" target="_blank">Instacast</a></li>
 					<li><a href="<%= podcast.feedurl %>">FeedURL</a></li>
 				</ul>
