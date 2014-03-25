@@ -1,5 +1,9 @@
 #Changelog
 
+###v2.2.5
+
+* Fix wrong font-awesome info icon
+
 ###v2.2.4
 
 * Fix subscribe dropdown bug
