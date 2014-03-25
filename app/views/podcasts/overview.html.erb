@@ -36,7 +36,7 @@
                 <a href="<%= info_url(:slugintern => podcast.slugintern) %>"><img src="<%= APP_CONFIG['artwork_base_url'] + podcast.slugintern %>.jpg"></a>
                 <h3 class="hide-for-small breaklines"><%= podcast.name %></h3>
                 <p class="hide-for-small"><%= first_x_words(podcast.description, 20) %></p>
-                <p class="hide-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="fa fa-info-sign"></i> Mehr Informationen</a></p>
+                <p class="hide-for-small"><a href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="fa fa-info"></i> Mehr Informationen</a></p>
           </li>
         <% end %>
         </ul>
