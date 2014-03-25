@@ -79,7 +79,7 @@
 		      <% if !podcast.hoersuppeslug.blank? %><li><a href="http://hoersuppe.de/podcast/<%= podcast.hoersuppeslug %>" target="_blank"><i class="fa fa-headphones"></i> Hörsuppe</a></li><% end %>
 		    </ul>
 		    <!-- MORE INFO LINK FOR MOBILE VIEW -->
-			<p class="show-for-small"><a target="_blank" href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="fa fa-info-sign"></i> Mehr Informationen</a></p>
+			<p class="show-for-small"><a target="_blank" href="<%= info_url(:slugintern => podcast.slugintern) %>"><i class="fa fa-info"></i> Mehr Informationen</a></p>
 		<% end %>
 	</div>
 </div>
